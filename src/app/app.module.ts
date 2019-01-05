@@ -41,7 +41,8 @@ import { AuthService } from './auth.service';
     TellerInPenarikanTunaiComponent,
     TellerInSelisihKasComponent,
     TellerInSinkronFinComponent,
-    TellerInPindahBukuBedaUangComponent
+    TellerInPindahBukuBedaUangComponent,
+    TellerInTranPindahBukuComponent
   ],
   imports: [
     BrowserModule,
