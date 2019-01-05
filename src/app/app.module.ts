@@ -15,6 +15,7 @@ import { HomeNavComponent } from './navigation/home-nav/home-nav.component';
 import { DaftarUserSignOnComponent } from './administrative/daftar-user-sign-on/daftar-user-sign-on.component';
 import { WebBranchStatusComponent } from './administrative/web-branch-status/web-branch-status.component';
 import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
+import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
 import { TellerInSetoranTunaiComponent } from './teller-in/teller-in-setoran-tunai/teller-in-setoran-tunai.component';
 import { TellerInPenarikanTunaiComponent } from './teller-in/teller-in-penarikan-tunai/teller-in-penarikan-tunai.component';
 import { TellerInSelisihKasComponent } from './teller-in/teller-in-selisih-kas/teller-in-selisih-kas.component';
@@ -22,7 +23,7 @@ import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/t
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
 import { AuthService } from './auth.service';
-import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
+
 
 
 
