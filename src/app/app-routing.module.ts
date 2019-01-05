@@ -12,7 +12,6 @@ import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/t
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
 
-import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
 
 
 
@@ -41,4 +40,4 @@ export class AppRoutingModule { }
 export const routingComponents = [DashboardComponent, PageNotFoundComponent, LoginFormComponent,
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent, 
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent, 
-  TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,TanggalbisnisComponent]
+  TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent]

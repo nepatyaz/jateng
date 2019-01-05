@@ -41,26 +41,7 @@ import { AuthService } from './auth.service';
     TellerInPenarikanTunaiComponent,
     TellerInSelisihKasComponent,
     TellerInSinkronFinComponent,
-    TellerInPindahBukuBedaUangComponent,
-<<<<<<< HEAD
-    TellerInTranPindahBukuComponent,
-    CariBaruUserComponent,
-    GantiPasswordComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    TutupUserComponent
-    TanggalbisnisComponent
-=======
-    TutupUserComponent,
-    TanggalbisnisComponent,
-    KontrolUserComponent
->>>>>>> 78eeb2af51bb1d64c8442e1e4874831350739e86
-=======
-    TellerInTranPindahBukuComponent
->>>>>>> parent of 99886f17... tambahan routing
-=======
-    TutupUserComponent
->>>>>>> parent of 99d688eb... merge
+    TellerInPindahBukuBedaUangComponent
   ],
   imports: [
     BrowserModule,
