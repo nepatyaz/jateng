@@ -13,6 +13,8 @@ import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pinda
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
 import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
 import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
+import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
+
 
 
 
@@ -31,6 +33,7 @@ const routes: Routes = [
   {path : 'tellerin/sinkronfin', component : TellerInSinkronFinComponent},
   {path : 'tellerin/pinbukbedauang', component : TellerInPindahBukuBedaUangComponent},
   {path : 'tellerin/pindahbuku', component : TellerInTranPindahBukuComponent},
+  {path : 'maintencance/caribaruuser', component : CariBaruUserComponent},
   {path : '**', component : PageNotFoundComponent}
 
 ];
@@ -43,4 +46,5 @@ export class AppRoutingModule { }
 export const routingComponents = [DashboardComponent, PageNotFoundComponent, LoginFormComponent,
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent, 
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent, 
-  TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,TanggalbisnisComponent,AktifitasuserComponent]
+  TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,TanggalbisnisComponent,AktifitasuserComponent,
+  CariBaruUserComponent]

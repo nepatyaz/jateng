@@ -23,6 +23,8 @@ import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/t
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
 import { AuthService } from './auth.service';
+import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
+
 
 
 
@@ -48,7 +50,8 @@ import { AuthService } from './auth.service';
     TellerInPindahBukuBedaUangComponent,
     TellerInTranPindahBukuComponent,
     TanggalbisnisComponent,
-    AktifitasuserComponent
+    AktifitasuserComponent,
+    CariBaruUserComponent
   ],
   imports: [
     BrowserModule,
