@@ -21,6 +21,7 @@ import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/t
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
 import { AuthService } from './auth.service';
+import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
 
 
 
@@ -42,7 +43,8 @@ import { AuthService } from './auth.service';
     TellerInSelisihKasComponent,
     TellerInSinkronFinComponent,
     TellerInPindahBukuBedaUangComponent,
-    TellerInTranPindahBukuComponent
+    TellerInTranPindahBukuComponent,
+    TanggalbisnisComponent
   ],
   imports: [
     BrowserModule,
