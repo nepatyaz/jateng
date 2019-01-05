@@ -1,0 +1,174 @@
+<!--Main layout-->
+<div style="margin: 20px;margin-top:21vh">
+  <!-- Start your project here-->
+  <div class="d-flex flex-column h-100">
+    <div id="outer" class="d-flex flex-column flex-grow">
+      <div class="card">
+        <div class="card-body">
+          <h5>TRANSAKSI PEMINDAHBUKUAN BEDA MATA UANG DENGAN CEK</h5>
+          <!-- Default form contact -->
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <table class="table table-borderless table-sm">
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Tanggal Valuta</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" style="width: 250px;" class="form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-normal">No Referensi</td>
+                    <td>:</td>
+                    <td><input type="text" style="width: 250px;" class="form-control-sm"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-bottom" colspan="8">
+                      <h6 class="font-weight-bold">Data Rekening Debit</h6>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-normal">No Rekening Debit</td>
+                    <td>:</td>
+                    <td><input type="text" style="width: 250px;" class="form-control form-control-sm"></td>
+                    <td class="font-weight-normal">Nilai Transaksi Debit</td>
+                    <td>:</td>
+                    <td><input type="text" style="width: 200px;" class="form-control form-control-sm"></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="8">
+                      <h6 class="font-weight-bold">Data Rekening Kredit</h6>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-normal">No Rekening Kredit</td>
+                    <td>:</td>
+                    <td><input type="text" style="width: 250px;" class="form-control form-control-sm"></td>
+                    <td class="font-weight-normal">Nilai Transaksi Kredit</td>
+                    <td>:</td>
+                    <td><input type="text" style="width: 200px;" class="form-control form-control-sm"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-normal">Nilai Ekuivalen</td>
+                    <td style="width: 5px;">:</td>
+                    <td><input type="text" style="width: 250px;" class="form-control form-control-sm"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-normal">Kode Departemen</td>
+                    <td style="width: 5px;">:</td>
+                    <td>DC</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-normal">Keterangan</td>
+                    <td style="width: 5px;">:</td>
+                    <td>
+                      <textarea rows="4" cols="50" class="form-control form-control-sm"></textarea>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="8">
+                      <hr>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-bottom">
+                      <h6 class="font-weight-bold">Alat Bantu</h6>
+                    </td>
+                    <td colspan="6"></td>
+                    <td><button type="button" class="btn btn-primary align-middle">salin</button></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="font-weight-bold">Mata Uang Rekening Debit</td>
+                    <td colspan="5" class="font-weight-bold">Mata Uang Rekening Kredit</td>
+                  </tr>
+                  <tr>
+                    <td class="text-right" class="font-weight-normal">Nilai Transaksi Debit</td>
+                    <td></td>
+                    <td>
+                      <select class="custom-select" style="width: 200px;">
+                        <option selected>Pilih Salah Satu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <span style="display:inline-block; width: 50px;"></span> <span class="font-weight-normal">Ekuivalen</span>
+                    </td>
+                    <td>
+                      <select class="custom-select" style="width: 200px;">
+                        <option selected>Pilih Salah Satu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </td>
+                    <td></td>
+                    <td class="align-middle" class="font-weight-normal">Nilai Transaksi Kredit</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-right">
+                      <input type="text" class="form-control form-control-sm">
+                    </td>
+                    <td>x</td>
+                    <td>
+                      <div class="input-group">
+                        <input type="text" class="form-control form-control-sm">
+                        <span class="align-bottom">=</span>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="align-bottom">=</span> &nbsp;&nbsp;
+                            <input type="text" class="form-control form-control-sm">
+                          </div>
+                    </td>
+                    <td>X</td>
+                    <td>
+                      <input type="text" class="form-control form-control-sm" style="width: 200px;">
+                    </td>
+                    <td colspan="2"></td>
+                  </tr>
+                </table>
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-primary btn-rounded">Proses</button>
+                  <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <br><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

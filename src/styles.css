@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(assets/image/background.png);
+    background-attachment: fixed;
+    position: relative;
+    min-height: 70vh;
+}
+header{
+height: 19vh;
+background-image: url(assets/image/bankjatengheader.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-color:rgba(255, 255, 255, 0.6);
+}
+main{
+min-height: 50vh;
+margin-top: 20vh;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+min-width: 700px;
+}
+footer{
+height: 50px;
+background-image: url(assets/image/bankjatengfooter.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-color:rgba(255, 255, 255, 10%);
+}
+.flex-grow {
+    flex: 1 0 auto;
+}
+.btn-press{
+    padding: 6px 6px;
+    margin: 1px 0px 1px 1px;
+}

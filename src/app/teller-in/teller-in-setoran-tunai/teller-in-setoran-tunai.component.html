@@ -1,0 +1,80 @@
+<!--Main layout-->
+<div style="margin: 20px;margin-top:20vh">
+    <!-- Start your project here-->
+    <div class="d-flex flex-column h-100">
+        <div id="outer" class="d-flex flex-column flex-grow">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">TRANSAKSI SETORAN TUNAI</h5>
+                    <!-- Default form contact -->
+                    <form class="text-center border border-light p-5">
+                        <table>
+                            <tr> 
+                                <td style="width: 130px;">Tanggal Valuta</td>
+                                <td style="width: 30px;">:</td>
+                                <td><input type="text" ng-model="tglvaluta" name="tglvaluta" class="form-control" style="width: 400px;"></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Nomor Referensi</td>
+                                <td style="width: 30px;">:</td>
+                                <td><input type="text" ng-model="norefernsi" name="norefernsi" class="form-control"
+                                        style="width: 400px;"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Nomor Rekening</td>
+                                <td style="width: 30px;">:</td>
+                                <td><input type="text" ng-model="norekening" name="norekening" class="form-control"
+                                        style="width: 400px;"></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Nilai Transaksi</td>
+                                <td style="width: 30px;">:</td>
+                                <td><input type="text" ng-model="nilaitransaksi" name="nilaitransaksi" class="form-control"
+                                        style="width: 400px;"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Kode Departemen</td>
+                                <td style="width: 30px;">:</td>
+                                <select class="form-control" ng-model="optdepartemen" name="optdepartemen">
+                                    <option>DC</option>
+                                    <option>EC</option>
+                                    <option>FC</option>
+                                    <option>GC</option>
+                                </select>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Keterangan</td>
+                                <td style="width: 30px;">:</td>
+                                <td><input type="text" ng-model="keterangan" name="keterangan" class="form-control"
+                                        style="width: 400px;"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;"></td>
+                                <td style="width: 30px;"></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-save"
+                                            aria-hidden="true"></i>
+                                        &nbsp;Proses</button>
+                                    <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-close"
+                                            aria-hidden="true"></i>Kembali</button>
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

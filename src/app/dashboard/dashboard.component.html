@@ -1,0 +1,52 @@
+<app-home-nav></app-home-nav>
+<!--Main layout-->
+<div style="margin: 20px;">
+  <!-- Start your project here-->
+  <div class="d-flex flex-column h-100">
+    <div id="outer" class="d-flex flex-column flex-grow">
+      <div class="card">
+        <div class="card-body">
+          <br><br><br><br>
+          <h3 class="card-title" style="text-align: center">Home Page Application</h3>
+          <h3> Link Khusus untuk test halaman </h3>
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Administrative
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/administrator/daftaruser']">Daftar User</a>
+              <a class="dropdown-item" [routerLink]="['/administrator/webbranchstatus']">WebBranch</a>
+              <a class="dropdown-item" [routerLink]="['/administrator/settglbisnis']">Pengaturan Tanggal Bisnis</a>
+            </div>
+          </div>
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Teller In
+            </button>
+
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/tellerin/setorantunai']">Setoran Tunai</a>
+              <a class="dropdown-item" [routerLink]="['/tellerin/penarikantunai']">Penarikan Tunai</a>
+              <a class="dropdown-item" [routerLink]="['/tellerin/selisihkas']">Selisih Kas</a>
+              <a class="dropdown-item" [routerLink]="['/tellerin/sinkronfin']">Sinkron Fin</a>
+              <a class="dropdown-item" [routerLink]="['/tellerin/pinbukbedauang']">Pindah Buku</a>
+              <a class="dropdown-item" [routerLink]="['/tellerin/pinbukbedauang']">Pindah Buku Beda Uang</a>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- Default form contact -->
+          <br><br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Start your project here-->
+</div>
+<!--Main layout-->

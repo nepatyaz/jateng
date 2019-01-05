@@ -1,0 +1,21 @@
+{
+    "/status/*": {
+      "target": "http://127.0.0.1:3000/status",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/status": ""
+      }
+    },
+    "/user/*": {
+      "target": "http://127.0.0.1:3000/user",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/user": ""
+      }
+    }
+  }
+  
