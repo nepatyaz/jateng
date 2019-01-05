@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aktifitasuser.component.css']
 })
 export class AktifitasuserComponent implements OnInit {
-
+  tanggal = Date.now();
   constructor() { }
 
   ngOnInit() {
