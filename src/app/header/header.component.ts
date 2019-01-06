@@ -15,10 +15,12 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    if (this.siteUrl.search("dashboard") == -1 ) {
-      this.isDashboard = false;
-    } else {
-      this.isDashboard = true;
+
+    if (sessionStorage.getItem('isLoggedIn') == "true") {
+      this.isDashboard = true
+    }
+    else {
+      this.isDashboard = false
     }
   }
 }
