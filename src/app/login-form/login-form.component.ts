@@ -42,7 +42,13 @@ export class LoginFormComponent implements OnInit {
           if (data.status === 'OK') {
             //redirect ke halaman redirect
             //console.log(data.status)
-            localStorage.setItem('isLoggedIn',"true");
+            //set session storage untuk menyimpan data session
+            var status: string = String(data.status)
+            var role: string = String(data.role)
+            console.log( data.role)
+            sessionStorage.setItem('status', status)
+            sessionStorage.setItem('role', role)
+            
             this.router.navigate(['/dashboard'])
             //this.otentifikasi.setLoggedIn(true)
           } else {
