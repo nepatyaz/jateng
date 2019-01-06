@@ -15,8 +15,8 @@
                   <thead>
                     <tr>
                       <th style="width:4%">User ID</th>
-                      <th style="width:13%">Nama</th>
-                      <th style="width:24%">Login Terakhir</th>
+                      <th style="width:24%">Nama</th>
+                      <th style="width:15%">Login Terakhir</th>
                       <th style="width:15%">Logout Terakhir</th>
                       <th style="width:8%">Status</th>
                       <th style="width:10%">Kode Departemen</th>
@@ -24,13 +24,17 @@
                     <tr *ngFor="let record of ktrlusers; let i = index; let evenRecords = even; let oddRecords = odd;let firsRecords = first; let lastRecords = last;" [ngClass]="{odd:oddRecords, even:evenRecords, first : firsRecords, last : lastRecords}">
                       <td>{{record.UserId}}</td>
                       <td>{{record.Nama}}</td>
-                      <td>{{record.LoginAkhir}}</td>
-                      <td>{{record.LogoutAkhir}}</td>
+                      <td>{{record.LoginAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                      <td>{{record.LogoutAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
                       <td>{{record.Status}}</td>
                       <td>{{record.KodeDept}}</td>
                     </tr>
                   </thead>
                 </table>
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-primary btn-rounded">Buka</button>
+                  <button type="button" class="btn btn-primary btn-rounded">Tutup Sendiri</button>
+                </div>
               </form>
             </div>
           </div>
