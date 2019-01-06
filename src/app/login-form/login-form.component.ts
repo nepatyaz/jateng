@@ -44,11 +44,13 @@ export class LoginFormComponent implements OnInit {
           
             //this.otentifikasi.setLoggedIn(true)
           } else {
+            this.basicModal.show()
             this.pesan = data.message
-            window.alert(data.message)
+            //window.alert(data.message)
           }
         } else {
-          window.alert(data.message)
+          this.basicModal.show()
+          //window.alert(data.message)
           this.pesan = data.message
             
         }
