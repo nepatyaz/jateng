@@ -10,6 +10,6 @@ export class KtrluserService {
   }
   getData() {
     //return this.http.get('https://my-json-server.typicode.com/nepatyaz/rest/status')
-    return this.http.get('/status/')
+    return this.http.get('/ktrluser/')
   }
 }

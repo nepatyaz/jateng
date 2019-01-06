@@ -16,6 +16,15 @@
       "pathRewrite": {
         "^/user": ""
       }
+    },
+    "/ktrluser/*": {
+      "target": "http://127.0.0.1:3000/ktrluser",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/ktrluser": ""
+      }
     }
   }
   
