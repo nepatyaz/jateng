@@ -28,6 +28,7 @@ import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-p
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
+import { KtrluserService } from './ktrluser.service';
 
 
 
@@ -66,7 +67,7 @@ import { FooterHomeComponent } from './footer/footer-home/footer-home.component'
     HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [AuthService],
+  providers: [AuthService,KtrluserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
