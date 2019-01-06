@@ -15,6 +15,7 @@ export class KontrolUserComponent implements OnInit {
   ngOnInit() {
     this.servis.getData().subscribe(data => {
       this.ktrlusers = data
+      console.log(this.ktrlusers.UserId)
     })
   }
 
