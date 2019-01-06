@@ -40,13 +40,12 @@
           </form>
         </div>
       </div>
-
     </div>
   </div>
   <!-- /Start your project here-->
 </main>
 
-
+<!--bagian modal untuk pesan login-->
 <div mdbModal #basicModal="mdbModal" class="modal fade modal-notify modal-danger" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
     <!--Content-->
@@ -55,13 +54,11 @@
       <div class="modal-header d-flex justify-content-center">
         <p class="heading">Login Gagal</p>
       </div>
-
       <!--Body-->
       <div class="modal-body">
         <i class="fa fa-times fa-4x animated rotateIn"></i>
         <h5>{{pesanLogin}}</h5>
       </div>
-
       <!--Footer-->
       <div class="modal-footer justify-content-center">
         <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a>
@@ -70,3 +67,4 @@
     <!--/.Content-->
   </div>
 </div>
+<!--Bagian modal untuk pesan login-->
