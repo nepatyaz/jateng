@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kontrol-user.component.css']
 })
 export class KontrolUserComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
