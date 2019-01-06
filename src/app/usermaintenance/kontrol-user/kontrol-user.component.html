@@ -14,20 +14,20 @@
                 <table class="table table-striped table-bordered datatable" style="height:25px; text-align:center;">
                   <thead>
                     <tr>
-                      <th style="width:4%">User ID</th>
-                      <th style="width:24%">Nama</th>
-                      <th style="width:15%">Login Terakhir</th>
-                      <th style="width:15%">Logout Terakhir</th>
-                      <th style="width:8%">Status</th>
-                      <th style="width:10%">Kode Departemen</th>
+                      <th style="width:4%;line-height: 1.2">User ID</th>
+                      <th style="width:24%;line-height: 1.2">Nama</th>
+                      <th style="width:15%;line-height: 1.2">Login Terakhir</th>
+                      <th style="width:15%;line-height: 1.2">Logout Terakhir</th>
+                      <th style="width:8%;line-height: 1.2">Status</th>
+                      <th style="width:10%;line-height: 1.2">Kode Departemen</th>
                     </tr>
                     <tr *ngFor="let record of ktrlusers; let i = index; let evenRecords = even; let oddRecords = odd;let firsRecords = first; let lastRecords = last;" [ngClass]="{odd:oddRecords, even:evenRecords, first : firsRecords, last : lastRecords}">
-                      <td>{{record.UserId}}</td>
-                      <td>{{record.Nama}}</td>
-                      <td>{{record.LoginAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
-                      <td>{{record.LogoutAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
-                      <td>{{record.Status}}</td>
-                      <td>{{record.KodeDept}}</td>
+                      <td style="line-height: 0.5;">{{record.UserId}}</td>
+                      <td style="line-height: 0.5;">{{record.Nama}}</td>
+                      <td style="line-height: 0.5;">{{record.LoginAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                      <td style="line-height: 0.5;">{{record.LogoutAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                      <td style="line-height: 0.5;">{{record.Status}}</td>
+                      <td style="line-height: 0.5;">{{record.KodeDept}}</td>
                     </tr>
                   </thead>
                 </table>
