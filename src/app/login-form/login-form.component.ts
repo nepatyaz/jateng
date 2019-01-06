@@ -10,14 +10,13 @@ import { AuthService } from '../auth.service';
 })
 export class LoginFormComponent implements OnInit {
   pesanLogin
-
+  
   @ViewChild('basicModal') basicModal: ModalDirective;
 
   constructor(private router: Router, private userData: AuthService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
   loginUser(event) {
     event.preventDefault();
     //buat variabel untuk menyimpan nilai value dari form login
@@ -48,8 +47,8 @@ export class LoginFormComponent implements OnInit {
             console.log( data.role)
             sessionStorage.setItem('status', status)
             sessionStorage.setItem('role', role)
-            
-            this.router.navigate(['/dashboard'])
+            sessionStorage.setItem('isLoggedIn', "true");
+            this.router.navigate(['/dashboard']);
             //this.otentifikasi.setLoggedIn(true)
           } else {
             //jika hasil pengembalian dari nilai buka 'ok'
