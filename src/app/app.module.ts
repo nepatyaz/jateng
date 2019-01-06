@@ -24,7 +24,7 @@ import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pinda
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
 import { AuthService } from './auth.service';
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
-
+import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 
 
 
@@ -51,7 +51,8 @@ import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-bar
     TellerInTranPindahBukuComponent,
     TanggalbisnisComponent,
     AktifitasuserComponent,
-    CariBaruUserComponent
+    CariBaruUserComponent,
+    GantiPasswordComponent
   ],
   imports: [
     BrowserModule,
