@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KtrlUser } from '../ktrluser.service';
+import { KtrluserService } from 'src/app/ktrluser.service';
 
 @Component({
   selector: 'app-kontrol-user',
@@ -10,7 +10,7 @@ export class KontrolUserComponent implements OnInit {
   
   ktrlusers
 
-  constructor(private servis: KtrlUser) { }
+  constructor(private servis: KtrluserService) { }
 
   ngOnInit() {
     this.servis.getData().subscribe(data => {
