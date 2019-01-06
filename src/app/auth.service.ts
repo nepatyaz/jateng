@@ -13,6 +13,19 @@ interface myData {
 })
 export class AuthService {
 
+  private loggedInstatus = false
+  
+  setLoggedIn(value:boolean){
+    var stringValue = sessionStorage.getItem(status);
+    var boolValue = (stringValue === "OK"); 
+    this.loggedInstatus = boolValue;
+    console.log(boolValue)
+  }
+
+  get isloggedin(){
+    return this.loggedInstatus
+  }
+
   constructor(private http: HttpClient) { }
 
   getUserDetail(userid, password) {

@@ -17,30 +17,32 @@ import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-bar
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
-
+import { LoginGuard } from './guard/login.guard';
 
 
 const routes: Routes = [
-
-  {path : '', component : LoginFormComponent},
-  {path : 'administrator/daftaruser', component : DaftarUserSignOnComponent},
-  {path : 'administrator/webbranchstatus', component : WebBranchStatusComponent},
-  {path : 'administrator/tglbisnis', component : TanggalbisnisComponent},
-  {path : 'administrator/aktifitasuser', component : AktifitasuserComponent},
-  {path : 'dashboard', component : DashboardComponent},
-  {path : 'login', component : LoginFormComponent},
-  {path : 'tellerin/setorantunai', component : TellerInSetoranTunaiComponent},
-  {path : 'tellerin/penarikantunai', component : TellerInPenarikanTunaiComponent},
-  {path : 'tellerin/selisihkas', component : TellerInSelisihKasComponent},
-  {path : 'tellerin/sinkronfin', component : TellerInSinkronFinComponent},
-  {path : 'tellerin/pinbukbedauang', component : TellerInPindahBukuBedaUangComponent},
-  {path : 'tellerin/pindahbuku', component : TellerInTranPindahBukuComponent},
-  {path : 'maintencance/caribaruuser', component : CariBaruUserComponent},
-  {path : 'maintencance/gantisandi', component : GantiPasswordComponent},
-  {path : 'maintencance/kontroluser', component : KontrolUserComponent},
-  {path : 'maintencance/tutupuser', component : TutupUserComponent},
-  {path : '**', component : PageNotFoundComponent}
-
+  { path: '', component: LoginFormComponent },
+  { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
+  { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
+  { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
+  { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [LoginGuard]
+  },
+  { path: 'login', component: LoginFormComponent },
+  { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
+  { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
+  { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
+  { path: 'tellerin/sinkronfin', component: TellerInSinkronFinComponent },
+  { path: 'tellerin/pinbukbedauang', component: TellerInPindahBukuBedaUangComponent },
+  { path: 'tellerin/pindahbuku', component: TellerInTranPindahBukuComponent },
+  { path: 'maintencance/caribaruuser', component: CariBaruUserComponent },
+  { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
+  { path: 'maintencance/kontroluser', component: KontrolUserComponent },
+  { path: 'maintencance/tutupuser', component: TutupUserComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -49,7 +51,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent, 
-  TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent, 
-  TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,TanggalbisnisComponent,AktifitasuserComponent,
-  CariBaruUserComponent,GantiPasswordComponent,KontrolUserComponent,TutupUserComponent]
+  DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
+  TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
+  TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
+  CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent]

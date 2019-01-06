@@ -29,6 +29,7 @@ import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-use
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 import { KtrluserService } from './ktrluser.service';
+import { LoginGuard } from './guard/login.guard';
 
 
 
@@ -67,7 +68,7 @@ import { KtrluserService } from './ktrluser.service';
     HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [AuthService,KtrluserService],
+  providers: [AuthService,KtrluserService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
