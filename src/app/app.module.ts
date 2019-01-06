@@ -27,6 +27,7 @@ import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-bar
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
+import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 
 
 
@@ -56,7 +57,8 @@ import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.comp
     CariBaruUserComponent,
     GantiPasswordComponent,
     KontrolUserComponent,
-    TutupUserComponent
+    TutupUserComponent,
+    FooterHomeComponent
   ],
   imports: [
     BrowserModule,
