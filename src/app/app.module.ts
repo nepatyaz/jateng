@@ -28,7 +28,12 @@ import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-p
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
+import { KtrluserService } from './ktrluser.service';
 import { LoginGuard } from './guard/login.guard';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -63,7 +68,7 @@ import { LoginGuard } from './guard/login.guard';
     HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [AuthService, LoginGuard],
+  providers: [AuthService,KtrluserService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
