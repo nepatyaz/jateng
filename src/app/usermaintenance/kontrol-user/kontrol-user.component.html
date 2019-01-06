@@ -21,14 +21,10 @@
                       <th style="width:8%">Status</th>
                       <th style="width:10%">Kode Departemen</th>
                     </tr>
-                    <tr>
-                      <!--               
-                      <td style="text-align:center">{{ .IDNip }}</td>
-                      <td>{{ this.NamaPegawai }}</td>
-                      <td>{{ this.Alamat1 }}</td>
-                      <td>{{ this.NamaFoto }}</td>
-                      <td>{{ this.NoHp }}</td>
-                      <td>{{ this.Jabatan }}</td> -->
+                    <tr *ngFor="let record of records; let i = index; let evenRecords = even; let oddRecords = odd;let firsRecords = first; let lastRecords = last;" [ngClass]="{odd:oddRecords, even:evenRecords, first : firsRecords, last : lastRecords}">
+                      <td>{{i+1}}</td>
+                      <td>{{record.name}}</td>
+                      <td>{{record.status}}</td>
                     </tr>
                   </thead>
                 </table>

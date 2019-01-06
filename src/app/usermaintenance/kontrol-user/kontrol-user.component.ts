@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KtrlUser } from '../ktrluser.service';
 
 @Component({
   selector: 'app-kontrol-user',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KontrolUserComponent implements OnInit {
   
-  constructor() { }
+  ktrlusers
+
+  constructor(private servis: KtrlUser) { }
 
   ngOnInit() {
+    this.servis.getData().subscribe(data => {
+      this.ktrlusers = data
+    })
   }
 
 }
