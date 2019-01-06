@@ -14,7 +14,7 @@ import { AuthService } from '../auth.service';
 export class LoginFormComponent implements OnInit {
   users$: Object
   results = ''
-  pesan
+  pesanLogin
 
   @ViewChild('basicModal') basicModal: ModalDirective;
 
@@ -22,9 +22,7 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit() {
     //ini file projek yang lagi dikerjakan
-   
   }
-
 
   loginUser(event) {
     event.preventDefault();
@@ -41,21 +39,17 @@ export class LoginFormComponent implements OnInit {
           if (data.status === 'OK') {
             console.log(data.status)
             this.router.navigate(['/dashboard'])
-          
             //this.otentifikasi.setLoggedIn(true)
           } else {
             this.basicModal.show()
-            this.pesan = data.message
+            this.pesanLogin = data.message
             //window.alert(data.message)
           }
         } else {
           this.basicModal.show()
           //window.alert(data.message)
-          this.pesan = data.message
-            
+          this.pesanLogin = data.message
         }
       })
-
   }
-
 }
