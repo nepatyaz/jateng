@@ -26,6 +26,7 @@ import { AuthService } from './auth.service';
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
+import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 
 
 
@@ -54,7 +55,8 @@ import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-use
     AktifitasuserComponent,
     CariBaruUserComponent,
     GantiPasswordComponent,
-    KontrolUserComponent
+    KontrolUserComponent,
+    TutupUserComponent
   ],
   imports: [
     BrowserModule,

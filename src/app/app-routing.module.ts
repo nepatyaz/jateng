@@ -16,7 +16,7 @@ import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitas
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
-
+import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 
 
 
@@ -38,6 +38,7 @@ const routes: Routes = [
   {path : 'maintencance/caribaruuser', component : CariBaruUserComponent},
   {path : 'maintencance/gantisandi', component : GantiPasswordComponent},
   {path : 'maintencance/kontroluser', component : KontrolUserComponent},
+  {path : 'maintencance/tutupuser', component : TutupUserComponent},
   {path : '**', component : PageNotFoundComponent}
 
 ];
@@ -51,4 +52,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent, 
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent, 
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,TanggalbisnisComponent,AktifitasuserComponent,
-  CariBaruUserComponent,GantiPasswordComponent,KontrolUserComponent]
+  CariBaruUserComponent,GantiPasswordComponent,KontrolUserComponent,TutupUserComponent]
