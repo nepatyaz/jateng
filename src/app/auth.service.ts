@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 
 interface myData {
@@ -13,30 +14,31 @@ interface myData {
 })
 export class AuthService {
 
-  private loggedInstatus = false
-  
-  setLoggedIn(value:boolean){
-    var stringValue = sessionStorage.getItem(status);
-    var boolValue = (stringValue === "OK"); 
-    this.loggedInstatus = boolValue;
-    console.log(boolValue)
+  public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private loggedInstatus
+
+  loggedIn: boolean;
+  loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
+
+  setLoggedIn(value: boolean) {
+    this.loggedIn = value;
   }
 
-  get isloggedin(){
-    return this.loggedInstatus
+  get isloggedin() {
+    return this.setLoggedIn
   }
-  constructor(private http: HttpClient) { }
+  constructor(private http : HttpClient) {
+
+  }
 
   getUserDetail(userid, password) {
     //post detail ke http server balikan user info jika benar
     return this.http.post<myData>('/user', {
       userid,
-      password 
+      password
     })
   }
 
-  cekLogin(){
-    console.log(sessionStorage.getItem("isloggedin"))
-  }
-  
+
+
 }

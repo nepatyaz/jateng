@@ -17,16 +17,6 @@ export class LoginGuard implements CanActivate {
 
     let url: string = state.url;
     return this.verifyLogin(url);
-
-    //return true;
-    // if (boolValue) {
-    //   console.log(boolValue)
-    //   return true;
-    // }
-    // else {
-    //   this._router.navigate(['/login']);
-    //   return false;
-    // }
   }
   verifyLogin(url): boolean {
     if (!this.isLoggedIn()) {
