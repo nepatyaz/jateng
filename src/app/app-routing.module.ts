@@ -27,12 +27,17 @@ import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { LoginGuard } from './guard/login.guard';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: DashboardComponent,
+    path: '', component: HomeLayoutComponent,
     canActivate: [LoginGuard]
+  },
+  {
+    path: 'login', component: LoginLayoutComponent
   },
   { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
   { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
@@ -40,10 +45,9 @@ const routes: Routes = [
   { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    component: HomeLayoutComponent,
     canActivate: [LoginGuard]
   },
-  { path: 'login', component: LoginFormComponent },
   { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
   { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
   { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
