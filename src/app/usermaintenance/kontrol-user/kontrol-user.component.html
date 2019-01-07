@@ -23,7 +23,7 @@
                     </tr>
                     <tr *ngFor="let record of ktrlusers; let i = index; let evenRecords = even; let oddRecords = odd;let firsRecords = first; let lastRecords = last;" [ngClass]="{odd:oddRecords, even:evenRecords, first : firsRecords, last : lastRecords}">
                       <td style="line-height: 0.5;">{{record.UserId}}</td>
-                      <td style="line-height: 0.5;">{{record.Nama}}</td>
+                      <td style="line-height: 0.5;text-align:left">{{record.Nama}}</td>
                       <td style="line-height: 0.5;">{{record.LoginAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
                       <td style="line-height: 0.5;">{{record.LogoutAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
                       <td style="line-height: 0.5;">{{record.Status}}</td>
