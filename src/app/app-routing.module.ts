@@ -17,6 +17,10 @@ import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-bar
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
+import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
+import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
+import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
+import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
 import { LoginGuard } from './guard/login.guard';
 
 
@@ -45,6 +49,11 @@ const routes: Routes = [
   { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
   { path: 'maintencance/kontroluser', component: KontrolUserComponent },
   { path: 'maintencance/tutupuser', component: TutupUserComponent },
+  { path: 'maintencance/ctkpassbook', component: CetakPassbookComponent },
+  { path: 'maintencance/hdrpassbook', component: HeaderPassbookComponent },
+  { path: 'maintencance/ulangpassbook', component: UlangPassbookComponent },
+  { path: 'maintencance/checktaspen', component: CheckTaspenComponent },
+  
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -57,4 +66,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent]
+  CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent,CetakPassbookComponent,
+  HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent]
