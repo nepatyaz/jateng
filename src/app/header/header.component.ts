@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
    tanggal = Date.now();
 
-  constructor() {}
+  constructor(private router : Router) {}
 
   ngOnInit() {
 
@@ -23,4 +24,10 @@ export class HeaderComponent implements OnInit {
       this.isDashboard = false
     }
   }
+  fungsi(){
+    window.alert('Logout')
+    sessionStorage.setItem('isLoggedIn', "false");
+    this.router.navigate(['/']);
+  }
+
 }

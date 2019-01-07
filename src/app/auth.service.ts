@@ -25,7 +25,6 @@ export class AuthService {
   get isloggedin(){
     return this.loggedInstatus
   }
-
   constructor(private http: HttpClient) { }
 
   getUserDetail(userid, password) {
@@ -35,4 +34,9 @@ export class AuthService {
       password 
     })
   }
+
+  cekLogin(){
+    console.log(sessionStorage.getItem("isloggedin"))
+  }
+  
 }
