@@ -21,6 +21,7 @@ import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
 import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
 import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
+import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
 import { LoginGuard } from './guard/login.guard';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'maintencance/hdrpassbook', component: HeaderPassbookComponent },
   { path: 'maintencance/ulangpassbook', component: UlangPassbookComponent },
   { path: 'maintencance/checktaspen', component: CheckTaspenComponent },
+  { path: 'kartu/carikartuatm', component: CariKartuatmComponent },
   
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -71,4 +73,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent,CetakPassbookComponent,
-  HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent]
+  HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent,CariKartuatmComponent]

@@ -36,7 +36,10 @@ import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook
 import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
-import { HomeComponent } from './home/home.component';
+import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
+import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
+import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
+import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 
 
 
@@ -74,7 +77,10 @@ import { HomeComponent } from './home/home.component';
     CheckTaspenComponent,
     HomeLayoutComponent,
     LoginLayoutComponent,
-    HomeComponent
+    CariKartuatmComponent,
+    BayarPKBComponent,
+    BayarMPNComponent,
+    BillpaymentComponent
   ],
   imports: [
     BrowserModule,
