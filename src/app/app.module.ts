@@ -30,6 +30,7 @@ import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.comp
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 import { KtrluserService } from './ktrluser.service';
 import { LoginGuard } from './guard/login.guard';
+import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 
 
 
@@ -60,7 +61,8 @@ import { LoginGuard } from './guard/login.guard';
     GantiPasswordComponent,
     KontrolUserComponent,
     TutupUserComponent,
-    FooterHomeComponent
+    FooterHomeComponent,
+    CetakPassbookComponent
   ],
   imports: [
     BrowserModule,
