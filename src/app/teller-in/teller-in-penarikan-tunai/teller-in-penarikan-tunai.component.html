@@ -1,105 +1,96 @@
 <app-home-nav></app-home-nav>
 <!--Main layout-->
 <div style="margin: 20px;">
-    <!-- Start your project heree-->
+    <!-- Start your project here-->
     <div class="d-flex flex-column h-100">
-        <div id="outer" class="d-flex flex-column flex-grow">
+      <div id="outer" class="d-flex flex-column flex-grow">
+        <div class="card">
+          <div class="card-body">
+            <h5>TRANSAKSI PENARIKAN TUNAI</h5>
+            <!-- Default form contact -->
             <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">TRANSAKSI PENARIKAN TUNAI</h5>
-                    <!-- Default form contactt -->
-                    <form class="text-center border border-light p-5">
-                        <table>
-                            <tr>
-                                <td style="width: 130px;">Tanggal Valuta</td>
-                                <td style="width: 30px;">:</td>
-                                <td><input type="text" name="tglvaluta" id="tglvaluta" class="form-control form-control-sm"
-                                        style="width: 400px;"></td>
-                                <td colspan="2"></td>
-                            </tr>
-                            <tr>
-                                <div class="form-check" style="text-align: left">
-                                    <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1"
-                                        checked>
-                                    <td style="width: 130px;">Nomor Referensi</td>
-                                </div>
-                                <td style="width: 30px;">:</td>
-                                <td colspan="2"></td>
-                            </tr>
-                            <tr>
-                                <div class="form-check" style="text-align: left">
-                                    <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1"
-                                        checked>
-                                    <td style="width: 130px;">Nomor Cheque</td>
-                                </div>
-                                <td style="width: 30px;">:</td>
-                                <!-- <td><input type="text" ng-model="tglvaluta" name="tglvaluta" class="form-control" style="width: 400px;"></td> -->
-                            </tr>
-                            <tr>
-                                <td style="width: 130px;">Nomor Rekening</td>
-                                <td style="width: 30px;">:</td>
-                                <td><input type="text" name="norekening" id="norekening" class="form-control form-control-sm"
-                                        style="width: 400px;"></td>
-                                <td colspan="2"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 130px;">Nilai Transaksi</td>
-                                <td style="width: 30px;">:</td>
-                                <td><input type="text" name="nilaitransaksi" id="nilaitransaksi" class="form-control form-control-sm"
-                                        style="width: 400px;"></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="font-weight-normal">Kode Departemen</td>
-                                <td>:</td>
-                                <td>
-                                    <select class="custom-select" name="optkodedept" id="optkodedept" style="width: 200px;">
-                                        <option selected>Pilih Salah Satu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 130px;">Keterangan</td>
-                                <td style="width: 30px;">:</td>
-                                <td><input type="text" name="keterangan" id="keterangan" class="form-control form-control-sm"
-                                        style="width: 400px;"></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="font-weight-normal">Kode Taspen</td>
-                                <td>:</td>
-                                <td>
-                                    <select class="custom-select" name="optkodetaspen" id="optkodetaspen" style="width: 200px;">
-                                        <option selected>Pilih Salah Satu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 130px;"></td>
-                                <td style="width: 30px;"></td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-save"
-                                            aria-hidden="true"></i>
-                                        &nbsp;Proses</button>
-                                    <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-close"
-                                            aria-hidden="true"></i>Kembali</button>
-                                </td>
-                                <td colspan="2"></td>
-                            </tr>
-                        </table>
-                    </form>
-                    <br><br><br>
-                </div>
+              <div class="card-body">
+                <form>
+                  <table class="table table-borderless table-sm">
+                    <tr style="height: 10px;">
+                      <td style="width: 190px;" class="font-weight-normal">Tanggal Valuta</td>
+                      <td style="width: 5px;">:</td>
+                      <td style="width: 500px;"><input type="text" name="tglvaluta" id="tglvaluta" style="width: 250px;" class="form-control form-control-sm"></td>
+                      <td style="width: 350px;"></td>
+                      <td style="width: 5px;"></td>
+                      <td style="width: 5px;"></td>
+                      <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-check-input" type="radio" id="radio1" name="radio1" value="option1" checked>Nomor Referensi</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input class="form-check-input" type="radio" id="radio1" name="radio1" value="option1">Nomor Cheque</td>
+                    </tr>
+                    <tr style="height: 10px;">
+                      <td style="width: 190px;" class="font-weight-normal">Nomor Rekening</td>
+                      <td style="width: 5px;">:</td>
+                      <td style="width: 500px;"><input type="text" name="norekening" id="norekening" style="width: 250px;" class="form-control form-control-sm"></td>
+                      <td style="width: 350px;"></td>
+                      <td style="width: 5px;"></td>
+                      <td style="width: 5px;"></td>
+                      <td colspan="2"></td>
+                    </tr>
+                    <tr style="height: 10px;">
+                        <td style="width: 190px;" class="font-weight-normal">Nilai Transaksi</td>
+                        <td style="width: 5px;">:</td>
+                        <td style="width: 500px;"><input type="text" name="nilaitransaksi" id="nilaitransaksi" style="width: 250px;" class="form-control form-control-sm"></td>
+                        <td style="width: 350px;"></td>
+                        <td style="width: 5px;"></td>
+                        <td style="width: 5px;"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-normal">Kode Departemen</td>
+                        <td style="width: 5px;">:</td>
+                        <td>DC</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-normal">Keterangan</td>
+                        <td style="width: 5px;">:</td>
+                        <td>
+                            <textarea rows="4" name="keterangan" id="keterangan" cols="50" class="form-control form-control-sm"></textarea>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                      <td class="font-weight-normal">Kode Taspen</td>
+                      <td>:</td>
+                      <td>
+                        <select class="custom-select" name="optkodetaspen" id="optkodetaspen" style="width: 200px;">
+                          <option selected>Pilih Salah Satu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
+                    <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
+                  </div>
+                </form>
+              </div>
             </div>
-
+            <br><br><br>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
