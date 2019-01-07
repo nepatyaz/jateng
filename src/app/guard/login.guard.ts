@@ -20,7 +20,7 @@ export class LoginGuard implements CanActivate {
   }
   verifyLogin(url): boolean {
     if (!this.isLoggedIn()) {
-      this._router.navigate(['/login']);
+      this._router.navigate(['login']);
       return false;
     }
     else if (this.isLoggedIn()) {

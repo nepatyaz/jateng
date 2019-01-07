@@ -34,6 +34,9 @@ import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
 import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
 import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -68,7 +71,10 @@ import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.compo
     CetakPassbookComponent,
     HeaderPassbookComponent,
     UlangPassbookComponent,
-    CheckTaspenComponent
+    CheckTaspenComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
