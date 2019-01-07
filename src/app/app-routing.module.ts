@@ -25,6 +25,7 @@ import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.compo
 import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
 import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
+import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { LoginGuard } from './guard/login.guard';
 
 
@@ -61,6 +62,7 @@ const routes: Routes = [
   { path: 'pembayaran/bayarpkb', component: BayarPKBComponent  },
   { path: 'pembayaran/bayarmpn', component: BayarMPNComponent  },
   { path: 'pembayaran/billpayment', component: BillpaymentComponent  },
+  { path: 'cashdrawer/denominasi', component: DenominasiComponent  },
   
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -76,4 +78,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent,CetakPassbookComponent,
   HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent,CariKartuatmComponent,BayarPKBComponent,
-  BayarMPNComponent,BillpaymentComponent]
+  BayarMPNComponent,BillpaymentComponent,DenominasiComponent]
