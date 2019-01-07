@@ -9,23 +9,29 @@
           <h5 class="card-title">SINKRONISASI TRANSAKSI FINANCIAL RETAIL</h5>
           <!-- Default form contact -->
           <form class="text-center border border-light p-5">
-            <table> 
-              <tr>
-                <td style="width: 130px;">Kode Transaksi</td>
-                <td style="width: 30px;">:</td>
-                <select class="form-control" ng-model="optmatauang" name="optmatauang">
-                  <option>IDR</option>
-                  <option>USD</option>
-                  <option>YEN</option>
-                  <option>EURO</option>
-                </select>
-                <td colspan="2"></td>
-                <td>
-                  <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-save" aria-hidden="true"></i>
-                    &nbsp;Ambil</button>
-                  <!-- <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-close" aria-hidden="true"></i>&nbsp;&nbsp;Kembali</button> -->
-                </td>
-              </tr>
+            <table>
+                <tr>
+                  <td class="font-weight-normal">Kode Transaksi</td>
+                  <td>:</td>
+                  <td>
+                    <select class="custom-select" name="optmatauang" id="optmatauang" style="width: 200px;">
+                      <option selected>Pilih Salah Satu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 130px;"></td>
+                  <td style="width: 30px;"></td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-save" aria-hidden="true"></i>
+                      &nbsp;Proses</button>
+                    <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-close" aria-hidden="true"></i>Kembali</button>
+                  </td>
+                  <td colspan="2"></td>
+                </tr>
               <!-- <tr>
                 <td style="width: 130px;"></td>
                 <td style="width: 30px;"></td>
@@ -38,7 +44,7 @@
               </tr> -->
             </table>
           </form>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br>
         </div>
       </div>
 

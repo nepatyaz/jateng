@@ -10,7 +10,7 @@
                     <!-- Default form contact -->
                     <form class="text-center border border-light p-5">
                         <table>
-                            <tr> 
+                            <tr>
                                 <td style="width: 130px;">Tanggal Valuta</td>
                                 <td style="width: 30px;">:</td>
                                 <td><input type="text" ng-model="tglvaluta" name="tglvaluta" class="form-control" style="width: 400px;"></td>
@@ -40,15 +40,16 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td style="width: 130px;">Kode Departemen</td>
-                                <td style="width: 30px;">:</td>
-                                <select class="form-control" ng-model="optdepartemen" name="optdepartemen">
-                                    <option>DC</option>
-                                    <option>EC</option>
-                                    <option>FC</option>
-                                    <option>GC</option>
-                                </select>
-                                <td colspan="2"></td>
+                                <td class="font-weight-normal">Kode Departemen</td>
+                                <td>:</td>
+                                <td>
+                                    <select class="custom-select" name="optkodedept" id="optkodedept" style="width: 200px;">
+                                        <option selected>Pilih Salah Satu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td style="width: 130px;">Keterangan</td>
@@ -72,7 +73,7 @@
                             </tr>
                         </table>
                     </form>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br>
                 </div>
             </div>
 

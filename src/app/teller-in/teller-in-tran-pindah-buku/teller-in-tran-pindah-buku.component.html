@@ -49,15 +49,16 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td style="width: 130px;">Kode Departemen</td>
-                                <td style="width: 30px;">:</td>
-                                <select class="form-control" ng-model="kodedepartemen" name="kodedepartemen">
-                                    <option>DC</option>
-                                    <option>EC</option>
-                                    <option>FC</option>
-                                    <option>GC</option>
-                                </select>
-                                <td colspan="2"></td>
+                                <td class="font-weight-normal">Kode Departemen</td>
+                                <td>:</td>
+                                <td>
+                                    <select class="custom-select" name="optkodedept" id="optkodedept" style="width: 200px;">
+                                        <option selected>Pilih Salah Satu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td style="width: 130px;">Keterangan</td>
@@ -81,7 +82,7 @@
                             </tr>
                         </table>
                     </form>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br>
                 </div>
             </div>
         </div>
