@@ -35,6 +35,9 @@ import { HeaderPassbookComponent } from './passbook/header-passbook/header-passb
 import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
 import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
 import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
+import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
+import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
+import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 
 
 
@@ -70,7 +73,10 @@ import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.compo
     HeaderPassbookComponent,
     UlangPassbookComponent,
     CheckTaspenComponent,
-    CariKartuatmComponent
+    CariKartuatmComponent,
+    BayarPKBComponent,
+    BayarMPNComponent,
+    BillpaymentComponent
   ],
   imports: [
     BrowserModule,
