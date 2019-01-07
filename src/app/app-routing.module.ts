@@ -22,6 +22,9 @@ import { HeaderPassbookComponent } from './passbook/header-passbook/header-passb
 import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
 import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
 import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
+import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
+import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
+import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 import { LoginGuard } from './guard/login.guard';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
@@ -59,6 +62,9 @@ const routes: Routes = [
   { path: 'maintencance/ulangpassbook', component: UlangPassbookComponent },
   { path: 'maintencance/checktaspen', component: CheckTaspenComponent },
   { path: 'kartu/carikartuatm', component: CariKartuatmComponent },
+  { path: 'pembayaran/bayarpkb', component: BayarPKBComponent  },
+  { path: 'pembayaran/bayarmpn', component: BayarMPNComponent  },
+  { path: 'pembayaran/billpayment', component: BillpaymentComponent  },
   
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -73,4 +79,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent,CetakPassbookComponent,
-  HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent,CariKartuatmComponent]
+  HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent,CariKartuatmComponent,BayarPKBComponent,
+  BayarMPNComponent,BillpaymentComponent]
