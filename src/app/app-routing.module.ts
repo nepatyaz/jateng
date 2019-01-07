@@ -25,7 +25,10 @@ import { LoginGuard } from './guard/login.guard';
 
 
 const routes: Routes = [
-  { path: '', component: LoginFormComponent },
+  {
+    path: '', component: DashboardComponent,
+    canActivate: [LoginGuard]
+  },
   { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
   { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
   { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },

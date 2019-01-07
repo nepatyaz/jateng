@@ -17,7 +17,4 @@ export class DashboardComponent implements OnInit {
     console.log(this.id);
   }
 
-  onClickMe() {
-    this._location.back();
-  }
 }
