@@ -10,5 +10,14 @@ import { AuthService } from './auth.service';
 export class AppComponent {
 
 
+  constructor(public auth: AuthService) {
+
+  }
+
+  ngOnInit() {
+   // this.auth.setLoggedIn()
+  }
+
+
 
 }

@@ -48,10 +48,12 @@ export class LoginFormComponent implements OnInit {
             sessionStorage.setItem('status', status)
             sessionStorage.setItem('role', role)
             sessionStorage.setItem('isLoggedIn', "true");
+            //this.userData.setLoggedIn(true);
+
             this.router.navigate(['/dashboard']);
             //this.otentifikasi.setLoggedIn(true)
           } else {
-            //jika hasil pengembalian dari nilai buka 'ok'
+            //jika hasil pengembalian dari nilai bukan 'ok'
             //tampilkan komponen modal
             this.basicModal.show()
             // simpan hasil value dari pengembalian nilai dari data kedalam variabel

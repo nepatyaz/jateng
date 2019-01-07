@@ -13,8 +13,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     //this.id = localStorage.getItem('status');
-    this.id = sessionStorage.getItem('status')
-    console.log(this.id);
+    //this.id = sessionStorage.getItem('status')
+    //console.log(this.id);
+    
   }
 
 }
