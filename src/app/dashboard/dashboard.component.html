@@ -26,16 +26,61 @@
             <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
               Teller In
             </button>
-
             <div class="dropdown-menu dropdown-primary">
               <a class="dropdown-item" [routerLink]="['/tellerin/setorantunai']">Setoran Tunai</a>
               <a class="dropdown-item" [routerLink]="['/tellerin/penarikantunai']">Penarikan Tunai</a>
               <a class="dropdown-item" [routerLink]="['/tellerin/selisihkas']">Selisih Kas</a>
               <a class="dropdown-item" [routerLink]="['/tellerin/sinkronfin']">Sinkron Fin</a>
-              <a class="dropdown-item" [routerLink]="['/tellerin/pinbukbedauang']">Pindah Buku</a>
+              <a class="dropdown-item" [routerLink]="['/tellerin/pindahbuku']">Pindah Buku</a>
               <a class="dropdown-item" [routerLink]="['/tellerin/pinbukbedauang']">Pindah Buku Beda Uang</a>
             </div>
           </div>
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Maintenance
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/maintencance/caribaruuser']">Pencarian user</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/gantisandi']">Ganti Sandi</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/kontroluser']">Kontrol User</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/tutupuser']">Tutup User</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/ctkpassbook']">Cetak PassBook</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/hdrpassbook']">Cetak Header PassBook</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/ulangpassbook']">Cetak Ulang Header PassBook</a>
+              <a class="dropdown-item" [routerLink]="['/maintencance/checktaspen']">Check Taspen</a>
+            </div>
+          </div>
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Kartu
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/kartu/carikartuatm']">Pencarian Kartu ATM</a>
+            </div>
+          </div>
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Pembayaran
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/pembayaran/bayarpkb']">Pembayaran PKB</a>
+              <a class="dropdown-item" [routerLink]="['/pembayaran/bayarmpn']">Pembayaran MPN</a>
+              <a class="dropdown-item" [routerLink]="['/pembayaran/billpayment']">Pembayaran Bill Payment</a>
+            </div>
+          </div>
+
+          <div class="btn-group" mdbDropdown>
+              <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+                Cash Drawer
+              </button>
+              <div class="dropdown-menu dropdown-primary">
+                <a class="dropdown-item" [routerLink]="['/cashdrawer/denominasi']">Denominasi</a>
+              </div>
+            </div>
+
           <!-- Default form contact -->
           <br><br><br><br><br><br><br>
         </div>

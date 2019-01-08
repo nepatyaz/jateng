@@ -36,6 +36,7 @@ const routes: Routes = [
     path: '', component: HomeLayoutComponent,
     canActivate: [LoginGuard],
     children: [
+      { path: '',component: DashboardComponent,},
       { path: 'dashboard',component: DashboardComponent,},
       { path: 'daftaruser',component: DaftarUserSignOnComponent},
       { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
@@ -66,7 +67,7 @@ const routes: Routes = [
   {
     path: '', component: LoginLayoutComponent,
     children: [
-      { path: 'dashboard',component: LoginFormComponent,},
+      { path: 'login',component: LoginFormComponent,},
     ]
   },
   { path: '**', component: PageNotFoundComponent }
