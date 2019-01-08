@@ -33,39 +33,51 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 const routes: Routes = [
   {
     path: '', component: HomeLayoutComponent,
-    canActivate: [LoginGuard]
+    canActivate: [LoginGuard],
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
+      {
+        path: 'daftaruser',
+        component: DaftarUserSignOnComponent
+      },
+      { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
+      { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
+      { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
+      { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
+      { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
+      { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
+      { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
+      { path: 'tellerin/sinkronfin', component: TellerInSinkronFinComponent },
+      { path: 'tellerin/pinbukbedauang', component: TellerInPindahBukuBedaUangComponent },
+      { path: 'tellerin/pindahbuku', component: TellerInTranPindahBukuComponent },
+      { path: 'maintencance/caribaruuser', component: CariBaruUserComponent },
+      { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
+      { path: 'maintencance/kontroluser', component: KontrolUserComponent },
+      { path: 'maintencance/tutupuser', component: TutupUserComponent },
+      { path: 'maintencance/ctkpassbook', component: CetakPassbookComponent },
+      { path: 'maintencance/hdrpassbook', component: HeaderPassbookComponent },
+      { path: 'maintencance/ulangpassbook', component: UlangPassbookComponent },
+      { path: 'maintencance/checktaspen', component: CheckTaspenComponent },
+      { path: 'kartu/carikartuatm', component: CariKartuatmComponent },
+      { path: 'pembayaran/bayarpkb', component: BayarPKBComponent },
+      { path: 'pembayaran/bayarmpn', component: BayarMPNComponent },
+      { path: 'pembayaran/billpayment', component: BillpaymentComponent },
+    ]
   },
   {
-    path: 'login', component: LoginLayoutComponent
+    path: '',
+    component: LoginLayoutComponent,
+    children: [
+      { path: 'login', component: LoginFormComponent }
+      
+    ]
   },
-  { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
-  { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
-  { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
-  { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
-  {
-    path: 'dashboard',
-    component: HomeLayoutComponent,
-    canActivate: [LoginGuard]
-  },
-  { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
-  { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
-  { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
-  { path: 'tellerin/sinkronfin', component: TellerInSinkronFinComponent },
-  { path: 'tellerin/pinbukbedauang', component: TellerInPindahBukuBedaUangComponent },
-  { path: 'tellerin/pindahbuku', component: TellerInTranPindahBukuComponent },
-  { path: 'maintencance/caribaruuser', component: CariBaruUserComponent },
-  { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
-  { path: 'maintencance/kontroluser', component: KontrolUserComponent },
-  { path: 'maintencance/tutupuser', component: TutupUserComponent },
-  { path: 'maintencance/ctkpassbook', component: CetakPassbookComponent },
-  { path: 'maintencance/hdrpassbook', component: HeaderPassbookComponent },
-  { path: 'maintencance/ulangpassbook', component: UlangPassbookComponent },
-  { path: 'maintencance/checktaspen', component: CheckTaspenComponent },
-  { path: 'kartu/carikartuatm', component: CariKartuatmComponent },
-  { path: 'pembayaran/bayarpkb', component: BayarPKBComponent  },
-  { path: 'pembayaran/bayarmpn', component: BayarMPNComponent  },
-  { path: 'pembayaran/billpayment', component: BillpaymentComponent  },
-  
+  //{ path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
+
+
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -78,6 +90,6 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent,CetakPassbookComponent,
-  HeaderPassbookComponent,UlangPassbookComponent,CheckTaspenComponent,CariKartuatmComponent,BayarPKBComponent,
-  BayarMPNComponent,BillpaymentComponent]
+  CariBaruUserComponent, GantiPasswordComponent, KontrolUserComponent, TutupUserComponent, CetakPassbookComponent,
+  HeaderPassbookComponent, UlangPassbookComponent, CheckTaspenComponent, CariKartuatmComponent, BayarPKBComponent,
+  BayarMPNComponent, BillpaymentComponent]

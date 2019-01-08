@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-login-layout',
   template: `
   <app-header></app-header>
-  <app-login-form></app-login-form>
+  <router-outlet></router-outlet>
   <app-footer></app-footer>
   `,
   styles: []
