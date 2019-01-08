@@ -40,6 +40,7 @@ import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.compo
 import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
 import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
+import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 
 
 
@@ -80,7 +81,8 @@ import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.compo
     CariKartuatmComponent,
     BayarPKBComponent,
     BayarMPNComponent,
-    BillpaymentComponent
+    BillpaymentComponent,
+    DenominasiComponent
   ],
   imports: [
     BrowserModule,
