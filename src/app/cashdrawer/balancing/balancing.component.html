@@ -1,47 +1,67 @@
 <app-home-nav></app-home-nav>
 <!--Main layout-->
 <div style="margin: 20px;">
-    <!-- Start your project here-->
-    <div class="d-flex flex-column h-100">
-        <div id="outer" class="d-flex flex-column flex-grow">
-            <div class="card">
-                <div class="card-body">
-                      <!-- Default form contact -->
-                    <div class="card">
-                        <div class="card-body">
-                            <form>
-                                <table class="table table-borderless table-sm"> 
-                                    <tr style="height: 10px;">
-                                        <td style="width: 170px;" class="font-weight-normal">User ID</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 45px;">JATENGSP</td>
-                                    </tr>
-                                </table>
-                                <nav>
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                                      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
-                                    </div>
-                                </nav>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                                    <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
-                    <br><br><br>
-                </div>
-            </div>
-        </div>
+  <!-- Start your project here-->
+  <div class="d-flex flex-column h-100">
+    <div id="outer" class="d-flex flex-column flex-grow">
+      <div class="card">
+        <div class="card-body">
 
+          <!--Panel Atas 1-->
+          <mdb-card class="mb-3">
+            <mdb-card-body>
+              <div class="row">
+                <label class="col-2 font-weight-bold">User ID</label>
+                <label class="col-3">: Jateng SP</label>
+                <span class="col-2"></span>
+                <label class="col-2 font-weight-bold">Kode Cabang</label>
+                <label class="col-3">: 034 - Cabang Utama</label>
+              </div>
+              <div class="row">
+                <label class="col-2 font-weight-bold">Nama User</label>
+                <label class="col-3">: Jateng SP</label>
+                <span class="col-2"></span>
+                <label class="col-2 font-weight-bold">Kode Departemen</label>
+                <label class="col-3">: DC - Data Center</label>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+          <!--Panel Atas 1-->
+
+          <div class="btn-group" role="group" aria-label="Basic example mb-0">
+            <button (click)="fungsi0()" mdbBtn type="button"  [ngClass]="{'btn-default' : konten0, 'btn-light': !konten0}" mdbWavesEffect>Teller
+              Cash Balancing</button>
+            <button (click)="fungsi1()" mdbBtn type="button"  [ngClass]="{'btn-default' : konten1, 'btn-light': !konten1}" mdbWavesEffect>Ringkasan
+              Transaksi</button>
+            <button (click)="fungsi2()" mdbBtn type="button"  [ngClass]="{'btn-default' : konten2, 'btn-light': !konten2}" mdbWavesEffect>Daftar
+              Transaksi</button>
+          </div>
+
+          <mdb-card>
+            <mdb-card-body>
+
+              <div class="tab-content">
+                <div *ngIf="konten0" role="tabpanel" class="tab-pane active" id="one">Konten Cash Balancing</div>
+                <div *ngIf="konten1" role="tabpanel" class="tab-pane active" id="one">Konten Ringkasan Transaksi</div>
+                <div *ngIf="konten2" role="tabpanel" class="tab-pane active" id="one">Konten Daftar Transaksi</div>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+
+
+
+          <span style="height: 10vh;"></span>
+        </div>
+      </div>
     </div>
+
+  </div>
 </div>
 <style>
- .nav-tabs > li > a, .nav-pills > li > a {margin-left:25px;margin-right:27px;}
+  .nav-tabs>li>a,
+  .nav-pills>li>a {
+    margin-left: 25px;
+    margin-right: 27px;
+  }
+
 </style>
