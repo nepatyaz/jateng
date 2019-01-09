@@ -1,123 +1,190 @@
 <app-home-nav></app-home-nav>
 <!--Main layout-->
 <div style="margin: 20px;">
-    <!-- Start your project here-->
-    <div class="d-flex flex-column h-100">
-        <div id="outer" class="d-flex flex-column flex-grow">
-            <div class="card">
-                <div class="card-body">
-                    <h5>DENOMINASI</h5>
-                    <!-- Default form contact -->
+  <!-- Start your project here-->
+  <div class="d-flex flex-column h-100">
+    <div id="outer" class="d-flex flex-column flex-grow">
+      <div class="card">
+        <div class="card-body">
+          <h5>DENOMINASI</h5>
+          <!-- Default form contact -->
 
-                    <div class="card">
-                        <div class="card-body">
-                            <form>
-                                <h6>DAFTAR SALDO KAS TELLER</h6>
-                                <table class="table table-borderless table-sm">
-                                    <tr>
-                                        <td class="font-weight-normal">Mata Uang</td>
-                                        <td>:</td>
-                                        <td>
-                                            <select class="custom-select" name="optmatauang" id="optmatauang" style="width: 250px; height: 34px;">
-                                                <option selected>Pilih Salah Satu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Saldo Awal</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="saldoawal" id="saldoawal"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Saldo Akhir</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="saldoakhir" id="saldoakhir"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Mutasi Debet</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="mutasidebet" id="mutasidebet"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Mutasi Kredit</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="mutasikredit" id="mutasikredit"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Mutasi Non Cash Debet</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="mutasinondebet" id="mutasinondebet" style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Mutasi Non Cash Kredit</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="mutasinonkredit" id="mutasinonkredit" style="width: 250px;"
-                                                class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="8">
-                                            <hr>
-                                        </td>
-                                    </tr>
-                                    <h6>DENOMINASI COIN</h6>
-                                </table>
-                                <table class="table table-borderless table-sm">
-                                    <tr>
-                                        <td style="width: 190px">
-                                        </td>
-                                        <td style="width: 95px;">10 X</td>
-                                        <td>
-                                            <div class="input-group" style="width: 245px;">
-                                                <input type="text" name="niltrandbt2" id="niltrandbt2" class="form-control form-control-sm" style="width: 245px">
-                                                <span class="align-bottom" >&nbsp;&nbsp;koin =</span>
-                                                <!-- <input type="text" name="nilekuivalen2" id="nilekuivalen2" class="form-control form-control-sm" style="width: 245px"> -->
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                                    <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
-                    <br><br><br>
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <h6>DAFTAR SALDO KAS TELLER</h6>
+                <table class="table table-borderless table-sm">
+                  <tr>
+                    <td class="font-weight-normal">Mata Uang</td>
+                    <td>:</td>
+                    <td>
+                      <select class="custom-select" name="optmatauang" id="optmatauang" style="width: 250px; height: 34px;">
+                        <option selected>Pilih Salah Satu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Saldo Awal</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" name="saldoawal" id="saldoawal" style="width: 250px;"
+                        class="form-control form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Saldo Akhir</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" name="saldoakhir" id="saldoakhir" style="width: 250px;"
+                        class="form-control form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Mutasi Debet</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" name="mutasidebet" id="mutasidebet" style="width: 250px;"
+                        class="form-control form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Mutasi Kredit</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" name="mutasikredit" id="mutasikredit" style="width: 250px;"
+                        class="form-control form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Mutasi Non Cash Debet</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" name="mutasinondebet" id="mutasinondebet" style="width: 250px;"
+                        class="form-control form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr style="height: 10px;">
+                    <td style="width: 270px;" class="font-weight-normal">Mutasi Non Cash Kredit</td>
+                    <td style="width: 5px;">:</td>
+                    <td style="width: 500px;"><input type="text" name="mutasinonkredit" id="mutasinonkredit" style="width: 250px;"
+                        class="form-control form-control-sm"></td>
+                    <td style="width: 350px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td style="width: 5px;"></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="8">
+                      <hr>
+                    </td>
+                  </tr>
+                  <h6>DENOMINASI COIN</h6>
+                </table>
+
+                <!--group x10-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">10 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
                 </div>
-            </div>
-        </div>
+                <!--group x10-->
+                <!--group x25-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">25 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
+                </div>
+                <!--group x25-->
+                <!--group x50-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">50 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
+                </div>
+                <!--group x50-->
+                <!--group x100-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">100 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
+                </div>
+                <!--group x100-->
+                <!--group x200-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">200 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
+                </div>
+                <!--group x200-->
+                <!--group x500-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">500 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
+                </div>
+                <!--group x500-->
+                <!--group x1000-->
+                <div class="form-group row">
+                  <span class="col-2"></span>
+                  <label class="col-1 col-form-label">1000 X</label>
+                  <input type="text" class="form-control col-3" id="input1" placeholder="0">
+                  <label for="input1" class="col-1 col-form-label pl-0">Koin =</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="input2" placeholder="0" style="text-align:right;">
+                  </div>
+                </div>
+                <!--group x1000-->
 
+                <br>
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-primary btn-rounded">Proses</button>
+                  <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <br><br><br>
+        </div>
+      </div>
     </div>
+
+  </div>
 </div>

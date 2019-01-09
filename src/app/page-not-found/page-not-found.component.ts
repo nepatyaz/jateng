@@ -2,23 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-not-found',
-  template: ` <div class="stars">
-  <div class="custom-navbar" style="margin-top :5vh">
-      <div class="brand-logo">
-          <img src="http://salehriaz.com/404Page/img/logo.svg" width="80px">
-      </div>
-      <div class="navbar-links">
-          <ul>
-            <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">Home</a></li>
-            <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">About</a></li>
-            <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">Features</a></li>
-            <li><a href="http://salehriaz.com/404Page/404.html" class="btn-request" target="_blank">Request A Demo</a></li>
-          </ul>
-      </div>
-  </div>
+  template: ` <div class="stars" style="margin-top:15vh;">
   <div class="central-body">
-      <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px">
-      <a href="/" class="btn-go-home" target="_blank">GO BACK HOME</a>
+      <img class="image-404" src="assets/image/404.png" width="300px">
+      <a href="/" class="btn-go-home" target="_blank">Kembali</a>
   </div>
   <div class="objects">
       <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
@@ -30,15 +17,6 @@ import { Component, OnInit } from '@angular/core';
           <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
       </div>
   </div>
-  <div class="glowing_stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-
-  </div>
-
 </div>
   `,
   styleUrls: ['./page-not-found.component.css']
