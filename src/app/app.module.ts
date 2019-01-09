@@ -41,6 +41,7 @@ import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
 import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
+import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 
 
 
@@ -82,7 +83,8 @@ import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.componen
     BayarPKBComponent,
     BayarMPNComponent,
     BillpaymentComponent,
-    DenominasiComponent
+    DenominasiComponent,
+    BalancingComponent
   ],
   imports: [
     BrowserModule,

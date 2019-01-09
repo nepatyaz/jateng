@@ -26,6 +26,7 @@ import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
 import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
+import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { LoginGuard } from './guard/login.guard';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
@@ -62,6 +63,7 @@ const routes: Routes = [
       { path: 'pembayaran/bayarmpn', component: BayarMPNComponent },
       { path: 'pembayaran/billpayment', component: BillpaymentComponent },
       { path: 'cashdrawer/denominasi', component: DenominasiComponent },
+      { path: 'cashdrawer/balancing', component: BalancingComponent },
     ]
   },
   {
@@ -83,4 +85,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  DenominasiComponent]
+  DenominasiComponent,BalancingComponent]
