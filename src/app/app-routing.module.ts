@@ -67,10 +67,11 @@ const routes: Routes = [
   {
     path: '', component: LoginLayoutComponent,
     children: [
-      { path: 'login',component: LoginFormComponent,},
+      { path: 'login',component: LoginFormComponent},
     ]
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent}
+  
 ];
 
 @NgModule({

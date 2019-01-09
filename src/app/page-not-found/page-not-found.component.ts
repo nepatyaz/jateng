@@ -2,22 +2,44 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-not-found',
-  template: `
-  <div style="margin-top: 5
-  0vh;margin-left: 20px;margin-right: 20px;">
-     <!-- Start your project here-->
-      <div class="d-flex flex-column h-100">
-         <div id="outer" class="d-flex flex-column flex-grow">
-         <div class="card">
-              <div class="card-body">
-              <H2>
-                Halaman Yang Diminta Tidak Ada!
-              </H2>
-              </div>
-            </div>
-          </div>
+  template: ` <div class="stars">
+  <div class="custom-navbar" style="margin-top :5vh">
+      <div class="brand-logo">
+          <img src="http://salehriaz.com/404Page/img/logo.svg" width="80px">
       </div>
-    </div> 
+      <div class="navbar-links">
+          <ul>
+            <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">Home</a></li>
+            <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">About</a></li>
+            <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">Features</a></li>
+            <li><a href="http://salehriaz.com/404Page/404.html" class="btn-request" target="_blank">Request A Demo</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="central-body">
+      <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px">
+      <a href="/" class="btn-go-home" target="_blank">GO BACK HOME</a>
+  </div>
+  <div class="objects">
+      <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+      <div class="earth-moon">
+          <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+          <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+      </div>
+      <div class="box_astronaut">
+          <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+      </div>
+  </div>
+  <div class="glowing_stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+
+  </div>
+
+</div>
   `,
   styleUrls: ['./page-not-found.component.css']
 })
