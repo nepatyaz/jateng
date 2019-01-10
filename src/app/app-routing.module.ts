@@ -30,6 +30,7 @@ import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { LoginGuard } from './guard/login.guard';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 
 
 const routes: Routes = [
@@ -37,9 +38,9 @@ const routes: Routes = [
     path: '', component: HomeLayoutComponent,
     canActivate: [LoginGuard],
     children: [
-      { path: '',component: DashboardComponent,},
-      { path: 'dashboard',component: DashboardComponent,},
-      { path: 'daftaruser',component: DaftarUserSignOnComponent},
+      { path: '', component: DashboardComponent, },
+      { path: 'dashboard', component: DashboardComponent, },
+      { path: 'daftaruser', component: DaftarUserSignOnComponent },
       { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
       { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
       { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
@@ -64,16 +65,17 @@ const routes: Routes = [
       { path: 'pembayaran/billpayment', component: BillpaymentComponent },
       { path: 'cashdrawer/denominasi', component: DenominasiComponent },
       { path: 'cashdrawer/balancing', component: BalancingComponent },
+      { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent }
     ]
   },
   {
     path: '', component: LoginLayoutComponent,
     children: [
-      { path: 'login',component: LoginFormComponent},
+      { path: 'login', component: LoginFormComponent },
     ]
   },
-  { path: '**', component: PageNotFoundComponent}
-  
+  { path: '**', component: PageNotFoundComponent }
+
 ];
 
 @NgModule({
@@ -85,4 +87,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  DenominasiComponent,BalancingComponent]
+  DenominasiComponent, BalancingComponent,SinkronisasiComponent]

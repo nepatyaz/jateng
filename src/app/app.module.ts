@@ -42,6 +42,7 @@ import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
+import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 
 
 
@@ -84,7 +85,8 @@ import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
     BayarMPNComponent,
     BillpaymentComponent,
     DenominasiComponent,
-    BalancingComponent
+    BalancingComponent,
+    SinkronisasiComponent
   ],
   imports: [
     BrowserModule,
