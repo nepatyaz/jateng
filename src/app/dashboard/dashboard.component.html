@@ -72,15 +72,24 @@
           </div>
 
           <div class="btn-group" mdbDropdown>
-              <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
-                Cash Drawer
-              </button>
-              <div class="dropdown-menu dropdown-primary">
-                <a class="dropdown-item" [routerLink]="['/cashdrawer/denominasi']">Denominasi</a>
-                <a class="dropdown-item" [routerLink]="['/cashdrawer/balancing']">Balancing</a>
-                <a class="dropdown-item" [routerLink]="['/cashdrawer/sinkronisasi']">Sinkronisasi</a>
-              </div>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Cash Drawer
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/cashdrawer/denominasi']">Denominasi</a>
+              <a class="dropdown-item" [routerLink]="['/cashdrawer/balancing']">Balancing</a>
+              <a class="dropdown-item" [routerLink]="['/cashdrawer/sinkronisasi']">Sinkronisasi</a>
             </div>
+          </div>
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Rekening Koran
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/rekening/cetak']">Cetak Rekening Koran</a>
+            </div>
+          </div>
           <!-- Default form contact -->
           <br><br><br><br><br><br><br>
         </div>
@@ -90,4 +99,3 @@
   <!-- /Start your project here-->
 </div>
 <!--Main layout-->
-
