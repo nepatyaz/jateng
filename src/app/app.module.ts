@@ -46,7 +46,6 @@ import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.co
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
