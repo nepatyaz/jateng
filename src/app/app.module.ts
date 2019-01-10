@@ -43,8 +43,9 @@ import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.compo
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
-
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDatepickerModule, matDatepickerAnimations} from '@angular/material/datepicker';
+import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 
 
 
@@ -86,13 +87,16 @@ import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.co
     BillpaymentComponent,
     DenominasiComponent,
     BalancingComponent,
-    SinkronisasiComponent
+    SinkronisasiComponent,
+    CetakrekeningComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    BrowserAnimationsModule,
+    MatDatepickerModule
   ],
   providers: [AuthService,KtrluserService,LoginGuard],
   bootstrap: [AppComponent]
