@@ -44,6 +44,8 @@ import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.componen
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
+import { MaterialModule } from './material';
+
 
 
 @NgModule({
@@ -85,13 +87,14 @@ import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakreke
     DenominasiComponent,
     BalancingComponent,
     SinkronisasiComponent,
-    CetakrekeningComponent
+    CetakrekeningComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
+    MaterialModule
   ],
   providers: [AuthService, KtrluserService, LoginGuard],
   bootstrap: [AppComponent]
