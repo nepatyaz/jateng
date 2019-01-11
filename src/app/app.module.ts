@@ -42,8 +42,9 @@ import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
-
-
+import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
+import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
+import { MaterialModule } from './material';
 
 
 
@@ -84,15 +85,18 @@ import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
     BayarMPNComponent,
     BillpaymentComponent,
     DenominasiComponent,
-    BalancingComponent
+    BalancingComponent,
+    SinkronisasiComponent,
+    CetakrekeningComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    MaterialModule
   ],
-  providers: [AuthService,KtrluserService,LoginGuard],
+  providers: [AuthService, KtrluserService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,93 @@
+<!--Main layout-->
+<div class="m-3 h-100">
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card">
+      <div class="card-body">
+        <h5>Cetak Rekening Koran</h5>
+
+        <mdb-card>
+          <mdb-card-body>
+
+            <!--input 1-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">No Rekening Pertama</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input1-->
+
+            <!--input 2-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">No Rekening Terakhir</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 2-->
+
+            <!--input 3-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Mulai</label>
+              <label class="col-form-label pr-0 font-weight-bold">:</label>
+              <div class="col-3 form-inline">
+                <div class="input-group">
+                  <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+                  <mat-datepicker #picker></mat-datepicker>
+                  <div class="input-group-append">
+                    <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+              </div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Berakhir</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3 form-inline">
+                <div class="input-group">
+                  <input class="form-control" [matDatepicker]="picker2" placeholder="Tanggal Berakhir">
+                  <mat-datepicker #picker2></mat-datepicker>
+                  <div class="input-group-append">
+                    <button mat-raised-button (click)="picker2.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--input 3-->
+
+
+            <!--input 4-->
+            <div class="form-group row ">
+              <label class="col-2 col-form-label  font-weight-bold">Jenis Layout</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3 custom-control custom-radio">
+                <!-- Default unchecked -->
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios"
+                    mdbInputDirective>
+                  <label class="custom-control-label" for="defaultUnchecked">Dengan Garis Batas</label>
+                </div>
+
+                <!-- Default checked -->
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios"
+                    checked mdbInputDirective>
+                  <label class="custom-control-label" for="defaultChecked">Tanpa Garis Batas</label>
+                </div>
+              </div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 4-->
+
+            <div class="d-flex justify-content-center">
+                <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+
+        <span style="height: 10vh;"></span>
+      </div>
+    </div>
+  </div>
+
+</div>
