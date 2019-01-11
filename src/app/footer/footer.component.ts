@@ -7,17 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  public siteUrl = window.location.href;
-  public isDashboard = false;
-
   constructor() { }
 
   ngOnInit() {
-    if (this.siteUrl.search("dashboard") == -1 ) {
-      this.isDashboard = false;
-    } else {
-      this.isDashboard = true;
-    }
 
   }
 
