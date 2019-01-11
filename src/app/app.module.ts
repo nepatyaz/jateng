@@ -45,6 +45,7 @@ import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 import { MaterialModule } from './material';
+import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 
 
 
@@ -88,6 +89,7 @@ import { MaterialModule } from './material';
     BalancingComponent,
     SinkronisasiComponent,
     CetakrekeningComponent,
+    DaftarrekeningComponent,
   ],
   imports: [
     BrowserModule,
