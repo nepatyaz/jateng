@@ -32,6 +32,8 @@ import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
+import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
+
 
 
 const routes: Routes = [
@@ -67,7 +69,8 @@ const routes: Routes = [
       { path: 'cashdrawer/denominasi', component: DenominasiComponent },
       { path: 'cashdrawer/balancing', component: BalancingComponent },
       { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent },
-      { path: 'rekening/cetak', component: CetakrekeningComponent }
+      { path: 'rekening/cetak', component: CetakrekeningComponent },
+      { path: 'rekening/daftar', component: DaftarrekeningComponent },
     ]
   },
   {
@@ -89,4 +92,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent]
+  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent]
