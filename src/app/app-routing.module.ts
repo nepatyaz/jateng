@@ -36,6 +36,7 @@ import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarr
 
 
 
+
 const routes: Routes = [
   {
     path: '', component: HomeLayoutComponent,
@@ -70,7 +71,7 @@ const routes: Routes = [
       { path: 'cashdrawer/balancing', component: BalancingComponent },
       { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent },
       { path: 'rekening/cetak', component: CetakrekeningComponent },
-      { path: 'rekening/daftar', component: DaftarrekeningComponent },
+      { path: 'rekening/daftar', component: DaftarrekeningComponent }
     ]
   },
   {
