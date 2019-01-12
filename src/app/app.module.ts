@@ -46,6 +46,7 @@ import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.co
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 import { MaterialModule } from './material';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
+import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 
 
 
@@ -90,6 +91,7 @@ import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarr
     SinkronisasiComponent,
     CetakrekeningComponent,
     DaftarrekeningComponent,
+    UploadTransaksiComponent,
   ],
   imports: [
     BrowserModule,

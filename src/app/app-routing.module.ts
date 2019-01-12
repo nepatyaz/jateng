@@ -33,6 +33,7 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
+import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 
 
 
@@ -49,6 +50,7 @@ const routes: Routes = [
       { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
       { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
       { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
+      { path: 'administrator/upload', component: UploadTransaksiComponent },
       { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
       { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
       { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
@@ -59,10 +61,10 @@ const routes: Routes = [
       { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
       { path: 'maintencance/kontroluser', component: KontrolUserComponent },
       { path: 'maintencance/tutupuser', component: TutupUserComponent },
-      { path: 'maintencance/ctkpassbook', component: CetakPassbookComponent },
-      { path: 'maintencance/hdrpassbook', component: HeaderPassbookComponent },
-      { path: 'maintencance/ulangpassbook', component: UlangPassbookComponent },
-      { path: 'maintencance/checktaspen', component: CheckTaspenComponent },
+      { path: 'passbook/ctkpassbook', component: CetakPassbookComponent },
+      { path: 'passbook/hdrpassbook', component: HeaderPassbookComponent },
+      { path: 'passbook/ulangpassbook', component: UlangPassbookComponent },
+      { path: 'passbook/checktaspen', component: CheckTaspenComponent },
       { path: 'kartu/carikartuatm', component: CariKartuatmComponent },
       { path: 'pembayaran/bayarpkb', component: BayarPKBComponent },
       { path: 'pembayaran/bayarmpn', component: BayarMPNComponent },
@@ -71,7 +73,7 @@ const routes: Routes = [
       { path: 'cashdrawer/balancing', component: BalancingComponent },
       { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent },
       { path: 'rekening/cetak', component: CetakrekeningComponent },
-      { path: 'rekening/daftar', component: DaftarrekeningComponent }
+      { path: 'rekening/daftar', component: DaftarrekeningComponent } 
     ]
   },
   {
@@ -93,4 +95,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent]
+  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent,UploadTransaksiComponent]
