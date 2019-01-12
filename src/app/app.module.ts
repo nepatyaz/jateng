@@ -47,6 +47,7 @@ import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakreke
 import { MaterialModule } from './material';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
+import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
 
 
 
@@ -92,6 +93,7 @@ import { UploadTransaksiComponent } from './administrative/upload-transaksi/uplo
     CetakrekeningComponent,
     DaftarrekeningComponent,
     UploadTransaksiComponent,
+    ChangeOfflineLimitComponent,
   ],
   imports: [
     BrowserModule,

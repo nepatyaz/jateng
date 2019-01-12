@@ -34,6 +34,7 @@ import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.co
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
+import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
 
 
 
@@ -51,6 +52,7 @@ const routes: Routes = [
       { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
       { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
       { path: 'administrator/upload', component: UploadTransaksiComponent },
+      { path: 'administrator/offlinelimit', component: ChangeOfflineLimitComponent },
       { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
       { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
       { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
@@ -95,4 +97,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent,UploadTransaksiComponent]
+  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent,UploadTransaksiComponent,
+  ChangeOfflineLimitComponent]
