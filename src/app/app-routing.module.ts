@@ -38,12 +38,9 @@ import { ChangeOfflineLimitComponent } from './administrative/change-offline-lim
 import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
-<<<<<<< HEAD
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
-=======
 import { RoleComponent } from './usermaintenance/role/role.component';
 
->>>>>>> 9b66f5afa7a7d37f432584d0876fd89889b0e729
 
 
 //routing alamat setiap komponen di aplikasi 
