@@ -53,6 +53,7 @@ import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-reke
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 import { RoleComponent } from './usermaintenance/role/role.component';
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
+import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
 
 
 
@@ -104,6 +105,7 @@ import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
     GantiPasswordOverrideComponent,
     RoleComponent,
     TellerInComponent,
+    RefreshUserComponent,
   ],
   imports: [
     BrowserModule,
