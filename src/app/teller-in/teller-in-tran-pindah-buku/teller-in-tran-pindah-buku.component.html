@@ -1,98 +1,87 @@
 <!--Main layout-->
-<div style="margin: 20px;">
+<div class="m-3 h-100">
     <!-- Start your project here-->
-    <div class="d-flex flex-column h-100">
-        <div id="outer" class="d-flex flex-column flex-grow">
-            <div class="card">
-                <div class="card-body">
-                    <h5>TRANSAKSI PEMINDAHBUKUAN TANPA CEK</h5>
-                    <!-- Default form contact -->
-                    <div class="card">
-                        <div class="card-body">
-                            <form>
-                                <table class="table table-borderless table-sm">
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Tanggal Valuta</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="tglvaluta" id="tglvaluta"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Nomor Referensi</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="noreferensi" id="noreferensi"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Nomor Rekening Debit</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="norekdebit" id="norekdebit"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Nomor Rekening Kredit</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="norekkredit" id="norekkredit" style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr style="height: 10px;">
-                                        <td style="width: 270px;" class="font-weight-normal">Nilai Transaksi</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td style="width: 500px;"><input type="text" name="niltransaksi" id="niltransaksi"
-                                                style="width: 250px;" class="form-control form-control-sm"></td>
-                                        <td style="width: 350px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td style="width: 5px;"></td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-weight-normal">Kode Departemen</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td>DC</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-weight-normal">Keterangan</td>
-                                        <td style="width: 5px;">:</td>
-                                        <td>
-                                            <textarea rows="4" name="keterangan" id="keterangan" cols="50" class="form-control form-control-sm"></textarea>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                                    <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
+    <div id="outer" class="d-flex flex-column">
+        <div class="card konten">
+            <div class="card-body">
+                <h5>Transaksi Pemindahbukuan Tanpa Cek</h5>
+
+                <mdb-card>
+                    <mdb-card-body>
+
+                        <!--input 1-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
+                            <label class="col-form-label pr-0 font-weight-bold">:</label>
+                            <div class="col-3 form-inline">
+                                <div class="input-group">
+                                    <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+                                    <mat-datepicker #picker></mat-datepicker>
+                                    <div class="input-group-append">
+                                        <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                    <br><br><br>
-                </div>
+                        <!--input 1-->
+                        <!--input 2-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <div class="col-3"><input type="text" class="form-control"></div>
+                            <span class="col-6"></span>
+                        </div>
+                        <!--input 2-->
+                        <!--input 3-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">No Rekening Debit</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <div class="col-3"><input type="text" class="form-control"></div>
+                            <span class="col-6"></span>
+                        </div>
+                        <!--input 3-->
+                        <!--input 4-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">No Rekening Kredit</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <div class="col-3"><input type="text" class="form-control"></div>
+                            <span class="col-6"></span>
+                        </div>
+                        <!--input 4-->
+                        <!--input 5-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <div class="col-3"><input type="text" class="form-control"></div>
+                            <span class="col-6"></span>
+                        </div>
+                        <!--input 5-->
+                        <!--input 6-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <label class="col-2 col-form-label  font-weight-bold">DC</label>
+                            <span class="col-6"></span>
+                        </div>
+                        <!--input 6-->
+                        <!--input 7-->
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <div class="col-3"><input type="text" class="form-control"></div>
+                            <span class="col-6"></span>
+                        </div>
+                        <!--input 7-->
+                        <div class="d-flex justify-content-center">
+                            <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
+                            <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
+                        </div>
+                    </mdb-card-body>
+                </mdb-card>
+
+                <span style="height: 10vh;"></span>
             </div>
         </div>
     </div>
+
 </div>
