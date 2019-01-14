@@ -35,10 +35,11 @@ import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakreke
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
+import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 
 
 
-
+//routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
   {
     path: '', component: HomeLayoutComponent,
@@ -75,7 +76,9 @@ const routes: Routes = [
       { path: 'cashdrawer/balancing', component: BalancingComponent },
       { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent },
       { path: 'rekening/cetak', component: CetakrekeningComponent },
-      { path: 'rekening/daftar', component: DaftarrekeningComponent } 
+      { path: 'rekening/daftar', component: DaftarrekeningComponent },
+      { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent } 
+      
     ]
   },
   {
@@ -98,4 +101,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent,UploadTransaksiComponent,
-  ChangeOfflineLimitComponent]
+  ChangeOfflineLimitComponent,CashdrawerHeadTellerComponent]

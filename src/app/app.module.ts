@@ -48,6 +48,7 @@ import { MaterialModule } from './material';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
+import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 
 
 
@@ -94,6 +95,7 @@ import { ChangeOfflineLimitComponent } from './administrative/change-offline-lim
     DaftarrekeningComponent,
     UploadTransaksiComponent,
     ChangeOfflineLimitComponent,
+    CashdrawerHeadTellerComponent,
   ],
   imports: [
     BrowserModule,
