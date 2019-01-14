@@ -54,6 +54,7 @@ import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password
 import { RoleComponent } from './usermaintenance/role/role.component';
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
 import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
+import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 
 
 
@@ -106,6 +107,7 @@ import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-use
     RoleComponent,
     TellerInComponent,
     RefreshUserComponent,
+    DaftarKodeNasabahComponent,
   ],
   imports: [
     BrowserModule,
