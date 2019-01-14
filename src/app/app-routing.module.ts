@@ -40,6 +40,7 @@ import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-reke
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
 import { RoleComponent } from './usermaintenance/role/role.component';
+import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
 
 
 
@@ -71,6 +72,7 @@ const routes: Routes = [
       { path: 'maintenance/tutupuser', component: TutupUserComponent },
       { path: 'maintenance/gantisandioveride', component: GantiPasswordOverrideComponent },
       { path: 'maintenance/role', component: RoleComponent },
+      { path: 'maintenance/refresh', component: RefreshUserComponent },
       { path: 'passbook/ctkpassbook', component: CetakPassbookComponent },
       { path: 'passbook/hdrpassbook', component: HeaderPassbookComponent },
       { path: 'passbook/ulangpassbook', component: UlangPassbookComponent },
@@ -87,6 +89,7 @@ const routes: Routes = [
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
+      
 
 
     ]
