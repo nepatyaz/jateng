@@ -38,7 +38,7 @@ import { ChangeOfflineLimitComponent } from './administrative/change-offline-lim
 import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
-
+import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -57,6 +57,7 @@ const routes: Routes = [
       { path: 'administrator/upload', component: UploadTransaksiComponent },
       { path: 'administrator/offlinelimit', component: ChangeOfflineLimitComponent },
       { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
+      { path: 'tellerin/tellerin', component: TellerInComponent },
       { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
       { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
       { path: 'tellerin/sinkronfin', component: TellerInSinkronFinComponent },
@@ -102,7 +103,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
+  DaftarUserSignOnComponent, WebBranchStatusComponent,TellerInComponent ,TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
