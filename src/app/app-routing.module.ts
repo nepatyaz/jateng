@@ -37,6 +37,7 @@ import { UploadTransaksiComponent } from './administrative/upload-transaksi/uplo
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
 import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
+import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 
 
 
@@ -65,6 +66,7 @@ const routes: Routes = [
       { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
       { path: 'maintencance/kontroluser', component: KontrolUserComponent },
       { path: 'maintencance/tutupuser', component: TutupUserComponent },
+      { path: 'maintencance/gantisandioveride', component: GantiPasswordOverrideComponent },
       { path: 'passbook/ctkpassbook', component: CetakPassbookComponent },
       { path: 'passbook/hdrpassbook', component: HeaderPassbookComponent },
       { path: 'passbook/ulangpassbook', component: UlangPassbookComponent },
@@ -81,7 +83,7 @@ const routes: Routes = [
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
-      
+
     ]
   },
   {
@@ -103,5 +105,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
-  DenominasiComponent, BalancingComponent,SinkronisasiComponent,CetakrekeningComponent,DaftarrekeningComponent,UploadTransaksiComponent,
-  ChangeOfflineLimitComponent,CashdrawerHeadTellerComponent,ReportCetakRekeningComponent]
+  DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
+  ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,GantiPasswordOverrideComponent]
