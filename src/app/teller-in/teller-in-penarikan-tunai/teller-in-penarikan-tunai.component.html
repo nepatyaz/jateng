@@ -21,33 +21,22 @@
             <div class="form-group row ">
               <label class="col-2 col-form-label  font-weight-bold">Jenis Nomor</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 custom-control custom-radio">
-                <!-- Default unchecked -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios"
-                    mdbInputDirective>
-                  <label class="custom-control-label" for="defaultUnchecked">Nomor Referensi</label>
-                </div>
-
-                <!-- Default checked -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios"
-                    checked mdbInputDirective>
-                  <label class="custom-control-label" for="defaultChecked">Nomor Cheque</label>
-                </div>
+              <div class="form-check form-check-inline">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label"> Nomor Referensi</label>
               </div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label"> Nomor Cheque</label>
+              </div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div class="col-3"><input type="text" class="form-control"></div>
               <span class="col-6"></span>
             </div>
             <!--input 2-->
             <!--input 3-->
-            <div class="form-group row">
-                <label class="col-2 col-form-label  font-weight-bold">Isi Nomor</label>
-                <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input type="text" class="form-control"></div>
-                <span class="col-6"></span>
-              </div>
-              <!--input 3-->
-            <!--input 4-->
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">No Rekening</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -75,11 +64,12 @@
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <span></span>
+              <div class="col-4"><textarea rows="4" cols ="50" class="form-control"></textarea></div>
               <span class="col-6"></span>
             </div>
             <!--input 6-->
-            <!--input 3-->
+            <!--input 7-->
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Kode Taspen</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -92,7 +82,7 @@
                 </select>
               </div>
             </div>
-            <!--input 3-->
+            <!--input 7-->
             <div class="d-flex justify-content-center">
               <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
               <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
