@@ -49,6 +49,7 @@ import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarr
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
 import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
+import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
 
 
 
@@ -96,6 +97,7 @@ import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-tell
     UploadTransaksiComponent,
     ChangeOfflineLimitComponent,
     CashdrawerHeadTellerComponent,
+    ReportCetakRekeningComponent,
   ],
   imports: [
     BrowserModule,

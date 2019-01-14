@@ -3,7 +3,7 @@
   <!-- Start your project here-->
   <div class="d-flex flex-column h-100">
     <div id="outer" class="d-flex flex-column flex-grow">
-      <div class="card">
+      <div class="card konten">
         <div class="card-body">
           <br><br><br><br>
           <h3 class="card-title" style="text-align: center">Home Page Application</h3>
@@ -98,6 +98,16 @@
             <div class="dropdown-menu dropdown-primary">
               <a class="dropdown-item" [routerLink]="['/rekening/cetak']">Cetak Rekening Koran</a>
               <a class="dropdown-item" [routerLink]="['/rekening/daftar']">Daftar Rekening Koran</a>
+            </div>
+          </div>
+
+
+          <div class="btn-group" mdbDropdown>
+            <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+              Cash Drawer Head Teller
+            </button>
+            <div class="dropdown-menu dropdown-primary">
+              <a class="dropdown-item" [routerLink]="['/cashdrawerhead/daftarsaldo']">Daftar Saldo Kas Cabang</a>
             </div>
           </div>
           <!-- Default form contact -->
