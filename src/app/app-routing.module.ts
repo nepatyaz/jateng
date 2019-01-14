@@ -38,7 +38,12 @@ import { ChangeOfflineLimitComponent } from './administrative/change-offline-lim
 import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
+<<<<<<< HEAD
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
+=======
+import { RoleComponent } from './usermaintenance/role/role.component';
+
+>>>>>>> 9b66f5afa7a7d37f432584d0876fd89889b0e729
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -63,11 +68,12 @@ const routes: Routes = [
       { path: 'tellerin/sinkronfin', component: TellerInSinkronFinComponent },
       { path: 'tellerin/pinbukbedauang', component: TellerInPindahBukuBedaUangComponent },
       { path: 'tellerin/pindahbuku', component: TellerInTranPindahBukuComponent },
-      { path: 'maintencance/caribaruuser', component: CariBaruUserComponent },
-      { path: 'maintencance/gantisandi', component: GantiPasswordComponent },
-      { path: 'maintencance/kontroluser', component: KontrolUserComponent },
-      { path: 'maintencance/tutupuser', component: TutupUserComponent },
-      { path: 'maintencance/gantisandioveride', component: GantiPasswordOverrideComponent },
+      { path: 'maintenance/caribaruuser', component: CariBaruUserComponent },
+      { path: 'maintenance/gantisandi', component: GantiPasswordComponent },
+      { path: 'maintenance/kontroluser', component: KontrolUserComponent },
+      { path: 'maintenance/tutupuser', component: TutupUserComponent },
+      { path: 'maintenance/gantisandioveride', component: GantiPasswordOverrideComponent },
+      { path: 'maintenance/role', component: RoleComponent },
       { path: 'passbook/ctkpassbook', component: CetakPassbookComponent },
       { path: 'passbook/hdrpassbook', component: HeaderPassbookComponent },
       { path: 'passbook/ulangpassbook', component: UlangPassbookComponent },
@@ -84,6 +90,7 @@ const routes: Routes = [
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
+
 
     ]
   },
@@ -107,4 +114,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
-  ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,GantiPasswordOverrideComponent]
+  ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent]
