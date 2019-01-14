@@ -15,25 +15,36 @@
                 <div class="col-3 pt-2">
 
                   <!-- radio input -->
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" checked mdbInputDirective>
-                    <label class="custom-control-label" for="defaultUnchecked">Teller</label>
+                  <div class="form-check ">
+                    <label class="form-check-label" for="radio1">
+                      <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>
+                      Teller
+                    </label>
                   </div>
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" unchecked mdbInputDirective>
-                    <label class="custom-control-label" for="defaultChecked">Customer Service</label>
+                  <div class="form-check">
+                    <label class="form-check-label" for="radio2">
+                      <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+                      Customer Service
+                    </label>
                   </div>
-
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" unchecked mdbInputDirective>
-                    <label class="custom-control-label" for="defaultChecked">Head Teller</label>
-                  </div>
-
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" unchecked mdbInputDirective>
-                    <label class="custom-control-label" for="defaultChecked">Head Customer Service</label>
-                  </div>
+                  <div class="form-check">
+                      <label class="form-check-label" for="radio2">
+                        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option2">
+                        Head Teller
+                      </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="radio2">
+                          <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option2">
+                          Head Cutomer Service
+                        </label>
+                      </div>
+                  
                   <!-- radio end-->
+                    <br>
+                  <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-primary btn-rounded">Refresh User</button>
+                  </div>
 
                 </div>
                 <span class="col-2"></span>
