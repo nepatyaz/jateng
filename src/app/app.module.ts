@@ -52,6 +52,7 @@ import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-tell
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 import { RoleComponent } from './usermaintenance/role/role.component';
+import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
 
 
 
@@ -102,6 +103,7 @@ import { RoleComponent } from './usermaintenance/role/role.component';
     ReportCetakRekeningComponent,
     GantiPasswordOverrideComponent,
     RoleComponent,
+    TellerInComponent,
   ],
   imports: [
     BrowserModule,
