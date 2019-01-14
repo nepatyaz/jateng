@@ -50,6 +50,8 @@ import { UploadTransaksiComponent } from './administrative/upload-transaksi/uplo
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
 import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
+import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
+import { RoleComponent } from './usermaintenance/role/role.component';
 
 
 
@@ -98,6 +100,8 @@ import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-reke
     ChangeOfflineLimitComponent,
     CashdrawerHeadTellerComponent,
     ReportCetakRekeningComponent,
+    GantiPasswordOverrideComponent,
+    RoleComponent,
   ],
   imports: [
     BrowserModule,
