@@ -58,6 +58,8 @@ import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
 import { DataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/data-umum-nasabah/data-umum-nasabah.component';
 import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/edit-data-umum-nasabah/edit-data-umum-nasabah.component';
+import { DataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/data-personal/data-personal.component';
+import { UbahDataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-personal/ubah-data-personal.component';
 
 
 
@@ -113,7 +115,9 @@ import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/kompon
     DaftarKodeNasabahComponent,
     PencarianNasabahComponent,
     DataUmumNasabahComponent,
-    EditDataUmumNasabahComponent
+    EditDataUmumNasabahComponent,
+    DataPersonalComponent,
+    UbahDataPersonalComponent
   ],
   imports: [
     BrowserModule,

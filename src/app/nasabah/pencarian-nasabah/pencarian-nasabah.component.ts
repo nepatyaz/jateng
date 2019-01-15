@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewChild, AfterViewInit} from '@angular/core';
+import { Component, AfterViewInit} from '@angular/core';
 
 
 @Component({
@@ -12,15 +12,8 @@ export class PencarianNasabahComponent implements AfterViewInit {
   konten = [1, 0, 0, 0, 0];
   konten1 = [1, 0, 0, 0, 0];
   editData: boolean = true;
-  isichild;
+  editDataPersonal : boolean = true;
 
-  pesan = "pesan parent;"
-
-  // @ViewChild(EditDataUmumNasabahComponent) editStatus;
-  // @ViewChild(DataUmumNasabahComponent) dataStatus;
- // @ViewChild(ChildComponent) child;
-
-  
 
   constructor() { }
 
@@ -28,8 +21,12 @@ export class PencarianNasabahComponent implements AfterViewInit {
 
   }
 
-  terimaStatusEdit($event) {
+  statusEdit($event) {
     this.editData = $event;
+  }
+
+  statusEditDataPersonal($event){
+    this.editDataPersonal = $event;
   }
 
   //blok fungsi untuk menampilkan konten panel atas

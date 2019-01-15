@@ -82,19 +82,21 @@
                   </div>
                   <!--button menu pada tab informasi-->
 
-
                   <!--panel isi konten data umum cif-->
                   <mdb-card>
                     <mdb-card-body>
                       <div *ngIf="konten1[0]" role="tabpanel" class="tab-pane active">
-                        <app-data-umum-nasabah *ngIf="editData" [editData]="editData" (editDataEvent)="terimaStatusEdit($event)"></app-data-umum-nasabah>
-                        <app-edit-data-umum-nasabah *ngIf="!editData" [editData]="editData" (editDataEvent)="terimaStatusEdit($event)"></app-edit-data-umum-nasabah>
+                        <app-data-umum-nasabah *ngIf="editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-data-umum-nasabah>
+                        <app-edit-data-umum-nasabah *ngIf="!editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-edit-data-umum-nasabah>
                       </div>
-                    <!--panel isi konten data umum cif-->
-
+                      <!--panel isi konten data umum cif-->
+                      <!--panel isi konten data personal-->
                       <div *ngIf="konten1[1]" role="tabpanel" class="tab-pane active">
-                        isi data personal
+                        <app-data-personal *ngIf="editDataPersonal" (editDataPersonalEvent)="statusEditDataPersonal($event)"></app-data-personal>
+                        <app-ubah-data-personal *ngIf="!editDataPersonal" (editDataPersonalEvent)="statusEditDataPersonal($event)"></app-ubah-data-personal>
                       </div>
+                      <!--panel isi konten data personal-->
+
                       <div *ngIf="konten1[2]" role="tabpanel" class="tab-pane active">
                         isi transaksi limit
                       </div>
