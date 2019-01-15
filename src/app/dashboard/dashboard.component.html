@@ -54,6 +54,16 @@
           </div>
 
           <div class="btn-group" mdbDropdown>
+              <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
+                Nasabah
+              </button>
+              <div class="dropdown-menu dropdown-primary">
+                  <a class="dropdown-item" [routerLink]="['/nasabah/daftarnasabah']">Daftar Kode Nasabah</a>
+                  <a class="dropdown-item" [routerLink]="['/nasabah/carinasabah']">Pencarian Nasabah</a>
+              </div>
+            </div>
+
+          <div class="btn-group" mdbDropdown>
             <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle" mdbWavesEffect>
               Kartu
             </button>

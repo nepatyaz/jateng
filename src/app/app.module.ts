@@ -55,6 +55,9 @@ import { RoleComponent } from './usermaintenance/role/role.component';
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
 import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
+import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
+import { DataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/data-umum-nasabah/data-umum-nasabah.component';
+import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/edit-data-umum-nasabah/edit-data-umum-nasabah.component';
 
 
 
@@ -108,6 +111,9 @@ import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar
     TellerInComponent,
     RefreshUserComponent,
     DaftarKodeNasabahComponent,
+    PencarianNasabahComponent,
+    DataUmumNasabahComponent,
+    EditDataUmumNasabahComponent
   ],
   imports: [
     BrowserModule,
