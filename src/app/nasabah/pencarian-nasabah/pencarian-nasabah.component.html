@@ -114,9 +114,8 @@
                       <!--panel isi sandi bi-->
                       <!--panel isi data tambahan-->
                       <div *ngIf="konten1[4]" role="tabpanel" class="tab-pane active">
-                          <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahan)="statusDataTambahan($event)"></app-data-tambahan>
-                          <app-ubah-data-tambahan *ngIf="editDataTambahan"></app-ubah-data-tambahan>
-                          <button (click)="editDataTambahan = !editDataTambahan">toggle</button>
+                          <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-data-tambahan>
+                          <app-ubah-data-tambahan *ngIf="!editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-ubah-data-tambahan>
                       </div>
                       <!--panel isi data tambahan-->
                     </mdb-card-body>

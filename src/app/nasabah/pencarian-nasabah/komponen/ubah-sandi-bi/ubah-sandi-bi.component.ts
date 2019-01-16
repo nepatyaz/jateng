@@ -18,7 +18,6 @@ export class UbahSandiBiComponent implements OnInit {
   }
 
   funcUbahSandiBi(){
-    window.alert('ubah');
     this.editSandiBi = true;
     this.editSandiBiEvent.emit(this.editSandiBi);
 
