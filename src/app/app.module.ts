@@ -62,6 +62,11 @@ import { DataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/data
 import { UbahDataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-personal/ubah-data-personal.component';
 import { TransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/transaksi-limit/transaksi-limit.component';
 import { UbahTransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/ubah-transaksi-limit/ubah-transaksi-limit.component';
+import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/sandi-bi.component';
+import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
+import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
+import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
+import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
 
 
 
@@ -121,7 +126,12 @@ import { UbahTransaksiLimitComponent } from './nasabah/pencarian-nasabah/kompone
     DataPersonalComponent,
     UbahDataPersonalComponent,
     TransaksiLimitComponent,
-    UbahTransaksiLimitComponent
+    UbahTransaksiLimitComponent,
+    SandiBiComponent,
+    UbahSandiBiComponent,
+    DataTambahanComponent,
+    UbahDataTambahanComponent,
+    PortofolioCifComponent
   ],
   imports: [
     BrowserModule,
