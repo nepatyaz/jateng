@@ -1,0 +1,44 @@
+<h5 class="text-primary font-weight-bold">Rincian Perhitungan Bunga Jasa Giro</h5>
+<br>
+<div class="row">
+  <label class="col-3 font-weight-bold">Tanggal Awal</label>
+  <label>:</label>
+  <div class="col-3 form-inline">
+      <div class="input-group">
+        <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+        <mat-datepicker #picker></mat-datepicker>
+        <div class="input-group-append">
+          <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<table class="table table-borderless">
+    <tr>
+      <td class="font-weight-bold">User Id </td>
+      <td style="width: 5px;">:</td>
+      <td><strong>Jateng SP</strong></td>
+      <td style="width: 15%;"></td>
+      <td class="font-weight-bold">Kode Bank</td>
+      <td style="width: 5px;">:</td>
+      <td><strong>Bank Jateng</strong></td>
+    </tr>
+    <tr>
+      <td class="font-weight-bold">Nama</td>
+      <td>:</td>
+      <td><strong>Jateng SP</strong></td>
+      <td></td>
+      <td class="font-weight-bold">Kode Cabang</td>
+      <td>:</td>
+      <td><strong>034 - Cabang Utama</strong></td>
+    </tr>
+    <tr>
+        <td colspan="3"></td>
+        <td></td>
+        <td class="font-weight-bold">Kode Departemen</td>
+        <td>:</td>
+        <td><strong>DC - Data Center</strong></td>
+      </tr>
+  </table>
+
