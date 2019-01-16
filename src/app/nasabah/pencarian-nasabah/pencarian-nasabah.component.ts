@@ -13,12 +13,12 @@ export class PencarianNasabahComponent implements AfterViewInit {
   konten1 = [1, 0, 0, 0, 0];
   editData: boolean = true;
   editDataPersonal : boolean = true;
+  editTransaksiLimit : boolean = true;
 
 
   constructor() { }
 
   ngAfterViewInit() {
-
   }
 
   statusEdit($event) {
@@ -27,6 +27,10 @@ export class PencarianNasabahComponent implements AfterViewInit {
 
   statusEditDataPersonal($event){
     this.editDataPersonal = $event;
+  }
+
+  statusEditTransaksiLimit($event){
+    this.editTransaksiLimit = $event;
   }
 
   //blok fungsi untuk menampilkan konten panel atas

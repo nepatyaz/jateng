@@ -61,6 +61,7 @@ import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/kompon
 import { DataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/data-personal/data-personal.component';
 import { UbahDataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-personal/ubah-data-personal.component';
 import { TransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/transaksi-limit/transaksi-limit.component';
+import { UbahTransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/ubah-transaksi-limit/ubah-transaksi-limit.component';
 
 
 
@@ -119,7 +120,8 @@ import { TransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/tr
     EditDataUmumNasabahComponent,
     DataPersonalComponent,
     UbahDataPersonalComponent,
-    TransaksiLimitComponent
+    TransaksiLimitComponent,
+    UbahTransaksiLimitComponent
   ],
   imports: [
     BrowserModule,

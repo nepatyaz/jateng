@@ -100,7 +100,9 @@
 
                       <!--panel isi konten transaksi limit-->
                       <div *ngIf="konten1[2]" role="tabpanel" class="tab-pane active">
-                        <app-transaksi-limit></app-transaksi-limit>
+                        <app-transaksi-limit *ngIf="editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-transaksi-limit>
+                        <app-ubah-transaksi-limit *ngIf="!editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-ubah-transaksi-limit>
+                          <!--panel <button (click)="editTransaksiLimit = !editTransaksiLimit">toggle</button>{{editTransaksiLimit}}-->
                       </div>
                       <!--panel isi konten data limit-->
 
