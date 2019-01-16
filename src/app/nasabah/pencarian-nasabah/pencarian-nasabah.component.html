@@ -123,7 +123,9 @@
                 </div>
                 <!--end panel isi konten data umum cif-->
 
-                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Portofolio</div>
+                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">
+                  <app-portofolio-cif></app-portofolio-cif>
+                </div>
                 <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Relasi</div>
                 <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Alamat Tambahan</div>
                 <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Pesan</div>
