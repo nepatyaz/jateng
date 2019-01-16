@@ -134,8 +134,13 @@
                   <app-mutasi></app-mutasi>  
               </div>
               <!--isi tab data saldo rekening -->
+
+              <!--isi tab data bunga jasa giro -->
+              <div *ngIf="kontenTabungan[4]" role="tabpanel" class="tab-pane active">
+                <app-bunga-jasa-giro></app-bunga-jasa-giro>  
+              </div>
+              <!--isi tab data bunga jas giro -->
               
-              <div *ngIf="kontenTabungan[4]" role="tabpanel" class="tab-pane active">isi 5 </div>
               <div *ngIf="kontenTabungan[5]" role="tabpanel" class="tab-pane active">isi 6 </div>
             </div>
           </mdb-card-body>

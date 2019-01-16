@@ -67,11 +67,12 @@ import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-
 import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
 import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
 import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
-import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/data-administrasi/data-administrasi.component';
-import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/data-suku-bunga/data-suku-bunga.component';
-import { SaldoRekeningComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/saldo-rekening/saldo-rekening.component';
-import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/mutasi/mutasi.component';
+import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-administrasi/data-administrasi.component';
+import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-suku-bunga/data-suku-bunga.component';
+import { SaldoRekeningComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/saldo-rekening/saldo-rekening.component';
+import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/mutasi/mutasi.component';
 import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
+import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/bunga-jasa-giro/bunga-jasa-giro.component';
 
 
 
@@ -141,7 +142,8 @@ import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembu
     DataSukuBungaComponent,
     SaldoRekeningComponent,
     MutasiComponent,
-    PembuatanNasabahBaruComponent
+    PembuatanNasabahBaruComponent,
+    BungaJasaGiroComponent
   ],
   imports: [
     BrowserModule,
