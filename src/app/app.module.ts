@@ -71,6 +71,7 @@ import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofoli
 import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/data-suku-bunga/data-suku-bunga.component';
 import { SaldoRekeningComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/saldo-rekening/saldo-rekening.component';
 import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komponen/mutasi/mutasi.component';
+import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
 
 
 
@@ -139,7 +140,8 @@ import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/komp
     DataAdministrasiComponent,
     DataSukuBungaComponent,
     SaldoRekeningComponent,
-    MutasiComponent
+    MutasiComponent,
+    PembuatanNasabahBaruComponent
   ],
   imports: [
     BrowserModule,
