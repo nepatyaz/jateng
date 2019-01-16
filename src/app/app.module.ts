@@ -67,6 +67,7 @@ import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-
 import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
 import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
 import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
+import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
 
 
 
@@ -131,7 +132,8 @@ import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-c
     UbahSandiBiComponent,
     DataTambahanComponent,
     UbahDataTambahanComponent,
-    PortofolioCifComponent
+    PortofolioCifComponent,
+    PembuatanNasabahBaruComponent
   ],
   imports: [
     BrowserModule,
