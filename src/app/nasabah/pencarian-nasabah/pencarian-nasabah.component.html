@@ -90,7 +90,7 @@
                         <app-edit-data-umum-nasabah *ngIf="!editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-edit-data-umum-nasabah>
                       </div>
                       <!--panel isi konten data umum cif-->
-                      
+
                       <!--panel isi konten data personal-->
                       <div *ngIf="konten1[1]" role="tabpanel" class="tab-pane active">
                         <app-data-personal *ngIf="editDataPersonal" (editDataPersonalEvent)="statusEditDataPersonal($event)"></app-data-personal>
@@ -98,9 +98,12 @@
                       </div>
                       <!--panel isi konten data personal-->
 
+                      <!--panel isi konten transaksi limit-->
                       <div *ngIf="konten1[2]" role="tabpanel" class="tab-pane active">
-                        isi transaksi limit
+                        <app-transaksi-limit></app-transaksi-limit>
                       </div>
+                      <!--panel isi konten data limit-->
+
                       <div *ngIf="konten1[3]" role="tabpanel" class="tab-pane active">
                         isi sandi bi
                       </div>
