@@ -93,7 +93,7 @@ const routes: Routes = [
       { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
-      { path: 'nasabah/buatnasabahbaru', component: PencarianNasabahComponent },
+      { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
 
     ]
   },
