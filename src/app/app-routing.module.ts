@@ -44,7 +44,7 @@ import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-use
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
 import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
-
+import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
 
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
@@ -94,6 +94,7 @@ const routes: Routes = [
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
       { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
+      { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
 
     ]
   },
@@ -118,4 +119,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
   ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent,
-  DaftarKodeNasabahComponent,PencarianNasabahComponent,PembuatanNasabahBaruComponent]
+  DaftarKodeNasabahComponent,PencarianNasabahComponent,PembuatanNasabahBaruComponent,DuplikatNasabahComponent]
