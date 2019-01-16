@@ -1,49 +1,45 @@
 <!--Main layout-->
-<div style="margin: 20px;">
-    <!-- Start your project here-->
-    <div class="d-flex flex-column h-100">
-      <div id="outer" class="d-flex flex-column flex-grow">
-        <div class="card">
-          <div class="card-body">
-            <h5>FORM CETAK PASSBOOK</h5>
-            <!-- Default form contact -->
-            <div class="card">
-              <div class="card-body">
-                <form>
-                  <table class="table table-borderless table-sm">
-                    <tr style="height: 10px;">
-                      <td style="width: 190px;" class="font-weight-normal">No.Rekening</td>
-                      <td style="width: 5px;">:</td>
-                      <td style="width: 500px;"><input type="text" name="norekening" id="norekening" style="width: 250px;" class="form-control form-control-sm"></td>
-                      <td style="width: 350px;"></td>
-                      <td style="width: 5px;"></td>
-                      <td style="width: 5px;"></td>
-                      <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                      <td class="font-weight-normal">Kode Taspen</td>
-                      <td>:</td>
-                      <td>
-                        <select class="custom-select" name="optkodetaspen" id="optkodetaspen" style="width: 200px;">
-                          <option selected>Pilih Salah Satu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </td>
-                    </tr>
-                  </table>
-                  <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                    <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
-                  </div>
-                </form>
+<div class="m-3 h-100">
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card konten">
+      <div class="card-body">
+        <h5>Form Cetak Passbook</h5>
+
+        <mdb-card>
+          <mdb-card-body>
+            <!--input 1-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">No. Rekening</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" name="norekening" id="norekening" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 1-->
+            <!--input 2-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Kode Taspen</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodetaspen" id="optkodetaspen" style="width: 250px;">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
               </div>
             </div>
-            <br><br><br>
-          </div>
-        </div>
+            <!--input 2-->
+            <div class="d-flex justify-content-center">
+                <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
+                <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+
+        <span style="height: 10vh;"></span>
       </div>
     </div>
   </div>
-  
+
+</div>

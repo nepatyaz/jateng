@@ -53,6 +53,19 @@ import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-reke
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 import { RoleComponent } from './usermaintenance/role/role.component';
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
+import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
+import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
+import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
+import { DataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/data-umum-nasabah/data-umum-nasabah.component';
+import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/edit-data-umum-nasabah/edit-data-umum-nasabah.component';
+import { DataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/data-personal/data-personal.component';
+import { UbahDataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-personal/ubah-data-personal.component';
+import { TransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/transaksi-limit/transaksi-limit.component';
+import { UbahTransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/ubah-transaksi-limit/ubah-transaksi-limit.component';
+import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/sandi-bi.component';
+import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
+import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
+import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
 
 
 
@@ -104,6 +117,19 @@ import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
     GantiPasswordOverrideComponent,
     RoleComponent,
     TellerInComponent,
+    RefreshUserComponent,
+    DaftarKodeNasabahComponent,
+    PencarianNasabahComponent,
+    DataUmumNasabahComponent,
+    EditDataUmumNasabahComponent,
+    DataPersonalComponent,
+    UbahDataPersonalComponent,
+    TransaksiLimitComponent,
+    UbahTransaksiLimitComponent,
+    SandiBiComponent,
+    UbahSandiBiComponent,
+    DataTambahanComponent,
+    UbahDataTambahanComponent
   ],
   imports: [
     BrowserModule,

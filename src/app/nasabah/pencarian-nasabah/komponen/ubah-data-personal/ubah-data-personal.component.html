@@ -1,0 +1,388 @@
+<h5 class="text-primary font-weight-bold">Data Pribadi Sesuai Identitas</h5>
+<!--baris 1-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Jenis kartu ID</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>KTP</option>
+      <option value="1">SIM</option>
+      <option value="1">Paspor</option>
+    </select>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">No. Kartu ID</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 1-->
+
+<!--baris 2-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Tanggal Terbit Kartu ID</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3 form-inline">
+    <div class="input-group">
+      <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Terbit">
+      <mat-datepicker #picker></mat-datepicker>
+      <div class="input-group-append">
+        <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+      </div>
+    </div>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Tanggal Akhir Kartu ID</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3 form-inline">
+    <div class="input-group">
+      <input class="form-control" [matDatepicker]="picker2" placeholder="Tanggal Akhir">
+      <mat-datepicker #picker2></mat-datepicker>
+      <div class="input-group-append">
+        <button mat-raised-button (click)="picker2.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--baris 2-->
+
+<!--baris 2-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Tanggal Lahir</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3 form-inline">
+    <div class="input-group">
+      <input class="form-control" [matDatepicker]="picker3" placeholder="Tanggal Akhir">
+      <mat-datepicker #picker3></mat-datepicker>
+      <div class="input-group-append">
+        <button mat-raised-button (click)="picker3.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+      </div>
+    </div>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Tempat Lahir</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 2-->
+
+<!--baris 3-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Pendidikan Terakhir</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>S1</option>
+      <option value="1">D3</option>
+      <option value="1">SMA</option>
+    </select>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Agama</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Islam</option>
+      <option value="1">Kristen</option>
+      <option value="1">Hindu</option>
+      <option value="1">Budha</option>
+    </select>
+  </div>
+</div>
+<!--baris 3-->
+
+<!--baris 4-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Jenis Kelamin</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><select class="custom-select">
+      <option selected>Laki - Laki</option>
+      <option value="1">Perempuan</option>
+    </select></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Status</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Belum Menikah</option>
+      <option value="1">Menikah</option>
+    </select>
+  </div>
+</div>
+<!--baris 4-->
+
+<!--baris 5-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Titel</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Nama Panggilan </label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 5-->
+
+<!--baris 6-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Hoby</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Olahraga</option>
+      <option value="1">Beladiri</option>
+    </select>
+  </div>
+  <span class="col-7"></span>
+</div>
+<!--baris 6-->
+<br>
+<h5 class="font-weight-bold text-primary">Kependudukan</h5>
+<!--baris 7-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Kewarganegaraan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Indonesia</option>
+      <option value="1">Asing</option>
+    </select>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Status Tempat Tinggal </label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Keluarga</option>
+      <option value="1">Kontrak</option>
+    </select></div>
+</div>
+<!--baris 7-->
+
+<!--baris 8-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Lama Tgl.(Thn.)</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Lama Tgl. (Bln)</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 8-->
+
+<!--baris 9-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Negara Asal</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Indonesia</option>
+      <option value="1">Jepang</option>
+    </select>
+  </div>
+</div>
+<!--baris 9-->
+
+<br>
+<h5 class="font-weight-bold text-primary">Tanggungan</h5>
+<!--baris 10-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Jumlah Istri</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Jumlah Anak </label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 10-->
+
+<!--baris 11-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Jumlah Orang Tua</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 11-->
+
+<br>
+<h5 class="font-weight-bold text-primary">Kartu</h5>
+<!--baris 12-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">No Kartu Kredit 1</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Limit Kartu Kredit 1</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 12-->
+<!--baris 13-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">No Kartu Kredit 2</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Limit Kartu Kredit 2</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 13-->
+
+<!--baris 14-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">No Kartu ATM 1</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">No Kartu Atm 2</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 14-->
+
+<br>
+<h5 class="font-weight-bold text-primary">Data Pekerjaan</h5>
+<!--baris 15-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Data Pekerjaan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Keuangan / Akuntan </option>
+      <option value="1">Enginering</option>
+    </select>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Jabatan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 15-->
+<!--baris 16-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Bidang Usaha</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Keuangan</option>
+      <option value="1">Teknologi</option>
+    </select></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Nama Perusahaan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 16-->
+<br>
+<h5 class="font-weight-bold text-primary">Alamat Perusahaan</h5>
+<!--baris 17-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Alamat Jalan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <textarea rows="4" class="form-control">
+    </textarea>
+  </div>
+</div>
+<!--baris 17-->
+<!--baris 18-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">Kota</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>Semarang</option>
+      <option value="1">Pekalongan</option>
+    </select>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Kode Pos</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 18-->
+<!--baris 19-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">No Telepon 1</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <div class="input-group">
+      <input type="text" class="form-control col-3 mr-2" value="021">
+      <input type="text" class="form-control col-9" value="1234567">
+    </div>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Kode Extensi 1</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 19-->
+<!--baris 20-->
+<div class="form-group row">
+  <label class="col-2 col-form-label font-weight-bold">No Telepon 2</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <div class="input-group">
+      <input type="text" class="form-control col-3 mr-2" value="021">
+      <input type="text" class="form-control col-9" value="1234567">
+    </div>
+  </div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Kode Extensi 2</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 20-->
+<!--baris 21-->
+<div class="form-group row  ">
+  <label class="col-2 col-form-label font-weight-bold">No Fax (Prsh)</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <div class="input-group">
+      <input type="text" class="form-control col-3 mr-2" value="021">
+      <input type="text" class="form-control col-9" value="1234567">
+    </div>
+  </div>
+  <span class="col-1"></span>
+</div>
+<!--baris 21-->
+<br>
+<h5 class="font-weight-bold text-primary">Data Kekayaan</h5>
+<!--baris 22-->
+<div class="form-group row  ">
+  <label class="col-2 col-form-label font-weight-bold">Pendapatan Perbulan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected>1 sd 5 jt</option>
+      <option value="1">5 sd 10 jt</option>
+    </select></div>
+</div>
+<!--baris 22-->
+<!--baris 23-->
+<div class="form-group row  ">
+  <label class="col-2 col-form-label font-weight-bold">Sumber Pendapatan Tetap</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+  <span class="col-1"></span>
+  <label class="col-2 col-form-label font-weight-bold">Sumber Pendapatan Tambahan</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 24-->
+<!--baris 25-->
+<div class="form-group row  ">
+  <label class="col-2 col-form-label font-weight-bold">Tujuan Penggunaan Dana</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3"><input type="text" class="form-control"></div>
+</div>
+<!--baris 26-->
+
+<div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary">Proses</button>
+  <button type="button" class="btn btn-primary" (click)="funcUbahPersonal()">Kembali</button>
+</div>
+
+isi value di data : {{editDataPersonal}}

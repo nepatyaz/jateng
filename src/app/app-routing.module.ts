@@ -40,6 +40,9 @@ import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-reke
 import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
 import { RoleComponent } from './usermaintenance/role/role.component';
+import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
+import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
+import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
 
 
 
@@ -71,6 +74,7 @@ const routes: Routes = [
       { path: 'maintenance/tutupuser', component: TutupUserComponent },
       { path: 'maintenance/gantisandioveride', component: GantiPasswordOverrideComponent },
       { path: 'maintenance/role', component: RoleComponent },
+      { path: 'maintenance/refresh', component: RefreshUserComponent },
       { path: 'passbook/ctkpassbook', component: CetakPassbookComponent },
       { path: 'passbook/hdrpassbook', component: HeaderPassbookComponent },
       { path: 'passbook/ulangpassbook', component: UlangPassbookComponent },
@@ -87,7 +91,8 @@ const routes: Routes = [
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
       { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
-
+      { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
+      { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
 
     ]
   },
@@ -107,8 +112,9 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  DaftarUserSignOnComponent, WebBranchStatusComponent,TellerInComponent ,TellerInSetoranTunaiComponent,
+  DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
-  ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent]
+  ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent,
+  DaftarKodeNasabahComponent,PencarianNasabahComponent]

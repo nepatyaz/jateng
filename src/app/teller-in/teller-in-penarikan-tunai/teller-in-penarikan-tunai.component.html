@@ -1,98 +1,98 @@
 <!--Main layout-->
-<div style="margin: 20px;">
-    <!-- Start your project here-->
-    <div class="d-flex flex-column h-100">
-      <div id="outer" class="d-flex flex-column flex-grow">
-        <div class="card">
-          <div class="card-body">
-            <h5>TRANSAKSI PENARIKAN TUNAI</h5>
-            <!-- Default form contact -->
-            <div class="card">
-              <div class="card-body">
-                <form>
-                  <table class="table table-borderless table-sm">
-                        <tr style="height: 10px;">
-                            <td style="width: 270px;" class="font-weight-normal">Tanggal Valuta</td>
-                            <td style="width: 5px;">:</td>
-                            <td style="width: 500px;"><input type="text" name="tglvaluta" id="tglvaluta" style="width: 250px;" class="form-control form-control-sm"></td>
-                            <td style="width: 350px;"></td>
-                            <td style="width: 5px;"></td>
-                            <td style="width: 5px;"></td>
-                            <td colspan="2"></td>
-                        </tr>
-                    <tr>
-                        <td><input style="font-weight: bold" type="radio" id="radio1" name="radio1" value="option1" checked> Nomor Referensi</td>
-                        <td style="width: 5px;">:</td>
-                        <td style="width: 500px;"><input type="text" name="norekening" id="norekening" style="width: 250px;" class="form-control form-control-sm"></td>
-                    </tr>
-                    <tr>
-                        <td><input  type="radio" id="radio1" name="radio1" value="option1"> Nomor Cheque</td>
-                        <td style="width: 5px;">:</td>
-                    </tr>
-                    <td colspan="2"></td>
-                    <tr style="height: 10px;">
-                      <td style="width: 190px;" class="font-weight-normal">Nomor Rekening</td>
-                      <td style="width: 5px;">:</td>
-                      <td style="width: 500px;"><input type="text" name="norekening" id="norekening" style="width: 250px;" class="form-control form-control-sm"></td>
-                      <td style="width: 350px;"></td>
-                      <td style="width: 5px;"></td>
-                      <td style="width: 5px;"></td>
-                      <td colspan="2"></td>
-                    </tr>
-                    <tr style="height: 10px;">
-                        <td style="width: 190px;" class="font-weight-normal">Nilai Transaksi</td>
-                        <td style="width: 5px;">:</td>
-                        <td style="width: 500px;"><input type="text" name="nilaitransaksi" id="nilaitransaksi" style="width: 250px;" class="form-control form-control-sm"></td>
-                        <td style="width: 350px;"></td>
-                        <td style="width: 5px;"></td>
-                        <td style="width: 5px;"></td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <td class="font-weight-normal">Kode Departemen</td>
-                        <td style="width: 5px;">:</td>
-                        <td>DC</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="font-weight-normal">Keterangan</td>
-                        <td style="width: 5px;">:</td>
-                        <td>
-                            <textarea rows="4" name="keterangan" id="keterangan" cols="50" class="form-control form-control-sm"></textarea>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                      <td class="font-weight-normal">Kode Taspen</td>
-                      <td>:</td>
-                      <td>
-                        <select class="custom-select" name="optkodetaspen" id="optkodetaspen" style="width: 200px;">
-                          <option selected>Pilih Salah Satu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </td>
-                    </tr>
-                  </table>
-                  <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                    <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
-                  </div>
-                </form>
+<div class="m-3 h-100">
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card konten">
+      <div class="card-body">
+        <h5>Transaksi Penarikan Tunai</h5>
+
+        <mdb-card>
+          <mdb-card-body>
+
+            <!--input 1-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <label class="col-2 col-form-label  font-weight-bold">28/01/2013</label>
+              <span class="col-6"></span>
+            </div>
+            <!--input 1-->
+            <!--input 2-->
+            <div class="form-group row ">
+              <label class="col-2 col-form-label  font-weight-bold">Jenis Nomor</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="form-check form-check-inline">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label"> Nomor Referensi</label>
+              </div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label"> Nomor Cheque</label>
+              </div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 2-->
+            <!--input 3-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">No Rekening</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 3-->
+            <!--input 4-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 4-->
+            <!--input 5-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <label class="col-2 col-form-label  font-weight-bold">DC</label>
+              <span class="col-6"></span>
+            </div>
+            <!--input 5-->
+            <!--input 6-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <span></span>
+              <div class="col-4"><textarea rows="4" cols ="50" class="form-control"></textarea></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 6-->
+            <!--input 7-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Kode Taspen</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
               </div>
             </div>
-            <br><br><br>
-          </div>
-        </div>
+            <!--input 7-->
+            <div class="d-flex justify-content-center">
+              <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
+              <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+
+        <span style="height: 10vh;"></span>
       </div>
     </div>
   </div>
+
+</div>
