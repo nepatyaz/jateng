@@ -61,7 +61,34 @@
     <div class="tab-content">
 
       <!--Panel isi konten tabs tabungan-->
+
+      <!-- panel informasi atas tab tabungan -->
       <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active">
+        <div class="row">
+          <label class="col-2 font-weight-bold">Nama Pada Rekening</label>
+          <label>:</label>
+          <label class="col-2">Dwi Sutrisno</label>
+          <span class="col-2"></span>
+          <label class="col-2 font-weight-bold">Jenis Rekening</label>
+          <label>:</label>
+          <label class="col-3">2222</label>
+        </div>
+        <div class="row">
+          <label class="col-2 font-weight-bold">Nomer Rekening</label>
+          <label>:</label>
+          <label class="col-2">41200000</label>
+          <span class="col-2"></span>
+          <label class="col-2 font-weight-bold">Mata Uang</label>
+          <label>:</label>
+          <label class="col-3">IDR</label>
+        </div>
+
+        <div class="row">
+          <label class="col-2 font-weight-bold">Cabang</label>
+          <label>:</label>
+          <label class="col-2">Utama</label>
+        </div>
+        <!-- panel informasi atas tab tabungan -->
 
         <!--Panel Tabs konten tabungan-->
         <div class="btn-group" role="group" aria-label="Basic example mb-0">
@@ -80,19 +107,40 @@
         </div>
         <!--Panel Tabs-->
 
+        <!-- isi konten panel tabs tabungan-->
         <mdb-card>
           <mdb-card-body>
             <div class="tab-content">
-                <div *ngIf="kontenTabungan[0]" role="tabpanel" class="tab-pane active">isi 1 </div>
-                <div *ngIf="kontenTabungan[1]" role="tabpanel" class="tab-pane active">isi 2 </div>
-                <div *ngIf="kontenTabungan[2]" role="tabpanel" class="tab-pane active">isi 3 </div>
-                <div *ngIf="kontenTabungan[3]" role="tabpanel" class="tab-pane active">isi 4 </div>
-                <div *ngIf="kontenTabungan[4]" role="tabpanel" class="tab-pane active">isi 5 </div>
-                <div *ngIf="kontenTabungan[5]" role="tabpanel" class="tab-pane active">isi 6 </div>
+              <!--isi tab data administrasi-->
+              <div *ngIf="kontenTabungan[0]" role="tabpanel" class="tab-pane active">
+                <app-data-administrasi></app-data-administrasi>
+              </div>
+              <!--isi tab data administrasi-->
+
+              <!--isi tab data suku bunga-->
+              <div *ngIf="kontenTabungan[1]" role="tabpanel" class="tab-pane active">
+                <app-data-suku-bunga></app-data-suku-bunga>
+              </div>
+              <!--isi tab data suku bunga -->
+
+              <!--isi tab data saldo rekening -->
+              <div *ngIf="kontenTabungan[2]" role="tabpanel" class="tab-pane active">
+                <app-saldo-rekening></app-saldo-rekening>
+              </div>
+              <!--isi tab data saldo rekening -->
+
+              <!--isi tab data saldo rekening -->
+              <div *ngIf="kontenTabungan[3]" role="tabpanel" class="tab-pane active">
+                  <app-mutasi></app-mutasi>  
+              </div>
+              <!--isi tab data saldo rekening -->
+              
+              <div *ngIf="kontenTabungan[4]" role="tabpanel" class="tab-pane active">isi 5 </div>
+              <div *ngIf="kontenTabungan[5]" role="tabpanel" class="tab-pane active">isi 6 </div>
             </div>
           </mdb-card-body>
         </mdb-card>
-
+        <!-- isi konten panel tabs-->
 
       </div>
       <!--Panel isi konten dtabs tabungan-->
