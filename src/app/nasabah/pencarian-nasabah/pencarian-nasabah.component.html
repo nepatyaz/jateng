@@ -106,12 +106,19 @@
                       </div>
                       <!--panel isi konten data limit-->
 
+                      <!--panel isi sandi bi-->
                       <div *ngIf="konten1[3]" role="tabpanel" class="tab-pane active">
-                        isi sandi bi
+                          <app-sandi-bi *ngIf="editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-sandi-bi>
+                          <app-ubah-sandi-bi *ngIf="!editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-ubah-sandi-bi>
                       </div>
+                      <!--panel isi sandi bi-->
+                      <!--panel isi data tambahan-->
                       <div *ngIf="konten1[4]" role="tabpanel" class="tab-pane active">
-                        isi data tambahan
+                          <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahan)="statusDataTambahan($event)"></app-data-tambahan>
+                          <app-ubah-data-tambahan *ngIf="editDataTambahan"></app-ubah-data-tambahan>
+                          <button (click)="editDataTambahan = !editDataTambahan">toggle</button>
                       </div>
+                      <!--panel isi data tambahan-->
                     </mdb-card-body>
                   </mdb-card>
                 </div>

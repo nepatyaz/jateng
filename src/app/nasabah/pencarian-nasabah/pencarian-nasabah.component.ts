@@ -14,7 +14,8 @@ export class PencarianNasabahComponent implements AfterViewInit {
   editData: boolean = true;
   editDataPersonal : boolean = true;
   editTransaksiLimit : boolean = true;
-
+  editSandiBi : boolean = true;
+  editDataTambahan : boolean = true;
 
   constructor() { }
 
@@ -31,6 +32,10 @@ export class PencarianNasabahComponent implements AfterViewInit {
 
   statusEditTransaksiLimit($event){
     this.editTransaksiLimit = $event;
+  }
+
+  statusEditSandiBi($event){
+    this.editSandiBi = $event;
   }
 
   //blok fungsi untuk menampilkan konten panel atas
