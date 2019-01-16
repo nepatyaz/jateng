@@ -1,23 +1,24 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'app-transaksi-limit',
-  templateUrl: './transaksi-limit.component.html',
+  selector: 'app-ubah-transaksi-limit',
+  templateUrl: './ubah-transaksi-limit.component.html',
   styles: []
 })
-export class TransaksiLimitComponent implements OnInit {
+export class UbahTransaksiLimitComponent implements OnInit {
 
   //terima data dari parent component
   @Input() editTransaksiLimit;
   //kirim data ke parent 
   @Output() editTransaksiLimitEvent = new EventEmitter<string>();
-  
+
   constructor() { }
+
   ngOnInit() {
   }
 
   funcUbahLimit(){
-    this.editTransaksiLimit = false;
+    this.editTransaksiLimit = true;
     this.editTransaksiLimitEvent.emit(this.editTransaksiLimit);
   }
 
