@@ -16,7 +16,7 @@
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Kode Nasabah</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control" value="Corporate"></div>
+              <div class="col-3"><input type="text" class="form-control"></div>
               <span class="col-6"></span>
             </div>
             <!--input 1-->
@@ -24,7 +24,7 @@
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Jenis Nasabah</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="col-3"><input type="text" class="form-control" value="Individual"></div>
               <span class="col-6"></span>
             </div>
             <!--input 2-->
@@ -99,6 +99,23 @@
                 <span class="col-6"></span>
               </div>
               <!--input 9-->
+              <!--input 10-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Jenis Kartu Identitas</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3">
+                  <select class="custom-select" name="optkodempn" id="optkodempn">
+                    <option selected>Pilih Salah Satu</option>
+                    <option value="1">KTP</option>
+                    <option value="2">SIM</option>
+                  </select>
+                </div>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">No. Kartu Identitas</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3"><input type="text" class="form-control"></div>
+              </div>
+              <!--input 8-->
               <div class="d-flex justify-content-center">
                 <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
                 <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>

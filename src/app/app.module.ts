@@ -75,6 +75,7 @@ import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembu
 import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
 
 import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/bunga-jasa-giro/bunga-jasa-giro.component';
+import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
 
 
 
@@ -146,7 +147,8 @@ import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-c
     MutasiComponent,
     PembuatanNasabahBaruComponent,
     DuplikatNasabahComponent,
-    BungaJasaGiroComponent
+    BungaJasaGiroComponent,
+    DuplikatNasabahIndvlComponent
   ],
   imports: [
     BrowserModule,
