@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-bunga-jasa-giro',
-  templateUrl: './bunga-jasa-giro.component.html',
+  selector: 'app-riwayat-saldo',
+  templateUrl: './riwayat-saldo.component.html',
   styles: []
 })
-export class BungaJasaGiroComponent implements OnInit {
+export class RiwayatSaldoComponent implements OnInit {
   tanggal = Date.now();
   constructor() { }
 

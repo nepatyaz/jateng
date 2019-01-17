@@ -108,8 +108,8 @@
         <!--Panel Tabs-->
 
         <!-- isi konten panel tabs tabungan-->
-        <mdb-card>
-          <mdb-card-body>
+        <div class="card">
+          <div class="card-body">
             <div class="tab-content">
               <!--isi tab data administrasi-->
               <div *ngIf="kontenTabungan[0]" role="tabpanel" class="tab-pane active">
@@ -140,11 +140,14 @@
                 <app-bunga-jasa-giro></app-bunga-jasa-giro>  
               </div>
               <!--isi tab data bunga jas giro -->
-              
-              <div *ngIf="kontenTabungan[5]" role="tabpanel" class="tab-pane active">isi 6 </div>
+              <!-- isi tab riwayat saldo -->
+              <div *ngIf="kontenTabungan[5]" role="tabpanel" class="tab-pane active">
+                  <app-riwayat-saldo></app-riwayat-saldo> 
+              </div>
+              <!-- isi tab riwayat saldo -->
             </div>
-          </mdb-card-body>
-        </mdb-card>
+          </div>
+        </div>
         <!-- isi konten panel tabs-->
 
       </div>
