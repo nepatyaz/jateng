@@ -96,7 +96,7 @@ const routes: Routes = [
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
       { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
       { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
-      { path: 'nasabah/duplikatnasabah', component:  DuplikatNasabahIndvlComponent },
+      { path: 'nasabah/duplikatnasabahindvl', component:  DuplikatNasabahIndvlComponent },
      
     ]
   },
