@@ -115,7 +115,31 @@
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
                 <div class="col-3"><input type="text" class="form-control"></div>
               </div>
-              <!--input 8-->
+              <!--input 10-->
+              <!--input 11-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Lahir</label>
+              <label class="col-form-label pr-0 font-weight-bold">:</label>
+              <div class="col-3 form-inline">
+                <div class="input-group">
+                  <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Lahir">
+                  <mat-datepicker #picker></mat-datepicker>
+                  <div class="input-group-append">
+                    <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+              </div>
+              <label class="col-2 col-form-label font-weight-bold">Jenis Kelamin</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3">
+                  <select class="custom-select" name="optkodempn" id="optkodempn">
+                    <option selected>Pilih Salah Satu</option>
+                    <option value="1">Pria</option>
+                    <option value="2">Wanita</option>
+                  </select>
+                </div>
+            </div>
+            <!--input11-->
               <div class="d-flex justify-content-center">
                 <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
                 <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
