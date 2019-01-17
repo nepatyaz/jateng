@@ -72,7 +72,11 @@ import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-c
 import { SaldoRekeningComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/saldo-rekening/saldo-rekening.component';
 import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/mutasi/mutasi.component';
 import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
+import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
+
 import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/bunga-jasa-giro/bunga-jasa-giro.component';
+import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
+import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 
 
 
@@ -143,7 +147,10 @@ import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-c
     SaldoRekeningComponent,
     MutasiComponent,
     PembuatanNasabahBaruComponent,
-    BungaJasaGiroComponent
+    DuplikatNasabahComponent,
+    BungaJasaGiroComponent,
+    DuplikatNasabahIndvlComponent,
+    BuatNasabahCorporateComponent
   ],
   imports: [
     BrowserModule,
