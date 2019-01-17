@@ -1,44 +1,153 @@
 <h5 class="text-primary font-weight-bold">Rincian Perhitungan Bunga Jasa Giro</h5>
-<br>
-<div class="row">
+
+<!--panel atas-->
+<div class="row mt-3">
   <label class="col-3 font-weight-bold">Tanggal Awal</label>
   <label>:</label>
   <div class="col-3 form-inline">
-      <div class="input-group">
-        <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
-        <mat-datepicker #picker></mat-datepicker>
-        <div class="input-group-append">
-          <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-        </div>
+    <div class="input-group">
+      <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+      <mat-datepicker #picker></mat-datepicker>
+      <div class="input-group-append">
+        <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
       </div>
     </div>
+  </div>
+</div>
+<br>
+<!--Panel Atas-->
+
+<!--Table-->
+<div class="card shadow-sm">
+  <div class="card-body ">
+    <table class="table table-hover table-bordered">
+      <thead class="grey lighten-2">
+        <tr class="font-weight-bold">
+          <th scope="col">Tanggal</th>
+          <th scope="col">Saldo Rekening</th>
+          <th scope="col">Rate(%) Jasa Giro</th>
+          <th scope="col">Saldo Jasa Giro</th>
+          <th scope="col">Bunga Jasa Giro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">4.25</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">175</td>
+        </tr>
+        <tr>
+          <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">4.25</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">175</td>
+        </tr>
+        <tr>
+          <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">4.25</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">175</td>
+        </tr>
+        <tr>
+          <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">4.25</td>
+          <td class="font-weight-normal">1.500.000</td>
+          <td class="font-weight-normal">175</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+      <!--Pagination-->
+      <div class="d-flex flex-row-reverse" style="margin-top: 15px;">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pg-blue">
+              <li class="page-item">
+                <a class="page-link">
+                  <span >&laquo; Sebelumnya</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link">2</a></li>
+              <li class="page-item"><a class="page-link">3</a></li>
+              <li class="page-item">
+                <a class="page-link">
+                  <span >&raquo; Selanjutnya</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Pagination-->
+
+
+
+  </div>
+</div>
+<!-- table  -->
+
+
+
+<!-- panel bawah -->
+<div class="mt-3">
+<div class="row">
+  <label class="col-3 font-weight-bold">Perioda Bunga s/d Tanggal</label>
+  <label class="col-2"></label>
+  <span class="col-2"></span>
+  <label class="col-2 font-weight-bold">12/11/2012</label>
+  <label class="col-3">12/12/2018</label>
 </div>
 
-<table class="table table-borderless">
-    <tr>
-      <td class="font-weight-bold">User Id </td>
-      <td style="width: 5px;">:</td>
-      <td><strong>Jateng SP</strong></td>
-      <td style="width: 15%;"></td>
-      <td class="font-weight-bold">Kode Bank</td>
-      <td style="width: 5px;">:</td>
-      <td><strong>Bank Jateng</strong></td>
-    </tr>
-    <tr>
-      <td class="font-weight-bold">Nama</td>
-      <td>:</td>
-      <td><strong>Jateng SP</strong></td>
-      <td></td>
-      <td class="font-weight-bold">Kode Cabang</td>
-      <td>:</td>
-      <td><strong>034 - Cabang Utama</strong></td>
-    </tr>
-    <tr>
-        <td colspan="3"></td>
-        <td></td>
-        <td class="font-weight-bold">Kode Departemen</td>
-        <td>:</td>
-        <td><strong>DC - Data Center</strong></td>
-      </tr>
-  </table>
+<div class="row">
+  <label class="col-3 ">Yang Di Hitung</label>
+  <label class="col-2"></label>
+  <span class="col-2"></span>
+  <label class="col-2 ">12/11/2012</label>
+  <label class="col-3">2.132</label>
+</div>
 
+<div class="row">
+  <label class="col-3 ">Yang Di Di Bebankan</label>
+  <label class="col-2"></label>
+  <span class="col-2"></span>
+  <label class="col-2 ">5.248</label>
+  <label class="col-3">5.293</label>
+</div>
+
+<div class="row">
+  <label class="col-3 ">Yang Di Cadangkan</label>
+  <label class="col-2"></label>
+  <span class="col-2"></span>
+  <label class="col-2 "></label>
+  <label class="col-3">1.968</label>
+</div>
+
+<div class="row">
+  <label class="col-3">Adjustment Cadangan Bunga </label>
+  <label class="col-2"></label>
+  <span class="col-2"></span>
+  <label class="col-2"></label>
+  <label class="col-3">0.0</label>
+</div>
+
+<div class="row">
+  <label class="col-3 ">Bunga Bersih</label>
+  <label class="col-2"></label>
+  <span class="col-2"></span>
+  <label class="col-2 "></label>
+  <label class="col-3">0.0</label>
+</div>
+<div class="row">
+  <label class="col-3">Metode Perhitungan Bunga</label>
+  <label class="col-2"></label>
+  <span class="col-2">11</span>
+  <label class="col-2"></label>
+  <label class="col-3"></label>
+</div>
+</div>
+<!-- panel bawah -->
