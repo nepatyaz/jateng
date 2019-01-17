@@ -77,7 +77,7 @@ import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-
 import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/bunga-jasa-giro/bunga-jasa-giro.component';
 import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
-
+import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
 
 
 @NgModule({
@@ -150,7 +150,8 @@ import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembu
     DuplikatNasabahComponent,
     BungaJasaGiroComponent,
     DuplikatNasabahIndvlComponent,
-    BuatNasabahCorporateComponent
+    BuatNasabahCorporateComponent,
+    RiwayatSaldoComponent
   ],
   imports: [
     BrowserModule,
