@@ -77,6 +77,7 @@ import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-c
 import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
+import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/view-kontrol-user/view-kontrol-user.component';
 
@@ -154,8 +155,13 @@ import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/vi
     DuplikatNasabahIndvlComponent,
     BuatNasabahCorporateComponent,
     RiwayatSaldoComponent,
+<<<<<<< HEAD
     BuatNasabahIndividualComponent,
     ViewKontrolUserComponent
+=======
+    GiroComponent,
+    BuatNasabahIndividualComponent
+>>>>>>> 04db1516d522cebf797832401c03b00922efe144
   ],
   imports: [
     BrowserModule,

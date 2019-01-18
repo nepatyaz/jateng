@@ -1,34 +1,69 @@
 <header class="navbar fixed-top">
-  <div class="row" style="width:16vw;" id="header">
-    <div class="row text-right small" style="position: absolute;text-align: right;bottom: -15px;left: 15vw;">
-      <ul style="list-style-type: none;">
-        <li>Tanggal Bisnis</li>
-        <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy'}}</li>
-        <li>Last Login</li>
-        <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy'}}</li>
-      </ul>
+  <div class="row w-100 h-100 p-0" id="header">
+
+    <div style="width: 15%"></div>
+
+    <div style="width: 10%">
+      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+        <ul style="list-style-type: none; font-size:1vw;">
+          <li>Tanggal Bisnis</li>
+          <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy'}}</li>
+          <li>Last Login</li>
+          <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy hh:mm'}}</li>
+        </ul>
+      </div>
     </div>
-    <div class="row  text-right small" style="position: absolute;text-align: right;bottom: -15px;left: 23vw;">
-      <ul style="list-style-type: none;">
-        <li>Status</li>
-        <li class="font-weight-bold text-info">Online</li>
-        <li>IP Anda :</li>
-        <li class="font-weight-bold text-info">xxx.xxx.xxx.xxx</li>
-      </ul>
+
+    <div style="width: 10%">
+      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+        <ul style="list-style-type: none; font-size:1vw;">
+          <li>Status</li>
+          <li class="font-weight-bold text-info">Online</li>
+          <li>IP Anda </li>
+          <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy hh:mm'}}</li>
+        </ul>
+      </div>
     </div>
-    <div class="row text-right small" style="position: absolute;text-align: right;bottom: -15px;left: 32vw;">
-      <ul style="list-style-type: none;">
-        <li></li>
-        <li></li>
-        <li>Cabang :</li>
-        <li class="font-weight-bold text-blue text-info">88|Cabang Utama</li>
-      </ul>
+
+    <div style="width: 12%">
+      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+        <ul style="list-style-type: none; font-size:1vw;">
+          <li></li>
+          <li class="font-weight-bold text-info"></li>
+          <li>Cabang </li>
+          <li class="font-weight-bold text-info">034|Cabang Utama</li>
+        </ul>
+      </div>
     </div>
-    <div class="row text-info text-right small" style="position: absolute;text-align: right;bottom: 0px;left: 45vw;">
-      <a class="text-muted" (click)="fungsi()"><i class="fa fa-sign-out text-muted" role="button"></i>Sign Out</a>
+
+    <div style="width: 12%">
+      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+        <ul style="list-style-type: none; font-size:1vw;">
+          <li></li>
+          <li class="font-weight-bold text-info"></li>
+          <li> </li>
+          <li class="font-weight-bold text-info"><a class="text-muted" (click)="fungsi()"><i class="fa fa-sign-out text-muted"
+                role="button"></i>Sign Out</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="row font-weight-bold text-right" style="position: absolute;text-align: right;top: 35px;right: 20px;">
-      <p class="text-light">Selamat Datang <br> Jateng SP | Jateng SP</p>
+
+
+    <div style="width: 27%">
     </div>
+
+    <div style="width: 14%">
+      <div class="row text-right" style="position: absolute;top: 30px;">
+        <ul style="list-style-type: none; font-size:1vw;">
+          <li class="text-light">
+           <h6>Selamat Datang</h6> 
+          </li>
+          <li class="font-weight-bold text-info">
+            Jateng SP | Jateng SP
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </header>
