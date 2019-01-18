@@ -30,7 +30,7 @@
                       <td>{{record.KodeDept}}</td>
                       <td>
                           <!-- <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a> -->
-                        <button class="btn-sm" mdbBtn color="default" title="Lihat Data" (click)="bukaModal()" >
+                        <button class="btn-sm" mdbBtn color="default" data-toggle="modal" title="Lihat Data" (click)="bukaModal()" mdbWavesEffect>
                           <span>Lihat</span>
                         </button>
                         <span style="margin:3px"></span>
@@ -58,27 +58,52 @@
   </div>
 </div>
 
-
-
-<!--bagian modal untuk pesan login-->
-<div mdbModal #basicModal="mdbModal" class="modal fade modal-notify modal-danger" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content text-center">
-        <!--Header-->
-        <div class="modal-header d-flex justify-content-center">
-          <p class="heading"></p>
+<div mdbModal #basicModal="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"  role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-6">
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">User ID</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
         </div>
-        <!--Body-->
-        <div class="modal-body">
-            <app-view-kontrol-user></app-view-kontrol-user>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Nama User</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-7"><input type="text" class="form-control"></div>
         </div>
-        <!--Footer-->
-        <div class="modal-footer justify-content-center">
-          <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Login Terakhir</label>
+          <label class="col-form-label font-weight-npbold">:</label>
+          <div class="col-7"><input type="text" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Logout Terakhir</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-7"><input type="text" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Status</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Kode Departemen</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
         </div>
       </div>
-      <!--/.Content-->
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>
+      </div>
     </div>
   </div>
-  <!--Bagian modal untuk pesan login-->
+</div>
+

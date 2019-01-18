@@ -29,6 +29,7 @@ import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-use
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 import { KtrluserService } from './ktrluser.service';
+import { ViewuserService } from './viewuser.service';
 import { LoginGuard } from './guard/login.guard';
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -79,7 +80,6 @@ import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembu
 import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
 import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
-import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/view-kontrol-user/view-kontrol-user.component';
 
 
 
@@ -156,7 +156,6 @@ import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/vi
     BuatNasabahCorporateComponent,
     RiwayatSaldoComponent,
     BuatNasabahIndividualComponent,
-    ViewKontrolUserComponent,
     GiroComponent,
     BuatNasabahIndividualComponent
   ],
@@ -167,7 +166,7 @@ import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/vi
     MDBBootstrapModule.forRoot(),
     MaterialModule
   ],
-  providers: [AuthService, KtrluserService, LoginGuard],
+  providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
