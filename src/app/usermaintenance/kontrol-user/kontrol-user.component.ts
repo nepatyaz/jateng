@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from 'angular-bootstrap-md';
 import { KtrluserService } from 'src/app/ktrluser.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { KtrluserService } from 'src/app/ktrluser.service';
 export class KontrolUserComponent implements OnInit {
   
   ktrlusers
+  @ViewChild('basicModal') basicModal: ModalDirective;
 
   constructor(private servis: KtrluserService) { }
 
