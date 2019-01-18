@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ModalDirective } from 'angular-bootstrap-md';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { KtrluserService } from 'src/app/ktrluser.service';
+import { ModalDirective } from 'angular-bootstrap-md';
 
 @Component({
   selector: 'app-kontrol-user',
@@ -19,6 +19,11 @@ export class KontrolUserComponent implements OnInit {
       this.ktrlusers = data
       console.log(this.ktrlusers.UserId)
     })
+  }
+
+
+  bukaModal(){
+    this.basicModal.show()
   }
 
 }
