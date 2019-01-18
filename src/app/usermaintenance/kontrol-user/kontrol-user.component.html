@@ -30,7 +30,7 @@
                       <td>{{record.KodeDept}}</td>
                       <td>
                           <!-- <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a> -->
-                        <button class="btn-sm" mdbBtn color="default" title="Lihat Data" (click)="bukaModal()" >
+                        <button class="btn-sm" mdbBtn color="default" data-toggle="modal" title="Lihat Data" (click)="bukaModal()" mdbWavesEffect>
                           <span>Lihat</span>
                         </button>
                         <span style="margin:3px"></span>
@@ -58,27 +58,36 @@
   </div>
 </div>
 
-
-
-<!--bagian modal untuk pesan login-->
-<div mdbModal #basicModal="mdbModal" class="modal fade modal-notify modal-danger" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content text-center">
-        <!--Header-->
-        <div class="modal-header d-flex justify-content-center">
-          <p class="heading"></p>
-        </div>
-        <!--Body-->
-        <div class="modal-body">
-            <app-view-kontrol-user></app-view-kontrol-user>
-        </div>
-        <!--Footer-->
-        <div class="modal-footer justify-content-center">
-          <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a>
-        </div>
+<div mdbModal #basicModal="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <!--/.Content-->
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <!-- <i class="fa fa-envelope prefix grey-text"></i> -->
+          <input type="email" id="defaultForm-email" [formControl]="loginFormModalEmail" class="form-control validate"
+            mdbInputDirective>
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <!-- <i class="fa fa-lock prefix grey-text"></i> -->
+          <input type="password" id="defaultForm-pass" [formControl]="loginFormModalPassword" class="form-control validate"
+            mdbInputDirective>
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>
+      </div>
     </div>
   </div>
-  <!--Bagian modal untuk pesan login-->
+</div>
+
