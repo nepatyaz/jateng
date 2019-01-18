@@ -16,6 +16,7 @@ import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitas
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
+import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/view-kontrol-user/view-kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -74,6 +75,7 @@ const routes: Routes = [
       { path: 'maintenance/caribaruuser', component: CariBaruUserComponent },
       { path: 'maintenance/gantisandi', component: GantiPasswordComponent },
       { path: 'maintenance/kontroluser', component: KontrolUserComponent },
+      { path: 'maintenance/viewkontroluser', component: ViewKontrolUserComponent },
       { path: 'maintenance/tutupuser', component: TutupUserComponent },
       { path: 'maintenance/gantisandioveride', component: GantiPasswordOverrideComponent },
       { path: 'maintenance/role', component: RoleComponent },

@@ -29,9 +29,10 @@
                       <td>{{record.Status}}</td>
                       <td>{{record.KodeDept}}</td>
                       <td>
-                        <a class="btn-sm" mdbBtn color="default" title="Lihat Data" href="/tabelbarang/view/{{this.id}}">
+                          <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a>
+                        <!-- <a class="btn-sm" mdbBtn color="default" title="Lihat Data" href="/tabelbarang/view/{{this.id}}">
                           <span>Lihat</span>
-                        </a>
+                        </a> -->
                         <span style="margin:3px"></span>
                         <a class="btn-sm" mdbBtn color="default" title="Rubah Data" href="/tabelbarang/update/{{this.id}}">
                           <span>Ubah</span>
@@ -45,8 +46,7 @@
                   </thead>
                 </table>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-primary btn-rounded">Buka</button>
-                  <button type="button" class="btn btn-primary btn-rounded">Tutup</button>
+                  <button type="button" class="btn btn-primary btn-rounded">Keluar</button>
                 </div>
               </form>
             </div>
