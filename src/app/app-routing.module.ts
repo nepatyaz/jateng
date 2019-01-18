@@ -129,4 +129,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent,PencarianNasabahComponent,
   PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, 
-  BuatNasabahIndividualComponent]
+  BuatNasabahIndividualComponent,ViewKontrolUserComponent]
