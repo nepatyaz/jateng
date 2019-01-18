@@ -155,13 +155,10 @@ import { ViewKontrolUserComponent } from './usermaintenance/kontrol-user/view/vi
     DuplikatNasabahIndvlComponent,
     BuatNasabahCorporateComponent,
     RiwayatSaldoComponent,
-<<<<<<< HEAD
     BuatNasabahIndividualComponent,
-    ViewKontrolUserComponent
-=======
+    ViewKontrolUserComponent,
     GiroComponent,
     BuatNasabahIndividualComponent
->>>>>>> 04db1516d522cebf797832401c03b00922efe144
   ],
   imports: [
     BrowserModule,
