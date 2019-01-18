@@ -78,6 +78,7 @@ import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembu
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
 import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
+import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 
 
 
@@ -153,7 +154,8 @@ import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/g
     DuplikatNasabahIndvlComponent,
     BuatNasabahCorporateComponent,
     RiwayatSaldoComponent,
-    GiroComponent
+    GiroComponent,
+    BuatNasabahIndividualComponent
   ],
   imports: [
     BrowserModule,

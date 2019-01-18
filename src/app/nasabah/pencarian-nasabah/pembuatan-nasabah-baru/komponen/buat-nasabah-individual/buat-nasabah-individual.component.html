@@ -19,7 +19,7 @@
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Jenis Nasabah</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control" value="Corporate"></div>
+              <div class="col-3"><input type="text" class="form-control" value="Individual"></div>
               <span class="col-1"></span>
               <label class="col-2 col-form-label font-weight-bold">Kode Nasabah</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -30,7 +30,7 @@
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Nama Nasabah</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control" value="Mat Rasi"></div>
+              <div class="col-3"><input type="text" class="form-control" value="Antok"></div>
               <span class="col-1"></span>
               <label class="col-2 col-form-label font-weight-bold">Tanggal Pembukuan</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -177,167 +177,58 @@
               <span class="col-1"></span>
               <label class="col-2 col-form-label font-weight-bold">Kode Pos</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
             </div>
             <!--input 12-->
-            <!--input 13 -->
-            <u style="color: #2bbbad; font-weight: bold;">
-              <h6 style="color: #2bbbad; font-weight: bold;">Data Nasabah Perusahaan</h6>
-            </u>
-            <!--input 13 -->
-            <!--input 14-->
+            <!--input 13-->
             <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Bentuk Usaha</label>
+              <label class="col-2 col-form-label font-weight-bold">Propinsi</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
-              <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Bidang Usaha</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
+              <div class="col-3"><input type="text" class="form-control" value="Jawa Tengah"></div>
+              <span class="col-6"></span>
             </div>
-            <!--input 14-->
-            <!--input 15-->
+            <!--input 13-->
+            <!--input 14 -->
             <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Ijin Usaha</label>
+              <label class="col-2 col-form-label font-weight-bold">No. Telp</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="col-1"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
               <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Penghasilan per Tahun</label>
+              <label class="col-2 col-form-label font-weight-bold">No. Telp Alternatif</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
+              <div class="col-1"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
             </div>
-            <!--input 15-->
+            <!--input 14 -->
+            <!--input 15 -->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Fax</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-1"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 15 -->
             <!--input 16-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Akte Pendirian</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
-              <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Tanggal Berdiri</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 form-inline">
-                <div class="input-group">
-                  <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Berdiri">
-                  <mat-datepicker #picker></mat-datepicker>
-                  <div class="input-group-append">
-                    <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!--input 27 -->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Data Pribadi Sesuai Identitas</h6>
+            </u>
             <!--input 16-->
             <!--input 17-->
             <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Tujuan Penggunaan</label>
+              <label class="col-2 col-form-label font-weight-bold">Jenis Kartu ID</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="col-3"><input type="text" class="form-control" value="KTP"></div>
               <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Sumber Dana</label>
+              <label class="col-2 col-form-label font-weight-bold">No. Kartu ID</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
-              <span class="col-1"></span>
+              <div class="col-3"><input type="text" class="form-control" value="1415161871"></div>
             </div>
             <!--input 17-->
             <!--input 18-->
             <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Kepemilikan Modal</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
-              <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Negara Asal</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">Indonesia</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
-            </div>
-            <!--input 18-->
-            <!--input 13 -->
-            <u style="color: #2bbbad; font-weight: bold;">
-              <h6 style="color: #2bbbad; font-weight: bold;">Pinjaman Ke Bank Lain</h6>
-            </u>
-            <!--input 13 -->
-            <!--input 20-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Loan Flag</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">Tidak</option>
-                  <option value="2">Ya</option>
-                </select>
-              </div>
-              <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Jenis Pinjaman</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">one</option>
-                  <option value="2">Two</option>
-                  <option value="2">Three</option>
-                </select>
-              </div>
-            </div>
-            <!--input 20-->
-            <!--input 21-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Nilai Pinjaman</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
-              <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Nama Bank</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
-              <span class="col-1"></span>
-            </div>
-            <!--input 21-->
-            <!--input 22-->
-            <u style="color: #2bbbad; font-weight: bold;">
-              <h6 style="color: #2bbbad; font-weight: bold;">Data Tambahan Lainnya</h6>
-            </u>
-            <!--input 22-->
-            <!--input 23-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Tanggal Mulai SIUP</label>
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Terbit Kartu ID</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3 form-inline">
                 <div class="input-group">
@@ -349,7 +240,7 @@
                 </div>
               </div>
               <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Tanggal Jatuh Tempo SIUP</label>
+              <label class="col-2 col-form-label font-weight-bold">Tanggal Akhir Kartu ID</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3 form-inline">
                 <div class="input-group">
@@ -361,67 +252,318 @@
                 </div>
               </div>
             </div>
+            <!--input 18-->
+            <!--input 19-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Lahir</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Tempat Lahir</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+            </div>
+            <!--input 19-->
+            <!--input 20-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Pendidikan Terakhir</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
+              </div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Agama</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">Indonesia</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
+              </div>
+            </div>
+            <!--input 20-->
+            <!--input 21 -->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Kependudukan</h6>
+            </u>
+            <!--input 21 -->
+            <!--input 22-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Kewarganegaraan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">Tidak</option>
+                  <option value="2">Ya</option>
+                </select>
+              </div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Status Tempat Tgl.</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">one</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
+              </div>
+            </div>
+            <!--input 22-->
+            <!--input 23-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Lama Tgl.(Thn.)</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Lama Tgl.(Bln.)</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+            </div>
             <!--input 23-->
             <!--input 24-->
             <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Tanda Daftar Perusahaan</label>
+              <label class="col-2 col-form-label  font-weight-bold">Negara Asal</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
+              </div>
+              <span class="col-1"></span>
+            </div>
+            <!--input 24-->
+            <!--input 25-->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Tanggungan</h6>
+            </u>
+            <!--input 25-->
+            <!--input 26-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Jumlah Istri</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Jumlah Anak</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 26-->
+            <!--input 27-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Jumlah Orang Tua</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3"><input type="text" class="form-control"></div>
               <span class="col-6"></span>
             </div>
-            <!--input 24-->
-            <!--input 25-->
+            <!--input 27-->
+            <!--input 28-->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Kartu</h6>
+            </u>
+            <!--input 28-->
+            <!--input 29-->
             <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Tanggal Masa Berlaku TDP</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 form-inline">
-                <div class="input-group">
-                  <input class="form-control" [matDatepicker]="picker4" placeholder="Tanggal SIUP">
-                  <mat-datepicker #picker4></mat-datepicker>
-                  <div class="input-group-append">
-                    <button mat-raised-button (click)="picker4.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-                  </div>
-                </div>
-              </div>
-              <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Tanggal Jatuh Tempo TDP</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 form-inline">
-                <div class="input-group">
-                  <input class="form-control" [matDatepicker]="picker5" placeholder="Jatuh Tempo Siup">
-                  <mat-datepicker #picker5></mat-datepicker>
-                  <div class="input-group-append">
-                    <button mat-raised-button (click)="picker5.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--input 25-->
-            <!--input 26-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Akte Perubahan</label>
+              <label class="col-2 col-form-label font-weight-bold">Nomor Kartu Kredit 1</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3"><input type="text" class="form-control"></div>
               <span class="col-1"></span>
-              <label class="col-2 col-form-label font-weight-bold">Tanggal Akte Perubahan</label>
+              <label class="col-2 col-form-label font-weight-bold">Limit Kartu Kredit 1</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 form-inline">
-                <div class="input-group">
-                  <input class="form-control" [matDatepicker]="picker6" placeholder="Jatuh Tempo Siup">
-                  <mat-datepicker #picker6></mat-datepicker>
-                  <div class="input-group-append">
-                    <button mat-raised-button (click)="picker6.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-                  </div>
-                </div>
+              <div class="col-3"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 29-->
+            <!--input 30-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Nomor Kartu Kredit 2</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Limit Kartu Kredit 2</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 30-->
+            <!--input 31-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Nomor Kartu ATM 1</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Nomor Kartu ATM 2</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 31-->
+            <!--input 32 -->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Data Pekerjaan</h6>
+            </u>
+            <!--input 32 -->
+            <!--input 33-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Jenis Pekerjaan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
+              </div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Jabatan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+            </div>
+            <!--input 33-->
+            <!--input 34-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Bidang Usaha</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
+              </div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Nama Perusahaan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+            </div>
+            <!--input 34-->
+            <!--input 35-->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Alamat Perusahaan</h6>
+            </u>
+            <!--input 35-->
+            <!--input 36-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Alamat Jalan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-4"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 36-->
+            <!--input 37-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold"></label>
+              <label class="col-form-label pr-0  font-weight-bold">&nbsp;</label>
+              <div class="col-4"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 37-->
+            <!--input 38-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Kota</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">Semarang</option>
+                  <option value="2">Surabaya</option>
+                </select>
+              </div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Kode Pos</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-2"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 38-->
+            <!--input 39 -->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">No Telepon 1</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-1"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">No Extensi 1</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-2"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 39 -->
+            <!--input 40 -->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">No Telepon 2</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-1"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">No Extensi 2</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-2"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 40 -->
+            <!--input 41 -->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">No Fax (Prsh)</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-1"><input type="text" class="form-control"></div>
+              <div class="col-2"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 41 -->
+            <!--input 42-->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Data KYK</h6>
+            </u>
+            <!--input 42-->
+            <!--input 43-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Pendapatan Perbulan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="2">Three</option>
+                </select>
               </div>
             </div>
-            <!--input 26-->
-            <!--input 27 -->
+            <!--input 43-->
+            <!--input 44-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Sumber Pendapatan Tetap</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control" value="Semarang"></div>
+              <span class="col-1"></span>
+              <label class="col-2 col-form-label font-weight-bold">Sumber Pendapatan Tambahan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 44-->
+            <!--input 45-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Tujuan Penggunaan Dana</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control" value="Semarang"></div>
+            </div>
+            <!--input 45-->
+            <!--input 46 -->
             <u style="color: #2bbbad; font-weight: bold;">
               <h6 style="color: #2bbbad; font-weight: bold;">Limit Transaksi</h6>
             </u>
-            <!--input 27 -->
-            <!--input 28-->
+            <!--input 46 -->
+            <!--input 47-->
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Limit Setoran Tunai</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -431,8 +573,8 @@
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3"><input type="text" class="form-control"></div>
             </div>
-            <!--input 28-->
-            <!--input 29-->
+            <!--input 47-->
+            <!--input 48-->
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Limit Setoran Non Tunai</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -442,8 +584,8 @@
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3"><input type="text" class="form-control"></div>
             </div>
-            <!--input 29-->
-            <!--input 30-->
+            <!--input 48-->
+            <!--input 49-->
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Limit Penarikan Tunai</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -453,8 +595,8 @@
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3"><input type="text" class="form-control"></div>
             </div>
-            <!--input 30-->
-            <!--input 31-->
+            <!--input 49-->
+            <!--input 50-->
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Limit Penarikan Non Tunai</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -464,13 +606,13 @@
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3"><input type="text" class="form-control"></div>
             </div>
-            <!--input 31-->
-            <!--input 32 -->
+            <!--input 50-->
+            <!--input 51 -->
             <u style="color: #2bbbad; font-weight: bold;">
               <h6 style="color: #2bbbad; font-weight: bold;">Data Sandi BI</h6>
             </u>
-            <!--input 32 -->
-            <!--input 33-->
+            <!--input 51 -->
+            <!--input 52-->
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Badan Hukum</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -482,8 +624,8 @@
                 </select>
               </div>
             </div>
-            <!--input 33-->
-            <!--input 34-->
+            <!--input 52-->
+            <!--input 53-->
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Golongan Pemilik</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -496,8 +638,8 @@
                 </div>
               </div>
             </div>
-            <!--input 34-->
-            <!--input 35-->
+            <!--input 53-->
+            <!--input 54-->
             <div class="form-group row">
               <label class="col-2 col-form-label font-weight-bold">Kode Industri</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
@@ -510,7 +652,49 @@
                 </div>
               </div>
             </div>
-            <!--input 35-->
+            <!--input 54-->
+            <!--input 55 -->
+            <u style="color: #2bbbad; font-weight: bold;">
+              <h6 style="color: #2bbbad; font-weight: bold;">Data Tambahan Lainnya</h6>
+            </u>
+            <!--input 55 -->
+            <!--input 56-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label font-weight-bold">Ibu Kandung</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+            </div>
+            <!--input 56-->
+            <!--input 57-->
+            <div class="form-group row ">
+              <label class="col-2 col-form-label  font-weight-bold">Karyawan/Pensiunan Sendiri</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="form-check form-check-inline">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label"> Ya</label>
+              </div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label"> Tidak</label>
+              </div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 57-->
+            <!--input 58-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Jenis Terkait</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3">
+                <select class="custom-select" name="optkodempn" id="optkodempn">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                </select>
+              </div>
+            </div>
+            <!--input 58-->
             <br><br>
             <div class="d-flex justify-content-center">
               <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>

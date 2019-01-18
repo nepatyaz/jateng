@@ -47,6 +47,7 @@ import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembu
 import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
 import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
+import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
@@ -99,6 +100,7 @@ const routes: Routes = [
       { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
       { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
       { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
+      { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
      
     ]
   },
@@ -124,4 +126,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent,
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent,PencarianNasabahComponent,
-  PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent]
+  PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, 
+  BuatNasabahIndividualComponent]
