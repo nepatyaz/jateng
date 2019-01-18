@@ -60,29 +60,45 @@
 
 <div mdbModal #basicModal="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
   aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog"  role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="basicModal.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <!-- <i class="fa fa-envelope prefix grey-text"></i> -->
-          <input type="email" id="defaultForm-email" [formControl]="loginFormModalEmail" class="form-control validate"
-            mdbInputDirective>
-          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+      <div class="modal-body mx-6">
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">User ID</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
         </div>
-
-        <div class="md-form mb-4">
-          <!-- <i class="fa fa-lock prefix grey-text"></i> -->
-          <input type="password" id="defaultForm-pass" [formControl]="loginFormModalPassword" class="form-control validate"
-            mdbInputDirective>
-          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Nama User</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-7"><input type="text" class="form-control"></div>
         </div>
-
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Login Terakhir</label>
+          <label class="col-form-label font-weight-npbold">:</label>
+          <div class="col-7"><input type="text" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Logout Terakhir</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-7"><input type="text" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Status</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Kode Departemen</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
+        </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>

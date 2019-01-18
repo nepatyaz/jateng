@@ -29,6 +29,7 @@ import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-use
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 import { KtrluserService } from './ktrluser.service';
+import { ViewuserService } from './viewuser.service';
 import { LoginGuard } from './guard/login.guard';
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -165,7 +166,7 @@ import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pemb
     MDBBootstrapModule.forRoot(),
     MaterialModule
   ],
-  providers: [AuthService, KtrluserService, LoginGuard],
+  providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
