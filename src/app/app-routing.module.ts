@@ -103,7 +103,6 @@ const routes: Routes = [
       { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
       { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
-     
     ]
   },
   {
