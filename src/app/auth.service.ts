@@ -28,7 +28,6 @@ export class AuthService {
     return this.setLoggedIn
   }
   constructor(private http : HttpClient) {
-
   }
 
   getUserDetail(userid, password) {

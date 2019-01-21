@@ -34,11 +34,11 @@
                           <span>Lihat</span>
                         </button>
                         <span style="margin:3px"></span>
-                        <!-- <a class="btn-sm" mdbBtn color="default" title="Rubah Data" href="/tabelbarang/update/{{this.id}}">
-                          <span>Ubah</span>
-                        </a>
+                        <button class="btn-sm" mdbBtn color="default" data-toggle="modal" title="Hapus Data"  (click)="hapusdata(record.UserId)" mdbWavesEffect>
+                            <span>Hapus Data </span>
+                          </button>
                         <span style="margin:3px"></span>
-                        <a class="btn-sm" mdbBtn color="default" title="Hapus Data" data-toggle="confirmation" href="tabelbarang/delete/{{this.id}}">
+                        <!-- <a class="btn-sm" mdbBtn color="default" title="Hapus Data" data-toggle="confirmation" href="tabelbarang/delete/{{this.id}}">
                           <span>Hapus</span>
                         </a> -->
                       </td>
