@@ -28,13 +28,7 @@ export class KontrolUserComponent implements OnInit {
     this.servis.getData().subscribe(data => {
       this.ktrlusers = data
     })
-<<<<<<< HEAD
-    this.servis.getData().subscribe(data => {
-      this.viewusers = data
-    })
-=======
     
->>>>>>> 4e52d880cc83fd2198fba34eeeb1dd399f4b4a54
   }
 
   bukaModal(id){
@@ -47,7 +41,6 @@ export class KontrolUserComponent implements OnInit {
       // }
       this.basicModal.show()
     })
-    
   }
 
   hapusdata(id){
