@@ -28,14 +28,26 @@ export class KontrolUserComponent implements OnInit {
     this.servis.getData().subscribe(data => {
       this.ktrlusers = data
     })
+<<<<<<< HEAD
     this.servis.getData().subscribe(data => {
       this.viewusers = data
     })
+=======
+    
+>>>>>>> 4e52d880cc83fd2198fba34eeeb1dd399f4b4a54
   }
 
-
-  bukaModal(){
-    this.basicModal.show()
+  bukaModal(id){
+    console.log(id)
+    this.servis.getData2(id).subscribe(data => {
+      this.viewusers = data
+      // var isidata = {
+      //   userid : 'string;',
+      //   nama:'agus'
+      // }
+      this.basicModal.show()
+    })
+    
   }
 
   hapusdata(id){
