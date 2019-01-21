@@ -12,4 +12,8 @@ export class KtrluserService {
     //return this.http.get('https://my-json-server.typicode.com/nepatyaz/rest/status')
     return this.http.get('/ktrluser/')
   }
+  getData2(id) {
+    //return this.http.get('https://my-json-server.typicode.com/nepatyaz/rest/status')
+    return this.http.get('/view_ktrluser/'+id)
+  }
 }

@@ -25,6 +25,15 @@
       "pathRewrite": {
         "^/ktrluser": ""
       }
+    },
+    "/view_ktrluser/*": {
+      "target": "http://127.0.0.1:3000/view_ktrluser",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/view_ktrluser": ""
+      }
     }
   }
   
