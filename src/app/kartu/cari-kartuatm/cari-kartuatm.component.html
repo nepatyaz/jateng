@@ -8,10 +8,10 @@
           <h5>PENCARIAN KARTU ATM</h5>
           <!-- Default form contact -->
           <div class="card">
-            <div class="card-body">
+              <div class="card-body">
               <form>
-                <h6>MASUKAN KRITERIA PENCARIAN</h6>
-                <table class="table table-borderless">
+                  <h6>MASUKAN KRITERIA PENCARIAN</h6>
+                  <table class="table table-borderless">
                   <tr>
                     <td style="width: 150px;" class="font-weight-normal">Pilih Kriteria</td>
                     <td style="width: 5px;">:</td>
@@ -29,6 +29,7 @@
                     <td><input type="text" class="form-control form-control-sm" style="width: 250px;"></td>
                   </tr>
                 </table>
+
                 <div class="d-flex justify-content-center">
                   <button type="button" class="btn btn-primary btn-rounded">Cari</button>
                   <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
@@ -37,6 +38,38 @@
             </div>
           </div>
           <br>
+          
+    <!-- <app-aktivasi-atm></app-aktivasi-atm> -->
+      <!--Panel Tabs-->
+       <div class="btn-group" role="group" aria-label="Basic example mb-0">
+         <button (click)="tabAktivasi()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[0], 'btn-light': !konten[0]}"
+           mdbWavesEffect>Aktivasi Kartu</button>
+         <button (click)="tabBlokir()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[1], 'btn-light': !konten[1]}"
+           mdbWavesEffect>Blokir Kartu</button>
+         <button (click)="tabBukaBlokir()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[2], 'btn-light': !konten[2]}"
+           mdbWavesEffect>Buka Blokir Kartu</button>
+         <button (click)="tabTutupKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[3], 'btn-light': !konten[3]}"
+           mdbWavesEffect>Tutup Kartu</button>
+         <button (click)="tabRelasiKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[4], 'btn-light': !konten[4]}"
+           mdbWavesEffect>Relasi Kartu</button>
+       </div>
+       <!--Panel Tabs-->
+
+       
+          <!--Panel isi konten dari menu tabs-->
+          <mdb-card>
+            <mdb-card-body>
+              <div class="tab-content">
+                <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active" id="one">Aktivasi Kartu</div>
+                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">Konten 2</div>
+                <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">Konten 3</div>
+                <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Pesan</div>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+          <!--Panel isi konten dari menu tabs-->
+
+
         </div>
       </div>
     </div>

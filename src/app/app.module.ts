@@ -66,6 +66,7 @@ import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/
 import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
 import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
 import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
+import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivasi-atm.component';
 
 
 
@@ -129,7 +130,8 @@ import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/
     SandiBiComponent,
     UbahSandiBiComponent,
     DataTambahanComponent,
-    UbahDataTambahanComponent
+    UbahDataTambahanComponent,
+    AktivasiAtmComponent
   ],
   imports: [
     BrowserModule,
