@@ -43,9 +43,17 @@ import { RoleComponent } from './usermaintenance/role/role.component';
 import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
+<<<<<<< HEAD
 import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivasi-atm.component';
 
 
+=======
+import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
+import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
+import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
+import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
+import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
+>>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd
 
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
@@ -94,7 +102,15 @@ const routes: Routes = [
       { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
+<<<<<<< HEAD
       { path: 'kartu/aktivasi', component: AktivasiAtmComponent },
+=======
+      { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
+      { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
+      { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
+      { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
+      { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
+>>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd
     ]
   },
   {
@@ -116,6 +132,14 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInComponent, TellerInSetoranTunaiComponent,
   TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent, TellerInSinkronFinComponent,
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
+<<<<<<< HEAD
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
   ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent,
   DaftarKodeNasabahComponent,PencarianNasabahComponent,AktivasiAtmComponent]
+=======
+  DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent,
+  UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
+  GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent,PencarianNasabahComponent,
+  PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, 
+  BuatNasabahIndividualComponent]
+>>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd

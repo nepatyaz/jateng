@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 interface myData {
   status: String,
   message: String,
-  role: String
+  role: String,
 }
 
 @Injectable({
@@ -15,7 +15,7 @@ interface myData {
 export class AuthService {
 
   public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  private loggedInstatus
+  //private loggedInstatus
 
   loggedIn: boolean;
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
@@ -28,14 +28,13 @@ export class AuthService {
     return this.setLoggedIn
   }
   constructor(private http : HttpClient) {
-
   }
 
   getUserDetail(userid, password) {
     //post detail ke http server balikan user info jika benar
     return this.http.post<myData>('/user', {
       userid,
-      password
+      password,
     })
   }
 

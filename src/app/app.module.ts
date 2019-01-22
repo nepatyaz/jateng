@@ -29,6 +29,7 @@ import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-use
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 import { KtrluserService } from './ktrluser.service';
+import { ViewuserService } from './viewuser.service';
 import { LoginGuard } from './guard/login.guard';
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -66,7 +67,23 @@ import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/
 import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
 import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
 import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
+<<<<<<< HEAD
 import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivasi-atm.component';
+=======
+import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
+import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-administrasi/data-administrasi.component';
+import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-suku-bunga/data-suku-bunga.component';
+import { SaldoRekeningComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/saldo-rekening/saldo-rekening.component';
+import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/mutasi/mutasi.component';
+import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
+import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
+import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/bunga-jasa-giro/bunga-jasa-giro.component';
+import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
+import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
+import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
+import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
+import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
+>>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd
 
 
 
@@ -131,7 +148,24 @@ import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivas
     UbahSandiBiComponent,
     DataTambahanComponent,
     UbahDataTambahanComponent,
+<<<<<<< HEAD
     AktivasiAtmComponent
+=======
+    PortofolioCifComponent,
+    DataAdministrasiComponent,
+    DataSukuBungaComponent,
+    SaldoRekeningComponent,
+    MutasiComponent,
+    PembuatanNasabahBaruComponent,
+    DuplikatNasabahComponent,
+    BungaJasaGiroComponent,
+    DuplikatNasabahIndvlComponent,
+    BuatNasabahCorporateComponent,
+    RiwayatSaldoComponent,
+    BuatNasabahIndividualComponent,
+    GiroComponent,
+    BuatNasabahIndividualComponent
+>>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd
   ],
   imports: [
     BrowserModule,
@@ -140,7 +174,7 @@ import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivas
     MDBBootstrapModule.forRoot(),
     MaterialModule
   ],
-  providers: [AuthService, KtrluserService, LoginGuard],
+  providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

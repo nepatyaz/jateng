@@ -1,0 +1,183 @@
+<!--Panel Atas 1-->
+<mdb-card class="mb-3">
+  <mdb-card-body>
+
+    <div class="row">
+      <label class="col-2 font-weight-bold">Nomor Nasabah</label>
+      <label>:</label>
+      <label class="col-2">0500001230</label>
+      <span class="col-2"></span>
+      <label class="col-2 font-weight-bold">Nama</label>
+      <label>:</label>
+      <label class="col-3">Dwi S</label>
+    </div>
+
+    <div class="row">
+      <label class="col-2 font-weight-bold">Total Fasilitas</label>
+      <label>:</label>
+      <label class="col-2">41200000</label>
+      <span class="col-2"></span>
+      <label class="col-2 font-weight-bold">Total O/S Debit</label>
+      <label>:</label>
+      <label class="col-3">01238236712</label>
+    </div>
+
+    <div class="row">
+      <label class="col-2 font-weight-bold">Total Agunan</label>
+      <label>:</label>
+      <label class="col-2">0.10</label>
+      <span class="col-2"></span>
+      <label class="col-2 font-weight-bold">Collect</label>
+      <label>:</label>
+      <label class="col-3">2</label>
+    </div>
+
+  </mdb-card-body>
+</mdb-card>
+<!--Panel Atas 1-->
+
+<!--Panel Tabs-->
+<div class="btn-group" role="group" aria-label="Basic example mb-0">
+  <button (click)="tabTabungan()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[0], 'btn-light': !konten[0]}"
+    mdbWavesEffect>Tabungan</button>
+  <button (click)="tabGiro()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[1], 'btn-light': !konten[1]}"
+    mdbWavesEffect>Giro</button>
+  <button (click)="tabDeposito()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[2], 'btn-light': !konten[2]}"
+    mdbWavesEffect>Deposito</button>
+  <button (click)="tabPinjaman()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[3], 'btn-light': !konten[3]}"
+    mdbWavesEffect>Pinjaman</button>
+  <button (click)="tabFasilitas()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[4], 'btn-light': !konten[4]}"
+    mdbWavesEffect>Fasilitas</button>
+  <button (click)="tabKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[5], 'btn-light': !konten[5]}"
+    mdbWavesEffect>Kartu</button>
+</div>
+<!--Panel Tabs-->
+
+
+
+<!--Panel isi konten dari menu tabs-->
+<mdb-card>
+  <mdb-card-body>
+    <div class="tab-content">
+
+      <!--Panel isi konten tabs tabungan-->
+
+      <!-- panel informasi atas tab tabungan -->
+      <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active">
+        <div class="row">
+          <label class="col-2 font-weight-bold">Nama Pada Rekening</label>
+          <label>:</label>
+          <label class="col-2">Dwi Sutrisno</label>
+          <span class="col-2"></span>
+          <label class="col-2 font-weight-bold">Jenis Rekening</label>
+          <label>:</label>
+          <label class="col-3">2222</label>
+        </div>
+        <div class="row">
+          <label class="col-2 font-weight-bold">Nomer Rekening</label>
+          <label>:</label>
+          <label class="col-2">41200000</label>
+          <span class="col-2"></span>
+          <label class="col-2 font-weight-bold">Mata Uang</label>
+          <label>:</label>
+          <label class="col-3">IDR</label>
+        </div>
+
+        <div class="row">
+          <label class="col-2 font-weight-bold">Cabang</label>
+          <label>:</label>
+          <label class="col-2">Utama</label>
+        </div>
+        <!-- panel informasi atas tab tabungan -->
+
+        <!--Panel Tabs konten tabungan-->
+        <div class="btn-group" role="group" aria-label="Basic example mb-0">
+          <button (click)="tabDataAdmin()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenTabungan[0], 'btn-light': !kontenTabungan[0]}"
+            mdbWavesEffect>Data Administrasi</button>
+          <button (click)="tabDataSukuBunga()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenTabungan[1], 'btn-light': !kontenTabungan[1]}"
+            mdbWavesEffect>Data Suku Bunga</button>
+          <button (click)="tabSaldoRekening()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenTabungan[2], 'btn-light': !kontenTabungan[2]}"
+            mdbWavesEffect>Saldo Rekening</button>
+          <button (click)="tabMutasi()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenTabungan[3], 'btn-light': !kontenTabungan[3]}"
+            mdbWavesEffect>Mutasi</button>
+          <button (click)="tabBungaJasa()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenTabungan[4], 'btn-light': !kontenTabungan[4]}"
+            mdbWavesEffect>Bunga Jasa</button>
+          <button (click)="tabRiwayat()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenTabungan[5], 'btn-light': !kontenTabungan[5]}"
+            mdbWavesEffect>Riwayat</button>
+        </div>
+        <!--Panel Tabs-->
+
+        <!-- isi konten panel tabs tabungan-->
+        <div class="card">
+          <div class="card-body">
+            <div class="tab-content">
+              <!--isi tab data administrasi-->
+              <div *ngIf="kontenTabungan[0]" role="tabpanel" class="tab-pane active">
+                <app-data-administrasi></app-data-administrasi>
+              </div>
+              <!--isi tab data administrasi-->
+
+              <!--isi tab data suku bunga-->
+              <div *ngIf="kontenTabungan[1]" role="tabpanel" class="tab-pane active">
+                <app-data-suku-bunga></app-data-suku-bunga>
+              </div>
+              <!--isi tab data suku bunga -->
+
+              <!--isi tab data saldo rekening -->
+              <div *ngIf="kontenTabungan[2]" role="tabpanel" class="tab-pane active">
+                <app-saldo-rekening></app-saldo-rekening>
+              </div>
+              <!--isi tab data saldo rekening -->
+
+              <!--isi tab data saldo rekening -->
+              <div *ngIf="kontenTabungan[3]" role="tabpanel" class="tab-pane active">
+                  <app-mutasi></app-mutasi>  
+              </div>
+              <!--isi tab data saldo rekening -->
+
+              <!--isi tab data bunga jasa giro -->
+              <div *ngIf="kontenTabungan[4]" role="tabpanel" class="tab-pane active">
+                <app-bunga-jasa-giro></app-bunga-jasa-giro>  
+              </div>
+              <!--isi tab data bunga jas giro -->
+              <!-- isi tab riwayat saldo -->
+              <div *ngIf="kontenTabungan[5]" role="tabpanel" class="tab-pane active">
+                  <app-riwayat-saldo></app-riwayat-saldo> 
+              </div>
+              <!-- isi tab riwayat saldo -->
+            </div>
+          </div>
+        </div>
+        <!-- isi konten panel tabs-->
+
+      </div>
+      <!--Panel isi konten dtabs tabungan-->
+      <!--Panel isi konten tabs giro-->
+      <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active">
+        <app-giro></app-giro>
+      </div>
+      <!--Panel isi konten tabs giro-->
+      <!--Panel isi konten tabs deposito-->
+      <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active">
+        Konten deposito
+      </div>
+      <!--Panel isi konten tabs deposito -->
+      <!--Panel isi konten tabs pinjaman -->
+      <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active">
+        Konten pinjaman
+      </div>
+      <!--Panel isi konten tabs pinjaman -->
+      <!--Panel isi konten tabs fasilitas -->
+      <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active">
+        Konten fasilitas
+      </div>
+      <!--Panel isi konten tabs fasilitas -->
+      <!--Panel isi konten tabs kartu -->
+      <div *ngIf="konten[5]" role="tabpanel" class="tab-pane active">
+        Konten kartu
+      </div>
+      <!--Panel isi konten tabs kartu -->
+    </div>
+  </mdb-card-body>
+</mdb-card>
+<!--Panel isi konten dari menu tabs-->

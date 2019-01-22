@@ -1,0 +1,85 @@
+<!--Main layout-->
+<div class="m-3 h-100">
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card konten">
+      <div class="card-body">
+        <h5>Pencarian Nasabah</h5>
+
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+            <!--input 1-->
+            <div class="form-group row ">
+              <label class="col-2 col-form-label  font-weight-bold">Pilih Kriteria</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3 pt-2">
+                <!-- Default checked -->
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios"
+                  checked mdbInputDirective>
+                  <label class="custom-control-label" for="defaultUnchecked1">Kode Nasabah</label>
+                </div>
+                <!-- Default unhecked -->
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultChecked2" name="defaultExampleRadios"
+                    mdbInputDirective>
+                  <label class="custom-control-label" for="defaultChecked2">Kode Cabang</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultChecked3" name="defaultExampleRadios"
+                    mdbInputDirective>
+                  <label class="custom-control-label" for="defaultChecked3">No Kartu Identitas</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultChecked4" name="defaultExampleRadios"
+                    mdbInputDirective>
+                  <label class="custom-control-label" for="defaultChecked4">Alamat</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultChecked5" name="defaultExampleRadios"
+                    mdbInputDirective>
+                  <label class="custom-control-label" for="defaultChecked5">Nama Nasabah</label>
+                </div>
+              </div>
+              <span class="col-2"></span>
+            </div>
+            <!--input 1-->
+            <!--input 2-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Masukkan Nilai</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="input-group-append" id="button-addon4">
+                <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Cari</button>
+              </div>
+            </div>
+            
+            <div>
+              <hr>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold" style="color: #2bbbad">Pembuatan Nasabah Baru</label>
+            </div>
+            <div class="form-group row">
+                <span class="col-2"></span>
+                <div class="col-3">
+                  <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
+                    <option selected>Pilih Salah Satu</option>
+                    <option value="1">Corporate</option>
+                    <option value="2">Retail</option>
+                  </select>
+                </div>
+                <div class="input-group-append" id="button-addon4">
+                    <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
+                  </div>
+              </div>
+              
+          </mdb-card-body>
+        </mdb-card>
+
+        <span style="height: 10vh;"></span>
+      </div>
+    </div>
+  </div>
+
+</div>

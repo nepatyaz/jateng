@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header-home.component.css']
 })
 export class HeaderHomeComponent implements OnInit {
-
+  tanggal = Date.now();
   constructor(private router : Router) { }
 
   ngOnInit() {

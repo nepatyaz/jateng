@@ -1,0 +1,60 @@
+<!--Panel Tabs konten tabungan-->
+<div class="btn-group" role="group" aria-label="Basic example mb-0">
+  <button (click)="tabDataAdmin()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[0], 'btn-light': !kontenGiro[0]}"
+    mdbWavesEffect>Data Administrasi</button>
+  <button (click)="tabDataSukuBunga()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[1], 'btn-light': !kontenGiro[1]}"
+    mdbWavesEffect>Data Suku Bunga</button>
+  <button (click)="tabSaldoRekening()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[2], 'btn-light': !kontenGiro[2]}"
+    mdbWavesEffect>Saldo Rekening</button>
+  <button (click)="tabMutasi()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[3], 'btn-light': !kontenGiro[3]}"
+    mdbWavesEffect>Mutasi</button>
+  <button (click)="tabBungaJasa()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[4], 'btn-light': !kontenGiro[4]}"
+    mdbWavesEffect>Bunga Jasa</button>
+  <button (click)="tabRiwayat()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[5], 'btn-light': !kontenGiro[5]}"
+    mdbWavesEffect>Riwayat</button>
+</div>
+<!--Panel Tabs-->
+
+
+<!-- isi konten panel tabs tabungan-->
+<div class="card">
+  <div class="card-body">
+    <div class="tab-content">
+      <!--isi tab data administrasi-->
+      <div *ngIf="kontenGiro[0]" role="tabpanel" class="tab-pane active">
+        isi 1
+      </div>
+      <!--isi tab data administrasi-->
+
+      <!--isi tab data suku bunga-->
+      <div *ngIf="kontenGiro[1]" role="tabpanel" class="tab-pane active">
+        isi nya 2
+      </div>
+      <!--isi tab data suku bunga -->
+
+      <!--isi tab data saldo rekening -->
+      <div *ngIf="kontenGiro[2]" role="tabpanel" class="tab-pane active">
+        isi nya 3
+      </div>
+      <!--isi tab data saldo rekening -->
+
+      <!--isi tab data saldo rekening -->
+      <div *ngIf="kontenGiro[3]" role="tabpanel" class="tab-pane active">
+        isi nya4
+      </div>
+      <!--isi tab data saldo rekening -->
+
+      <!--isi tab data bunga jasa giro -->
+      <div *ngIf="kontenGiro[4]" role="tabpanel" class="tab-pane active">
+        isi nya5
+      </div>
+      <!--isi tab data bunga jas giro -->
+      <!-- isi tab riwayat saldo -->
+      <div *ngIf="kontenGiro[5]" role="tabpanel" class="tab-pane active">
+        isi nya6
+      </div>
+      <!-- isi tab riwayat saldo -->
+    </div>
+  </div>
+</div>
+<!-- isi konten panel tabs-->

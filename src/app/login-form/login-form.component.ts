@@ -24,7 +24,6 @@ export class LoginFormComponent implements OnInit {
     //buat variabel untuk menyimpan nilai/value dari setiap id komponen form
     const username = target.querySelector('#username').value
     const password = target.querySelector('#password').value
-    console.log(username);
     //console.log(username + " - " + password)
     //jalankan fungsi dari servis auth yang bernama getuserdetail
     //kirim juga nilai dari form yang sudah disimpan oleh ke variabel ke dalam parameter fungsi
@@ -40,14 +39,15 @@ export class LoginFormComponent implements OnInit {
           //dan arahkan ke halaman dashboard
           if (data.status === 'OK') {
             //redirect ke halaman redirect
-            console.log(data.status)
+            console.log(data.status);
+            console.log(data.message)
             //set session storage untuk menyimpan data session
             var status: string = String(data.status)
             var role: string = String(data.role)
-            console.log( data.role)
             sessionStorage.setItem('status', status)
             sessionStorage.setItem('role', role)
             sessionStorage.setItem('isLoggedIn', "true");
+
 
             this.router.navigate(['/dashboard']);
             //this.otentifikasi.setLoggedIn(true)

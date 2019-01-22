@@ -9,36 +9,101 @@
           <!-- Default form contact -->
           <div class="card">
             <div class="card-body">
-              <form>
-                <table class="table table-striped table-hover table-bordered" style="height:25px; text-align:center;">
+              <!-- <form> -->
+                <table class="table table-sm table-striped table-hover table-bordered" style="height:25px; text-align:center;">
                   <thead class="thead-light">
                     <tr>
                       <th class="col-form-label pr-0 font-weight-bold" style="width:4%;line-height: 1.2">User ID</th>
-                      <th class="col-form-label pr-0 font-weight-bold" style="width:24%;line-height: 1.2">Nama</th>
-                      <th class="col-form-label pr-0 font-weight-bold" style="width:15%;line-height: 1.2">Login Terakhir</th>
-                      <th class="col-form-label pr-0 font-weight-bold" style="width:15%;line-height: 1.2">Logout Terakhir</th>
+                      <th class="col-form-label pr-0 font-weight-bold" style="width:20%;line-height: 1.2">Nama</th>
+                      <th class="col-form-label pr-0 font-weight-bold" style="width:12%;line-height: 1.2">Login Terakhir</th>
+                      <th class="col-form-label pr-0 font-weight-bold" style="width:12%;line-height: 1.2">Logout Terakhir</th>
                       <th class="col-form-label pr-0 font-weight-bold" style="width:8%;line-height: 1.2">Status</th>
-                      <th class="col-form-label pr-0 font-weight-bold" style="width:12%;line-height: 1.2">Kode Departemen</th>
+                      <th class="col-form-label pr-0 font-weight-bold" style="width:10%;line-height: 1.2">Kode Departemen</th>
+                      <th class="col-form-label pr-0 font-weight-bold" style="width:15%;line-height: 1.2">Pilih Proses</th>
                     </tr>
                     <tr *ngFor="let record of ktrlusers; let i = index; let evenRecords = even; let oddRecords = odd;let firsRecords = first; let lastRecords = last;" [ngClass]="{odd:oddRecords, even:evenRecords, first : firsRecords, last : lastRecords}">
-                      <td style="line-height: 0.5;">{{record.UserId}}</td>
-                      <td style="line-height: 0.5;text-align:left">{{record.Nama}}</td>
-                      <td style="line-height: 0.5;">{{record.LoginAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
-                      <td style="line-height: 0.5;">{{record.LogoutAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
-                      <td style="line-height: 0.5;">{{record.Status}}</td>
-                      <td style="line-height: 0.5;">{{record.KodeDept}}</td>
+                      <td>{{record.UserId}}</td>
+                      <td style="text-align:left">{{record.Nama}}</td>
+                      <td>{{record.LoginAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                      <td>{{record.LogoutAkhir | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                      <td>{{record.Status}}</td>
+                      <td>{{record.KodeDept}}</td>
+                      <td>
+                          <!-- <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a> -->
+                        <button class="btn-sm" mdbBtn color="default" data-toggle="modal" title="Lihat Data" (click)="bukaModal(record.id)" mdbWavesEffect>
+                          <span>Lihat</span>
+                        </button>
+                        <span style="margin:3px"></span>
+                        <button class="btn-sm" mdbBtn color="default" data-toggle="modal" title="Hapus Data"  (click)="hapusdata(record.UserId)" mdbWavesEffect>
+                            <span>Hapus Data </span>
+                          </button>
+                        <span style="margin:3px"></span>
+                        <!-- <a class="btn-sm" mdbBtn color="default" title="Hapus Data" data-toggle="confirmation" href="tabelbarang/delete/{{this.id}}">
+                          <span>Hapus</span>
+                        </a> -->
+                      </td>
                     </tr>
                   </thead>
                 </table>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-primary btn-rounded">Buka</button>
-                  <button type="button" class="btn btn-primary btn-rounded">Tutup</button>
+                  <button type="button" class="btn btn-primary btn-rounded">Keluar</button>
                 </div>
-              </form>
+              <!-- </form> -->
             </div>
           </div>
           <br>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #basicModal="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"  role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <tr *ngFor="let record2 of viewusers"></tr>
+
+      <div class="modal-body mx-6">
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">User ID</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control" value="{{userid}}"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Nama User</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-7"><input type="text" class="form-control" value="{{nama}}"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Login Terakhir</label>
+          <label class="col-form-label font-weight-npbold">:</label>
+          <div class="col-7"><input type="text" class="form-control" value="{{loginAkhir}}"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Logout Terakhir</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-7"><input type="text" class="form-control" value="{{logoutAkhir}}"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Status</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control" value="{{status}}"></div>
+        </div>
+        <div class="form-group row">
+          <label class="col-4 col-form-label font-weight-nobold">Kode Departemen</label>
+          <label class="col-form-label font-weight-nobold">:</label>
+          <div class="col-4"><input type="text" class="form-control"></div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>
       </div>
     </div>
   </div>

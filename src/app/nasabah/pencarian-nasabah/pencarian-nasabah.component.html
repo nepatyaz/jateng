@@ -7,8 +7,8 @@
         <div class="card-body">
 
           <!--Panel Atas 1-->
-          <mdb-card class="mb-3">
-            <mdb-card-body>
+          <div class="card mb-3">
+            <div class="card-body">
 
               <div class="row">
                 <label class="col-2 font-weight-bold">Nama Nasabah</label>
@@ -40,8 +40,8 @@
                 <label class="col-3">CS</label>
               </div>
 
-            </mdb-card-body>
-          </mdb-card>
+            </div>
+          </div>
           <!--Panel Atas 1-->
 
 
@@ -61,8 +61,8 @@
           <!--Panel Tabs-->
 
           <!--Panel isi konten dari menu tabs-->
-          <mdb-card>
-            <mdb-card-body>
+          <div class="card">
+            <div class="card-body">
               <div class="tab-content">
 
                 <!--Panel isi konten dari tab informasi -->
@@ -83,8 +83,8 @@
                   <!--button menu pada tab informasi-->
 
                   <!--panel isi konten data umum cif-->
-                  <mdb-card>
-                    <mdb-card-body>
+                  <div class="card">
+                    <div class="card-body">
                       <div *ngIf="konten1[0]" role="tabpanel" class="tab-pane active">
                         <app-data-umum-nasabah *ngIf="editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-data-umum-nasabah>
                         <app-edit-data-umum-nasabah *ngIf="!editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-edit-data-umum-nasabah>
@@ -114,23 +114,24 @@
                       <!--panel isi sandi bi-->
                       <!--panel isi data tambahan-->
                       <div *ngIf="konten1[4]" role="tabpanel" class="tab-pane active">
-                          <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahan)="statusDataTambahan($event)"></app-data-tambahan>
-                          <app-ubah-data-tambahan *ngIf="editDataTambahan"></app-ubah-data-tambahan>
-                          <button (click)="editDataTambahan = !editDataTambahan">toggle</button>
+                          <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-data-tambahan>
+                          <app-ubah-data-tambahan *ngIf="!editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-ubah-data-tambahan>
                       </div>
                       <!--panel isi data tambahan-->
-                    </mdb-card-body>
-                  </mdb-card>
+                    </div>
+                  </div>
                 </div>
                 <!--end panel isi konten data umum cif-->
 
-                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Portofolio</div>
+                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">
+                  <app-portofolio-cif></app-portofolio-cif>
+                </div>
                 <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Relasi</div>
                 <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Alamat Tambahan</div>
                 <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Pesan</div>
               </div>
-            </mdb-card-body>
-          </mdb-card>
+            </div>
+          </div>
           <!--Panel isi konten dari menu tabs-->
 
           <!-- Default form contact -->
