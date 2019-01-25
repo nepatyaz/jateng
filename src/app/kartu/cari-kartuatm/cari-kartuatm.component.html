@@ -5,12 +5,12 @@
     <div id="outer" class="d-flex flex-column flex-grow">
       <div class="card konten">
         <div class="card-body">
-          <h5>PENCARIAN KARTU ATM</h5>
+          <h5 class="text-primary font-weight-bold">PENCARIAN KARTU ATM</h5>
           <!-- Default form contact -->
           <div class="card">
               <div class="card-body">
               <form>
-                  <h6>MASUKAN KRITERIA PENCARIAN</h6>
+                  <h5>MASUKAN KRITERIA PENCARIAN</h5>
                   <table class="table table-borderless">
                   <tr>
                     <td style="width: 150px;" class="font-weight-normal">Pilih Kriteria</td>
@@ -38,38 +38,57 @@
             </div>
           </div>
           <br>
-          
-    <!-- <app-aktivasi-atm></app-aktivasi-atm> -->
-      <!--Panel Tabs-->
-       <div class="btn-group" role="group" aria-label="Basic example mb-0">
-         <button (click)="tabAktivasi()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[0], 'btn-light': !konten[0]}"
-           mdbWavesEffect>Aktivasi Kartu</button>
-         <button (click)="tabBlokir()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[1], 'btn-light': !konten[1]}"
-           mdbWavesEffect>Blokir Kartu</button>
-         <button (click)="tabBukaBlokir()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[2], 'btn-light': !konten[2]}"
-           mdbWavesEffect>Buka Blokir Kartu</button>
-         <button (click)="tabTutupKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[3], 'btn-light': !konten[3]}"
-           mdbWavesEffect>Tutup Kartu</button>
-         <button (click)="tabRelasiKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[4], 'btn-light': !konten[4]}"
-           mdbWavesEffect>Relasi Kartu</button>
-       </div>
-       <!--Panel Tabs-->
-
-       
-          <!--Panel isi konten dari menu tabs-->
-          <mdb-card>
-            <mdb-card-body>
-              <div class="tab-content">
-                <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active" id="one">Aktivasi Kartu</div>
-                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">Konten 2</div>
-                <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">Konten 3</div>
-                <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Pesan</div>
-              </div>
-            </mdb-card-body>
-          </mdb-card>
-          <!--Panel isi konten dari menu tabs-->
-
-
+          <!--panel 1-->
+          <h5 class="text-primary font-weight-bold" style="margin-top: 10px;">DAFTAR KARTU HASIL PENCARIAN</h5>
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-hover border">
+                <thead class="grey lighten-2">
+                  <tr class="col-2 col-form-label" style="color: #2bbbad; font-weight: bold;">
+                    <th scope="col">NOMOR KARTU</th>
+                    <th scope="col">NAMA</th>
+                    <th scope="col">STATUS KARTU</th>
+                    <th scope="col">BLOK</th>
+                    <th scope="col">TUTUP/BUKA</th>
+                  </tr>
+                </thead>
+                <tr>
+                    <td class="font-weight-normal">123456789</td>
+                    <td class="font-weight-normal">AAAA</td>
+                    <td class="font-weight-normal">Aktif</td>
+                    <td class="font-weight-normal">Normal</td>
+                    <td class="font-weight-normal">Buka </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-normal">123456789</td>
+                    <th class="font-weight-normal">DDDDDDD</th>
+                    <td class="font-weight-normal">Aktif</td>
+                    <td class="font-weight-normal">Capture</td>
+                    <td class="font-weight-normal">Tutup</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+                    <!--Pagination-->
+                    <div class="d-flex flex-row-reverse" style="margin-top: 15px;">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination pg-blue">
+                            <li class="page-item">
+                              <a class="page-link">
+                                <span >&laquo;&laquo; Sebelumnya</span>
+                              </a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link">
+                                <span >Selanjutnya &raquo;&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                      <!--Pagination-->
+          <br>
+              
         </div>
       </div>
     </div>

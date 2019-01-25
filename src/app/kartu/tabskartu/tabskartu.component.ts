@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cari-kartuatm',
-  templateUrl: './cari-kartuatm.component.html',
-  styleUrls: ['./cari-kartuatm.component.css']
+  selector: 'app-tabskartu',
+  templateUrl: './tabskartu.component.html',
+  styleUrls: ['./tabskartu.component.css']
 })
-export class CariKartuatmComponent implements OnInit {
+export class TabskartuComponent implements OnInit {
   konten = [1, 0, 0, 0, 0]; 
   constructor() { }
 
   ngOnInit() {
   }
 
+  
   //blok fungsi untuk menampilkan konten panel atas
   tabAktivasi() {
     this.konten = [1, 0, 0, 0, 0];

@@ -67,9 +67,7 @@ import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/
 import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
 import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
 import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
-<<<<<<< HEAD
 import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivasi-atm.component';
-=======
 import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
 import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-administrasi/data-administrasi.component';
 import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-suku-bunga/data-suku-bunga.component';
@@ -83,7 +81,12 @@ import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembu
 import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
 import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
->>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd
+import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
+import { AktivasiComponent } from './kartu/tabskartu/komponen/aktivasi/aktivasi.component';
+import { BlokirComponent } from './kartu/tabskartu/komponen/blokir/blokir.component';
+import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka-blokir.component';
+import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
+import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
 
 
 
@@ -148,9 +151,7 @@ import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pemb
     UbahSandiBiComponent,
     DataTambahanComponent,
     UbahDataTambahanComponent,
-<<<<<<< HEAD
-    AktivasiAtmComponent
-=======
+    AktivasiAtmComponent,
     PortofolioCifComponent,
     DataAdministrasiComponent,
     DataSukuBungaComponent,
@@ -164,8 +165,13 @@ import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pemb
     RiwayatSaldoComponent,
     BuatNasabahIndividualComponent,
     GiroComponent,
-    BuatNasabahIndividualComponent
->>>>>>> fe5089023fdfb4a9f510bd391d2ab8bdd2c1cacd
+    BuatNasabahIndividualComponent,
+    TabskartuComponent,
+    AktivasiComponent,
+    BlokirComponent,
+    BukaBlokirComponent,
+    TutupKartuComponent,
+    RelasiKartuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,75 @@
+<!--Main layout-->
+<div style="margin: 20px;">
+  <!-- Start your project here-->
+  <div class="d-flex flex-column h-100">
+    <div id="outer" class="d-flex flex-column flex-grow">
+      <div class="card konten">
+        <div class="card-body">
+          <h5 class="text-primary font-weight-bold">PENCARIAN KARTU ATM</h5>
+          <!-- Default form contact -->
+          <div class="card">
+            <div class="card-body">
+              <!-- <app-aktivasi-atm></app-aktivasi-atm> -->
+              <!--Panel Tabs-->
+              <div class="btn-group" role="group" aria-label="Basic example mb-0">
+                <button (click)="tabAktivasi()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[0], 'btn-light': !konten[0]}"
+                  mdbWavesEffect>Aktivasi Kartu</button>
+                <button (click)="tabBlokir()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[1], 'btn-light': !konten[1]}"
+                  mdbWavesEffect>Blokir Kartu</button>
+                <button (click)="tabBukaBlokir()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[2], 'btn-light': !konten[2]}"
+                  mdbWavesEffect>Buka Blokir Kartu</button>
+                <button (click)="tabTutupKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[3], 'btn-light': !konten[3]}"
+                  mdbWavesEffect>Tutup Kartu</button>
+                <button (click)="tabRelasiKartu()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[4], 'btn-light': !konten[4]}"
+                  mdbWavesEffect>Relasi Kartu</button>
+              </div>
+              <!--Panel Tabs-->
+
+
+
+              <mdb-card>
+                <mdb-card-body>
+                  <div class="tab-content">
+
+                      <!--panel isi konten menu aktivasi-->
+                    <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active" id="one">
+                      <app-aktivasi></app-aktivasi>
+                    </div>
+                    <!-- end panel aktivasi kartu -->
+
+                    <!--Panel isi konten menu blokir kartu-->
+                    <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">
+                      <app-blokir></app-blokir>
+                    </div>
+                    <!--Panel isi konten menu blokir-->
+
+                    <!-- panel isi konten buka blokir  -->
+                    <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">
+                        <app-buka-blokir></app-buka-blokir>
+                    </div>
+                    <!-- end panel buka blokir -->
+
+                    <!-- panel tutup kartu -->
+                    <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">
+                        <app-tutup-kartu></app-tutup-kartu>
+                    </div>
+                    <!-- end tutup kartu -->
+
+                    <!-- panel relasi kartu -->
+                    <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active" id="one">
+                        <app-relasi-kartu></app-relasi-kartu>
+                    </div>
+                    <!-- end relasi kartu -->
+
+
+
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+              <!--Panel isi konten dari menu tabs-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
