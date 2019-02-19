@@ -1,48 +1,48 @@
 <main ng-app="myApp">
   <!-- Start your project here-->
-  <div class="container-fluid justify-content-center">
-    <div>
-      <div class="card">
-        <div class="card-header">
-          <h4>Single Sign-on User</h4>
-        </div>
-        <div class="card-body">
-          <form (submit)="loginUser($event)">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col" style="min-width:80px;"></th>
-                  <th scope="col" style="min-width:5px;"></th>
-                  <th scope="col" style="min-width:500px;"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row"><strong>User ID</strong></th>
-                  <td><strong>:</strong></td>
-                  <td><input type="text" class="form-control" placeholder="User-ID" id="username" required></td>
-                </tr>
-                <tr>
-                  <th scope="row"><strong>Password</strong></th>
-                  <td><strong>:</strong></td>
-                  <td><input type="password" class="form-control" placeholder="Password" id="password" required></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td>
-                    <button type="submit" class="btn btn-primary btn-md" value="Login"><i class="fa fa-lock"></i>&nbsp;&nbsp;Login</button>
-                    <button type="reset" class="btn btn-danger btn-md"><i class="fa fa-close"></i>&nbsp;&nbsp;Cancel</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
-        </div>
+  <div class="container-fluid justify-content-md-center">
+
+    <div class="card" id="style-login">
+      <div class="card-header">
+        <h4>Single Sign-on User</h4>
+      </div>
+      <div class="card-body">
+        <form (submit)="loginUser($event)">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" style="min-width:80px;"></th>
+                <th scope="col" style="min-width:5px;"></th>
+                <th scope="col" style="min-width:500px;"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><strong>User ID</strong></th>
+                <td><strong>:</strong></td>
+                <td><input type="text" class="form-control" placeholder="User-ID" id="username" required></td>
+              </tr>
+              <tr>
+                <th scope="row"><strong>Password</strong></th>
+                <td><strong>:</strong></td>
+                <td><input type="password" class="form-control" placeholder="Password" id="password" required></td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td>
+                  <button type="submit" class="btn btn-primary btn-md" value="Login"><i class="fa fa-lock"></i>&nbsp;&nbsp;Login</button>
+                  <button type="reset" class="btn btn-danger btn-md"><i class="fa fa-close"></i>&nbsp;&nbsp;Cancel</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
       </div>
     </div>
+
   </div>
-  <!-- /Start your project here--> 
+  <!-- /Start your project here-->
 </main>
 
 <!--bagian modal untuk pesan login-->
