@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  height: 19vh;
+  height: 160px;
   background-image: url(assets/image/bankjatengheader.png);
   background-repeat: no-repeat;
   background-size: cover;
