@@ -2,18 +2,20 @@
 @import '~@angular/material/prebuilt-themes/purple-green.css';
 
 body {
-  background-image: url(assets/image/background.png);
+  background-image: url(assets/image/material-img/backgroundWb.png);
   background-attachment: fixed;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   min-height: 70vh;
 }
 
 header {
-  height: 160px;
-  background-image: url(assets/image/bankjatengheader.png);
+  height: 140px;
+  background-color: #234a7b;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 main {
@@ -28,7 +30,7 @@ main {
 
 footer {
   height: 50px;
-  background-image: url(assets/image/bankjatengfooter.png);
+  background-image: url(assets/image/material-img/footerWb2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(255, 255, 255, 10%);
