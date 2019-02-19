@@ -37,7 +37,7 @@
                   <div class="form-group row">
                     <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
                     <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <div class="col-3"><input type="text" class="form-control"></div>
+                    <div class="col-3"><input type="text" class="form-control" currencyMask [(ngModel)]="value" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}"></div>
                     <span class="col-6"></span>
                   </div>
                   <!--input 4-->
