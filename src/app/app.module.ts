@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -45,7 +46,6 @@ import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.componen
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
-import { MaterialModule } from './material';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
@@ -93,6 +93,7 @@ import { WebcamComponent } from './test/webcam/webcam.component';
 import { WebcamModule } from 'ngx-webcam';
 import { NgxCurrencyModule } from "ngx-currency";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MaterialModule } from './material';
 
 
 @NgModule({
@@ -183,11 +184,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
     MaterialModule,
     WebcamModule,
     NgxCurrencyModule,
+ 
 
   ],
   providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
