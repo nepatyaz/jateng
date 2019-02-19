@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
-import { HttpClientModule } from '@angular/common/http';
 import { HeaderHomeComponent } from './header/header-home/header-home.component';
 import { NavigationComponent } from './button/navigation/navigation.component';
 import { HomeNavComponent } from './navigation/home-nav/home-nav.component';
@@ -88,8 +88,11 @@ import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka
 import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
 import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
 import { WebcamComponent } from './test/webcam/webcam.component';
-import { WebcamModule } from 'ngx-webcam';
 
+//3rd party library module
+import { WebcamModule } from 'ngx-webcam';
+import { NgxCurrencyModule } from "ngx-currency";
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -179,10 +182,13 @@ import { WebcamModule } from 'ngx-webcam';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
     MaterialModule,
-    WebcamModule
+    WebcamModule,
+    NgxCurrencyModule,
+
   ],
   providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
   bootstrap: [AppComponent]
