@@ -1,73 +1,106 @@
 <!--Main layout-->
 <div class="m-3 h-100">
-        <!-- Start your project here-->
-        <div id="outer" class="d-flex flex-column">
-          <div class="card konten">
-            <div class="card-body">
-              <h5 class="text-primary font-weight-bold">Transaksi Setoran Tunai</h5>
-      
-              <mdb-card>
-                <mdb-card-body>
-      
-                  <!--input 1-->
-                  <div class="form-group row">
-                    <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
-                    <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <label class="col-2 col-form-label  font-weight-bold">28/01/2013</label>
-                    <span class="col-6"></span>
-                  </div>
-                  <!--input 1-->
-                <!--input 2-->
-                <div class="form-group row">
-                    <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
-                    <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <div class="col-3"><input type="text" class="form-control"></div>
-                    <span class="col-6"></span>
-                </div>
-                <!--input 2-->
-                  <!--input 3-->
-                  <div class="form-group row">
-                    <label class="col-2 col-form-label  font-weight-bold">Nomor Rekening</label>
-                    <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <div class="col-3"><input type="text" class="form-control"></div>
-                    <span class="col-6"></span>
-                  </div>
-                  <!--input 3-->
-                  <!--input 4-->
-                  <div class="form-group row">
-                    <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
-                    <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <div class="col-3"><input type="text" class="form-control" currencyMask [(ngModel)]="value" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}"></div>
-                    <span class="col-6"></span>
-                  </div>
-                  <!--input 4-->
-                  <!--input 5-->
-                  <div class="form-group row">
-                    <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
-                    <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <label class="col-2 col-form-label  font-weight-bold">DC</label>
-                    <span class="col-6"></span>
-                  </div>
-                  <!--input 5-->
-                  <!--input 6-->
-                  <div class="form-group row">
-                    <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
-                    <label class="col-form-label pr-0  font-weight-bold">:</label>
-                    <span></span>
-                    <div class="col-4"><textarea rows="4" cols ="50" class="form-control"></textarea></div>
-                    <span class="col-6"></span>
-                  </div>
-                  <!--input 6-->
-                  <div class="d-flex justify-content-center">
-                    <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
-                    <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
-                  </div>
-                </mdb-card-body>
-              </mdb-card>
-      
-              <span style="height: 10vh;"></span>
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card konten">
+      <div class="card-body">
+        <h5 class="text-primary font-weight-bold">Transaksi Setoran Tunai</h5>
+
+        <mdb-card>
+          <mdb-card-body>
+
+            <!--input 1-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <label class="col-2 col-form-label  font-weight-bold">28/01/2013</label>
+              <span class="col-6"></span>
             </div>
-          </div>
-        </div>
-      
+            <!--input 1-->
+            <!--input 2-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 2-->
+            <!--input 3-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Nomor Rekening</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 3-->
+            <!--input 4-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><input type="text" class="form-control" currencyMask [(ngModel)]="value" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}"></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 4-->
+            <!--input 5-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <label class="col-2 col-form-label  font-weight-bold">DC</label>
+              <span class="col-6"></span>
+            </div>
+            <!--input 5-->
+            <!--input 6-->
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <span></span>
+              <div class="col-4"><textarea rows="4" cols="50" class="form-control"></textarea></div>
+              <span class="col-6"></span>
+            </div>
+            <!--input 6-->
+            <div class="d-flex justify-content-center">
+              <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+                (click)="frame.show()" mdbWavesEffect><i class="fa fa-refresh"></i> Proses</button>
+              <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>
+                <i class="fa fa-angle-left"></i> Kembali
+              </button>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+        <span style="height: 10vh;"></span>
       </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Transaksi Setoran Tunai</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          Swipe Kartu Debit Customer  :
+          
+          <form  (submit)="test()">
+            <div class="md-form">
+                <input mdbInput mdbValidate name="pinInput" type="text" id="form2" class="form-control" [(ngModel)]="minLength" #pinInput="ngModel" required minlength="6">
+                <label for="form2">Inputkan Pin</label>
+                <mdb-error *ngIf="pinInput.invalid && (pinInput.dirty || pinInput.touched)">Pin Invalid</mdb-error>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="pinInput.invalid" disabled>Proses</button>
+              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="pinInput.valid">Proses</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
