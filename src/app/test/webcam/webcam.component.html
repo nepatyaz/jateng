@@ -4,12 +4,11 @@
   <div id="outer" class="d-flex flex-column">
     <div class="card konten">
       <div class="card-body">
-
         <div style="text-align:center">
           <h1>
             Webcam
           </h1>
-
+          
           <div>
             <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
             [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable"
@@ -23,8 +22,8 @@
             <button (click)="showNextWebcam(deviceId);">Activate</button>
           </div>
         </div>
-
-        <div class="snapshot" *ngIf="webcamImage" style="text-align:center">
+        <div><button (click)="captureScreen()">PDF</button></div>
+        <div class="snapshot" *ngIf="webcamImage" style="text-align:center"  id="kontenHalaman">
           <h2>Foto:</h2>
           <img [src]="webcamImage.imageAsDataUrl" style="height: 300px;" />
         </div>
@@ -33,6 +32,54 @@
         <ul *ngFor="let error of errors">
           <li>{{error | json}}</li>
         </ul>
+
+
+
+      <div id="content">
+      <div class="alert alert-info"><strong>Html To PDF Conversion - Angular 6</strong></div>
+     
+      </div>
+      <div>
+      <table id="contentToConvert">
+      <tbody>
+      <tr>
+      <th>Column1</th>
+      <th>Column2</th>
+      <th>Column3</th>
+      </tr>
+      <tr>
+      <td>Row 1</td>
+      <td>Row 1</td>
+      <td>Row 1</td>
+      </tr>
+      <tr>
+      <td>Row 2</td>
+      <td>Row 2</td>
+      <td>Row 2</td>
+      </tr>
+      <tr>
+      <td>Row 3</td>
+      <td>Row 3</td>
+      <td>Row 3</td>
+      </tr>
+      <tr>
+      <td>Row 4</td>
+      <td>Row 4</td>
+      <td>Row 4</td>
+      </tr>
+      <tr>
+      <td>Row 5</td>
+      <td>Row 5</td>
+      <td>Row 5</td>
+      </tr>
+      <tr>
+      <td>Row 6</td>
+      <td>Row 6</td>
+      <td>Row 6</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
 
 
 
