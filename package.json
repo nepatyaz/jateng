@@ -28,7 +28,11 @@
     "core-js": "^2.5.4",
     "font-awesome": "~4.7.x",
     "hammerjs": "^2.0.8",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jspdf": "^1.5.3",
+    "ngx-webcam": "^0.2.2",
     "rxjs": "~6.2.0",
+    "rxjs-compat": "^6.4.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

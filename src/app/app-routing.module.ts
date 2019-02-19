@@ -50,6 +50,7 @@ import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembu
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
+import { WebcamComponent } from './test/webcam/webcam.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -106,6 +107,7 @@ const routes: Routes = [
       { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
       { path: 'kartu/tabskartu', component: TabskartuComponent },
+      { path: 'test/camera', component: WebcamComponent },
     ]
   },
   {
@@ -134,4 +136,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent,PencarianNasabahComponent,
   PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, 
-  BuatNasabahIndividualComponent,TabskartuComponent]
+  BuatNasabahIndividualComponent,TabskartuComponent,WebcamComponent]

@@ -87,6 +87,8 @@ import { BlokirComponent } from './kartu/tabskartu/komponen/blokir/blokir.compon
 import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka-blokir.component';
 import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
 import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
+import { WebcamComponent } from './test/webcam/webcam.component';
+import { WebcamModule } from 'ngx-webcam';
 
 
 
@@ -171,14 +173,16 @@ import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/re
     BlokirComponent,
     BukaBlokirComponent,
     TutupKartuComponent,
-    RelasiKartuComponent
+    RelasiKartuComponent,
+    WebcamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
-    MaterialModule
+    MaterialModule,
+    WebcamModule
   ],
   providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
   bootstrap: [AppComponent]
