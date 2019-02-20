@@ -1,61 +1,23 @@
 <main ng-app="myApp">
-  <!-- Start your project here-->
 
-  <div class="container-fluid justify-content-md-center" id="style-card2">
-
-    <div class="card">
-      <div class="card-body  bg-main">
-        This is some text within a card body.
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title">
+        <h4>Enter your Single Sign On User ID and Password to Sign!</h4>
+        <form (ngSubmit)="loginUser($event)">
+          <div class="form-inline">
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="User Id"
+              required>
+            <button type="submit" class="btn" value="Login"><i class="fa fa-lock"></i>&nbsp;&nbsp;Login</button>
+          </div>
+          <div class="form-inline">
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <button type="reset" class="btn"><i class="fa fa-close"></i>&nbsp;&nbsp;Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
-
-    <!-- <div class="jumbotron jumbotron-fluid"></div> -->
-
-    <div class="container">
-      <div class="row justify-content-center" id="style-cardHeader">
-        <div class="col info-panel">
-          <h4>Enter Your Single Sign-on User ID and password to sign</h4>
-        </div>
-        <div class="row justify-content-md-center">
-          <form class="d-flex justify-content-center card-login" (submit)="loginUser($event)">
-            <!-- <div class="card card-login"> -->
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col" style="min-width:80px;"></th>
-                  <th scope="col" style="min-width:5px;"></th>
-                  <th scope="col" style="min-width:500px;"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row"><strong>User ID</strong></th>
-                  <td><strong>:</strong></td>
-                  <td><input type="text" class="form-control" placeholder="User-ID" id="username" required></td>
-                </tr>
-                <tr>
-                  <th scope="row"><strong>Password</strong></th>
-                  <td><strong>:</strong></td>
-                  <td><input type="password" class="form-control" placeholder="Password" id="password" required></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td>
-                    <button type="submit" class="btn btn-primary btn-md" value="Login"><i class="fa fa-lock"></i>&nbsp;&nbsp;Login</button>
-                    <button type="reset" class="btn btn-danger btn-md"><i class="fa fa-close"></i>&nbsp;&nbsp;Cancel</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- </div> -->
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <!-- /Start your project here-->
+  </div>>
 </main>
 
 <!--bagian modal untuk pesan login-->

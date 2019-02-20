@@ -20,36 +20,28 @@ body {
 }
 
 header {
-  height: 120px;
+  height: 100px;
   background-color: #234a7b;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 main {
-  /* max-height: 100%;
-  max-width: 100%;
-  margin-top: 20vh;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  min-width: 700px; */
-  margin: 0px;
-  right: 0px;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
   min-height: 100%;
   min-width: 100%;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
+
 
 footer {
   height: 50px;
-  background-image: url(assets/image/material-img/footerWb2.png);
+  background-image: url(assets/image/material-img/footerWb.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(255, 255, 255, 10%);
@@ -84,31 +76,79 @@ footer {
 /*                  LOGIN                */
 /* ------------------------------------- */
 
-
-div.container-fluid#style-card2 {
-  padding-left: 0;
-  padding-right: 0;
+/* div.card {
+  width: 880px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 50%);
+  text-align: center;
+  border-radius: 230px;
 
 }
 
-/* div.card-header#bg-opacity {
+div.card-title h4 {
+  color: #234a7b;
+  text-transform: uppercase;
+  font-weight: 100;
+}
 
+div.card div.card-body div.card-title form {
+  float: left;
+  width: 550px;
+}
+
+div.card input[type="text"],
+.card input[type="password"] {
+  border: 3px solid;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: #ffffff;
+  padding: 14px 10px;
+  width: 250px;
+  outline: none;
+  color: #ffffff;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+div.card input[type="text"]:focus,
+.card input[type="password"]:focus {
+  width: 300px;
+  border-color: #ffffff;
+  border: 2px solid #234a7b;
+  transition: 0.245s;
+}
+
+div.card button[type="submit"],
+div.card button[type="reset"] {
+  border: 0;
+  background: #ffffff;
+  display: block;
+  text-align: center;
+  /* border: 2px solid #234a7b; */
+/* padding: 14px 40px;
+  width: 150px;
+  outline: none;
+  color: #234a7b;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 } */
-
-#style-cardHeader {
-  top: 50px;
-  margin-right: 300px;
-  margin-left: 200px;
-  opacity: 0.7;
-  border: 20px;
-}
-
-.bg-main {
-  margin-top: 120px;
-  background-image: url(../src/assets/image/material-img/HeaderWb.png);
-  height: 105px;
-}
-
+/*
+div.card button[type="submit"]:hover,
+div.card button[type="reset"]:hover {
+  background: #234a7b;
+  color: white;
+} */
 
 /* ------------------------------------- */
 /*                  FOOTER               */
@@ -117,3 +157,5 @@ div.container-fluid#style-card2 {
 #f-style {
   color: #234a7b;
 }
+
+/* border-bottom: 1px solid #ccc!important; */
