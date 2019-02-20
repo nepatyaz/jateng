@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from 'angular-bootstrap-md';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,19 +12,23 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class TellerInSetoranTunaiComponent implements OnInit {
   // validatingForm: FormGroup;
 
-  constructor() { }
+  @ViewChild('modalSucces') modalSucces: ModalDirective;
+  @ViewChild('modalFoto') modalFoto: ModalDirective;
+
+  constructor(private router : Router) { }
 
   ngOnInit() {
-    // this.validatingForm = new FormGroup({
-    //   minLength: new FormControl(null, [Validators.required, Validators.minLength(6)]),
-    //   maxLength: new FormControl(null, [Validators.required, Validators.maxLength(6)])
-    // });
   }
 
-  // get input() { return this.validatingForm.get('minLength'); }
 
-  test(){
-    console.log("ABCDG");
+  validasiSucces(){
+    this.modalSucces.show();
+    setTimeout(()=>{ this.router.navigate(['/'])}, 5000)
+
+  }
+  validasiFoto(){
+    this.modalFoto.show();
+    
   }
 
 }
