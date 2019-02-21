@@ -94,6 +94,7 @@ import { WebcamModule } from 'ngx-webcam';
 import { NgxCurrencyModule } from "ngx-currency";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MaterialModule } from './material';
+import { CurrencyFormatDirective } from 'ng-currency-format';
 
 
 @NgModule({
@@ -178,7 +179,8 @@ import { MaterialModule } from './material';
     BukaBlokirComponent,
     TutupKartuComponent,
     RelasiKartuComponent,
-    WebcamComponent
+    WebcamComponent,
+    CurrencyFormatDirective
   ],
   imports: [
     BrowserModule,
