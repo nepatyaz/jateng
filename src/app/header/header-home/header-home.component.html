@@ -1,60 +1,54 @@
-<header class="navbar fixed-top" style="z-index: 1039;">
-  <a style="z-index: 9999;" href="https://www.google.com/">
-    <img src="/src/assets/image/LOGO.png" alt="LOGO">
-  </a>
-  <div class="row w-100 h-100 p-0" id="header">
-    <div style="width: 15%"></div>
-    <div style="width: 10%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px; margin-left: 70px;">
-        <ul style="list-style-type: none; font-size:1vw;">
-          <li>Tanggal Bisnis</li>
-          <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy'}}</li>
-          <li>Last Login</li>
-          <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy hh:mm'}}</li>
-        </ul>
-      </div>
+<header class="navbar fixed-top justify-content-center align-items-center" style="z-index: 1039;">
+
+
+  <!-- <div class="container-fluid d-flex align-items-stretch" id="header"> -->
+  <div class="container-fluid">
+    <div class="row">
+      <a style="z-index: 9999;" href="https://www.google.com/">
+        <img src="/src/assets/image/LOGO.png" alt="LOGO">
+      </a>
     </div>
 
-    <div style="width: 10%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px; margin-left: 70px;">
-        <ul style="list-style-type: none; font-size:1vw;">
-          <li>Status</li>
-          <li class="font-weight-bold text-info">Online</li>
-          <li>IP Anda </li>
-          <li class="font-weight-bold text-info">127.0.0.1</li>
+
+    <div class="col d-flex align-items-center justify-content-end">
+      <div class="row panel-style">
+        <ul class="col border border-light ul-style">
+          <li class="font-weight-bold text-light">Tanggal Bisnis: {{tanggal | date:'dd/MM/yyyy'}}</li>
+          <li class="font-weight-bold text-light">Last Login : {{tanggal | date:'dd/MM/yyyy hh:mm'}}</li>
         </ul>
       </div>
-    </div>
-
-    <div style="width: 12%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px;  margin-left: 70px;">
-        <ul style="list-style-type: none; font-size:1vw;">
-          <li></li>
-          <li class="font-weight-bold text-info"></li>
+      <div class="row panel-style">
+        <ul class="border border-light ul-style bg-opacity">
+          <li class="font-weight-bold text-white">Status: Online</li>
+          <li class="font-weight-bold text-white">IP Anda: 127.0.0.1</li>
+        </ul>
+      </div>
+      <div class="row panel-style">
+        <ul class="border border-light ul-style">
           <li>Cabang </li>
-          <li class="font-weight-bold text-info">034|Cabang Utama</li>
+          <li class="font-weight-bold text-light">034 | Cabang Utama</li>
         </ul>
       </div>
-    </div>
 
-    <div style="width: 12%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px;  margin-left: 70px;">
-        <ul style="list-style-type: none; font-size:1vw;">
-          <li></li>
-          <li class="font-weight-bold text-info"></li>
-          <li> </li>
-          <li class="font-weight-bold text-info"><a class="text-muted" (click)="fungsi()"><i class="fa fa-sign-out text-muted"
-                role="button"></i>Sign Out</a></li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div style="width: 27%">
+      <ul class="ul-style">
+        <button class="btn btn-danger">
+          <a class="text-light" (click)="fungsi()">Sign Out</a>
+        </button>
+      </ul>
 
     </div>
 
-    <div style="width: 14%">
+
+
+
+
+
+
+    <!-- <div style="width: 27%">
+
+    </div> -->
+
+    <!-- <div style="width: 14%">
       <div class="row text-right" style="position: absolute;top: 30px;">
         <ul style="list-style-type: none; font-size:1vw;">
           <li class="text-light">
@@ -65,7 +59,8 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
+    <!-- </div> -->
   </div>
 </header>
 

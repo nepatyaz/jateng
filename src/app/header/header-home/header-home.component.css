@@ -1,12 +1,12 @@
 .navbar2 {
-  background-color: #ffffff;
+  background-image: url(/src/assets/image/material-img/HeaderWb.png);
   margin-top: 100px;
 }
 
-/* .btn-press {
-  padding: 6px 6px;
-  margin: 1px 1px 1px 1px;
-} */
+header {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 .navbar3 {
   background-color: transparent;
@@ -36,4 +36,44 @@ header.navbar3 div.jumbotron {
   padding-right: 30px;
   margin-top: 100px;
   padding: 50px;
+}
+
+/* ========================================================= */
+/*                             NAVBAR                        */
+/* ========================================================= */
+.ul-style {
+  list-style-type: none;
+  font-size: 12px;
+  text-align: left;
+  border-radius: 20px;
+  margin-bottom: 0;
+  height: 70px;
+}
+
+li {
+  margin-right: 30px;
+  margin-top: 10px;
+  color: white;
+}
+
+.list-header {
+  position: absolute;
+}
+
+
+button {
+  border-radius: 30px;
+  color: white;
+}
+
+.styles {
+  width: 200px;
+}
+
+.panel-style {
+  margin: 10px;
+}
+
+ul.bg-opacity {
+  background: rgba(225, 225, 225, 50%);
 }
