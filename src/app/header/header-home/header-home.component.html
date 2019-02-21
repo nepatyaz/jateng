@@ -1,10 +1,11 @@
-<header class="navbar fixed-top">
+<header class="navbar fixed-top" style="z-index: 1039;">
+  <a style="z-index: 9999;" href="https://www.google.com/">
+    <img src="/src/assets/image/LOGO.png" alt="LOGO">
+  </a>
   <div class="row w-100 h-100 p-0" id="header">
-
     <div style="width: 15%"></div>
-
     <div style="width: 10%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+      <div class="row text-right small" style="position: absolute;bottom: -15px; margin-left: 70px;">
         <ul style="list-style-type: none; font-size:1vw;">
           <li>Tanggal Bisnis</li>
           <li class="font-weight-bold text-info">{{tanggal | date:'dd/MM/yyyy'}}</li>
@@ -15,7 +16,7 @@
     </div>
 
     <div style="width: 10%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+      <div class="row text-right small" style="position: absolute;bottom: -15px; margin-left: 70px;">
         <ul style="list-style-type: none; font-size:1vw;">
           <li>Status</li>
           <li class="font-weight-bold text-info">Online</li>
@@ -26,7 +27,7 @@
     </div>
 
     <div style="width: 12%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+      <div class="row text-right small" style="position: absolute;bottom: -15px;  margin-left: 70px;">
         <ul style="list-style-type: none; font-size:1vw;">
           <li></li>
           <li class="font-weight-bold text-info"></li>
@@ -37,7 +38,7 @@
     </div>
 
     <div style="width: 12%">
-      <div class="row text-right small" style="position: absolute;bottom: -15px;">
+      <div class="row text-right small" style="position: absolute;bottom: -15px;  margin-left: 70px;">
         <ul style="list-style-type: none; font-size:1vw;">
           <li></li>
           <li class="font-weight-bold text-info"></li>
@@ -50,13 +51,14 @@
 
 
     <div style="width: 27%">
+
     </div>
 
     <div style="width: 14%">
       <div class="row text-right" style="position: absolute;top: 30px;">
         <ul style="list-style-type: none; font-size:1vw;">
           <li class="text-light">
-           <h6>Selamat Datang</h6> 
+            <h6>Selamat Datang</h6>
           </li>
           <li class="font-weight-bold text-info">
             Jateng SP | Jateng SP
@@ -64,6 +66,27 @@
         </ul>
       </div>
     </div>
-
   </div>
+</header>
+
+<header class="navbar navbar2 fixed-top" style="margin-top: 100px;">
+</header>
+
+<header class="navbar navbar3 fixed-top" style="margin-top: 100px;">
+  <nav class="nav d-flex justify-content-center fixed-top" style="margin-top: 15vh;">
+    <nav class="col d-flex justify-content-center" style="margin-top: 15px;">
+      <a class="nav-link active" [routerLink]="['/user/bob']">Administrative</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Report</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">User Maintenance</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Pembayaran</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Rekening</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Kartu</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Rekening Koran</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Cash Drawer Teller</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">PassBook</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Otorisasi Head CS</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Cash Drawer</a>
+      <a class="nav-link active" [routerLink]="['/user/bob']">Nasabah</a>
+    </nav>
+  </nav>
 </header>

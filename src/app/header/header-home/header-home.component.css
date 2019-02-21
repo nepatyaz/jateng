@@ -1,0 +1,39 @@
+.navbar2 {
+  background-color: #ffffff;
+  margin-top: 100px;
+}
+
+/* .btn-press {
+  padding: 6px 6px;
+  margin: 1px 1px 1px 1px;
+} */
+
+.navbar3 {
+  background-color: transparent;
+  margin-top: 100px;
+  z-index: 1040;
+}
+
+header.navbar3 a.nav-link.active {
+  background-color: #234a7b;
+  margin: 1px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: #000000;
+}
+
+header.navbar3 a.nav-link:hover {
+  border-radius: 0;
+}
+
+header.navbar3 nav.d-flex.justify-content-center.fixed-top {
+  margin-top: 120px;
+}
+
+header.navbar3 div.jumbotron {
+  width: 100%;
+  padding-right: 30px;
+  margin-top: 100px;
+  padding: 50px;
+}
