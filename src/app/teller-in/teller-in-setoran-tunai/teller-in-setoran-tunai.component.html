@@ -74,8 +74,7 @@
             <!--input 6-->
             <div class="d-flex justify-content-center">
               <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.invalid || inputReferensi.invalid || inputReferensi.invalid" disabled><i class="fa fa-refresh"></i> Proses</button>
-              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.valid && inputReferensi.valid && inputReferensi.valid" data-toggle="modal" data-target="#basicExample"
-              (click)="frame.show()"><i class="fa fa-refresh" ></i> Proses</button>
+              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.valid && inputReferensi.valid && inputReferensi.valid" (click)="frame.show()"><i class="fa fa-refresh" ></i> Proses</button>
               <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active"  mdbWavesEffect>
                 <i class="fa fa-angle-left"></i> Kembali
               </button>
@@ -94,9 +93,6 @@
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Transaksi Setoran Tunai</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
@@ -104,10 +100,11 @@
           <img src="./../../../assets/image/swipe.png" class="rounded mx-auto d-block" alt="..." style="height: 100px;">
           <form (submit)="validasiFoto()">
             <div class="md-form">
-              <input mdbInput mdbValidate name="pinInput" type="text" id="form2" class="form-control" [(ngModel)]="minLength"
+              <input mdbInput mdbValidate name="pinInput" type="text" class="form-control" [(ngModel)]="minLength"
                 #pinInput="ngModel" required minlength="6">
               <label for="form2">Inputkan Pin</label>
               <mdb-error *ngIf="pinInput.invalid && (pinInput.dirty || pinInput.touched)">Pin Invalid</mdb-error>
+              <mdb-error *ngIf="pinInput.valid && (pinInput.dirty || pinInput.touched)">{{validasiFoto()}}</mdb-error>           
             </div>
             <div class="d-flex justify-content-center">
               <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="pinInput.invalid" disabled><i class="fa fa-refresh"></i> Proses</button>
@@ -126,10 +123,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close pull-right" aria-label="Close" (click)="modalFoto.hide()">
-            <span aria-hidden="true">×</span>
-          </button>
-          <h4 class="modal-title w-100" id="myModalLabel">Validasi Transaksi Setoran Tunai</h4>
+          <h4 class="modal-title w-100" id="myModalLabel">Validasi Foto Dan Tanda Tangan</h4>
         </div>
         <div class="modal-body">
             <div class="row">
@@ -137,17 +131,16 @@
                   <div class="row">
                     <div class="col-8 col-sm-6 text-center">
                       Foto Customer :
-                        <img src="./../../../assets/image/pasfoto.png" class="rounded mx-auto d-block" alt="..." style="height: 200px;">
+                        <img src="{{pasFoto}}" class="rounded mx-auto d-block" alt="..." style="height: 200px;">
                     </div>
                     <div class="col-4 col-sm-6 text-center">
                       Tanda Tangan Customer :
                       <br><br><br>
-                        <img src="./../../../assets/image/ttd2.png" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
+                        <img src="{{tandaTangan}}" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
                     </div>
                   </div>
                 </div>
               </div>
-          
         </div>
         <div class="modal-footer">
           <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSucces()" mdbWavesEffect><i class="fa fa-refresh"></i> Proses</button>

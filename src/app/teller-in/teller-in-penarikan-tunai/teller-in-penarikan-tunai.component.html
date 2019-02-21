@@ -53,7 +53,7 @@
                 <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
                 <div class="col-3 "> 
-                    <input mdbInput mdbValidate currencyMask name="inputNilai" id="nilaiTransaksi" type="text" class="form-control" [(ngModel)]="required" #inputNilai="ngModel" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}" required>
+                    <input mdbInput mdbValidate currencyMask name="inputNilai" id="nilaiTransaksi" type="text" class="form-control" [(ngModel)]="inputan" #inputNilai="ngModel" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}" required>
                 </div>
                 <span class="col-6 mt-2">
                   <p class="text-danger"  *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
@@ -94,7 +94,7 @@
             <!--input 7-->
             <div class="d-flex justify-content-center">
                 <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.invalid || inputRekening.invalid" disabled><i class="fa fa-refresh"></i> Proses</button>
-                <button mdbBtn type="submit" color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.valid && inputRekening.valid" ><i class="fa fa-refresh" ></i> Proses</button>
+                <button mdbBtn type="submit" color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.valid && inputRekening.valid" (click)="frame.show()" ><i class="fa fa-refresh" ></i> Proses</button>
                 <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active"  mdbWavesEffect>
                   <i class="fa fa-angle-left"></i> Kembali
                 </button>
@@ -118,10 +118,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Transaksi Setoran Tunai</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h4 class="modal-title w-100 font-weight-bold">Transaksi Tarik Tunai</h4>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
@@ -133,10 +130,7 @@
                 #pinInput="ngModel" required minlength="6">
               <label for="form2">Inputkan Pin</label>
               <mdb-error *ngIf="pinInput.invalid && (pinInput.dirty || pinInput.touched)">Pin Invalid</mdb-error>
-            </div>
-            <div class="d-flex justify-content-center">
-              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="pinInput.invalid" disabled>Proses</button>
-              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="pinInput.valid">Proses</button>
+              <mdb-error *ngIf="pinInput.valid && (pinInput.dirty || pinInput.touched)">Pin Valid{{validasiFoto()}}</mdb-error>
             </div>
           </form>
         </div>
@@ -146,3 +140,79 @@
 </div>
 
 
+<div mdbModal #modalFoto="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Validasi Foto Dan Tanda Tangan</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-8 col-sm-6 text-center">
+                      Foto Customer :
+                        <img src="{{pasFoto}}" class="rounded mx-auto d-block" alt="..." style="height: 200px;">
+                    </div>
+                    <div class="col-4 col-sm-6 text-center">
+                      Tanda Tangan Customer :
+                      <br><br><br>
+                        <img src="{{tandaTangan}}" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSucces()" mdbWavesEffect *ngIf="!isSPV"><i class="fa fa-refresh"></i> Proses</button>
+          <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSPV()" mdbWavesEffect *ngIf="isSPV"><i class="fa fa-refresh"></i> Proses</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--bagian modal untuk validasi transaksi-->
+<div mdbModal #modalSPV="mdbModal" class="modal fade modal-notify modal-primary" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm modal-notify modal-primary" role="document">
+      <!--Content-->
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">Supervisor Approval</p>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          Inputkan FingerPrint Dari Supervisor
+          <img src="../../../assets/image/finger.gif" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
+        </div>
+        <!--Footer-->
+        <div class="modal-footer justify-content-center">
+          <a type="button" mdbBtn color="primary" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="validasiSucces()"><i class="fa fa-refresh"></i> Proses</a>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Bagian modal untuk validasi transaksi-->
+
+  <!--bagian modal untuk validasi transaksi-->
+<div mdbModal #modalSucces="mdbModal" class="modal fade modal-notify modal-success" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm modal-notify modal-success" role="document">
+      <!--Content-->
+      
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">Transaksi Sukses</p>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <i class="fa fa-check fa-4x animated rotateIn"></i>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Bagian modal untuk validasi transaksi-->
