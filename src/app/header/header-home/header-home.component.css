@@ -1,17 +1,18 @@
-.navbar2 {
-  background-image: url(/src/assets/image/material-img/HeaderWb.png);
-  margin-top: 100px;
-}
-
 header {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-.navbar3 {
-  background-color: transparent;
+
+.navbar2 {
+  background-image: url(/src/assets/image/material-img/HeaderWb.png);
   margin-top: 100px;
-  z-index: 1040;
+}
+
+
+.navbar3 {
+  margin-top: 100px;
+  z-index: 1038;
 }
 
 header.navbar3 a.nav-link.active {
@@ -39,8 +40,9 @@ header.navbar3 div.jumbotron {
 }
 
 /* ========================================================= */
-/*                             NAVBAR                        */
+/*                           NAVBAR STYLE                    */
 /* ========================================================= */
+
 .ul-style {
   list-style-type: none;
   font-size: 12px;
@@ -77,3 +79,80 @@ button {
 ul.bg-opacity {
   background: rgba(225, 225, 225, 50%);
 }
+
+/* ========================================================= */
+/*                       NAVBAR DROPDOWN                     */
+/* ========================================================= */
+
+
+.bg-styleNav3 {
+  background-image: url(/src/assets/image/material-img/HeaderWb.png);
+}
+
+button.dropdown-toggle.waves-light {
+  background: none;
+  border: 2px solid #234a7b;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  min-width: 200px;
+  cursor: pointer;
+  transition: 0.4s linear;
+  position: relative;
+  border-radius: 5px;
+  margin: 5px;
+  color: #223344;
+  box-shadow: 0 2px rgb(122, 122, 122);
+  top: 2px;
+}
+
+button.dropdown-toggle.waves-light:hover {
+  color: #fff;
+  box-shadow: 0 0px rgb(122, 122, 122);
+  top: 2px;
+}
+
+button.dropdown-toggle.waves-light:active {
+  color: #fff;
+  box-shadow: 0 0px rgb(122, 122, 122);
+  top: 2px;
+  background-color: #234a7b;
+}
+
+button.dropdown-toggle.waves-light::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #234a7b;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.05, 0.92, 0.2, 1);
+  border-radius: 5px;
+
+
+}
+
+button.dropdown-toggle.waves-light.btn-shift::before {
+  transform: scaleX(0);
+  border-radius: 5px;
+}
+
+button.dropdown-toggle.waves-light.btn-shift:hover::before {
+  transform: scaleX(1);
+  border-radius: 2px;
+}
+
+button.dropdown-toggle.waves-light.btn-shift:active::before {
+  transform: scaleX(1);
+  border-radius: 2px;
+}
+
+/* @media (min-width: 1200px) {
+  bg-styleNav3 {
+    margin-top: 130px;
+  }
+} */
