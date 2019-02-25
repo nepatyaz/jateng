@@ -106,6 +106,12 @@ h1.web-branch {
   background-clip: text;
 }
 
+/* form {
+  background-image: url(/src/assets/image/material-img/backgroundWb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 /* ------------------------------------------------------ */
 /* body kontent / setting layout positioning in a content */
 .bodyContent {

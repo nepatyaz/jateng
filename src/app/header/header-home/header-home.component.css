@@ -88,6 +88,8 @@ ul.bg-opacity {
 
 .bg-styleNav3 {
   background-image: url(/src/assets/image/material-img/HeaderWb.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 button.dropdown-toggle.waves-light {
