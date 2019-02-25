@@ -51,6 +51,9 @@ import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembu
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
 import { WebcamComponent } from './test/webcam/webcam.component';
+import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
+import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
+import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -108,6 +111,9 @@ const routes: Routes = [
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
       { path: 'kartu/tabskartu', component: TabskartuComponent },
       { path: 'test/camera', component: WebcamComponent },
+      { path: 'otorisasihead/otorisasicif', component: OtorisasiCifComponent },
+      { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
+      { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
     ]
   },
   {
@@ -131,9 +137,9 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
   ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent,
-  DaftarKodeNasabahComponent,PencarianNasabahComponent,AktivasiAtmComponent,
+  DaftarKodeNasabahComponent, PencarianNasabahComponent, AktivasiAtmComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent,
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
-  GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent,PencarianNasabahComponent,
-  PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, 
-  BuatNasabahIndividualComponent,TabskartuComponent,WebcamComponent]
+  GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
+  PembuatanNasabahBaruComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent,
+  BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent]

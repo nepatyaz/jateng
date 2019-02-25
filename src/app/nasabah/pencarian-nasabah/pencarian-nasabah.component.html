@@ -101,20 +101,20 @@
                       <div *ngIf="konten1[2]" role="tabpanel" class="tab-pane active">
                         <app-transaksi-limit *ngIf="editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-transaksi-limit>
                         <app-ubah-transaksi-limit *ngIf="!editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-ubah-transaksi-limit>
-                          <!--panel <button (click)="editTransaksiLimit = !editTransaksiLimit">toggle</button>{{editTransaksiLimit}}-->
+                        <!--panel <button (click)="editTransaksiLimit = !editTransaksiLimit">toggle</button>{{editTransaksiLimit}}-->
                       </div>
                       <!--panel isi konten data limit-->
 
                       <!--panel isi sandi bi-->
                       <div *ngIf="konten1[3]" role="tabpanel" class="tab-pane active">
-                          <app-sandi-bi *ngIf="editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-sandi-bi>
-                          <app-ubah-sandi-bi *ngIf="!editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-ubah-sandi-bi>
+                        <app-sandi-bi *ngIf="editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-sandi-bi>
+                        <app-ubah-sandi-bi *ngIf="!editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-ubah-sandi-bi>
                       </div>
                       <!--panel isi sandi bi-->
                       <!--panel isi data tambahan-->
                       <div *ngIf="konten1[4]" role="tabpanel" class="tab-pane active">
-                          <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-data-tambahan>
-                          <app-ubah-data-tambahan *ngIf="!editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-ubah-data-tambahan>
+                        <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-data-tambahan>
+                        <app-ubah-data-tambahan *ngIf="!editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-ubah-data-tambahan>
                       </div>
                       <!--panel isi data tambahan-->
                     </div>
