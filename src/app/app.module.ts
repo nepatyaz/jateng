@@ -98,6 +98,8 @@ import { NgxCurrencyModule } from "ngx-currency";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MaterialModule } from './material';
 import { CurrencyFormatDirective } from 'ng-currency-format';
+import { PaginationComponent } from './test/pagination/pagination.component';
+import { Pagination2Component } from './test/pagination2/pagination2.component';
 
 
 
@@ -188,7 +190,9 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
     CurrencyFormatDirective,
     OtorisasiRekeningKonfidensialComponent,
     OtorisasiCifComponent,
-    OtorisasiRekeningComponent
+    OtorisasiRekeningComponent,
+    PaginationComponent,
+    Pagination2Component
   ],
   imports: [
     BrowserModule,

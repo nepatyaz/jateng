@@ -54,6 +54,8 @@ import { WebcamComponent } from './test/webcam/webcam.component';
 import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
 import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
 import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+import { PaginationComponent } from './test/pagination/pagination.component';
+import { Pagination2Component } from './test/pagination2/pagination2.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -111,6 +113,8 @@ const routes: Routes = [
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
       { path: 'kartu/tabskartu', component: TabskartuComponent },
       { path: 'test/camera', component: WebcamComponent },
+      { path: 'test/pagination', component: PaginationComponent },
+      { path: 'test/pagination2', component: Pagination2Component },
       { path: 'otorisasihead/otorisasicif', component: OtorisasiCifComponent },
       { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
       { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
@@ -142,4 +146,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
   PembuatanNasabahBaruComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent,
-  BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent]
+  BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent,
+  PaginationComponent,Pagination2Component]
