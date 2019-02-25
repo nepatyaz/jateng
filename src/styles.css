@@ -21,7 +21,7 @@ body {
 
 header {
   height: 100px;
-  background-color: #234a7b;
+  background-image: linear-gradient(to right top, #234a7b, #00597d, #006573, #176e63, #487455);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -58,7 +58,7 @@ footer {
 }
 
 #outer {
-  min-height: 500px;
+  min-height: 300px;
 }
 
 .konten {
@@ -72,9 +72,118 @@ footer {
   margin-bottom: -4px;
 }
 
-.bodyContent {
-  margin-top: 225px;
+h1.web-branch {
+  background: -webkit-linear-gradient(#C9D6FF, #E2E2E2);
+  background: -moz-linear-gradient(#C9D6FF, #E2E2E2);
+  background: -ms-linear-gradient(#C9D6FF, #E2E2E2);
+  background: -o-linear-gradient(#C9D6FF, #E2E2E2);
+  background: linear-gradient(#C9D6FF, #E2E2E2);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
+/* ------------------------------------------------------ */
+/* body kontent / setting layout positioning in a content */
+.bodyContent {
+  margin-top: 200px;
+  max-height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* body kontent / setting layout positioning in a content */
+/* ------------------------------------------------------ */
+
+h5 {
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  background: -moz-linear-gradient(#283c86, #45a247);
+  background: -ms-linear-gradient(#283c86, #45a247);
+  background: -o-linear-gradient(#283c86, #45a247);
+  background: linear-gradient(#283c86, #45a247);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h5.text-primary {
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  background: -moz-linear-gradient(#283c86, #45a247);
+  background: -ms-linear-gradient(#283c86, #45a247);
+  background: -o-linear-gradient(#283c86, #45a247);
+  background: linear-gradient(#283c86, #45a247);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h5.card-title {
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  /* For Chrome and Safari */
+  background: -moz-linear-gradient(#283c86, #45a247);
+  /* For old Fx (3.6 to 15) */
+  background: -ms-linear-gradient(#283c86, #45a247);
+  /* For pre-releases of IE 10*/
+  background: -o-linear-gradient(#283c86, #45a247);
+  /* For old Opera (11.1 to 12.0) */
+  background: linear-gradient(#283c86, #45a247);
+  /* Standard syntax; must be last */
+  -webkit-background-clip: text;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  background-clip: text;
+}
+
+
+
+/* ------------------------------------- */
+/*                  DASHBOARD            */
+/* ------------------------------------- */
+
+.dashboard {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-body {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------- */
 /*                  FOOTER               */

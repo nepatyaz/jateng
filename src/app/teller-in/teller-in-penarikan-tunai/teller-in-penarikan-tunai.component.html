@@ -1,5 +1,5 @@
 <!--Main layout-->
-<div class="m-3 h-100">
+<div class="bodyContent">
   <!-- Start your project here-->
   <div id="outer" class="d-flex flex-column">
     <div class="card konten">
@@ -9,97 +9,102 @@
         <mdb-card>
           <mdb-card-body>
             <form (ngSubmit)="formSubmit($event)">
-            <!--input 1-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <label class="col-2 col-form-label  font-weight-bold">28/01/2013</label>
-              <span class="col-6"></span>
-            </div>
-            <!--input 1-->
-            <!--input 2-->
-            <div class="form-group row ">
-              <label class="col-2 col-form-label  font-weight-bold">Jenis Nomor</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="form-check form-check-inline">
+              <!--input 1-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label class="col-2 col-form-label  font-weight-bold">28/01/2013</label>
+                <span class="col-6"></span>
+              </div>
+              <!--input 1-->
+              <!--input 2-->
+              <div class="form-group row ">
+                <label class="col-2 col-form-label  font-weight-bold">Jenis Nomor</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="form-check form-check-inline">
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                  <label class="form-check-label"> Nomor Referensi</label>
+                </div>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
-                <label class="form-check-label"> Nomor Referensi</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                  <label class="form-check-label"> Nomor Cheque</label>
+                </div>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <div class="col-3"><input type="text" class="form-control"></div>
+                <span class="col-6"></span>
               </div>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
-                <label class="form-check-label"> Nomor Cheque</label>
-              </div>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <div class="col-3"><input type="text" class="form-control"></div>
-              <span class="col-6"></span>
-            </div>
-            <!--input 2-->
-            <!--input 3-->
-            <div class="form-group row">
+              <!--input 2-->
+              <!--input 3-->
+              <div class="form-group row">
                 <label class="col-2 col-form-label  font-weight-bold">Nomor Rekening</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input mdbInput mdbValidate type="text" name="inputRekening" id="rekening" class="form-control" [(ngModel)]="rekening"
-                    #inputRekening="ngModel" required></div>
+                <div class="col-3"><input mdbInput mdbValidate type="text" name="inputRekening" id="rekening" class="form-control"
+                    [(ngModel)]="rekening" #inputRekening="ngModel" required></div>
                 <span class="col-6 mt-2">
                   <p class="text-danger" *ngIf="inputRekening.invalid && (inputRekening.dirty || inputRekening.touched)">Mohon
                     Inputkan No Rekening</p>
                 </span>
-            </div>
-            <!--input 3-->
-            <!--input 4-->
-            <div class="form-group row">
+              </div>
+              <!--input 3-->
+              <!--input 4-->
+              <div class="form-group row">
                 <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3 "> 
-                    <input mdbInput mdbValidate currencyMask name="inputNilai" id="nilaiTransaksi" type="text" class="form-control" [(ngModel)]="inputan" #inputNilai="ngModel" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}" required>
+                <div class="col-3 ">
+                  <input mdbInput mdbValidate currencyMask name="inputNilai" id="nilaiTransaksi" type="text" class="form-control"
+                    [(ngModel)]="inputan" #inputNilai="ngModel" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}"
+                    required>
                 </div>
                 <span class="col-6 mt-2">
-                  <p class="text-danger"  *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
+                  <p class="text-danger" *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
                     Inputkan Jumlah Transaksi</p>
-              </span>
-            </div>
-            <!--input 4-->
-            <!--input 5-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <label class="col-2 col-form-label  font-weight-bold">DC</label>
-              <span class="col-6"></span>
-            </div>
-            <!--input 5-->
-            <!--input 6-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <span></span>
-              <div class="col-4"><textarea rows="4" cols ="50" class="form-control"></textarea></div>
-              <span class="col-6"></span>
-            </div>
-            <!--input 6-->
-            <!--input 7-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Kode Taspen</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">Taspen 1</option>
-                  <option value="2">Taspen 2</option>
-                  <option value="3">Taspen 3</option>
-                </select>
+                </span>
               </div>
-            </div>
-            <!--input 7-->
-            <div class="d-flex justify-content-center">
-                <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.invalid || inputRekening.invalid" disabled><i class="fa fa-refresh"></i> Proses</button>
-                <button mdbBtn type="submit" color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.valid && inputRekening.valid" (click)="frame.show()" ><i class="fa fa-refresh" ></i> Proses</button>
-                <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active"  mdbWavesEffect>
+              <!--input 4-->
+              <!--input 5-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label class="col-2 col-form-label  font-weight-bold">DC</label>
+                <span class="col-6"></span>
+              </div>
+              <!--input 5-->
+              <!--input 6-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <span></span>
+                <div class="col-4"><textarea rows="4" cols="50" class="form-control"></textarea></div>
+                <span class="col-6"></span>
+              </div>
+              <!--input 6-->
+              <!--input 7-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Kode Taspen</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3">
+                  <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
+                    <option selected>Pilih Salah Satu</option>
+                    <option value="1">Taspen 1</option>
+                    <option value="2">Taspen 2</option>
+                    <option value="3">Taspen 3</option>
+                  </select>
+                </div>
+              </div>
+              <!--input 7-->
+              <div class="d-flex justify-content-center">
+                <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.invalid || inputRekening.invalid"
+                  disabled><i class="fa fa-refresh"></i> Proses</button>
+                <button mdbBtn type="submit" color="default" class="waves-light" mdbWavesEffect *ngIf="inputNilai.valid && inputRekening.valid"
+                  (click)="frame.show()"><i class="fa fa-refresh"></i> Proses</button>
+                <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active"
+                  mdbWavesEffect>
                   <i class="fa fa-angle-left"></i> Kembali
                 </button>
-            </div>
-          </form>
+              </div>
+            </form>
           </mdb-card-body>
         </mdb-card>
 
@@ -140,79 +145,83 @@
 </div>
 
 
-<div mdbModal #modalFoto="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Validasi Foto Dan Tanda Tangan</h4>
-        </div>
-        <div class="modal-body">
+<div mdbModal #modalFoto="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">Validasi Foto Dan Tanda Tangan</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12">
-                  <div class="row">
-                    <div class="col-8 col-sm-6 text-center">
-                      Foto Customer :
-                        <img src="{{pasFoto}}" class="rounded mx-auto d-block" alt="..." style="height: 200px;">
-                    </div>
-                    <div class="col-4 col-sm-6 text-center">
-                      Tanda Tangan Customer :
-                      <br><br><br>
-                        <img src="{{tandaTangan}}" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
-                    </div>
-                  </div>
-                </div>
+              <div class="col-8 col-sm-6 text-center">
+                Foto Customer :
+                <img src="{{pasFoto}}" class="rounded mx-auto d-block" alt="..." style="height: 200px;">
               </div>
-          
+              <div class="col-4 col-sm-6 text-center">
+                Tanda Tangan Customer :
+                <br><br><br>
+                <img src="{{tandaTangan}}" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSucces()" mdbWavesEffect *ngIf="!isSPV"><i class="fa fa-refresh"></i> Proses</button>
-          <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSPV()" mdbWavesEffect *ngIf="isSPV"><i class="fa fa-refresh"></i> Proses</button>
-        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSucces()"
+          mdbWavesEffect *ngIf="!isSPV"><i class="fa fa-refresh"></i> Proses</button>
+        <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSPV()"
+          mdbWavesEffect *ngIf="isSPV"><i class="fa fa-refresh"></i> Proses</button>
       </div>
     </div>
   </div>
+</div>
 
 
 <!--bagian modal untuk validasi transaksi-->
 <div mdbModal #modalSPV="mdbModal" class="modal fade modal-notify modal-primary" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm modal-notify modal-primary" role="document">
-      <!--Content-->
-      <div class="modal-content text-center">
-        <!--Header-->
-        <div class="modal-header d-flex justify-content-center">
-          <p class="heading">Supervisor Approval</p>
-        </div>
-        <!--Body-->
-        <div class="modal-body">
-          Inputkan FingerPrint Dari Supervisor
-          <img src="../../../assets/image/finger.gif" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
-        </div>
-        <!--Footer-->
-        <div class="modal-footer justify-content-center">
-          <a type="button" mdbBtn color="primary" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="validasiSucces()"><i class="fa fa-refresh"></i> Proses</a>
-        </div>
+  <div class="modal-dialog modal-sm modal-notify modal-primary" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Supervisor Approval</p>
       </div>
-      <!--/.Content-->
+      <!--Body-->
+      <div class="modal-body">
+        Inputkan FingerPrint Dari Supervisor
+        <img src="../../../assets/image/finger.gif" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
+      </div>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="primary" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="validasiSucces()"><i
+            class="fa fa-refresh"></i> Proses</a>
+      </div>
     </div>
+    <!--/.Content-->
   </div>
-  <!--Bagian modal untuk validasi transaksi-->
+</div>
+<!--Bagian modal untuk validasi transaksi-->
 
-  <!--bagian modal untuk validasi transaksi-->
+<!--bagian modal untuk validasi transaksi-->
 <div mdbModal #modalSucces="mdbModal" class="modal fade modal-notify modal-success" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm modal-notify modal-success" role="document">
-      <!--Content-->
-      
-      <div class="modal-content text-center">
-        <!--Header-->
-        <div class="modal-header d-flex justify-content-center">
-          <p class="heading">Transaksi Sukses</p>
-        </div>
-        <!--Body-->
-        <div class="modal-body">
-          <i class="fa fa-check fa-4x animated rotateIn"></i>
-        </div>
+  <div class="modal-dialog modal-sm modal-notify modal-success" role="document">
+    <!--Content-->
+
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Transaksi Sukses</p>
       </div>
-      <!--/.Content-->
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-check fa-4x animated rotateIn"></i>
+      </div>
     </div>
+    <!--/.Content-->
   </div>
-  <!--Bagian modal untuk validasi transaksi-->
+</div>
+<!--Bagian modal untuk validasi transaksi-->

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -88,6 +88,9 @@ import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka
 import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
 import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
 import { WebcamComponent } from './test/webcam/webcam.component';
+import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
+import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
+import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
 
 //3rd party library module
 import { WebcamModule } from 'ngx-webcam';
@@ -95,6 +98,8 @@ import { NgxCurrencyModule } from "ngx-currency";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MaterialModule } from './material';
 import { CurrencyFormatDirective } from 'ng-currency-format';
+
+
 
 
 @NgModule({
@@ -180,7 +185,10 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
     TutupKartuComponent,
     RelasiKartuComponent,
     WebcamComponent,
-    CurrencyFormatDirective
+    CurrencyFormatDirective,
+    OtorisasiRekeningKonfidensialComponent,
+    OtorisasiCifComponent,
+    OtorisasiRekeningComponent
   ],
   imports: [
     BrowserModule,
@@ -192,7 +200,7 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
     MaterialModule,
     WebcamModule,
     NgxCurrencyModule,
- 
+
 
   ],
   providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],

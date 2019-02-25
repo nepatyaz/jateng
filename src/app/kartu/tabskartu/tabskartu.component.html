@@ -1,5 +1,5 @@
 <!--Main layout-->
-<div style="margin: 20px;">
+<div class="bodyContent">
   <!-- Start your project here-->
   <div class="d-flex flex-column h-100">
     <div id="outer" class="d-flex flex-column flex-grow">
@@ -31,7 +31,7 @@
                 <mdb-card-body>
                   <div class="tab-content">
 
-                      <!--panel isi konten menu aktivasi-->
+                    <!--panel isi konten menu aktivasi-->
                     <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active" id="one">
                       <app-aktivasi></app-aktivasi>
                     </div>
@@ -45,19 +45,19 @@
 
                     <!-- panel isi konten buka blokir  -->
                     <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">
-                        <app-buka-blokir></app-buka-blokir>
+                      <app-buka-blokir></app-buka-blokir>
                     </div>
                     <!-- end panel buka blokir -->
 
                     <!-- panel tutup kartu -->
                     <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">
-                        <app-tutup-kartu></app-tutup-kartu>
+                      <app-tutup-kartu></app-tutup-kartu>
                     </div>
                     <!-- end tutup kartu -->
 
                     <!-- panel relasi kartu -->
                     <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active" id="one">
-                        <app-relasi-kartu></app-relasi-kartu>
+                      <app-relasi-kartu></app-relasi-kartu>
                     </div>
                     <!-- end relasi kartu -->
 

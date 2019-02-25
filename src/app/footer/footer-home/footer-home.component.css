@@ -1,3 +1,8 @@
-.footer{
-    bottom: -50px;
+.footer {
+  bottom: 0px;
+  height: 30px;
+}
+
+.font-color {
+  color: #234a7b;
 }
