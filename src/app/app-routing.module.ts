@@ -54,6 +54,8 @@ import { WebcamComponent } from './test/webcam/webcam.component';
 import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
 import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
 import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
+import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -114,6 +116,8 @@ const routes: Routes = [
       { path: 'otorisasihead/otorisasicif', component: OtorisasiCifComponent },
       { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
       { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
+      { path: 'rekening/pencariandaftarrekening', component: PencarianDaftarRekeningComponent },
+      { path: 'rekening/pencarianbarsheetrekening', component: BarsheetRekeningComponent },
     ]
   },
   {
@@ -142,4 +146,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
   PembuatanNasabahBaruComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent,
-  BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent]
+  BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent,
+  PencarianDaftarRekeningComponent, BarsheetRekeningComponent]

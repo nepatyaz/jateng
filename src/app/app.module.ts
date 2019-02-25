@@ -91,6 +91,9 @@ import { WebcamComponent } from './test/webcam/webcam.component';
 import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
 import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
 import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
+import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
+
 
 //3rd party library module
 import { WebcamModule } from 'ngx-webcam';
@@ -188,7 +191,9 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
     CurrencyFormatDirective,
     OtorisasiRekeningKonfidensialComponent,
     OtorisasiCifComponent,
-    OtorisasiRekeningComponent
+    OtorisasiRekeningComponent,
+    PencarianDaftarRekeningComponent,
+    BarsheetRekeningComponent
   ],
   imports: [
     BrowserModule,
