@@ -37,4 +37,6 @@ export class TellerInSetoranTunaiComponent implements OnInit {
     this.modalFoto.show();
   }
 
+
+
 }
