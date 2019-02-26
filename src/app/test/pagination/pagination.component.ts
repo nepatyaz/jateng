@@ -38,33 +38,8 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit() {
     this.exampleDatabase = new ExampleHttpDatabase(this.http);
-    // If the user changes the sort order, reset back to the first page.
-    // this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-
-    //load jumlah data maksimum dari tabel test 
-    this.tabel.totalDataTest().subscribe(
-      data => {
-        this.length = data[0].total;
-        console.log(data[0].total);
-      },
-      err => {
-        alert("Gagal Meload Jumlah Data : " + err.error)
-      }
-    );
-
-    //load data awal untuk di tampilkan ke tabel
-    this.exampleDatabase.getFirstData()
-      .subscribe(
-        res => {
-          this.isError = false;
-          this.dataSource.data = res as Test[];
-          console.log("isi source : ", this.dataSource);
-        },
-        err => {
-          this.isError = true;
-          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
-        }
-      )
+    this.getFirstData();
+    this.getTotalData();
   }
 
   paginationEvent(event) {
@@ -97,27 +72,15 @@ export class PaginationComponent implements OnInit {
           resp => {
             var object1 = resp
             Object.keys(object1); // this returns all properties in an array ["a", "b", "c"]
-            var jumlah = object1[Object.keys(object1)[Object.keys(object1).length - 1]] 
+            var jumlah = object1[Object.keys(object1)[Object.keys(object1).length - 1]]
             this.length = jumlah.total
             console.log("jumlah : ", jumlah.total);
             this.dataSource.data = resp as Test[];
           }
         );
 
-
-    }else {
-      this.exampleDatabase.getFirstData()
-      .subscribe(
-        res => {
-          this.isError = false;
-          this.dataSource.data = res as Test[];
-          console.log("isi source : ", this.dataSource);
-        },
-        err => {
-          this.isError = true;
-          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
-        }
-      )
+    } else {
+      this.getFirstData();
     }
 
 
@@ -132,6 +95,38 @@ export class PaginationComponent implements OnInit {
   testing() {
     var nilai = this._elementRef.nativeElement.querySelector('#inputSearch').value;
     console.log(nilai);
+  }
+
+
+
+  getTotalData() {
+    //load jumlah data maksimum dari tabel test 
+    this.tabel.totalDataTest().subscribe(
+      data => {
+        this.length = data[0].total;
+        console.log(data[0].total);
+      },
+      err => {
+        alert("Gagal Meload Jumlah Data : " + err.error)
+      }
+    );
+  }
+
+  getFirstData() {
+
+    //load dataawal untuk di tampilkan ke tabel
+    this.exampleDatabase.getFirstData()
+      .subscribe(
+        res => {
+          this.isError = false;
+          this.dataSource.data = res as Test[];
+          console.log("isi source : ", this.dataSource);
+        },
+        err => {
+          this.isError = true;
+          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
+        }
+      )
   }
 
 }
