@@ -23,14 +23,11 @@ import { TellerInSelisihKasComponent } from './teller-in/teller-in-selisih-kas/t
 import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/teller-in-sinkron-fin.component';
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
-import { AuthService } from './auth.service';
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
-import { KtrluserService } from './ktrluser.service';
-import { ViewuserService } from './viewuser.service';
 import { LoginGuard } from './guard/login.guard';
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -101,6 +98,11 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
 import { PaginationComponent } from './test/pagination/pagination.component';
 import { Pagination2Component } from './test/pagination2/pagination2.component';
 
+//service 
+import { KtrluserService } from './ktrluser.service';
+import { ViewuserService } from './viewuser.service';
+import { AuthService } from './auth.service';
+import { TableService } from './service/table.service';
 
 
 
@@ -192,7 +194,7 @@ import { Pagination2Component } from './test/pagination2/pagination2.component';
     OtorisasiCifComponent,
     OtorisasiRekeningComponent,
     PaginationComponent,
-    Pagination2Component
+    Pagination2Component,
   ],
   imports: [
     BrowserModule,
@@ -207,7 +209,7 @@ import { Pagination2Component } from './test/pagination2/pagination2.component';
 
 
   ],
-  providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
+  providers: [AuthService, KtrluserService, ViewuserService, TableService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

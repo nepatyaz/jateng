@@ -34,6 +34,24 @@
       "pathRewrite": {
         "^/view_ktrluser": ""
       }
+    },
+    "/comments/jumlah/*": {
+      "target": "http://127.0.0.1:3000/comments/jumlah",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/comments/jumlah": ""
+      }
+    },
+    "/commentsData/*": {
+      "target": "http://127.0.0.1:3000/commentsData",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/commentsData": ""
+      }
     }
   }
   
