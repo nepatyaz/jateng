@@ -53,16 +53,12 @@ export class Pagination2Component implements OnInit {
   }
 
 
-
-
   totalData() {
     //return this.http.get('https://my-json-server.typicode.com/nepatyaz/rest/statu')
     return this.http.get('/comments/jumlah').subscribe(data=>{
       console.log("jumlah data : ", data);
     });
   }
-
-
 }
 
 

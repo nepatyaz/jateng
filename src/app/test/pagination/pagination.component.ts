@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-import { merge, Observable, of as observableOf } from 'rxjs';
-import { catchError, map, startWith, switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { Comment } from '../pagination2/pagination2.component';
 import { TableService } from '../../service/table.service';
+import { catchError, map } from 'rxjs/operators';
 
 
 @Component({
@@ -12,21 +12,18 @@ import { TableService } from '../../service/table.service';
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.css']
 })
-export class PaginationComponent implements AfterViewInit {
+export class PaginationComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'email', 'body'];
+  displayedColumns: string[] = ['id', 'first_name', 'last_name', 'email', 'gender'];
   exampleDatabase: ExampleHttpDatabase;
   // data: GithubIssue[] = [];
-  data: Comment[] = [];
-  items: Comment[] = [];
+  data: Test[] = [];
+  items: Test[] = [];
 
+  isError = false;
+  errorMessage: string;
 
-  public dataSource = new MatTableDataSource<Comment>();
-
-
-  // resultsLength = 499;
-  // isLoadingResults = true;
-  // isRateLimitReached = false;
+  public dataSource = new MatTableDataSource<Test>();
 
   // MatPaginator Inputs
   length
@@ -36,137 +33,157 @@ export class PaginationComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   // @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private http: HttpClient, private tabel: TableService) { }
+  constructor(private http: HttpClient, private tabel: TableService, private _elementRef: ElementRef) { }
 
 
   ngOnInit() {
-
-  }
-
-
-
-  ngAfterViewInit() {
-
     this.exampleDatabase = new ExampleHttpDatabase(this.http);
     // If the user changes the sort order, reset back to the first page.
     // this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-    this.tabel.totalData().subscribe(data => {
-      this.length = data[0].total;
-      console.log(data[0].total);
-    });
+    //load jumlah data maksimum dari tabel test 
+    this.tabel.totalDataTest().subscribe(
+      data => {
+        this.length = data[0].total;
+        console.log(data[0].total);
+      },
+      err => {
+        alert("Gagal Meload Jumlah Data : " + err.error)
+      }
+    );
 
-    this.exampleDatabase.getData()
-      .subscribe(res => {
-        this.dataSource.data = res as Comment[];
-        console.log("isi source : ", this.dataSource);
-      })
-
-
-
-
-
-    // this.dataSource.paginator = this.paginator;
-    // merge(this.paginator.page)
-    //   .pipe(
-    //     startWith({}),
-    //     switchMap(() => {
-    //       this.isLoadingResults = true;
-    //       return this.exampleDatabase!.getRepoIssues(this.paginator.pageIndex);
-    //     }),
-    //     map(data => {
-    //       // Flip flag to show that loading has finished.
-    //       this.isLoadingResults = false;
-    //       this.isRateLimitReached = false;
-    //       // this.resultsLength = data.total_count;
-    //       console.log("data map : ", data);
-    //       return data.items;
-    //     }),
-    //     catchError(() => {
-    //       this.isLoadingResults = false;
-    //       // Catch if the GitHub API has reached its rate limit. Return empty data.
-    //       // this.isRateLimitReached = true;
-    //       return observableOf([]);
-    //     })
-    //   ).subscribe(data => {
-    //     this.data = data
-    //     console.log(this.data)
-    //   });
+    //load data awal untuk di tampilkan ke tabel
+    this.exampleDatabase.getFirstData()
+      .subscribe(
+        res => {
+          this.isError = false;
+          this.dataSource.data = res as Test[];
+          console.log("isi source : ", this.dataSource);
+        },
+        err => {
+          this.isError = true;
+          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
+        }
+      )
   }
-
 
   paginationEvent(event) {
     var recStart = event.pageIndex * event.pageSize;
-    // console.log(JSON.stringify("Current page index: " + event.pageIndex));
-    // console.log(JSON.stringify("length page index: " + event.length));
-    // console.log(JSON.stringify("pageSize page index: " + event.pageSize));
-    console.log("Record Start : ", recStart);
-    console.log("?size=" + event.length + "&page=" + recStart + "&limit=" + event.pageSize);
-    this.exampleDatabase.getPage("?size=" + event.length + "&page=" + recStart + "&limit=" + event.pageSize)
-    .subscribe(res => {
-      this.dataSource.data = res as Comment[];
-      console.log("isi source : ", this.dataSource);
-    })
 
+    console.log("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize);
+    this.exampleDatabase.getPageData("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize)
+      .subscribe(
+        res => {
+          this.isError = false
+          this.dataSource.data = res as Test[];
+          console.log("isi source : ", this.dataSource);
+        },
+        err => {
+          this.isError = true;
+          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
+        }
+      )
   }
 
 
+  applyFilter(filterValue: string) {
+    if (filterValue.length > 1) {
+      let searchUrl = "?&filter=" + filterValue
+      console.log("nilai filter :", searchUrl)
+
+      //cari data sesuai input filter 
+      this.exampleDatabase.getSearchCount(searchUrl)
+        .subscribe(
+          resp => {
+          console.log(resp);
+          }
+        );
+
+
+      //cari data sesuai input filter 
+      this.exampleDatabase.getSearch(searchUrl)
+        .subscribe(
+          resp => {
+            this.isError = false
+            this.dataSource.data = resp as Test[];
+          }
+        );
+
+
+    }else {
+      this.exampleDatabase.getFirstData()
+      .subscribe(
+        res => {
+          this.isError = false;
+          this.dataSource.data = res as Test[];
+          console.log("isi source : ", this.dataSource);
+        },
+        err => {
+          this.isError = true;
+          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
+        }
+      )
+    }
+
+
+
+    // this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
+  testing() {
+    var nilai = this._elementRef.nativeElement.querySelector('#inputSearch').value;
+    console.log(nilai);
+  }
+
 }
 
-
-
-
-export interface CommentApi {
+export interface TestApi {
   items: Comment[];
 }
 
-
-
-export interface Comment {
+export interface Test {
   id: string;
-  name: string;
+  first_name: string;
+  last_name: string;
   email: string;
-  body: string;
+  gender: string;
 }
 
-
-// export class ExampleHttpDatabase {
-//   constructor(private http: HttpClient) { }
-
-//   getRepoIssues(page: number): Observable<GithubApi> {
-//     const href = 'https://api.github.com/search/issues';
-//     const requestUrl =
-//       `${href}?q=repo:angular/material2&page=${page + 1}`;
-//     console.log(requestUrl);
-//     return this.http.get<GithubApi>(requestUrl);
-//   }
-// }
 export class ExampleHttpDatabase {
   constructor(private http: HttpClient) { }
 
-  getRepoIssues(page: number): Observable<CommentApi> {
-    const href = 'commentsData';
-    const requestUrl =
-      `${href}?size=1&page=${page}&limit=5`;
-    // `${href}?q=repo:angular/material2&page=${page + 1}`;
-    console.log(requestUrl);
-    return this.http.get<CommentApi>(requestUrl);
-  }
-
-  getData() {
-    const href = 'commentsData';
-    const requestUrl =
-      `${href}?size=1&page=0&limit=10`;
+  getFirstData() {
+    const href = 'api/testdata';
+    const requestUrl = `${href}?page=0&start=0&limit=10`;;
     // `${href}?q=repo:angular/material2&page=${page + 1}`;
     console.log(requestUrl);
     return this.http.get(requestUrl);
   }
 
-  getPage(url) {
-    const href = 'commentsData';
+  getPageData(url) {
+    const href = 'api/testdata';
     const requestUrl = href + url;
     // `${href}?q=repo:angular/material2&page=${page + 1}`;
     console.log(requestUrl);
     return this.http.get(requestUrl);
   }
+
+  getSearch(url) {
+    const href = 'api/testsearch';
+    const requestUrl = href + url;
+    console.log("url kirim : ", requestUrl);
+    return this.http.get(requestUrl);
+  }
+
+  getSearchCount(url) {
+    const href = 'api/testcount';
+    const requestUrl = href + url;
+    console.log("url kirim : ", requestUrl);
+    return this.http.get(requestUrl);
+  }
+
 }

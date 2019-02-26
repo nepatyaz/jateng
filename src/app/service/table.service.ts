@@ -18,4 +18,8 @@ export class TableService {
     //post detail ke http server balikan user info jika benar
     return this.http.get('/comments/jumlah')
   }
+  totalDataTest() {
+    //post detail ke http server balikan user info jika benar
+    return this.http.get('/api/jumlahtest')
+  }
 }
