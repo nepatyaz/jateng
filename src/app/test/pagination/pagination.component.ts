@@ -4,7 +4,7 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Observable } from 'rxjs';
 import { Comment } from '../pagination2/pagination2.component';
 import { TableService } from '../../service/table.service';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, last } from 'rxjs/operators';
 
 
 @Component({
@@ -91,19 +91,14 @@ applyFilter(filterValue: string) {
     console.log("nilai filter :", searchUrl)
 
     //cari data sesuai input filter 
-    this.exampleDatabase.getSearchCount(searchUrl)
-      .subscribe(
-        resp => {
-          console.log(resp);
-        }
-      );
-
-
-    //cari data sesuai input filter 
     this.exampleDatabase.getSearch(searchUrl)
       .subscribe(
         resp => {
-          this.isError = false
+          var object1 = resp
+          Object.keys(object1); // this returns all properties in an array ["a", "b", "c"]
+          var jumlah = object1[Object.keys(object1)[Object.keys(object1).length - 1]]
+          this.length = jumlah.total
+          console.log("jumlah : ", jumlah.total);
           this.dataSource.data = resp as Test[];
         }
       );
@@ -173,13 +168,6 @@ export class ExampleHttpDatabase {
 
   getSearch(url) {
     const href = 'api/testsearch';
-    const requestUrl = href + url;
-    console.log("url kirim : ", requestUrl);
-    return this.http.get(requestUrl);
-  }
-
-  getSearchCount(url) {
-    const href = 'api/testcount';
     const requestUrl = href + url;
     console.log("url kirim : ", requestUrl);
     return this.http.get(requestUrl);
