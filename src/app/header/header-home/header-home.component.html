@@ -49,19 +49,20 @@
 
     <div class="dropdown" mdbDropdown>
 
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift active" type="button" mdbWavesEffect>
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
         Financial Retail
       </button>
 
       <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/tellerin']">Teller In</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/setorantunai']">Setoran Tunai</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/penarikantunai']">Penarikan Tunai</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/pindahbuku']">Pemindahbukuan Tanpa Cek</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/pinbukbedauang']">Pemindahbukuan Beda Mata
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/tellerin']">Teller In</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/setorantunai']">Setoran Tunai</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/penarikantunai']">Penarikan Tunai</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/pindahbuku']">Pemindahbukuan Tanpa Cek</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/pinbukbedauang']">Pemindahbukuan Beda
+          Mata
           Uang</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/selisihkas']">Selisih Kas Lebih</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/tellerin/sinkronfin']">Sinkronisasi Fin Retail</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/selisihkas']">Selisih Kas Lebih</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/sinkronfin']">Sinkronisasi Fin Retail</button>
       </div>
     </div>
 
@@ -151,8 +152,10 @@
       </button>
 
       <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" href="#">Pencarian Daftar Rekening</button>
-        <button class="dropdown-item text-dark" href="#">Bar Sheet Rekening</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/rekening/pencariandaftarrekening']">Pencarian Daftar
+          Rekening</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/rekening/pencarianbarsheetrekening']">Bar Sheet
+          Rekening</button>
       </div>
     </div>
 

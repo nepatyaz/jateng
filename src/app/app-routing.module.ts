@@ -54,6 +54,8 @@ import { WebcamComponent } from './test/webcam/webcam.component';
 import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
 import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
 import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
+import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
 import { PaginationComponent } from './test/pagination/pagination.component';
 import { Pagination2Component } from './test/pagination2/pagination2.component';
 
@@ -118,6 +120,8 @@ const routes: Routes = [
       { path: 'otorisasihead/otorisasicif', component: OtorisasiCifComponent },
       { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
       { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
+      { path: 'rekening/pencariandaftarrekening', component: PencarianDaftarRekeningComponent },
+      { path: 'rekening/pencarianbarsheetrekening', component: BarsheetRekeningComponent },
     ]
   },
   {
@@ -147,4 +151,4 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
   PembuatanNasabahBaruComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent,
   BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent,
-  PaginationComponent,Pagination2Component]
+  PencarianDaftarRekeningComponent, BarsheetRekeningComponent, PaginationComponent, Pagination2Component]
