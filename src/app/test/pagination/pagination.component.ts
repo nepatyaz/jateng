@@ -1,10 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-import { Observable } from 'rxjs';
 import { Comment } from '../pagination2/pagination2.component';
 import { TableService } from '../../service/table.service';
-import { catchError, map, last } from 'rxjs/operators';
+
 
 
 @Component({
