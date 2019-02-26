@@ -73,45 +73,44 @@ export class PaginationComponent implements OnInit {
     console.log("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize);
     this.exampleDatabase.getPageData("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize)
       .subscribe(
-        res => {
+        res =>
           this.isError = false
           this.dataSource.data = res as Test[];
-          console.log("isi source : ", this.dataSource);
-        },
-        err => {
-          this.isError = true;
-          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
-        }
-      )
-  }
+    console.log("isi source : ", this.dataSource);
+  },
+  err => {
+  this.isError = true;
+  this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
+}
 
 
-  applyFilter(filterValue: string) {
-    if (filterValue.length > 1) {
-      let searchUrl = "?&filter=" + filterValue
-      console.log("nilai filter :", searchUrl)
 
-      //cari data sesuai input filter 
-      this.exampleDatabase.getSearchCount(searchUrl)
-        .subscribe(
-          resp => {
+applyFilter(filterValue: string) {
+  if (filterValue.length > 1) {
+    let searchUrl = "?&filter=" + filterValue
+    console.log("nilai filter :", searchUrl)
+
+    //cari data sesuai input filter 
+    this.exampleDatabase.getSearchCount(searchUrl)
+      .subscribe(
+        resp => {
           console.log(resp);
-          }
-        );
+        }
+      );
 
 
-      //cari data sesuai input filter 
-      this.exampleDatabase.getSearch(searchUrl)
-        .subscribe(
-          resp => {
-            this.isError = false
-            this.dataSource.data = resp as Test[];
-          }
-        );
+    //cari data sesuai input filter 
+    this.exampleDatabase.getSearch(searchUrl)
+      .subscribe(
+        resp => {
+          this.isError = false
+          this.dataSource.data = resp as Test[];
+        }
+      );
 
 
-    }else {
-      this.exampleDatabase.getFirstData()
+  } else {
+    this.exampleDatabase.getFirstData()
       .subscribe(
         res => {
           this.isError = false;
@@ -123,23 +122,23 @@ export class PaginationComponent implements OnInit {
           this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
         }
       )
-    }
-
-
-
-    // this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
   }
 
-  testing() {
-    var nilai = this._elementRef.nativeElement.querySelector('#inputSearch').value;
-    console.log(nilai);
-  }
 
+
+  // this.dataSource.filter = filterValue.trim().toLowerCase();
+
+  if (this.dataSource.paginator) {
+    this.dataSource.paginator.firstPage();
+  }
 }
+
+testing() {
+  var nilai = this._elementRef.nativeElement.querySelector('#inputSearch').value;
+  console.log(nilai);
+}
+
+
 
 export interface TestApi {
   items: Comment[];
