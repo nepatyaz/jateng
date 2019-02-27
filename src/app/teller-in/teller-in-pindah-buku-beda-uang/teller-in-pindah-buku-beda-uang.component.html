@@ -15,7 +15,7 @@
                 <label class="col-form-label pr-0 font-weight-bold">:</label>
                 <div class="col-3 form-inline">
                   <div class="input-group">
-                    <input class="form-control" mdbValidate formControlName="inputTanggal" [matDatepicker]="picker"
+                    <input class="form-control" mdbValidate formControlName="inputTanggal" [matDatepicker]="picker" id="inputTanggal"
                       placeholder="Tanggal Valuta">
                     <mat-datepicker #picker></mat-datepicker>
                     <div class="input-group-append">
@@ -31,7 +31,7 @@
               <div class="form-group row">
                 <label class="col-2 col-form-label font-weight-bold">Nomor Referensi</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input type="text" class="form-control"></div>
+                <div class="col-3"><input type="text" class="form-control" id="inputNoReferensi"></div>
                 <span class="col-6"></span>
               </div>
               <!--input 2-->
@@ -46,11 +46,13 @@
               <div class="form-group row">
                 <label class="col-2 col-form-label font-weight-bold">Nomor Rekening Debit</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input type="text" mdbValidate formControlName="inputNoRekeningDebit" class="form-control"></div>
+                <div class="col-3"><input type="text" mdbValidate formControlName="inputNoRekeningDebit" id="inputNoRekeningDebit"
+                    class="form-control"></div>
                 <span class="col-1"> </span>
                 <label class="col-2 col-form-label font-weight-bold">Nilai Transaksi Debit</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input type="text" mdbValidate formControlName="inputNilaiDebit" class="form-control"></div>
+                <div class="col-3"><input type="text" mdbValidate formControlName="inputNilaiDebit" id="inputNilaiDebit"
+                    class="form-control"></div>
               </div>
               <!--input 3-->
               <div class="form-group row">
@@ -64,18 +66,21 @@
               <div class="form-group row">
                 <label class="col-2 col-form-label font-weight-bold">Nomor Rekening Kredit</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input mdbValidate formControlName="inputNoRekKredit" type="text" class="form-control"></div>
+                <div class="col-3"><input mdbValidate formControlName="inputNoRekKredit" id="inputNoRekKredit" type="text"
+                    class="form-control"></div>
                 <span class="col-1"></span>
                 <label class="col-2 col-form-label font-weight-bold">Nilai Transaksi Kredit</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input mdbValidate formControlName="inputNilaiKredit" type="text" class="form-control"></div>
+                <div class="col-3"><input mdbValidate formControlName="inputNilaiKredit" id="inputNilaiKredit" type="text"
+                    class="form-control"></div>
               </div>
               <!--input 4-->
               <!--input 5-->
               <div class="form-group row">
                 <label class="col-2 col-form-label font-weight-bold">Nilai Ekuivalen</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input mdbValidate formControlName="inputNilaiEkuivalen" type="text" class="form-control"></div>
+                <div class="col-3"><input mdbValidate formControlName="inputNilaiEkuivalen" id="inputNilaiEkuivalen"
+                    type="text" class="form-control"></div>
                 <span class="col-6">
                   <p class="mt-1 text-danger" *ngIf="inputNilaiEkuivalen.invalid && (inputNilaiEkuivalen.dirty || inputNilaiEkuivalen.touched)">Mohon
                     Inputkan Nilai Ekuivalen </p>
@@ -95,7 +100,7 @@
                 <label class="col-2 col-form-label font-weight-bold">Keterangan</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
                 <span></span>
-                <div class="col-4"><textarea rows="4" cols="50" class="form-control"></textarea></div>
+                <div class="col-4"><textarea rows="4" cols="50" class="form-control" id="InputKeterangan"></textarea></div>
                 <span class="col-6"></span>
               </div>
               <!--input 7-->
@@ -156,9 +161,14 @@
                 </tbody>
               </table>
 
-              <div class="d-flex justify-content-center">
-                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputTanggal.invalid || inputNoRekeningDebit.invalid || inputNilaiDebit.invalid || inputNoRekKredit.invalid || inputNilaiKredit.invalid " disabled><i class="fa fa-refresh"></i> Proses</button>
-                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputTanggal.valid && inputNoRekeningDebit.valid && inputNilaiDebit.valid && inputNoRekKredit.valid && inputNilaiKredit.valid "><i class="fa fa-refresh" ></i> Proses</button>
+
+              <div class="d-flex justify-content-center mt-5">
+                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputTanggal.invalid || inputNoRekeningDebit.invalid || inputNilaiDebit.invalid || inputNoRekKredit.invalid || inputNilaiKredit.invalid "
+                  disabled><i class="fa fa-refresh"></i> Proses</button>
+                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputTanggal.valid && inputNoRekeningDebit.valid && inputNilaiDebit.valid && inputNoRekKredit.valid && inputNilaiKredit.valid "
+                  (click)="proses()"><i class="fa fa-refresh"></i> Proses</button>
+                <a mdbBtn type="button" color="primary" mdbWavesEffect [routerLink]="['/']" routerLinkActive="router-link-active"><i
+                    class="fa fa-reply "></i> Kembali</a>
               </div>
             </form>
 

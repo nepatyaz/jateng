@@ -33,4 +33,19 @@ export class TellerInPindahBukuBedaUangComponent implements OnInit {
   get inputNilaiKredit() { return this.validatingForm.get('inputNilaiKredit'); }
   get inputNilaiEkuivalen() { return this.validatingForm.get('inputNilaiEkuivalen'); }
 
+
+  proses(){
+    console.log("Proses Berjalan");
+    let inputTanggal = this._elementRef.nativeElement.querySelector('#inputTanggal').value; 
+    let inputNoReferensi = this._elementRef.nativeElement.querySelector('#inputNoReferensi').value; 
+    let inputNoRekeningDebit = this._elementRef.nativeElement.querySelector('#inputNoRekeningDebit').value; 
+    let inputNilaiDebit = this._elementRef.nativeElement.querySelector('#inputNilaiDebit').value; 
+    let inputNoRekKredit = this._elementRef.nativeElement.querySelector('#inputNoRekKredit').value; 
+    let inputNilaiKredit = this._elementRef.nativeElement.querySelector('#inputNilaiKredit').value; 
+    let inputNilaiEkuivalen = this._elementRef.nativeElement.querySelector('#inputNilaiEkuivalen').value; 
+    let InputKeterangan = this._elementRef.nativeElement.querySelector('#InputKeterangan').value; 
+    console.log( inputTanggal,inputNoReferensi,inputNoRekeningDebit,inputNilaiDebit,inputNoRekKredit,inputNilaiKredit,inputNilaiEkuivalen,InputKeterangan)   ;
+  }
+
+
 }
