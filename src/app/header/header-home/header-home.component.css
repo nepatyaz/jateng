@@ -90,7 +90,7 @@ ul.bg-opacity {
   background-image: url(/src/assets/image/material-img/HeaderWb.png);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 3;
+  /* z-index: 1; */
 }
 
 button.dropdown-toggle.waves-light {
