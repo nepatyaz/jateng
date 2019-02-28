@@ -5,10 +5,10 @@ header {
 
 
 
-.navbar2 {
+/* .navbar2 {
   background-image: url(/src/assets/image/material-img/HeaderWb.png);
   margin-top: 100px;
-}
+} */
 
 
 .navbar3 {
@@ -90,6 +90,7 @@ ul.bg-opacity {
   background-image: url(/src/assets/image/material-img/HeaderWb.png);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 3;
 }
 
 button.dropdown-toggle.waves-light {

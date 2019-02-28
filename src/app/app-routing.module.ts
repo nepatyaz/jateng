@@ -121,7 +121,6 @@ const routes: Routes = [
       { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
       { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
       { path: 'rekening/pencariandaftarrekening', component: PencarianDaftarRekeningComponent },
-      { path: 'rekening/pencarianbarsheetrekening', component: BarsheetRekeningComponent },
     ]
   },
   {

@@ -62,20 +62,25 @@
             </div>
             <div class="form-group row">
               <span class="col-2"></span>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">Corporate</option>
-                  <option value="2">Retail</option>
-                </select>
+              <div class="col-3" style="height: 40px;">
+                <mat-form-field style="width: 250px;">
+                  <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Corporate</mat-option>
+                    <mat-option value="option2">Individual</mat-option>
+                  </mat-select>
+                </mat-form-field>
               </div>
               <div class="input-group-append" id="button-addon4">
-                <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
+                <button [attr.disabled]="selected ? null : ''" (click)="onClick()" mdbBtn color="primary" size="sm"
+                  class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
               </div>
             </div>
 
           </mdb-card-body>
         </mdb-card>
+
+        <!-- NEW  -->
 
         <span style="height: 10vh;"></span>
       </div>

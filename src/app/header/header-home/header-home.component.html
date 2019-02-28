@@ -122,6 +122,22 @@
       </div>
     </div>
 
+    <!-- Try Multi Dropdown -->
+    <!-- <div class="dropdown" mdbDropdown>
+      <button mdbDropdownToggle mat-button [matMenuTriggerFor]="menuNasabah" class="dropdown-toggle waves-light btn-shift">Nasabah</button>
+      <mat-menu #menuNasabah="matMenu">
+        <button mat-menu-item class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet
+          Nasabah</button>
+        <button mat-menu-item [matMenuTriggerFor]="pencarianNasabah" class="dropdown-item text-dark">Pencarian Nasabah</button>
+        <button mat-menu-item class="dropdown-item text-dark">Pencarian Daftar Hitam</button>
+      </mat-menu>
+      <mat-menu #pencarianNasabah="matMenu">
+        <button mat-menu-item class="dropdown-item text-dark" [routerLink]="['/nasabah/carinasabah']">Pencarian Nasabah</button>
+        <button mat-menu-item class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pembuatan
+          Nasabah Baru</button>
+      </mat-menu>
+    </div> -->
+
     <div class="dropdown" mdbDropdown>
 
       <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
@@ -129,11 +145,11 @@
       </button>
 
       <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Daftar Kode Nasabah</button>
-        <button class="dropdown-item text-dark" href="#">Bar Sheet Nasabah</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/carinasabah']">Pencarian Nasabah</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pembuatan Nasabah Baru</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/duplikatnasabah']">Duplikat Cek Nasabah Baru -
+        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet Nasabah</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pencarian Nasabah</button>
+        <button class="dropdown-item text-dark">Pencarian Daftar Hitam</button>
+
+        <!-- <button class="dropdown-item text-dark" [routerLink]="['/nasabah/duplikatnasabah']">Duplikat Cek Nasabah Baru -
           Corporate</button>
         <button class="dropdown-item text-dark" [routerLink]="['/nasabah/duplikatnasabahindvl']">Duplikat Cek Nasabah
           Baru -
@@ -141,7 +157,7 @@
         <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahcorporate']">Buat Nasaba Baru -
           Corporate</button>
         <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahindividual']">Buat Nasaba Baru -
-          Individual</button>
+          Individual</button> -->
       </div>
     </div>
 

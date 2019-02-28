@@ -1,10 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-import { Observable } from 'rxjs';
 import { Comment } from '../pagination2/pagination2.component';
 import { TableService } from '../../service/table.service';
-import { catchError, map, last } from 'rxjs/operators';
+
 
 
 @Component({
@@ -38,9 +37,68 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit() {
     this.exampleDatabase = new ExampleHttpDatabase(this.http);
-    // If the user changes the sort order, reset back to the first page.
-    // this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+    this.getFirstData();
+    this.getTotalData();
+  }
 
+  paginationEvent(event) {
+    var recStart = event.pageIndex * event.pageSize;
+
+    console.log("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize);
+    this.exampleDatabase.getPageData("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize)
+      .subscribe(
+        res => {
+          this.isError = false
+          this.dataSource.data = res as Test[];
+          console.log("isi source : ", this.dataSource);
+        },
+        err => {
+          this.isError = true;
+          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
+        }
+      )
+  }
+
+
+  applyFilter(filterValue: string) {
+    if (filterValue.length > 1) {
+      let searchUrl = "?&filter=" + filterValue
+      console.log("nilai filter :", searchUrl)
+
+      //cari data sesuai input filter 
+      this.exampleDatabase.getSearch(searchUrl)
+        .subscribe(
+          resp => {
+            var object1 = resp
+            Object.keys(object1); // this returns all properties in an array ["a", "b", "c"]
+            var jumlah = object1[Object.keys(object1)[Object.keys(object1).length - 1]]
+            this.length = jumlah.total
+            console.log("jumlah : ", jumlah.total);
+            this.dataSource.data = resp as Test[];
+          }
+        );
+
+    } else {
+      this.getFirstData();
+    }
+
+
+
+    // this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
+  testing() {
+    var nilai = this._elementRef.nativeElement.querySelector('#inputSearch').value;
+    console.log(nilai);
+  }
+
+
+
+  getTotalData() {
     //load jumlah data maksimum dari tabel test 
     this.tabel.totalDataTest().subscribe(
       data => {
@@ -51,8 +109,11 @@ export class PaginationComponent implements OnInit {
         alert("Gagal Meload Jumlah Data : " + err.error)
       }
     );
+  }
 
-    //load data awal untuk di tampilkan ke tabel
+  getFirstData() {
+
+    //load dataawal untuk di tampilkan ke tabel
     this.exampleDatabase.getFirstData()
       .subscribe(
         res => {
@@ -67,73 +128,7 @@ export class PaginationComponent implements OnInit {
       )
   }
 
-  paginationEvent(event) {
-    var recStart = event.pageIndex * event.pageSize;
-
-    console.log("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize);
-    this.exampleDatabase.getPageData("?page=" + event.pageIndex + "&start=" + recStart + "&limit=" + event.pageSize)
-      .subscribe(
-        res =>
-          this.isError = false
-          this.dataSource.data = res as Test[];
-    console.log("isi source : ", this.dataSource);
-  },
-  err => {
-  this.isError = true;
-  this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
 }
-
-
-
-applyFilter(filterValue: string) {
-  if (filterValue.length > 1) {
-    let searchUrl = "?&filter=" + filterValue
-    console.log("nilai filter :", searchUrl)
-
-    //cari data sesuai input filter 
-    this.exampleDatabase.getSearch(searchUrl)
-      .subscribe(
-        resp => {
-          var object1 = resp
-          Object.keys(object1); // this returns all properties in an array ["a", "b", "c"]
-          var jumlah = object1[Object.keys(object1)[Object.keys(object1).length - 1]]
-          this.length = jumlah.total
-          console.log("jumlah : ", jumlah.total);
-          this.dataSource.data = resp as Test[];
-        }
-      );
-
-
-  } else {
-    this.exampleDatabase.getFirstData()
-      .subscribe(
-        res => {
-          this.isError = false;
-          this.dataSource.data = res as Test[];
-          console.log("isi source : ", this.dataSource);
-        },
-        err => {
-          this.isError = true;
-          this.errorMessage = "Gagal Meload Data ke Tabel : " + err.error;
-        }
-      )
-  }
-
-
-
-  // this.dataSource.filter = filterValue.trim().toLowerCase();
-
-  if (this.dataSource.paginator) {
-    this.dataSource.paginator.firstPage();
-  }
-}
-
-testing() {
-  var nilai = this._elementRef.nativeElement.querySelector('#inputSearch').value;
-  console.log(nilai);
-}
-
-
 
 export interface TestApi {
   items: Comment[];

@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-image: url(assets/image/material-img/backgroundLogin.jpg);
+  background-image: url(assets/image/material-img/backgroundWb.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,15 +26,15 @@ body {
   z-index: 0;
 }
 
-/* body::after {
+body::after {
   content: '';
   display: block;
-  width: 100%;
+  width: 63%;
   height: 100%;
-  background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(80deg, rgba(2, 0, 36, 1) 0%, rgba(113, 147, 189, 1) 0%, rgba(69, 126, 181, 1) 0%, rgba(123, 145, 174, 1) 49%, rgba(11, 141, 171, 0) 100%, rgba(9, 147, 175, 1) 100%);
   position: absolute;
-  z-index: 1040;
-} */
+  z-index: 1;
+}
 
 header {
   height: 100px;
@@ -56,7 +56,7 @@ main {
   min-width: 100%;
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: 2;
 }
 
 
@@ -67,6 +67,7 @@ footer {
   background-size: cover;
   background-color: rgba(255, 255, 255, 10%);
   z-index: 99999;
+  color: blue;
 }
 
 .flex-grow {
@@ -170,18 +171,31 @@ h5.card-title {
 /*                  DASHBOARD            */
 /* ------------------------------------- */
 
-.dashboard {
+.bodyDashboard {
   width: 100%;
   height: 100%;
+  margin-top: 100px;
+  z-index: 2;
+  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.dashboard-body {
+/* .dashboard {
+  width: 100%;
+  height: 100%;
+  margin-top: 200px;
+  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
+} */
+
+/* .dashboard-body {
   width: 100%;
   height: 100%;
   margin-top: 100px;
   background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
   background-size: cover;
-}
+} */
 
 
 
