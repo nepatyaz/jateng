@@ -106,6 +106,7 @@ import { KtrluserService } from './ktrluser.service';
 import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
+import { ButtonComponent } from './test/button/button.component';
 
 
 
@@ -201,6 +202,7 @@ import { TableService } from './service/table.service';
     BarsheetRekeningComponent,
     PaginationComponent,
     Pagination2Component,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
