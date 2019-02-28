@@ -87,10 +87,10 @@ ul.bg-opacity {
 
 
 .bg-styleNav3 {
-  background-image: url(/src/assets/image/material-img/HeaderWb.png);
+  background-image: url(/src/assets/image/material-img/header.png);
   background-size: cover;
   background-repeat: no-repeat;
-  /* z-index: 1; */
+  z-index: 1034;
 }
 
 button.dropdown-toggle.waves-light {

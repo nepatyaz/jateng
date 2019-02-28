@@ -1,10 +1,10 @@
 <!-- Header 1 / Logo / Panel / Logout -->
-<header class="navbar fixed-top justify-content-center align-items-center">
+<header class="navbar fixed-top justify-content-center align-items-center" style="z-index: 9999;">
   <!-- style="z-index: 1039;" -->
   <!-- Logo -->
   <div class="container-fluid">
     <div class="row">
-      <a style="z-index: 9999;" [routerLink]="['/dashboard']">
+      <a [routerLink]="['/dashboard']">
         <img src="/src/assets/image/LOGO.png" alt="LOGO">
       </a>
     </div>
@@ -147,7 +147,7 @@
       <div class="dropdown-menu dropdown-primary">
         <button class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet Nasabah</button>
         <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pencarian Nasabah</button>
-        <button class="dropdown-item text-dark">Pencarian Daftar Hitam</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/pencariandaftarhitam']">Pencarian Daftar Hitam</button>
 
         <!-- <button class="dropdown-item text-dark" [routerLink]="['/nasabah/duplikatnasabah']">Duplikat Cek Nasabah Baru -
           Corporate</button>

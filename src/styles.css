@@ -32,7 +32,7 @@ body::before {
   width: 63%;
   height: 100%;
   background-image: linear-gradient(80deg, rgba(2, 0, 36, 1) 0%, rgba(113, 147, 189, 1) 0%, rgba(69, 126, 181, 1) 0%, rgba(123, 145, 174, 1) 49%, rgba(11, 141, 171, 0) 100%, rgba(9, 147, 175, 1) 100%);
-  position: absolute;
+  position: fixed;
   z-index: 0;
 }
 
@@ -93,6 +93,7 @@ footer {
 
 #outer {
   min-height: 300px;
+  margin-bottom: 0;
 }
 
 .konten {
@@ -119,11 +120,6 @@ h1.web-branch {
   background-clip: text;
 }
 
-/* form {
-  background-image: url(/src/assets/image/material-img/backgroundWb.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 /* ------------------------------------------------------ */
 /* body kontent / setting layout positioning in a content */
@@ -187,27 +183,12 @@ h5.card-title {
   width: 100%;
   height: 100%;
   margin-top: 100px;
-  /* z-index: 2; */
-  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
+  z-index: 2;
+  background-image: url(/src/assets/image/material-img/dashboard.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-/* .dashboard {
-  width: 100%;
-  height: 100%;
-  margin-top: 200px;
-  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
-} */
-
-/* .dashboard-body {
-  width: 100%;
-  height: 100%;
-  margin-top: 100px;
-  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
-  background-size: cover;
-} */
 
 
 
