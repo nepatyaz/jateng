@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tutup-kartu',
+  selector: 'tutup-kartu',
   templateUrl: './tutup-kartu.component.html',
   styleUrls: ['./tutup-kartu.component.css']
 })

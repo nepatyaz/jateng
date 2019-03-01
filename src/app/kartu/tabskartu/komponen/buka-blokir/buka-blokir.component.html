@@ -1,36 +1,111 @@
-<h5 class="text-primary font-weight-bold">BUKA BLOKIR KARTU</h5>
-                      <div class="card">
-                        <div class="card-body">
-                          <form>
-                            <div class="form-group row">
-                              <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label">1234567890</label></div>
-                              <span class="col-6"></span>
+<div class="card">
+  <div class="card-body">
+    <h6 style="color: #2bbbad; font-weight: bold;" *ngIf="!isBlokirProses && !isNotifikasi">BUKA BLOKIR KARTU</h6>
+    <h6 style="color: #2bbbad; font-weight: bold;" *ngIf="isBlokirProses  && !isNotifikasi">KONFIRMASI BUKA BLOKIR</h6>
+    <h6 style="color: #2bbbad; font-weight: bold;" *ngIf="isNotifikasi">NOTIFIKASI BUKA KARTU</h6>
+    <hr>
+    <form>
+      <ng-container *ngIf="!isBlokirProses && !isNotifikasi">
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">1234567890</label></div>
+        <span class="col-6"></span>
 
-                              <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label">Dian </label></div>
-                              <span class="col-6"></span>
+        <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">Dian </label></div>
+        <span class="col-6"></span>
 
-                              <label class="col-2 col-form-label  font-weight-bold">Jenis Kelamin</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label"></label></div>
-                              <span class="col-6"></span>
+        <label class="col-2 col-form-label  font-weight-bold">Jenis Kelamin</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">Perempuan</label></div>
+        <span class="col-6"></span>
 
-                              <label class="col-2 col-form-label  font-weight-bold">Status</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label"></label></div>
-                              <span class="col-6"></span>
+        <label class="col-2 col-form-label  font-weight-bold">Status</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">Lajang</label></div>
+        <span class="col-6"></span>
 
-                              <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label"></label></div>
-                              <span class="col-6"></span>
-                          </div>
-                          </form>
-                            <div class="d-flex justify-content-center">
-                              <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                            </div>
-                        </div>
-                      </div>
+        <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">088888888888</label></div>
+        <span class="col-6"></span>
+
+        <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3">
+            <select class="custom-select" name="albok" id="albok" style="width: 250px;">
+              <option selected disabled>Pilih Salah Satu</option>
+              <option value="1">Kartu Palsu</option>
+              <option value="2">Kartu Hilang</option>
+              <option value="3">Kartu Tertelan Mesin ATM</option>
+            </select>
+          </div>
+        <span class="col-6"></span>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isBlokirProses && !isNotifikasi">
+        <div class="form-group row">
+            <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">1234567890</label></div>
+            <span class="col-6"></span>
+    
+            <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">Dian </label></div>
+            <span class="col-6"></span>
+    
+  
+            <label class="col-2 col-form-label  font-weight-bold">Status</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label"></label></div>
+            <span class="col-6"></span>
+    
+            <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">088888888888</label></div>
+            <span class="col-6"></span>
+            
+            <label class="col-2 col-form-label  font-weight-bold">Alasan Blokir</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">Kartu Hilang</label></div>
+            <span class="col-6"></span>
+
+          </div>
+    </ng-container>
+
+    <ng-container *ngIf="isNotifikasi && !isBlokirProses">
+        <div class="form-group row">
+            <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">1234567890</label></div>
+            <span class="col-6"></span>
+    
+            <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">Dian </label></div>
+            <span class="col-6"></span>
+    
+  
+            <label class="col-2 col-form-label  font-weight-bold">Status Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">Aktif</label></div>
+            <span class="col-6"></span>
+
+            <span class="col-4">
+                <h6 style="color: #2bbbad; font-weight: bold;">Transaksi Berhasil Di Proses</h6>
+            </span>
+        
+          </div>
+    </ng-container>
+
+    </form>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-rounded" (click)="prosesBlokir()"  *ngIf="!isBlokir && !isNotifikasi"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
+        <button type="button" class="btn btn-primary btn-rounded" (click)="konfirmasiProsesBlokir()" *ngIf="isBlokir && !isNotifikasi"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
+        <button type="button" class="btn btn-primary btn-rounded" [routerLink]="['./']" routerLinkActive="router-link-active"  *ngIf="isBlokir || isNotifikasi"><i class="fa fa-reply" aria-hidden="true"></i> Kembali</button>
+     </div>
+  </div>
+</div>

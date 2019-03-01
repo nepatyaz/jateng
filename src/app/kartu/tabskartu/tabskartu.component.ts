@@ -6,29 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabskartu.component.css']
 })
 export class TabskartuComponent implements OnInit {
-  konten = [1, 0, 0, 0, 0]; 
+  titleTab : string;
+  tabLoad: any[] = [];
+
+  getContent(index: number) {
+    if (this.tabLoad[index] === 1) {
+      this.tabLoad[index] = "<app-aktivasi></<app-aktivasi>>";
+    }
+
+    return this.tabLoad[index];
+  }
+  
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  title(param:string){
+    console.log(param);
+    this.titleTab = param;
+  }
+
   
-  //blok fungsi untuk menampilkan konten panel atas
-  tabAktivasi() {
-    this.konten = [1, 0, 0, 0, 0];
-  }
-  tabBlokir() {
-    this.konten = [0, 1, 0, 0, 0];
-  }
-  tabBukaBlokir() {
-    this.konten = [0, 0, 1, 0, 0];
-  }
-  tabTutupKartu() {
-    this.konten = [0, 0, 0, 1, 0];
-  }
-  tabRelasiKartu() {
-    this.konten = [0, 0, 0, 0, 1];
-  }
-  //end blok fungsi konten panel atas
 
 }
