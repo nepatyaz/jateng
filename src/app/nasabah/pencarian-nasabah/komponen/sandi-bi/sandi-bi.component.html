@@ -3,25 +3,46 @@
 <div class="form-group row mb-0">
   <label class="col-2 col-form-label font-weight-bold">Badan Hukum</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">PT</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">PT</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">PT</mat-option>
+      <mat-option value="2">CV</mat-option>
+      <mat-option value="3">Other</mat-option>
+    </mat-select>
+  </div>
 </div>
 <!--baris 1-->
 <!--baris 2-->
 <div class="form-group row mb-0">
-    <label class="col-2 col-form-label font-weight-bold">Golongan Pemilik</label>
-    <label class="col-form-label pr-0  font-weight-bold">:</label>
-    <div class="col-3"><label class="col-form-label">ABCDEFGHIJKLM</label></div>
+  <label class="col-2 col-form-label font-weight-bold">Golongan Pemilik</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">swt perusahaan lainnya</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="3">Other</mat-option>
+      <mat-option value="3">Other</mat-option>
+      <mat-option value="3">Other</mat-option>
+    </mat-select>
   </div>
-  <!--baris 2-->
-  <!--baris 3-->
+</div>
+<!--baris 2-->
+<!--baris 3-->
 <div class="form-group row mb-0">
-    <label class="col-2 col-form-label font-weight-bold">Kode Industri</label>
-    <label class="col-form-label pr-0  font-weight-bold">:</label>
-    <div class="col-3"><label class="col-form-label">ABCDEFGHIJKLM</label></div>
+  <label class="col-2 col-form-label font-weight-bold">Kode Industri</label>
+  <label class="col-form-label pr-0  font-weight-bold">:</label>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Keramik</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="3">Other</mat-option>
+      <mat-option value="3">Other</mat-option>
+      <mat-option value="3">Other</mat-option>
+    </mat-select>
   </div>
-  <!--baris 3-->
+</div>
+<!--baris 3-->
 
 
-  <div class="d-flex justify-content-end">
-      <button type="button" class="btn btn-primary" (click)="funcUbahSandiBi()">Ubah</button>
-    </div>
+<div class="d-flex justify-content-end">
+  <button type="button" class="btn btn-primary" (click)="funcUbahSandiBi()">Ubah</button>
+</div>

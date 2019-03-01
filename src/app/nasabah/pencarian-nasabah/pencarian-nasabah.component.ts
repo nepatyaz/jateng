@@ -7,12 +7,26 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./pencarian-nasabah.component.css']
 })
 
+
 export class PencarianNasabahComponent implements AfterViewInit {
 
 
   public elements: any = [
     { namaNasabah: 'Al Mulyadi', alamat: 'Jetin RY RT03 RW02 GENTAN BAKI SUKOHARJO', kota: 'KAB.SUKOHARJO', kodeNasabah: 802828281, jenisNasabah: 'Individual', accountOfficer: 'CS' }
   ];
+
+  states: string[] = [
+    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+    'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+    'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+    'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
+    'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+    'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+  ];
+
+
+
 
   constructor() {
 
@@ -33,6 +47,7 @@ export class PencarianNasabahComponent implements AfterViewInit {
   ngAfterViewInit() {
   }
 }
+
 
 
   //blok untuk function penerimaan data pada tab informasi cif

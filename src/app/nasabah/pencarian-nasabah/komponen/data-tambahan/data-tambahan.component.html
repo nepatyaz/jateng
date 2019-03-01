@@ -3,7 +3,10 @@
 <div class="form-group row">
   <label class="col-2 col-form-label font-weight-bold">Ibu Kandung</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">ABCDEFGHIJKLMNOPQRSTUVWXYZ</label></div>
+  <div class="col-3">
+    <label class="col-form-label" *ngIf="!isEdit">Sri Lanka</label>
+    <input class="form-control" *ngIf="isEdit" value="Sri Lanka">
+  </div>
 </div>
 <!--baris 1-->
 <div class="d-flex justify-content-end">

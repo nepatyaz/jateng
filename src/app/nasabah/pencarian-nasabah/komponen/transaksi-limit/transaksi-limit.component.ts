@@ -7,18 +7,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TransaksiLimitComponent implements OnInit {
 
+  isEdit = false;
   //terima data dari parent component
   @Input() editTransaksiLimit;
   //kirim data ke parent 
   @Output() editTransaksiLimitEvent = new EventEmitter<string>();
-  
+
   constructor() { }
   ngOnInit() {
   }
 
-  funcUbahLimit(){
-    this.editTransaksiLimit = false;
-    this.editTransaksiLimitEvent.emit(this.editTransaksiLimit);
+  funcUbahLimit() {
+    // this.editTransaksiLimit = false;
+    // this.editTransaksiLimitEvent.emit(this.editTransaksiLimit);
+    this.isEdit = !this.isEdit;
   }
 
 

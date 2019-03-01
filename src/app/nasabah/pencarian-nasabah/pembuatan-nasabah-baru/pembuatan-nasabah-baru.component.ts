@@ -20,7 +20,7 @@ export class PembuatanNasabahBaruComponent implements OnInit {
 
   onClick() {
     // console.log('asdasd');
-    
+
     if (this.selected === 'option1') {
       this.router.navigate(['/nasabah/buatnasabahcorporate']);
     } else {
@@ -28,7 +28,7 @@ export class PembuatanNasabahBaruComponent implements OnInit {
     }
   }
 
-  cariFunction(value){
+  cariFunction(value) {
     console.log(value);
     console.log(this.favoriteOption);
   }
