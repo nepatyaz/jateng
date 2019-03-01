@@ -7,51 +7,76 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginGuard } from './guard/login.guard';
+//layout component
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { HeaderHomeComponent } from './header/header-home/header-home.component';
 import { NavigationComponent } from './button/navigation/navigation.component';
 import { HomeNavComponent } from './navigation/home-nav/home-nav.component';
+import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+//administrative
 import { DaftarUserSignOnComponent } from './administrative/daftar-user-sign-on/daftar-user-sign-on.component';
 import { WebBranchStatusComponent } from './administrative/web-branch-status/web-branch-status.component';
 import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
 import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
+import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
+import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
+//teller in
 import { TellerInSetoranTunaiComponent } from './teller-in/teller-in-setoran-tunai/teller-in-setoran-tunai.component';
 import { TellerInPenarikanTunaiComponent } from './teller-in/teller-in-penarikan-tunai/teller-in-penarikan-tunai.component';
 import { TellerInSelisihKasComponent } from './teller-in/teller-in-selisih-kas/teller-in-selisih-kas.component';
 import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/teller-in-sinkron-fin.component';
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
+import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
+//usermaintenance
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
-import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
-import { LoginGuard } from './guard/login.guard';
+import { RoleComponent } from './usermaintenance/role/role.component';
+import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
+import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
+//passbook
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
 import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
 import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
-import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
-import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+//kartu
 import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
+import { AktivasiAtmComponent } from './kartu/aktivasi-atm/aktivasi-atm.component';
+import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
+import { AktivasiComponent } from './kartu/tabskartu/komponen/aktivasi/aktivasi.component';
+import { BlokirComponent } from './kartu/tabskartu/komponen/blokir/blokir.component';
+import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka-blokir.component';
+import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
+import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
+//otorisasi head
+import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
+import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
+import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+//pembayaran
 import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
 import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
+//cashdrawer
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
+import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
+//rekening
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
-import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
-import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
-import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
+import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
+import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
+
+//report
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
-import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
-import { RoleComponent } from './usermaintenance/role/role.component';
-import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
-import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
+//nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
 import { DataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/data-umum-nasabah/data-umum-nasabah.component';
@@ -64,7 +89,6 @@ import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/
 import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
 import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
 import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
-import { AktivasiAtmComponent } from './kartu/cari-kartuatm/aktivasi-atm/aktivasi-atm.component';
 import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
 import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-administrasi/data-administrasi.component';
 import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-suku-bunga/data-suku-bunga.component';
@@ -78,20 +102,12 @@ import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembu
 import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
 import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
-import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
-import { AktivasiComponent } from './kartu/tabskartu/komponen/aktivasi/aktivasi.component';
-import { BlokirComponent } from './kartu/tabskartu/komponen/blokir/blokir.component';
-import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka-blokir.component';
-import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
-import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
-import { WebcamComponent } from './test/webcam/webcam.component';
-import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
-import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
-import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
-import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
-import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
 import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
 
+//testing component
+import { WebcamComponent } from './test/webcam/webcam.component';
+import { PaginationComponent } from './test/pagination/pagination.component';
+import { Pagination2Component } from './test/pagination2/pagination2.component';
 
 //3rd party library module
 import { WebcamModule } from 'ngx-webcam';
@@ -99,8 +115,7 @@ import { NgxCurrencyModule } from "ngx-currency";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MaterialModule } from './material';
 import { CurrencyFormatDirective } from 'ng-currency-format';
-import { PaginationComponent } from './test/pagination/pagination.component';
-import { Pagination2Component } from './test/pagination2/pagination2.component';
+
 
 //service 
 import { KtrluserService } from './ktrluser.service';
@@ -108,9 +123,6 @@ import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 import { ButtonComponent } from './test/button/button.component';
-
-
-
 
 
 @NgModule({
@@ -126,12 +138,9 @@ import { ButtonComponent } from './test/button/button.component';
     HomeNavComponent,
     DaftarUserSignOnComponent,
     WebBranchStatusComponent,
-    TellerInSetoranTunaiComponent,
-    TellerInPenarikanTunaiComponent,
-    TellerInSelisihKasComponent,
-    TellerInSinkronFinComponent,
-    TellerInPindahBukuBedaUangComponent,
-    TellerInTranPindahBukuComponent,
+    TellerInSetoranTunaiComponent,TellerInPenarikanTunaiComponent,
+    TellerInSelisihKasComponent,TellerInSinkronFinComponent,
+    TellerInPindahBukuBedaUangComponent,TellerInTranPindahBukuComponent,
     TanggalbisnisComponent,
     AktifitasuserComponent,
     CariBaruUserComponent,
