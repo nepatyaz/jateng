@@ -11,8 +11,12 @@ export class PencarianNasabahComponent implements AfterViewInit {
 
 
   public elements: any = [
-    { namaNasabah: 'Surya Saputra', alamat: 'Jl. Durian No.11 Srondol', kota: 'jakarta', kodeNasabah: 802828281, jenisNasabah: 'Individual', accountOfficer: ' Kosong ' }
+    { namaNasabah: 'Al Mulyadi', alamat: 'Jetin RY RT03 RW02 GENTAN BAKI SUKOHARJO', kota: 'KAB.SUKOHARJO', kodeNasabah: 802828281, jenisNasabah: 'Individual', accountOfficer: 'CS' }
   ];
+
+  constructor() {
+
+  }
   // konten = [1, 0, 0, 0, 0];
   // konten1 = [1, 0, 0, 0, 0];
 
@@ -24,7 +28,7 @@ export class PencarianNasabahComponent implements AfterViewInit {
   // editDataTambahan : boolean = true;
   //variabel untuk konten pada tab informasi cif   
 
-  constructor() { }
+
 
   ngAfterViewInit() {
   }

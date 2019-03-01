@@ -5,37 +5,114 @@
     <div id="outer" class="d-flex flex-column flex-grow">
       <div class="card konten">
         <div class="card-body">
-          <mdb-card class="mb-3">
-            <mdb-card-body>
+          <!--panel 1-->
+          <div class="card">
+            <div class="card-body">
 
-              <div class="row justify-content-center">
-                <div class="col d-flex align-content-center">
-                  <mat-list>
-                    <mat-list-item *ngFor="let el of elements" scope="col" style="font-weight: bold;">Nama Nasabah :
-                      <div>{{el.namaNasabah}} </div>
-                    </mat-list-item>
-                    <mat-list-item *ngFor="let el of elements" scope="col" style="font-weight: bold;">Alamat :
-                      <div>{{el.alamat}} </div>
-                    </mat-list-item>
-                    <mat-list-item *ngFor="let el of elements" scope="col" style="font-weight: bold;">Kota :
-                      <div>{{el.kota}} </div>
-                    </mat-list-item>
-                  </mat-list>
-                </div>
-                <div class="col d-flex align-content-center">
-                  <mat-list>
-                    <mat-list-item *ngFor="let el of elements" scope="col" style="font-weight: bold;">Kode Nasabah :
-                      {{el.kodeNasabah}} </mat-list-item>
-                    <mat-list-item *ngFor="let el of elements" scope="col" style="font-weight: bold;">Jenis Nasabah :
-                      {{el.jenisNasabah}} </mat-list-item>
-                    <mat-list-item *ngFor="let el of elements" scope="col" style="font-weight: bold;">Account Officer :
-                      {{el.accountOfficer}} </mat-list-item>
-                  </mat-list>
-                </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Nama Nasabah</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.namaNasabah}}</label>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">Kode Nasabah</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.kodeNasabah}}</label>
               </div>
 
-            </mdb-card-body>
-          </mdb-card>
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Alamat</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.alamat}}</label>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">Jenis Nasabah</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.jenisNasabah}}</label>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Kota</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.kota}}</label>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">Account Officer</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.accountOfficer}}</label>
+              </div>
+
+            </div>
+          </div>
+          <!--panel 1-->
+
+          <!-- Tabs -->
+          <div class="card">
+            <div class="card-body">
+
+              <mat-tab-group>
+
+                <mat-tab label="INFORMASI CIF">
+                  <mat-tab-group>
+                    <mat-tab label="DATA UMUM CIF">
+                      <app-data-umum-nasabah></app-data-umum-nasabah>
+                    </mat-tab>
+                    <mat-tab label="DATA PERSONAL">
+                      <app-data-personal></app-data-personal>
+                    </mat-tab>
+                    <mat-tab label="TRANSAKSI LIMIT">
+                      <app-transaksi-limit></app-transaksi-limit>
+                    </mat-tab>
+                    <mat-tab label="SANDI BI"> Content 4 </mat-tab>
+                    <mat-tab label="DATA TAMBAHAN"> Content 5 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="PORTOFOLIO CIF">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="RELASI CIF">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="ALAMAT TAMBAHAN">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="PESAN">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="PRODUK">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+
+              </mat-tab-group>
+
+
+
+
+            </div>
+          </div>
+          <!-- Tabs -->
+
+
+
+
+
           <!-- Default form contact -->
         </div>
       </div>
