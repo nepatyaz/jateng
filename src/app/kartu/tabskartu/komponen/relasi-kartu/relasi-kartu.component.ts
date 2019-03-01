@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-relasi-kartu',
+  selector: 'relasi-kartu',
   templateUrl: './relasi-kartu.component.html',
   styleUrls: ['./relasi-kartu.component.css']
 })

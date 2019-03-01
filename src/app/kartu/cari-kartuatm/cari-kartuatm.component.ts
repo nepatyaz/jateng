@@ -6,28 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cari-kartuatm.component.css']
 })
 export class CariKartuatmComponent implements OnInit {
-  konten = [1, 0, 0, 0, 0]; 
+  isAktivasiKartu = false;
+  isPencarian = true;
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  //blok fungsi untuk menampilkan konten panel atas
-  tabAktivasi() {
-    this.konten = [1, 0, 0, 0, 0];
+  aktivasiMenu(){
+    this.isPencarian = !this.isPencarian;
+    this.isAktivasiKartu = !this.isAktivasiKartu;
+    console.log("aktvasi menu di aktifkan");
   }
-  tabBlokir() {
-    this.konten = [0, 1, 0, 0, 0];
+
+  pencarianKartu(){
+    this.isPencarian = true;
   }
-  tabBukaBlokir() {
-    this.konten = [0, 0, 1, 0, 0];
-  }
-  tabTutupKartu() {
-    this.konten = [0, 0, 0, 1, 0];
-  }
-  tabRelasiKartu() {
-    this.konten = [0, 0, 0, 0, 1];
-  }
-  //end blok fungsi konten panel atas
 
 }
