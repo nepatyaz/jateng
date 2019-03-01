@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./data-umum-nasabah.component.css']
 })
 export class DataUmumNasabahComponent implements OnInit {
+  isEdit = false;
 
   //terima data dari parent
  @Input() editData;
@@ -18,8 +19,9 @@ export class DataUmumNasabahComponent implements OnInit {
   }
 
   funcUbah(){
-    this.editData = false;
-    this.editDataEvent.emit(this.editData);
+    this.isEdit = !this.isEdit;
+    // this.editData = false;
+    // this.editDataEvent.emit(this.editData);
     // window.alert('ubah');
   }
 
