@@ -48,7 +48,6 @@ export class LoginFormComponent implements OnInit {
             sessionStorage.setItem('role', role)
             sessionStorage.setItem('isLoggedIn', "true");
 
-
             this.router.navigate(['/dashboard']);
             //this.otentifikasi.setLoggedIn(true)
           } else {
