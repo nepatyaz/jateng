@@ -73,7 +73,6 @@ import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakreke
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
 import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
-
 //report
 import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
 //nasabah
