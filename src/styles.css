@@ -8,16 +8,16 @@
 
 /* ====================================================== */
 
-html {
+/* html {
   min-height: 100%;
   min-width: 100%;
   height: 100%;
   width: 100%;
   z-index: 0;
-}
+} */
 
 body {
-  background-image: url(assets/image/material-img/backgroundLogin.jpg);
+  background-image: url(assets/image/material-img/backgroundWb.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,15 +26,15 @@ body {
   z-index: 0;
 }
 
-/* body::after {
+body::before {
   content: '';
   display: block;
-  width: 100%;
+  width: 63%;
   height: 100%;
-  background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-  position: absolute;
-  z-index: 1040;
-} */
+  background-image: linear-gradient(80deg, rgba(2, 0, 36, 1) 0%, rgba(113, 147, 189, 1) 0%, rgba(69, 126, 181, 1) 0%, rgba(123, 145, 174, 1) 49%, rgba(11, 141, 171, 0) 100%, rgba(9, 147, 175, 1) 100%);
+  position: fixed;
+  z-index: 0;
+}
 
 header {
   height: 100px;
@@ -47,7 +47,7 @@ header {
 
 
 
-main {
+/* main {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -56,7 +56,19 @@ main {
   min-width: 100%;
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
+} */
+
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 
@@ -67,6 +79,7 @@ footer {
   background-size: cover;
   background-color: rgba(255, 255, 255, 10%);
   z-index: 99999;
+  color: blue;
 }
 
 .flex-grow {
@@ -80,6 +93,7 @@ footer {
 
 #outer {
   min-height: 300px;
+  margin-bottom: 0;
 }
 
 .konten {
@@ -106,11 +120,6 @@ h1.web-branch {
   background-clip: text;
 }
 
-/* form {
-  background-image: url(/src/assets/image/material-img/backgroundWb.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 /* ------------------------------------------------------ */
 /* body kontent / setting layout positioning in a content */
@@ -166,21 +175,18 @@ h5.card-title {
 }
 
 
-
 /* ------------------------------------- */
 /*                  DASHBOARD            */
 /* ------------------------------------- */
 
-.dashboard {
-  width: 100%;
-  height: 100%;
-}
-
-.dashboard-body {
+.bodyDashboard {
   width: 100%;
   height: 100%;
   margin-top: 100px;
-  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
+  z-index: 2;
+  background-image: url(/src/assets/image/material-img/dashboard.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 

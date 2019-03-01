@@ -90,6 +90,7 @@ import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-c
 import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
 import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
 import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
+import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
 
 
 //3rd party library module
@@ -107,6 +108,8 @@ import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 import { ButtonComponent } from './test/button/button.component';
+
+
 
 
 
@@ -202,6 +205,7 @@ import { ButtonComponent } from './test/button/button.component';
     PaginationComponent,
     Pagination2Component,
     ButtonComponent,
+    PencarianDaftarHitamComponent,
   ],
   imports: [
     BrowserModule,

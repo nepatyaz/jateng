@@ -1,14 +1,12 @@
-footer.navbar div.text-body {
+footer.navbar div.text-unbold {
   color: #234a7b;
-  font-style: bold;
 }
 
-footer.navbar div.text-muted {
+footer.navbar div.text-unbold {
   color: #234a7b;
-  font-style: bold;
 }
 
-.text-muted {
+.text-blue {
   color: #234a7b;
-  font-style: bold;
+  font-weight: bold;
 }

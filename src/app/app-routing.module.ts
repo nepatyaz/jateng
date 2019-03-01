@@ -58,6 +58,8 @@ import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-re
 import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
 import { PaginationComponent } from './test/pagination/pagination.component';
 import { Pagination2Component } from './test/pagination2/pagination2.component';
+import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
+import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -121,7 +123,8 @@ const routes: Routes = [
       { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
       { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
       { path: 'rekening/pencariandaftarrekening', component: PencarianDaftarRekeningComponent },
-      { path: 'rekening/pencarianbarsheetrekening', component: BarsheetRekeningComponent },
+      { path: 'nasabah/pencariannasabah/portofoliocif', component: PortofolioCifComponent },
+      { path: 'nasabah/pencariandaftarhitam', component: PencarianDaftarHitamComponent },
     ]
   },
   {
@@ -151,4 +154,5 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
   PembuatanNasabahBaruComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent,
   BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent,
-  PencarianDaftarRekeningComponent, BarsheetRekeningComponent, PaginationComponent, Pagination2Component]
+  PencarianDaftarRekeningComponent, BarsheetRekeningComponent, PaginationComponent, Pagination2Component, PortofolioCifComponent,
+  PencarianDaftarHitamComponent]

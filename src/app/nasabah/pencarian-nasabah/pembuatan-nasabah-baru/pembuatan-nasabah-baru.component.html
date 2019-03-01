@@ -9,48 +9,28 @@
         <mdb-card class="mb-3">
           <mdb-card-body>
             <!--input 1-->
-            <div class="form-group row ">
+            <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Pilih Kriteria</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 pt-2">
-                <!-- Default checked -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios"
-                    checked mdbInputDirective>
-                  <label class="custom-control-label" for="defaultUnchecked1">Kode Nasabah</label>
-                </div>
-                <!-- Default unhecked -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultChecked2" name="defaultExampleRadios"
-                    mdbInputDirective>
-                  <label class="custom-control-label" for="defaultChecked2">Kode Cabang</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultChecked3" name="defaultExampleRadios"
-                    mdbInputDirective>
-                  <label class="custom-control-label" for="defaultChecked3">No Kartu Identitas</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultChecked4" name="defaultExampleRadios"
-                    mdbInputDirective>
-                  <label class="custom-control-label" for="defaultChecked4">Alamat</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultChecked5" name="defaultExampleRadios"
-                    mdbInputDirective>
-                  <label class="custom-control-label" for="defaultChecked5">Nama Nasabah</label>
-                </div>
+              <!-- <div class="col-3 pt-2"> -->
+              <div class="form-check">
+                <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteOption">
+                  <mat-radio-button class="example-radio-button" *ngFor="let option of options" [value]="option">
+                    {{option}}
+                  </mat-radio-button>
+                </mat-radio-group>
+                <!-- <div class="example-selected-value">Your favorite season is: {{favoriteOption}}</div> -->
               </div>
-              <span class="col-2"></span>
             </div>
             <!--input 1-->
             <!--input 2-->
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Masukkan Nilai</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="col-3"><input #inputSearch type="text" class="form-control"></div>
               <div class="input-group-append" id="button-addon4">
-                <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Cari</button>
+                <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" style="width: 60px" (click)="cariFunction(inputSearch.value)"
+                  mdbWavesEffect>Cari</button>
               </div>
             </div>
 
@@ -62,20 +42,25 @@
             </div>
             <div class="form-group row">
               <span class="col-2"></span>
-              <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">Corporate</option>
-                  <option value="2">Retail</option>
-                </select>
+              <div class="col-3" style="height: 40px;">
+                <mat-form-field style="width: 250px;">
+                  <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Corporate</mat-option>
+                    <mat-option value="option2">Individual</mat-option>
+                  </mat-select>
+                </mat-form-field>
               </div>
               <div class="input-group-append" id="button-addon4">
-                <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
+                <button [attr.disabled]="selected ? null : ''" (click)="onClick()" mdbBtn color="primary" size="sm"
+                  class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
               </div>
             </div>
 
           </mdb-card-body>
         </mdb-card>
+
+        <!-- NEW  -->
 
         <span style="height: 10vh;"></span>
       </div>

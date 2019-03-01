@@ -9,9 +9,11 @@
         <mdb-card>
           <mdb-card-body>
             <!--input 1-->
-            <div class="form-group row">
+            <div class="form-group row justify-content-between">
               <label class="col-4 col-form-label font-weight-bold" style="color: #2bbbad">Kode Nasabah CIF diambil dari
                 Host</label>
+              <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/nasabah/buatnasabahbaru']"
+                mdbWavesEffect>Kembali</button>
             </div>
             <u style="color: #2bbbad; font-weight: bold;">
               <h6 style="color: #2bbbad; font-weight: bold;">Data Umum Nasabah</h6>
@@ -698,7 +700,6 @@
             <br><br>
             <div class="d-flex justify-content-center">
               <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
-              <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
             </div>
           </mdb-card-body>
         </mdb-card>
