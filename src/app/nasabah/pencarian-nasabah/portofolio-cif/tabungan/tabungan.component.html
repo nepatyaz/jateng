@@ -1,0 +1,74 @@
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
+
+
+        <!-- panel Tabungan -->
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Nama Pada Rekening</label>
+              <label>:</label>
+              <label class="col-2">Ali Sodig</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Jenis Rekening</label>
+              <label>:</label>
+              <label class="col-3">203</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">No Rekening</label>
+              <label>:</label>
+              <label class="col-2">41200000</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Mata Uang</label>
+              <label>:</label>
+              <label class="col-3">IDR</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Cabang</label>
+              <label>:</label>
+              <label class="col-2">Cabang Utama</label>
+              <!-- <span class="col-2"></span>
+                        <label class="col-2 font-weight-bold">Collect</label>
+                        <label>:</label>
+                        <label class="col-3">2</label> -->
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!-- panel Tabungan -->
+
+
+
+        <!-- Sub Tab Component Tabungan-->
+        <mat-tab-group>
+          <mat-tab label="Data Administrasi">
+            <app-data-administrasi></app-data-administrasi>
+          </mat-tab>
+          <mat-tab label="Data Suku Bunga">
+            <app-data-suku-bunga></app-data-suku-bunga>
+          </mat-tab>
+          <mat-tab label="Saldo Rekening">
+            <app-saldo-rekening></app-saldo-rekening>
+          </mat-tab>
+          <mat-tab label="Mutasi">
+            <app-mutasi></app-mutasi>
+          </mat-tab>
+          <mat-tab label="Bunga Jasa Giro">
+            <app-bunga-jasa-giro></app-bunga-jasa-giro>
+          </mat-tab>
+          <mat-tab label="Riwayat Saldo">
+            <app-riwayat-saldo></app-riwayat-saldo>
+          </mat-tab>
+        </mat-tab-group>
+        <!-- Nested Tab -->
+
+      </div>
+    </div>
+  </div>
+</div>

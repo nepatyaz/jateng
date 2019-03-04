@@ -122,6 +122,8 @@ import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 import { ButtonComponent } from './test/button/button.component';
+import { TabunganComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/tabungan.component';
+
 
 
 @NgModule({
@@ -137,9 +139,9 @@ import { ButtonComponent } from './test/button/button.component';
     HomeNavComponent,
     DaftarUserSignOnComponent,
     WebBranchStatusComponent,
-    TellerInSetoranTunaiComponent,TellerInPenarikanTunaiComponent,
-    TellerInSelisihKasComponent,TellerInSinkronFinComponent,
-    TellerInPindahBukuBedaUangComponent,TellerInTranPindahBukuComponent,
+    TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent,
+    TellerInSelisihKasComponent, TellerInSinkronFinComponent,
+    TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,
     TanggalbisnisComponent,
     AktifitasuserComponent,
     CariBaruUserComponent,
@@ -214,6 +216,7 @@ import { ButtonComponent } from './test/button/button.component';
     Pagination2Component,
     ButtonComponent,
     PencarianDaftarHitamComponent,
+    TabunganComponent,
   ],
   imports: [
     BrowserModule,

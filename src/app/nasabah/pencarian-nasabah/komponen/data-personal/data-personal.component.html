@@ -220,7 +220,7 @@
     <input class="form-control" *ngIf="isEdit" value="1">
   </div>
   <span class="col-1"></span>
-  <label class="col-2 col-form-label font-weight-bold">Jumlah Anak </label>
+  <label class="col-2 col-form-label font-weight-bold">Jumlah Anak</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
   <div class="col-3">
     <label *ngIf="!isEdit" class="col-form-label">2</label>
@@ -233,7 +233,10 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Jumlah Orang Tua</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">2</label></div>
+  <div class="col-3">
+    <label type="text" *ngIf="!isEdit" class="col-form-lable">2</label>
+    <input type="text" *ngIf="isEdit" value="2">
+  </div>
 </div>
 <!--baris 11-->
 

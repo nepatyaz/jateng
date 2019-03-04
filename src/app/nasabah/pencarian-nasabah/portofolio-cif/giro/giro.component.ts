@@ -3,36 +3,35 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-giro',
   templateUrl: './giro.component.html',
-  styles: []
+  styles: ['table {min-width: 1170px; margin-bottom: 20px;}']
 })
+
 export class GiroComponent implements OnInit {
 
-  kontenGiro = [1, 0, 0, 0, 0, 0, 0, 0];
-  
+  displayedColumns: string[] = ['Account', 'Nama', 'Cabang', 'CCY', 'Type'];
+  dataSource = ELEMENT_DATA;
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
 
-  tabDataAdmin(){
-    this.kontenGiro = [1, 0, 0, 0, 0, 0, 0, 0];
-  }
 
-  tabDataSukuBunga(){
-    this.kontenGiro = [0, 1, 0, 0, 0, 0, 0, 0];
-  }
-  tabSaldoRekening(){
-    this.kontenGiro = [0, 0, 1, 0, 0, 0, 0, 0];
-  }
-  tabMutasi(){
-    this.kontenGiro = [0, 0, 0, 1, 0, 0, 0, 0];
-  }
-  tabBungaJasa(){
-    this.kontenGiro = [0, 0, 0, 0, 1, 0, 0, 0];
-  }
-  tabRiwayat(){
-    this.kontenGiro = [0, 0, 0, 0, 0, 1, 0, 0];
-  }
 
 }
+
+export interface PeriodicElement {
+  account: number;
+  nama: string;
+  cabang: string;
+  ccy: string;
+  type: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  { account: 1232353452, nama: 'AL Arraf', cabang: 'Cabang Utama', ccy: 'IDR', type: '104-Giro Swasta' },
+  { account: 1235423423, nama: 'Suryani', cabang: 'Cabang Utama', ccy: 'IDR', type: '104-Giro Swasta' },
+  { account: 12342344343, nama: 'Supri', cabang: 'Cabang Utama', ccy: 'IDR', type: '104-Giro Swasta' },
+];
