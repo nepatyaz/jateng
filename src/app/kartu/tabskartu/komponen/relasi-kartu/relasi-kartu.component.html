@@ -1,22 +1,184 @@
-<h5 class="text-primary font-weight-bold">RELASI KARTU</h5>
-                      <div class="card">
-                        <div class="card-body">
-                          <form>
-                            <div class="form-group row">
-                              <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label">1234567890</label></div>
-                              <span class="col-6"></span>
-                              </div>
-                              <div class="form-group row">
-                                <label class="col-2 col-form-label  font-weight-bold">Nomor ICF</label>
-                                <label class="col-form-label pr-0  font-weight-bold">:</label>
-                                <div class="col-3"><input type="text" class="form-control"></div>
-                                <span class="col-6"></span>
-                              </div>
-                              <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                              </div>
-                              </form>
-                            </div>
-                            </div>
+<!--Main layout-->
+<div style="margin: 20px;">
+    <!-- Start your project here-->
+    <div class="d-flex flex-column h-100">
+      <div id="outer" class="d-flex flex-column flex-grow">
+        <div class="card konten">
+          <div class="card-body">
+            <h5 class="text-primary font-weight-bold">Relasi Kartu</h5>
+            <!--panel 1-->
+            <div class="card">
+              <div class="card-body">
+                <table class="table table-borderless">
+                  <tr>
+                      <div class="form-group row">
+                          <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+                          <label class="col-form-label pr-0  font-weight-bold">:</label>
+                          <label class="col-2 col-form-label  font-weight-bold">1234567890</label>
+                          <span class="col-6"></span>
+                      </div>
+                      <div class="form-group row">
+                            <label class="col-2 col-form-label  font-weight-bold">Nomor CIF</label>
+                            <label class="col-form-label pr-0  font-weight-bold">:</label>
+                            <div class="col-3"><input type="text" class="form-control"></div>
+                            <span class="col-6"></span>
+                      </div>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <hr>
+        
+            <div class="card">
+            <div class="card-body">
+              <table class="table table-hover">
+                <thead>
+                  <tr class="table-active" style="text-align:center">
+                    <th scope="col">Relasi</th>
+                    <th scope="col">Primary</th>
+                    <th scope="col">Nomor Rekening</th>
+                    <th scope="col">Nama Pemegang</th>
+                    <th scope="col">Mata Uang</th>
+                    <th scope="col">Type</th>
+                  </tr>
+                </thead>
+                <tbody> 
+              <tr style="text-align:center" >
+                  <td class="font-weight-normal">
+                      <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td class="font-weight-normal">
+                      <input type="radio" aria-label="Radio button for following text input">
+                  </td>
+                  <td class="font-weight-normal">1234567890</td>
+                  <td class="font-weight-normal">Dian</td>
+                  <td class="font-weight-normal">IDR</td>
+                  <td class="font-weight-normal">Tabungan</td>
+              </tr>
+              <tr style="text-align:center" >
+                  <td class="font-weight-normal">
+                      <input type="checkbox" aria-label="Checkbox for following text input">
+                  </td>
+                  <td class="font-weight-normal">
+                      <input type="radio" aria-label="Radio button for following text input">
+                  </td>
+                  <td class="font-weight-normal">0987654321</td>
+                  <td class="font-weight-normal">Dian</td>
+                  <td class="font-weight-normal">IDR</td>
+                  <td class="font-weight-normal">Giro</td>
+              </tr>
+              <tr style="text-align:center" >
+                <td class="font-weight-normal">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </td>
+                <td class="font-weight-normal">
+                    <input type="radio" aria-label="Radio button for following text input">
+                </td>
+                <td class="font-weight-normal">1357902468</td>
+                <td class="font-weight-normal">Dian</td>
+                <td class="font-weight-normal">IDR</td>
+                <td class="font-weight-normal">Tabungan</td>
+              </tr>
+                </tbody>
+            </table>
+          </div>
+          </div>
+          <!--Pagination-->
+          <div class="d-flex flex-row-reverse" style="margin-top: 15px;">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pg-blue">
+                <li class="page-item">
+                  <a class="page-link">
+                    <span >&laquo; Sebelumnya</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link">
+                    <span >&raquo; Selanjutnya</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Pagination-->
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-rounded">Proses</button>
+            <button type="button" class="btn btn-primary btn-rounded">Batal</button>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-rounded">Kembali</button>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div style="margin: 20px;">
+  <div class="card">
+    <div class="card-body">
+        <form>
+          <h6 style="color: #2bbbad; font-weight: bold;">KONFIRMASI RELASI KARTU</h6>
+            
+            <div class="form-group row">
+              <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><label class="col-form-label">1234567890</label></div>
+              <span class="col-6"></span>
+
+              <label class="col-2 col-form-label  font-weight-bold">Nomor CIF</label>
+              <label class="col-form-label pr-0  font-weight-bold">:</label>
+              <div class="col-3"><label class="col-form-label">00000000 </label></div>
+              <span class="col-6"></span>
+            </div>
+        </form>
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-active" style="text-align:center">
+              <th scope="col">Primary</th>
+              <th scope="col">Nomor Rekening</th>
+              <th scope="col">Type</th>
+            </tr>
+          </thead> 
+          <tbody> 
+            <tr style="text-align:center" >
+              <td class="font-weight-normal">
+                <input type="radio" aria-label="Radio button for following text input">
+              </td>
+              <td class="font-weight-normal">1234567890</td>
+              <td class="font-weight-normal">Tabungan</td>
+            </tr>
+            <tr style="text-align:center" >
+              <td class="font-weight-normal">
+                  <input type="radio" aria-label="Radio button for following text input">
+              </td>
+              <td class="font-weight-normal">0987654321</td>
+              <td class="font-weight-normal">Giro</td>
+            </tr>
+            <tr style="text-align:center" >
+              <td class="font-weight-normal">
+                  <input type="radio" aria-label="Radio button for following text input">
+              </td>
+              <td class="font-weight-normal">1357902468</td>
+              <td class="font-weight-normal">Tabungan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-primary btn-rounded">Proses</button>
+    <button type="button" class="btn btn-primary btn-rounded">Batal</button>
+</div>
+
+

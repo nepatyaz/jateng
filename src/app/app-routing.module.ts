@@ -100,12 +100,13 @@ const routes: Routes = [
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
       { path: 'kartu/aktivasi', component: AktivasiAtmComponent },
+      { path: 'kartu/tabs', component: TabskartuComponent },
       { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
       { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
       { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
       { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
-      { path: 'kartu/tabskartu', component: TabskartuComponent },
+     
     ]
   },
   {
