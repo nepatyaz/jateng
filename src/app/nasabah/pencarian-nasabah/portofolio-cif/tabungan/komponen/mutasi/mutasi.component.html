@@ -1,17 +1,23 @@
-<h5 class="text-primary font-weight-bold">Aktifitas Rekening</h5>
-<br>
-<div class="row">
-  <label class="col-3 font-weight-bold">Tanggal Awal</label>
-  <label>:</label>
-  <div class="col-3 form-inline">
-      <div class="input-group">
-        <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
-        <mat-datepicker #picker></mat-datepicker>
-        <div class="input-group-append">
-          <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+<mdb-card class="mb-3">
+  <mdb-card-body>
+
+    <h5 class="text-primary font-weight-bold">Aktifitas Rekening</h5>
+    <br>
+    <div class="row">
+      <label class="col-3 font-weight-bold">Tanggal Awal</label>
+      <label>:</label>
+      <div class="col-3 form-inline">
+        <div class="input-group">
+          <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+          <mat-datepicker #picker></mat-datepicker>
+          <div class="input-group-append">
+            <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+          </div>
         </div>
       </div>
     </div>
-</div>
 
-<br><br><br>
+    <br><br><br>
+
+  </mdb-card-body>
+</mdb-card>

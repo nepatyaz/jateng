@@ -123,6 +123,13 @@ import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 import { ButtonComponent } from './test/button/button.component';
 import { TabunganComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/tabungan.component';
+import { DataAdministrasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/data-administrasi-giro/data-administrasi-giro.component';
+import { DataSukuBungaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/data-suku-bunga-giro/data-suku-bunga-giro.component';
+import { SaldoRekeningGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/saldo-rekening-giro/saldo-rekening-giro.component';
+import { MutasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/mutasi-giro/mutasi-giro.component';
+import { BungaJasaGiroGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-jasa-giro-giro/bunga-jasa-giro-giro.component';
+import { BungaPrkGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-prk-giro/bunga-prk-giro.component';
+import { BungaCerukanGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-cerukan-giro/bunga-cerukan-giro.component';
 
 
 
@@ -217,6 +224,13 @@ import { TabunganComponent } from './nasabah/pencarian-nasabah/portofolio-cif/ta
     ButtonComponent,
     PencarianDaftarHitamComponent,
     TabunganComponent,
+    DataAdministrasiGiroComponent,
+    DataSukuBungaGiroComponent,
+    SaldoRekeningGiroComponent,
+    MutasiGiroComponent,
+    BungaJasaGiroGiroComponent,
+    BungaPrkGiroComponent,
+    BungaCerukanGiroComponent,
   ],
   imports: [
     BrowserModule,
