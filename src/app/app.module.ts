@@ -137,19 +137,9 @@ import { BungaCerukanGiroComponent } from './nasabah/pencarian-nasabah/portofoli
     HeaderHomeComponent,
     NavigationComponent,
     HomeNavComponent,
-<<<<<<< HEAD
-    TellerInSetoranTunaiComponent,TellerInPenarikanTunaiComponent,
-    TellerInSelisihKasComponent,TellerInSinkronFinComponent,
-    TellerInPindahBukuBedaUangComponent,TellerInTranPindahBukuComponent,
-=======
-    DaftarUserSignOnComponent,
-    WebBranchStatusComponent,
     TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent,
     TellerInSelisihKasComponent, TellerInSinkronFinComponent,
     TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,
-    TanggalbisnisComponent,
-    AktifitasuserComponent,
->>>>>>> 2b698d6541e1e74cd079fd98d7ef952aa93db118
     CariBaruUserComponent,
     GantiPasswordComponent,
     KontrolUserComponent,
