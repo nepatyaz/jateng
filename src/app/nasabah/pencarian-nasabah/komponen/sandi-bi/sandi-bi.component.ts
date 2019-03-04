@@ -7,6 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SandiBiComponent implements OnInit {
 
+  isEdit = false;
   //terima data dari parent
   @Input() editSandiBi;
   //kirim data ke parent 
@@ -17,9 +18,10 @@ export class SandiBiComponent implements OnInit {
   ngOnInit() {
   }
 
-  funcUbahSandiBi(){
-    this.editSandiBi = false;
-    this.editSandiBiEvent.emit(this.editSandiBi);
+  funcUbahSandiBi() {
+    // this.editSandiBi = false;
+    // this.editSandiBiEvent.emit(this.editSandiBi);
+    this.isEdit = !this.isEdit;
 
   }
 

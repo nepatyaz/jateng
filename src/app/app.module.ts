@@ -115,6 +115,8 @@ import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 import { ButtonComponent } from './test/button/button.component';
+import { TabunganComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/tabungan.component';
+
 
 
 
@@ -129,9 +131,19 @@ import { ButtonComponent } from './test/button/button.component';
     HeaderHomeComponent,
     NavigationComponent,
     HomeNavComponent,
+<<<<<<< HEAD
     TellerInSetoranTunaiComponent,TellerInPenarikanTunaiComponent,
     TellerInSelisihKasComponent,TellerInSinkronFinComponent,
     TellerInPindahBukuBedaUangComponent,TellerInTranPindahBukuComponent,
+=======
+    DaftarUserSignOnComponent,
+    WebBranchStatusComponent,
+    TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent,
+    TellerInSelisihKasComponent, TellerInSinkronFinComponent,
+    TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,
+    TanggalbisnisComponent,
+    AktifitasuserComponent,
+>>>>>>> 2b698d6541e1e74cd079fd98d7ef952aa93db118
     CariBaruUserComponent,
     GantiPasswordComponent,
     KontrolUserComponent,
@@ -196,6 +208,7 @@ import { ButtonComponent } from './test/button/button.component';
     Pagination2Component,
     ButtonComponent,
     PencarianDaftarHitamComponent,
+    TabunganComponent,
   ],
   imports: [
     BrowserModule,

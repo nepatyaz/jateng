@@ -1,60 +1,99 @@
-<!--Panel Tabs konten tabungan-->
-<div class="btn-group" role="group" aria-label="Basic example mb-0">
-  <button (click)="tabDataAdmin()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[0], 'btn-light': !kontenGiro[0]}"
-    mdbWavesEffect>Data Administrasi</button>
-  <button (click)="tabDataSukuBunga()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[1], 'btn-light': !kontenGiro[1]}"
-    mdbWavesEffect>Data Suku Bunga</button>
-  <button (click)="tabSaldoRekening()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[2], 'btn-light': !kontenGiro[2]}"
-    mdbWavesEffect>Saldo Rekening</button>
-  <button (click)="tabMutasi()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[3], 'btn-light': !kontenGiro[3]}"
-    mdbWavesEffect>Mutasi</button>
-  <button (click)="tabBungaJasa()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[4], 'btn-light': !kontenGiro[4]}"
-    mdbWavesEffect>Bunga Jasa</button>
-  <button (click)="tabRiwayat()" mdbBtn type="button" [ngClass]="{'btn-default' : kontenGiro[5], 'btn-light': !kontenGiro[5]}"
-    mdbWavesEffect>Riwayat</button>
-</div>
-<!--Panel Tabs-->
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
 
 
-<!-- isi konten panel tabs tabungan-->
-<div class="card">
-  <div class="card-body">
-    <div class="tab-content">
-      <!--isi tab data administrasi-->
-      <div *ngIf="kontenGiro[0]" role="tabpanel" class="tab-pane active">
-        isi 1
-      </div>
-      <!--isi tab data administrasi-->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-      <!--isi tab data suku bunga-->
-      <div *ngIf="kontenGiro[1]" role="tabpanel" class="tab-pane active">
-        isi nya 2
-      </div>
-      <!--isi tab data suku bunga -->
+          <!-- Account Column -->
+          <ng-container matColumnDef="Account">
+            <th mat-header-cell *matHeaderCellDef> Account </th>
+            <td mat-cell *matCellDef="let element"> {{element.account}} </td>
+          </ng-container>
 
-      <!--isi tab data saldo rekening -->
-      <div *ngIf="kontenGiro[2]" role="tabpanel" class="tab-pane active">
-        isi nya 3
-      </div>
-      <!--isi tab data saldo rekening -->
+          <!-- Name Column -->
+          <ng-container matColumnDef="Nama">
+            <th mat-header-cell *matHeaderCellDef> Nama </th>
+            <td mat-cell *matCellDef="let element"> {{element.nama}} </td>
+          </ng-container>
 
-      <!--isi tab data saldo rekening -->
-      <div *ngIf="kontenGiro[3]" role="tabpanel" class="tab-pane active">
-        isi nya4
-      </div>
-      <!--isi tab data saldo rekening -->
+          <!-- Cabang Column -->
+          <ng-container matColumnDef="Cabang">
+            <th mat-header-cell *matHeaderCellDef> Cabang </th>
+            <td mat-cell *matCellDef="let element"> {{element.cabang}} </td>
+          </ng-container>
 
-      <!--isi tab data bunga jasa giro -->
-      <div *ngIf="kontenGiro[4]" role="tabpanel" class="tab-pane active">
-        isi nya5
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="CCY">
+            <th mat-header-cell *matHeaderCellDef> CCY </th>
+            <td mat-cell *matCellDef="let element"> {{element.ccy}} </td>
+          </ng-container>
+
+          <!-- Type Column -->
+          <ng-container matColumnDef="Type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!--Panel Atas 1-->
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Nomor Nasabah</label>
+              <label>:</label>
+              <label class="col-2">0500001230</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Nama</label>
+              <label>:</label>
+              <label class="col-3">Dwi S</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Total Fasilitas</label>
+              <label>:</label>
+              <label class="col-2">41200000</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Total O/S Debit</label>
+              <label>:</label>
+              <label class="col-3">01238236712</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Total Agunan</label>
+              <label>:</label>
+              <label class="col-2">0.10</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Collect</label>
+              <label>:</label>
+              <label class="col-3">2</label>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!--Panel Atas 1-->
+
+
+
+        <mat-tab-group>
+          <mat-tab label="Data Administrasi">
+            konten 1
+          </mat-tab>
+          <mat-tab label="Data Suku Bunga"> Content 2 </mat-tab>
+          <mat-tab label="Saldo Rekening"> Content 3 </mat-tab>
+          <mat-tab label="Mutasi"> Content 3 </mat-tab>
+          <mat-tab label="Bunga Jasa Giro"> Content 3 </mat-tab>
+          <mat-tab label="Bunga PRK"> Content 3 </mat-tab>
+          <mat-tab label="Bunga Cerukan"> Content 3 </mat-tab>
+        </mat-tab-group>
+
       </div>
-      <!--isi tab data bunga jas giro -->
-      <!-- isi tab riwayat saldo -->
-      <div *ngIf="kontenGiro[5]" role="tabpanel" class="tab-pane active">
-        isi nya6
-      </div>
-      <!-- isi tab riwayat saldo -->
     </div>
   </div>
 </div>
-<!-- isi konten panel tabs-->

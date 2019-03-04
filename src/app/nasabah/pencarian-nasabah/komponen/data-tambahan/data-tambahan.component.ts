@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-data-tambahan',
@@ -7,19 +7,21 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 })
 export class DataTambahanComponent implements OnInit {
 
-    //terima data dari parent component
-    @Input() editDataTambahan;
-    //kirim data ke parent 
-    @Output() editDataTambahanEvent = new EventEmitter<string>();
+  isEdit = false;
+  //terima data dari parent component
+  @Input() editDataTambahan;
+  //kirim data ke parent 
+  @Output() editDataTambahanEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  funcUbahDataTambahan(){
-    this.editDataTambahan = false;
-    this.editDataTambahanEvent.emit(this.editDataTambahan);
+  funcUbahDataTambahan() {
+    // this.editDataTambahan = false;
+    // this.editDataTambahanEvent.emit(this.editDataTambahan);
+    this.isEdit = !this.isEdit;
   }
 
 }

@@ -49,6 +49,7 @@
 
               <mat-tab-group>
 
+                <!-- Head Tab -->
                 <mat-tab label="INFORMASI CIF">
                   <mat-tab-group>
                     <mat-tab label="DATA UMUM CIF">
@@ -60,16 +61,17 @@
                     <mat-tab label="TRANSAKSI LIMIT">
                       <app-transaksi-limit></app-transaksi-limit>
                     </mat-tab>
-                    <mat-tab label="SANDI BI"> Content 4 </mat-tab>
-                    <mat-tab label="DATA TAMBAHAN"> Content 5 </mat-tab>
+                    <mat-tab label="SANDI BI">
+                      <app-sandi-bi></app-sandi-bi>
+                    </mat-tab>
+                    <mat-tab label="DATA TAMBAHAN">
+                      <app-data-tambahan></app-data-tambahan>
+                    </mat-tab>
                   </mat-tab-group>
                 </mat-tab>
+                <!-- Head Tab -->
                 <mat-tab label="PORTOFOLIO CIF">
-                  <mat-tab-group>
-                    <mat-tab label="First"> Content 1 </mat-tab>
-                    <mat-tab label="Second"> Content 2 </mat-tab>
-                    <mat-tab label="Third"> Content 3 </mat-tab>
-                  </mat-tab-group>
+                  <app-portofolio-cif></app-portofolio-cif>
                 </mat-tab>
                 <mat-tab label="RELASI CIF">
                   <mat-tab-group>
