@@ -3,11 +3,21 @@
 <div class="form-group row mb-0">
   <label class="col-2 col-form-label font-weight-bold">Jenis kartu ID</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">KTP</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">KTP</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Option 1</mat-option>
+      <mat-option value="2">Option 2</mat-option>
+      <mat-option value="3">Option 3</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">No. Kartu ID</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">123456789</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">123456789</label>
+    <input class="form-control" *ngIf="isEdit" value="1234567890">
+  </div>
 </div>
 <!--baris 1-->
 
@@ -15,11 +25,25 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Tanggal Terbit Kartu ID</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">12/12/2012</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">12/12/2012</label>
+    <mat-form-field *ngIf="isEdit">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Tanggal Akhir Kartu ID</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">12/12/2012</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">12/12/2012</label>
+    <mat-form-field *ngIf="isEdit">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
 </div>
 <!--baris 2-->
 
@@ -27,11 +51,21 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Tanggal Lahir</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">12/12/2012</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">12/12/2012</label>
+    <mat-form-field *ngIf="isEdit">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Tempat Lahir</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Semarang</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Semarang</label>
+    <input class="form-control" *ngIf="isEdit" value="Semarang">
+  </div>
 </div>
 <!--baris 2-->
 
@@ -39,11 +73,25 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Pendidikan Terakhir</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">S1</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">S1</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">S2</mat-option>
+      <mat-option value="2">S1</mat-option>
+      <mat-option value="3">SMA</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Agama</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Islam</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Islam</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Islam</mat-option>
+      <mat-option value="2">Kristen</mat-option>
+      <mat-option value="3">Hindu</mat-option>
+    </mat-select>
+  </div>
 </div>
 <!--baris 3-->
 
@@ -51,11 +99,24 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Jenis Kelamin</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Laki - Laki</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Laki Laki</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Laki Laki</mat-option>
+      <mat-option value="2">Perempuan</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Status</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Belum Menikah</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Menikah</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Belum Menikah</mat-option>
+      <mat-option value="2">Janda</mat-option>
+      <mat-option value="3">Duda</mat-option>
+    </mat-select>
+  </div>
 </div>
 <!--baris 4-->
 
@@ -63,11 +124,17 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Titel</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">SKom</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">S.Kom</label>
+    <input class="form-control" *ngIf="isEdit" value="S.kom">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Nama Panggilan </label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Dwi</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Dwi</label>
+    <input class="form-control" *ngIf="isEdit" value="Dwi">
+  </div>
 </div>
 <!--baris 5-->
 
@@ -75,7 +142,10 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Hoby</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Komputer</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Komputer</label>
+    <input class="form-control" *ngIf="isEdit" value="Komputer">
+  </div>
   <span class="col-7"></span>
 </div>
 <!--baris 6-->
@@ -85,11 +155,25 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Kewarganegaraan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Indonesia Asli</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">WNI</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">WNI</mat-option>
+      <mat-option value="2">WNA</mat-option>
+      <mat-option value="3">Other</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Status Tempat Tinggal </label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Keluarga</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Keluarga</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Kos</mat-option>
+      <mat-option value="2">Ngontrak</mat-option>
+      <mat-option value="3">Other</mat-option>
+    </mat-select>
+  </div>
 </div>
 <!--baris 7-->
 
@@ -97,11 +181,17 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Lama Tgl.(Thn.)</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">26 </label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">26</label>
+    <input class="form-control" *ngIf="isEdit" value="26">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Lama Tgl. (Bln)</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">2</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">2</label>
+    <input class="form-control" *ngIf="isEdit" value="2">
+  </div>
 </div>
 <!--baris 8-->
 
@@ -109,7 +199,13 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Negara Asal</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Indonesia</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Indonesia</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Malaysia</mat-option>
+      <mat-option value="2">Singapore</mat-option>
+    </mat-select>
+  </div>
 </div>
 <!--baris 9-->
 
@@ -119,11 +215,17 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Jumlah Istri</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">0 </label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">1</label>
+    <input class="form-control" *ngIf="isEdit" value="1">
+  </div>
   <span class="col-1"></span>
-  <label class="col-2 col-form-label font-weight-bold">Jumlah Anak </label>
+  <label class="col-2 col-form-label font-weight-bold">Jumlah Anak</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">0</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">2</label>
+    <input class="form-control" *ngIf="isEdit" value="2">
+  </div>
 </div>
 <!--baris 10-->
 
@@ -131,7 +233,10 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Jumlah Orang Tua</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">2</label></div>
+  <div class="col-3">
+    <label type="text" *ngIf="!isEdit" class="col-form-lable">2</label>
+    <input type="text" *ngIf="isEdit" value="2">
+  </div>
 </div>
 <!--baris 11-->
 
@@ -141,22 +246,34 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">No Kartu Kredit 1</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">123456789 </label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">23456789098765</label>
+    <input class="form-control" *ngIf="isEdit" value="23456789098765">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Limit Kartu Kredit 1</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">5.000.000</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">80.000.000,-</label>
+    <input class="form-control" *ngIf="isEdit" value="80.000.000,-">
+  </div>
 </div>
 <!--baris 12-->
 <!--baris 13-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">No Kartu Kredit 2</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">123456789</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">23456789098765</label>
+    <input class="form-control" *ngIf="isEdit" value="23456789098765">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Limit Kartu Kredit 2</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">5.000.000</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">80.000.000,-</label>
+    <input class="form-control" *ngIf="isEdit" value="80.000.000,-">
+  </div>
 </div>
 <!--baris 13-->
 
@@ -164,11 +281,17 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">No Kartu ATM 1</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">123456789</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">23456789098765</label>
+    <input class="form-control" *ngIf="isEdit" value="23456789098765">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">No Kartu Atm 2</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">123456789</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">80.000.000,-</label>
+    <input class="form-control" *ngIf="isEdit" value="80.000.000,-">
+  </div>
 </div>
 <!--baris 14-->
 
@@ -178,22 +301,40 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Data Pekerjaan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Programer</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Programmer</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Akunting</mat-option>
+      <mat-option value="2">HRD</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Jabatan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Staf</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Direktur</label>
+    <input class="form-control" *ngIf="isEdit" value="Direktur">
+  </div>
 </div>
 <!--baris 15-->
 <!--baris 16-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Bidang Usaha</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Teknologi</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Pedagang</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Startup</mat-option>
+      <mat-option value="2">Other</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Nama Perusahaan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Pt. ABCDEFG</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">PT.XYZ</label>
+    <input class="form-control" *ngIf="isEdit" value="PT.XYZ">
+  </div>
 </div>
 <!--baris 16-->
 <br>
@@ -202,47 +343,75 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Alamat Jalan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Jalan Raya Pemuda</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Jl. Raya Grogol Carik No.18</label>
+    <input class="form-control" *ngIf="isEdit" value="Jl. Raya Grogol Carik No.18">
+  </div>
 </div>
 <!--baris 17-->
 <!--baris 18-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Kota</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Semarang</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Semarang</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">Jakarta</mat-option>
+      <mat-option value="2">Denpasar</mat-option>
+      <mat-option value="3">Bandung</mat-option>
+    </mat-select>
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Kode Pos</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">xxxxx</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">12344</label>
+    <input class="form-control" *ngIf="isEdit" value="12344">
+  </div>
 </div>
 <!--baris 18-->
 <!--baris 19-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">No Telepon 1</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">123456789</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">082245654576</label>
+    <input class="form-control" *ngIf="isEdit" value="082245654576">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Kode Extensi 1</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">-</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label"> - </label>
+    <input class="form-control" *ngIf="isEdit" value="">
+  </div>
 </div>
 <!--baris 19-->
 <!--baris 20-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">No Telepon 2</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">-</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">082245654576</label>
+    <input class="form-control" *ngIf="isEdit" value="082245654576">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Kode Extensi 2</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">-</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label"> - </label>
+    <input class="form-control" *ngIf="isEdit" value="">
+  </div>
 </div>
 <!--baris 20-->
 <!--baris 21-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">No Fax (Prsh)</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">-</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">0362 894843</label>
+    <input class="form-control" *ngIf="isEdit" value="0362 894843">
+  </div>
   <span class="col-1"></span>
 </div>
 <!--baris 21-->
@@ -252,30 +421,46 @@
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Pendapatan Perbulan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">1Jt - 5Jt</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">1jt - 5jt / Bulan</label>
+    <mat-select *ngIf="isEdit" placeholder="Select an option">
+      <mat-option value="1">1jt - 5jt / Bulan</mat-option>
+      <mat-option value="2">5jt - 10jt / Bulan</mat-option>
+      <mat-option value="3">10jt - 15jt / Bulan</mat-option>
+    </mat-select>
+  </div>
 </div>
 <!--baris 22-->
 <!--baris 23-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Sumber Pendapatan Tetap</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Gaji</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Gaji</label>
+    <input class="form-control" *ngIf="isEdit" value="Gaji">
+  </div>
   <span class="col-1"></span>
   <label class="col-2 col-form-label font-weight-bold">Sumber Pendapatan Tambahan</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Gaji</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Gaji</label>
+    <input class="form-control" *ngIf="isEdit" value="Gaji">
+  </div>
 </div>
 <!--baris 24-->
 <!--baris 25-->
 <div class="form-group row mt-0 mb-0">
   <label class="col-2 col-form-label font-weight-bold">Tujuan Penggunaan Dana</label>
   <label class="col-form-label pr-0  font-weight-bold">:</label>
-  <div class="col-3"><label class="col-form-label">Lainnya</label></div>
+  <div class="col-3">
+    <label *ngIf="!isEdit" class="col-form-label">Lainnya</label>
+    <input class="form-control" *ngIf="isEdit" value="Lainnya">
+  </div>
 </div>
 <!--baris 26-->
 
 
 
 <div class="d-flex justify-content-end">
-  <button type="button" class="btn btn-primary" (click)="funcUbahPersonal()">Ubah</button>
+  <button type="button" class="btn btn-primary" (click)="funcNon()">Ubah</button>
 </div>

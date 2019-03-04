@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-data-personal',
@@ -7,6 +7,7 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 })
 export class DataPersonalComponent implements OnInit {
 
+  isEdit = false;
   //terima data dari parent component
   @Input() editDataPersonal;
   //kirim data ke parent 
@@ -17,9 +18,11 @@ export class DataPersonalComponent implements OnInit {
   ngOnInit() {
   }
 
-  funcUbahPersonal(){
-    this.editDataPersonal = false;
-    this.editDataPersonalEvent.emit(this.editDataPersonal);
+
+  funcNon() {
+    // console.log('test');
+    this.isEdit = !this.isEdit;
   }
+
 
 }

@@ -5,9 +5,129 @@
     <div id="outer" class="d-flex flex-column flex-grow">
       <div class="card konten">
         <div class="card-body">
+          <!--panel 1-->
+          <div class="card">
+            <div class="card-body">
 
-          <!--Panel Atas 1-->
-          <div class="card mb-3">
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Nama Nasabah</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.namaNasabah}}</label>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">Kode Nasabah</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.kodeNasabah}}</label>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Alamat</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.alamat}}</label>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">Jenis Nasabah</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.jenisNasabah}}</label>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-2 col-form-label font-weight-bold">Kota</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.kota}}</label>
+                <span class="col-1"></span>
+                <label class="col-2 col-form-label font-weight-bold">Account Officer</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label *ngFor="let el of elements" class="col-2 col-form-label">{{el.accountOfficer}}</label>
+              </div>
+
+            </div>
+          </div>
+          <!--panel 1-->
+
+          <!-- Tabs -->
+          <div class="card">
+            <div class="card-body">
+
+              <mat-tab-group>
+
+                <!-- Head Tab -->
+                <mat-tab label="INFORMASI CIF">
+                  <mat-tab-group>
+                    <mat-tab label="DATA UMUM CIF">
+                      <app-data-umum-nasabah></app-data-umum-nasabah>
+                    </mat-tab>
+                    <mat-tab label="DATA PERSONAL">
+                      <app-data-personal></app-data-personal>
+                    </mat-tab>
+                    <mat-tab label="TRANSAKSI LIMIT">
+                      <app-transaksi-limit></app-transaksi-limit>
+                    </mat-tab>
+                    <mat-tab label="SANDI BI">
+                      <app-sandi-bi></app-sandi-bi>
+                    </mat-tab>
+                    <mat-tab label="DATA TAMBAHAN">
+                      <app-data-tambahan></app-data-tambahan>
+                    </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <!-- Head Tab -->
+                <mat-tab label="PORTOFOLIO CIF">
+                  <app-portofolio-cif></app-portofolio-cif>
+                </mat-tab>
+                <mat-tab label="RELASI CIF">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="ALAMAT TAMBAHAN">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="PESAN">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+                <mat-tab label="PRODUK">
+                  <mat-tab-group>
+                    <mat-tab label="First"> Content 1 </mat-tab>
+                    <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab>
+                  </mat-tab-group>
+                </mat-tab>
+
+              </mat-tab-group>
+
+
+
+
+            </div>
+          </div>
+          <!-- Tabs -->
+
+
+
+
+
+          <!-- Default form contact -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Start your project here-->
+</div>
+<!--Main layout-->
+
+
+
+<!--Panel Atas 1-->
+<!-- <div class="card mb-3">
             <div class="card-body">
 
               <div class="row">
@@ -41,11 +161,11 @@
               </div>
 
             </div>
-          </div>
-          <!--Panel Atas 1-->
+          </div> -->
+<!--Panel Atas 1-->
 
-          <!--Panel Tabs-->
-          <div class="btn-group" role="group" aria-label="Basic example mb-0">
+<!--Panel Tabs-->
+<!-- <div class="btn-group" role="group" aria-label="Basic example mb-0">
             <button (click)="tabInformasi()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[0], 'btn-light': !konten[0]}"
               mdbWavesEffect>Informasi CIF</button>
             <button (click)="tabPortofolio()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[1], 'btn-light': !konten[1]}"
@@ -56,18 +176,18 @@
               mdbWavesEffect>Alamat tambahan</button>
             <button (click)="tabPesan()" mdbBtn type="button" [ngClass]="{'btn-default' : konten[4], 'btn-light': !konten[4]}"
               mdbWavesEffect>Pesan</button>
-          </div>
-          <!--Panel Tabs-->
+          </div> -->
+<!--Panel Tabs-->
 
-          <!--Panel isi konten dari menu tabs-->
-          <div class="card">
+<!--Panel isi konten dari menu tabs-->
+<!-- <div class="card">
             <div class="card-body">
-              <div class="tab-content">
+              <div class="tab-content"> -->
 
-                <!--Panel isi konten dari tab informasi -->
-                <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active" id="one">
-                  <!--button menu pada tab informasi-->
-                  <div class="btn-group" role="group" aria-label="Basic example mb-0">
+<!--Panel isi konten dari tab informasi -->
+<!-- <div *ngIf="konten[0]" role="tabpanel" class="tab-pane active" id="one"> -->
+<!--button menu pada tab informasi-->
+<!-- <div class="btn-group" role="group" aria-label="Basic example mb-0">
                     <button (click)="tabDataUmum()" mdbBtn type="button" [ngClass]="{'btn-default' : konten1[0], 'btn-light': !konten1[0]}"
                       mdbWavesEffect>Data Umum</button>
                     <button (click)="tabDataPersonal()" mdbBtn type="button" [ngClass]="{'btn-default' : konten1[1], 'btn-light': !konten1[1]}"
@@ -78,66 +198,57 @@
                       mdbWavesEffect>Sandi BI</button>
                     <button (click)="tabDataTambahan()" mdbBtn type="button" [ngClass]="{'btn-default' : konten1[4], 'btn-light': !konten1[4]}"
                       mdbWavesEffect>Data Tambahan</button>
-                  </div>
-                  <!--button menu pada tab informasi-->
+                  </div> -->
+<!--button menu pada tab informasi-->
 
-                  <!--panel isi konten data umum cif-->
-                  <div class="card">
+<!--panel isi konten data umum cif-->
+<!-- <div class="card">
                     <div class="card-body">
                       <div *ngIf="konten1[0]" role="tabpanel" class="tab-pane active">
                         <app-data-umum-nasabah *ngIf="editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-data-umum-nasabah>
                         <app-edit-data-umum-nasabah *ngIf="!editData" [editData]="editData" (editDataEvent)="statusEdit($event)"></app-edit-data-umum-nasabah>
-                      </div>
-                      <!--panel isi konten data umum cif-->
+                      </div> -->
+<!--panel isi konten data umum cif-->
 
-                      <!--panel isi konten data personal-->
-                      <div *ngIf="konten1[1]" role="tabpanel" class="tab-pane active">
+<!--panel isi konten data personal-->
+<!-- <div *ngIf="konten1[1]" role="tabpanel" class="tab-pane active">
                         <app-data-personal *ngIf="editDataPersonal" (editDataPersonalEvent)="statusEditDataPersonal($event)"></app-data-personal>
                         <app-ubah-data-personal *ngIf="!editDataPersonal" (editDataPersonalEvent)="statusEditDataPersonal($event)"></app-ubah-data-personal>
-                      </div>
-                      <!--panel isi konten data personal-->
+                      </div> -->
+<!--panel isi konten data personal-->
 
-                      <!--panel isi konten transaksi limit-->
-                      <div *ngIf="konten1[2]" role="tabpanel" class="tab-pane active">
+<!--panel isi konten transaksi limit-->
+<!-- <div *ngIf="konten1[2]" role="tabpanel" class="tab-pane active">
                         <app-transaksi-limit *ngIf="editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-transaksi-limit>
-                        <app-ubah-transaksi-limit *ngIf="!editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-ubah-transaksi-limit>
-                        <!--panel <button (click)="editTransaksiLimit = !editTransaksiLimit">toggle</button>{{editTransaksiLimit}}-->
-                      </div>
-                      <!--panel isi konten data limit-->
+                        <app-ubah-transaksi-limit *ngIf="!editTransaksiLimit" (editTransaksiLimitEvent)="statusEditTransaksiLimit($event)"></app-ubah-transaksi-limit> -->
+<!--panel <button (click)="editTransaksiLimit = !editTransaksiLimit">toggle</button>{{editTransaksiLimit}}-->
+<!-- </div> -->
+<!--panel isi konten data limit-->
 
-                      <!--panel isi sandi bi-->
-                      <div *ngIf="konten1[3]" role="tabpanel" class="tab-pane active">
+<!--panel isi sandi bi-->
+<!-- <div *ngIf="konten1[3]" role="tabpanel" class="tab-pane active">
                         <app-sandi-bi *ngIf="editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-sandi-bi>
                         <app-ubah-sandi-bi *ngIf="!editSandiBi" (editSandiBiEvent)="statusEditSandiBi($event)"></app-ubah-sandi-bi>
-                      </div>
-                      <!--panel isi sandi bi-->
-                      <!--panel isi data tambahan-->
-                      <div *ngIf="konten1[4]" role="tabpanel" class="tab-pane active">
+                      </div> -->
+<!--panel isi sandi bi-->
+<!--panel isi data tambahan-->
+<!-- <div *ngIf="konten1[4]" role="tabpanel" class="tab-pane active">
                         <app-data-tambahan *ngIf="editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-data-tambahan>
                         <app-ubah-data-tambahan *ngIf="!editDataTambahan" (editDataTambahanEvent)="statusEditDataTambahan($event)"></app-ubah-data-tambahan>
-                      </div>
-                      <!--panel isi data tambahan-->
-                    </div>
+                      </div> -->
+<!--panel isi data tambahan-->
+<!-- </div>
                   </div>
-                </div>
-                <!--end panel isi konten data umum cif-->
+                </div> -->
+<!--end panel isi konten data umum cif-->
 
-                <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">
+<!-- <div *ngIf="konten[1]" role="tabpanel" class="tab-pane active" id="one">
                   <app-portofolio-cif></app-portofolio-cif>
                 </div>
                 <div *ngIf="konten[2]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Relasi</div>
                 <div *ngIf="konten[3]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Alamat Tambahan</div>
-                <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Pesan</div>
-              </div>
+                <div *ngIf="konten[4]" role="tabpanel" class="tab-pane active" id="one">Konten Tab Pesan</div> -->
+<!-- </div>
             </div>
-          </div>
-          <!--Panel isi konten dari menu tabs-->
-
-          <!-- Default form contact -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /Start your project here-->
-</div>
-<!--Main layout-->
+          </div> -->
+<!--Panel isi konten dari menu tabs-->

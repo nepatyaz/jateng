@@ -75,3 +75,7 @@ div.card button[type="reset"]:hover {
   background: #234a7b;
   color: white;
 }
+
+div.modal-footer {
+  color: #234a7b;
+}

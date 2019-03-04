@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-data-umum-nasabah',
@@ -6,21 +6,26 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./data-umum-nasabah.component.css']
 })
 export class DataUmumNasabahComponent implements OnInit {
+  isEdit = false;
 
   //terima data dari parent
- @Input() editData;
- //kirim data ke parent 
- @Output() editDataEvent = new EventEmitter<string>();
+  @Input() editData;
+  //kirim data ke parent 
+  @Output() editDataEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  funcUbah(){
-    this.editData = false;
-    this.editDataEvent.emit(this.editData);
+  funcUbah() {
+    this.isEdit = !this.isEdit;
+    // this.editData = false;
+    // this.editDataEvent.emit(this.editData);
     // window.alert('ubah');
+  }
+  funcNon() {
+    this.isEdit = false;
   }
 
 }
