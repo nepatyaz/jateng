@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: ` <div class="stars" style="margin-top:15vh;">
   <div class="central-body">
       <img class="image-404" src="assets/image/404.png" width="300px">
-      <a href="/" class="btn-go-home" target="_blank">Kembali</a>
+      <a [routerLink]="['/']" class="btn-go-home">Kembali</a>
   </div>
   <div class="objects">
       <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">

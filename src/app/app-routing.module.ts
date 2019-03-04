@@ -4,13 +4,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginGuard } from './guard/login.guard';
-//administrative
-import { DaftarUserSignOnComponent } from './administrative/daftar-user-sign-on/daftar-user-sign-on.component';
-import { WebBranchStatusComponent } from './administrative/web-branch-status/web-branch-status.component';
-import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
-import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
-import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
-import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
 //tellerin
 import { TellerInSetoranTunaiComponent } from './teller-in/teller-in-setoran-tunai/teller-in-setoran-tunai.component';
 import { TellerInPenarikanTunaiComponent } from './teller-in/teller-in-penarikan-tunai/teller-in-penarikan-tunai.component';
@@ -26,6 +19,8 @@ import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-p
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
+import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
+
 //passbook
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -39,7 +34,7 @@ import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
 import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
 import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
 import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
-import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
+
 //cashdrawer
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
@@ -47,14 +42,6 @@ import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.co
 //layout
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
-//rekening
-import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
-import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
-import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
-import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
-//report
-import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
-import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
 //nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
@@ -75,6 +62,8 @@ import { Pagination2Component } from './test/pagination2/pagination2.component';
 import { WebcamComponent } from './test/webcam/webcam.component';
 
 
+
+
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
   {
@@ -83,14 +72,6 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent, },
       { path: 'dashboard', component: DashboardComponent, },
-      { path: 'daftaruser', component: DaftarUserSignOnComponent },
-      //administrasi path
-      { path: 'administrator/daftaruser', component: DaftarUserSignOnComponent },
-      { path: 'administrator/webbranchstatus', component: WebBranchStatusComponent },
-      { path: 'administrator/tglbisnis', component: TanggalbisnisComponent },
-      { path: 'administrator/aktifitasuser', component: AktifitasuserComponent },
-      { path: 'administrator/upload', component: UploadTransaksiComponent },
-      { path: 'administrator/offlinelimit', component: ChangeOfflineLimitComponent },
       //tellerin
       { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
       { path: 'tellerin/tellerin', component: TellerInComponent },
@@ -124,15 +105,6 @@ const routes: Routes = [
       { path: 'cashdrawer/denominasi', component: DenominasiComponent },
       { path: 'cashdrawer/balancing', component: BalancingComponent },
       { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent },
-      //rekening
-      { path: 'rekening/cetak', component: CetakrekeningComponent },
-      { path: 'rekening/daftar', component: DaftarrekeningComponent },
-      { path: 'rekening/pencariandaftarrekening', component: PencarianDaftarRekeningComponent },
-      //cashdrawer head
-      { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
-      { path: 'cashdrawerhead/daftarsaldo', component: CashdrawerHeadTellerComponent },
-      //report
-      { path: 'report/cetakrekening', component: ReportCetakRekeningComponent },
       //nasabah
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
@@ -154,6 +126,32 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'cashdrawerhead',
+    component: HomeLayoutComponent,
+    loadChildren: './cashdrawer-head/cashdrawer-head.module#CashdrawerHeadModule',
+  },
+  {
+    path: 'administrative',
+    component: HomeLayoutComponent,
+    loadChildren: './administrative/administrative.module#AdministrativeModule',
+  },
+  {
+    path: 'rekeningkoran',
+    component: HomeLayoutComponent,
+    loadChildren: './rekening-koran/rekening-koran.module#RekeningKoranModule',
+  },
+  {
+    path: 'rekening',
+    component: HomeLayoutComponent,
+    loadChildren: './rekening/rekening.module#RekeningModule',
+  },
+  {
+    path: 'report',
+    component: HomeLayoutComponent,
+    loadChildren: './report/report.module#ReportModule',
+    canActivate: [LoginGuard]
+  },
+  {
     path: '', component: LoginLayoutComponent,
     children: [
       { path: 'login', component: LoginFormComponent },
@@ -170,19 +168,13 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  DaftarUserSignOnComponent, WebBranchStatusComponent, TellerInComponent,
-  TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent,
+  TellerInComponent, TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent,
   TellerInSinkronFinComponent, TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,
-  TanggalbisnisComponent, AktifitasuserComponent, DenominasiComponent, BalancingComponent,
-  SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
-  ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
-  GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
-  AktivasiAtmComponent, DenominasiComponent, BalancingComponent, SinkronisasiComponent,
-  CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent, ChangeOfflineLimitComponent,
-  CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent,
+  DenominasiComponent, BalancingComponent, SinkronisasiComponent, GantiPasswordOverrideComponent, RoleComponent,
+  DaftarKodeNasabahComponent, PencarianNasabahComponent,
+  AktivasiAtmComponent, DenominasiComponent, BalancingComponent, SinkronisasiComponent, GantiPasswordOverrideComponent,
   RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent, PembuatanNasabahBaruComponent,
   DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, BuatNasabahIndividualComponent,
-  TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, 
-  OtorisasiRekeningKonfidensialComponent,PencarianDaftarRekeningComponent, BarsheetRekeningComponent, 
-  PaginationComponent, Pagination2Component, PortofolioCifComponent,PencarianDaftarHitamComponent
+  TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent,
+  OtorisasiRekeningKonfidensialComponent,PaginationComponent, Pagination2Component, PortofolioCifComponent, PencarianDaftarHitamComponent
 ]

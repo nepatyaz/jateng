@@ -19,12 +19,12 @@ import { FooterHomeComponent } from './footer/footer-home/footer-home.component'
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 //administrative
-import { DaftarUserSignOnComponent } from './administrative/daftar-user-sign-on/daftar-user-sign-on.component';
-import { WebBranchStatusComponent } from './administrative/web-branch-status/web-branch-status.component';
-import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
-import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
-import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
-import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
+// import { DaftarUserSignOnComponent } from './administrative/daftar-user-sign-on/daftar-user-sign-on.component';
+// import { WebBranchStatusComponent } from './administrative/web-branch-status/web-branch-status.component';
+// import { TanggalbisnisComponent } from './administrative/tanggalbisnis/tanggalbisnis.component';
+// import { AktifitasuserComponent } from './administrative/aktifitasuser/aktifitasuser.component';
+// import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
+// import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
 //teller in
 import { TellerInSetoranTunaiComponent } from './teller-in/teller-in-setoran-tunai/teller-in-setoran-tunai.component';
 import { TellerInPenarikanTunaiComponent } from './teller-in/teller-in-penarikan-tunai/teller-in-penarikan-tunai.component';
@@ -67,14 +67,7 @@ import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.compo
 import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
-import { CashdrawerHeadTellerComponent } from './cashdrawer/cashdrawer-head-teller/cashdrawer-head-teller.component';
-//rekening
-import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
-import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
-import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
-import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
-//report
-import { ReportCetakRekeningComponent } from './report/cetak-rekening/cetak-rekening.component';
+
 //nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
@@ -124,6 +117,7 @@ import { TableService } from './service/table.service';
 import { ButtonComponent } from './test/button/button.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -135,13 +129,9 @@ import { ButtonComponent } from './test/button/button.component';
     HeaderHomeComponent,
     NavigationComponent,
     HomeNavComponent,
-    DaftarUserSignOnComponent,
-    WebBranchStatusComponent,
     TellerInSetoranTunaiComponent,TellerInPenarikanTunaiComponent,
     TellerInSelisihKasComponent,TellerInSinkronFinComponent,
     TellerInPindahBukuBedaUangComponent,TellerInTranPindahBukuComponent,
-    TanggalbisnisComponent,
-    AktifitasuserComponent,
     CariBaruUserComponent,
     GantiPasswordComponent,
     KontrolUserComponent,
@@ -160,12 +150,6 @@ import { ButtonComponent } from './test/button/button.component';
     DenominasiComponent,
     BalancingComponent,
     SinkronisasiComponent,
-    CetakrekeningComponent,
-    DaftarrekeningComponent,
-    UploadTransaksiComponent,
-    ChangeOfflineLimitComponent,
-    CashdrawerHeadTellerComponent,
-    ReportCetakRekeningComponent,
     GantiPasswordOverrideComponent,
     RoleComponent,
     TellerInComponent,
@@ -208,8 +192,6 @@ import { ButtonComponent } from './test/button/button.component';
     OtorisasiRekeningKonfidensialComponent,
     OtorisasiCifComponent,
     OtorisasiRekeningComponent,
-    PencarianDaftarRekeningComponent,
-    BarsheetRekeningComponent,
     PaginationComponent,
     Pagination2Component,
     ButtonComponent,
@@ -225,7 +207,6 @@ import { ButtonComponent } from './test/button/button.component';
     MaterialModule,
     WebcamModule,
     NgxCurrencyModule,
-
 
   ],
   providers: [AuthService, KtrluserService, ViewuserService, TableService, LoginGuard],
