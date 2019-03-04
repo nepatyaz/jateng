@@ -1,0 +1,42 @@
+<!--Main layout-->
+<div class="bodyContent">
+  <!-- Start your project here-->
+  <div class="d-flex flex-column">
+    <div id="outer" class="d-flex flex-column flex-grow">
+      <div class="card konten">
+        <div class="card-body">
+
+          <!--Panel Tabs-->
+          <div class="btn-group" role="group" aria-label="Basic example mb-0">
+            <button (click)="fungsi0()" mdbBtn type="button" [ngClass]="{'btn-default' : konten0, 'btn-light': !konten0}"
+              mdbWavesEffect>Otorisasi CIF</button>
+            <button (click)="fungsi1()" mdbBtn type="button" [ngClass]="{'btn-default' : konten1, 'btn-light': !konten1}"
+              mdbWavesEffect>Otorisasi Alamat Tambahan</button>
+          </div>
+          <!--Panel Tabs-->
+
+          <!--Panel isi konten dari menu tabs-->
+          <mdb-card>
+            <mdb-card-body>
+              <div class="tab-content">
+                <div *ngIf="konten0" role="tabpanel" class="tab-pane active" id="one">Daftar Nasabah Yang Belum di
+                  Otorisasi</div>
+                <div *ngIf="konten1" role="tabpanel" class="tab-pane active" id="one">Daftar Otorisasi Alamat Tambahan</div>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+          <!--Panel isi konten dari menu tabs-->
+          <span style="height: 10vh;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .nav-tabs>li>a,
+  .nav-pills>li>a {
+    margin-left: 25px;
+    margin-right: 27px;
+  }
+
+</style>

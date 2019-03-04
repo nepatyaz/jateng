@@ -50,6 +50,14 @@ import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembu
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
+import { WebcamComponent } from './test/webcam/webcam.component';
+import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
+import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
+import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
+import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
+import { PaginationComponent } from './test/pagination/pagination.component';
+import { Pagination2Component } from './test/pagination2/pagination2.component';
 
 
 //routing alamat setiap komponen di aplikasi 
@@ -100,13 +108,20 @@ const routes: Routes = [
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
       { path: 'kartu/aktivasi', component: AktivasiAtmComponent },
-      { path: 'kartu/tabs', component: TabskartuComponent },
       { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
       { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
       { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
       { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
-     
+      { path: 'kartu/tabskartu', component: TabskartuComponent },
+      { path: 'test/camera', component: WebcamComponent },
+      { path: 'test/pagination', component: PaginationComponent },
+      { path: 'test/pagination2', component: Pagination2Component },
+      { path: 'otorisasihead/otorisasicif', component: OtorisasiCifComponent },
+      { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
+      { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
+      { path: 'rekening/pencariandaftarrekening', component: PencarianDaftarRekeningComponent },
+      { path: 'rekening/pencarianbarsheetrekening', component: BarsheetRekeningComponent },
     ]
   },
   {
@@ -130,9 +145,10 @@ export const routingComponents = [DashboardComponent, PageNotFoundComponent, Log
   TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent, TanggalbisnisComponent, AktifitasuserComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent, UploadTransaksiComponent,
   ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent, GantiPasswordOverrideComponent, RoleComponent,
-  DaftarKodeNasabahComponent,PencarianNasabahComponent,AktivasiAtmComponent,
+  DaftarKodeNasabahComponent, PencarianNasabahComponent, AktivasiAtmComponent,
   DenominasiComponent, BalancingComponent, SinkronisasiComponent, CetakrekeningComponent, DaftarrekeningComponent,
   UploadTransaksiComponent, ChangeOfflineLimitComponent, CashdrawerHeadTellerComponent, ReportCetakRekeningComponent,
-  GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent,PencarianNasabahComponent,
-  PembuatanNasabahBaruComponent,DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, 
-  BuatNasabahIndividualComponent,TabskartuComponent]
+  GantiPasswordOverrideComponent, RoleComponent, DaftarKodeNasabahComponent, PencarianNasabahComponent,
+  PembuatanNasabahBaruComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent,
+  BuatNasabahIndividualComponent, TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent, OtorisasiRekeningKonfidensialComponent,
+  PencarianDaftarRekeningComponent, BarsheetRekeningComponent, PaginationComponent, Pagination2Component]

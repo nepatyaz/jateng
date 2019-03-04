@@ -1,50 +1,224 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/purple-green.css';
-body{
-    background-image: url(assets/image/background.png);
-    background-attachment: fixed;
-    position: relative;
-    min-height: 70vh;
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+/* ====================================================== */
+
+/*                      GENERAL STYLES                    */
+
+/* ====================================================== */
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
-header{
-height: 19vh;
-background-image: url(assets/image/bankjatengheader.png);
-background-repeat: no-repeat;
-background-size: cover;
-background-color:rgba(255, 255, 255, 0.6);
+
+body {
+  background-image: url(assets/image/material-img/backgroundLogin.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+  z-index: 0;
 }
-main{
-min-height: 50vh;
-margin-top: 20vh;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-min-width: 700px;
+
+/* body::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  position: absolute;
+  z-index: 1040;
+} */
+
+header {
+  height: 100px;
+  /* background-image: linear-gradient(to right top, #234a7b, #00597d, #006573, #176e63, #487455); */
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right top, #17375e, #193a63, #1b3e69, #1e416e, #204574, #224d7f, #245589, #255d94, #246ca7, #217cb9, #198ccc, #059cde);
+  /* background: linear-gradient(25deg, rgba(2, 0, 36, 1) 0%, rgba(35, 74, 123, 1) 53%, rgba(9, 147, 175, 1) 100%); */
+  /* background-image: linear-gradient(to right top, #234A7B, #0085B0, #00C1CA, #73FAC9); warna biru */
 }
-footer{
-height: 50px;
-background-image: url(assets/image/bankjatengfooter.png);
-background-repeat: no-repeat;
-background-size: cover;
-background-color:rgba(255, 255, 255, 10%);
+
+
+
+main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
+
+
+footer {
+  height: 50px;
+  background-image: url(assets/image/material-img/footerWb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 10%);
+  z-index: 99999;
+}
+
 .flex-grow {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
-.btn-press{
-    padding: 6px 6px;
-    margin: 1px 0px 1px 1px;
+
+.btn-press {
+  padding: 6px 6px;
+  margin: 1px 0px 1px 1px;
 }
-#outer{
-    min-height: 500px;
+
+#outer {
+  min-height: 300px;
 }
-.konten{
-    min-height: 450px;
+
+.konten {
+  min-height: 450px;
+  background-image: url(/src/assets/image/batiks.png);
 }
+
 .btn.btn-sm {
-    padding: 0.5rem 0.6rem !important;
-    font-size: 0.44rem;
-    margin-top: -5px;
-    margin-bottom: -4px;
+  padding: 0.5rem 0.6rem !important;
+  font-size: 0.44rem;
+  margin-top: -5px;
+  margin-bottom: -4px;
 }
+
+h1.web-branch {
+  background: -webkit-linear-gradient(#C9D6FF, #E2E2E2);
+  background: -moz-linear-gradient(#C9D6FF, #E2E2E2);
+  background: -ms-linear-gradient(#C9D6FF, #E2E2E2);
+  background: -o-linear-gradient(#C9D6FF, #E2E2E2);
+  background: linear-gradient(#C9D6FF, #E2E2E2);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* form {
+  background-image: url(/src/assets/image/material-img/backgroundWb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* ------------------------------------------------------ */
+/* body kontent / setting layout positioning in a content */
+.bodyContent {
+  margin-top: 200px;
+  max-height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* body kontent / setting layout positioning in a content */
+/* ------------------------------------------------------ */
+
+h5 {
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  background: -moz-linear-gradient(#283c86, #45a247);
+  background: -ms-linear-gradient(#283c86, #45a247);
+  background: -o-linear-gradient(#283c86, #45a247);
+  background: linear-gradient(#283c86, #45a247);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h5.text-primary {
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  background: -moz-linear-gradient(#283c86, #45a247);
+  background: -ms-linear-gradient(#283c86, #45a247);
+  background: -o-linear-gradient(#283c86, #45a247);
+  background: linear-gradient(#283c86, #45a247);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h5.card-title {
+  background: -webkit-linear-gradient(#283c86, #45a247);
+  /* For Chrome and Safari */
+  background: -moz-linear-gradient(#283c86, #45a247);
+  /* For old Fx (3.6 to 15) */
+  background: -ms-linear-gradient(#283c86, #45a247);
+  /* For pre-releases of IE 10*/
+  background: -o-linear-gradient(#283c86, #45a247);
+  /* For old Opera (11.1 to 12.0) */
+  background: linear-gradient(#283c86, #45a247);
+  /* Standard syntax; must be last */
+  -webkit-background-clip: text;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  background-clip: text;
+}
+
+
+
+/* ------------------------------------- */
+/*                  DASHBOARD            */
+/* ------------------------------------- */
+
+.dashboard {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-body {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  background-image: url(/src/assets/image/material-img/backgrounddashboard.png);
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------- */
+/*                  FOOTER               */
+/* ------------------------------------- */
+
+#f-style {
+  color: #234a7b;
+}
+
+/* border-bottom: 1px solid #ccc!important; */

@@ -1,88 +1,192 @@
 <!--Main layout-->
-<div class="m-3 h-100">
-    <!-- Start your project here-->
-    <div id="outer" class="d-flex flex-column">
-        <div class="card konten">
-            <div class="card-body">
-                <h5 class="text-primary font-weight-bold">Transaksi Pemindahbukuan Tanpa Cek</h5>
+<div class="bodyContent">
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card konten">
+      <div class="card-body">
+        <h5 class="text-primary font-weight-bold">Transaksi Pemindahbukuan Tanpa Cek</h5>
 
-                <mdb-card>
-                    <mdb-card-body>
+        <mdb-card>
+          <mdb-card-body>
+            <form [formGroup]="validatingForm">
+              <!--input 1-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
+                <label class="col-form-label pr-0 font-weight-bold">:</label>
+                <div class="col-3 form-inline">
+                  <div class="input-group">
+                    <input mdbInput mdbValidate class="form-control" [matDatepicker]="picker" placeholder="Tanggal Valuta"
+                      formControlName="tanggal">
+                    <mat-datepicker #picker></mat-datepicker>
+                    <div class="input-group-append">
+                      <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 form-inline">
+                  <p class="mt-2 text-danger" *ngIf="inputTanggal.invalid && (inputTanggal.dirty || inputTanggal.touched)">
+                    Mohon Masukan Tanggal</p>
+                </div>
+              </div>
+              <!--input 1-->
+              <!--input 2-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3"><input type="text" class="form-control"></div>
+                <span class="col-6"></span>
+              </div>
+              <!--input 2-->
+              <!--input 3-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">No Rekening Debit</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3"><input mdbInput mdbValidate type="number" class="form-control" formControlName="rekeningDebit"></div>
+                <p class="col-6 text-danger" *ngIf="inputRekDebit.invalid && (inputRekDebit.dirty || inputRekDebit.touched)">Mohon
+                  Masukan No rekening </p>
+              </div>
+              <!--input 3-->
+              <!--input 4-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">No Rekening Kredit</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3"><input mdbInput mdbValidate type="number" class="form-control" formControlName="rekeningKredit"></div>
+                <p class="col-6 text-danger" *ngIf="inputRekKredit.invalid && (inputRekKredit.dirty || inputRekKredit.touched)">Mohon
+                  Masukan No Rekening Kredit</p>
+              </div>
+              <!--input 4-->
+              <!--input 5-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <!-- <div class="col-3"><input type="text" class="form-control" currencyMask [(ngModel)]="value" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}"></div> -->
+                <div class="col-3">
+                  <input mdbInput mdbValidate currencyFormat data-symbol="Rp." type="text" min="10000" class="form-control"
+                    minlength="10" formControlName="nilaiTransaksi">
+                </div>
+                <p class="col-6 text-danger" *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
+                  Masukan Nilai Transaksi(*minimum Rp.10Rb)</p>
+              </div>
+              <!--input 5-->
+              <!--input 6-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label class="col-2 col-form-label  font-weight-bold">DC</label>
+                <span class="col-6"></span>
+              </div>
+              <!--input 6-->
+              <!--input 7-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <span></span>
+                <div class="col-4"><textarea rows="4" cols="50" class="form-control"></textarea></div>
+                <span class="col-6"></span>
+              </div>
+              <!--input 7-->
+              <div class="d-flex justify-content-center">
+                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputNilai.invalid || inputRekDebit.invalid || inputRekDebit.invalid || inputRekKredit.invalid"
+                  disabled><i class="fa fa-refresh"></i> Proses</button>
+                <button mdbBtn type="button" color="primary" (click)="validasiSwipe()" mdbWavesEffect *ngIf="inputNilai.valid && inputRekDebit.valid && inputRekDebit.valid && inputRekKredit.valid"><i
+                    class="fa fa-refresh"></i> Proses</button>
+                <button mdbBtn type="button" color="primary" mdbWavesEffect [routerLink]="['/']" routerLinkActive="router-link-active">Kembali</button>
+              </div>
+            </form>
 
-                        <!--input 1-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
-                            <label class="col-form-label pr-0 font-weight-bold">:</label>
-                            <div class="col-3 form-inline">
-                                <div class="input-group">
-                                    <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Valuta">
-                                    <mat-datepicker #picker></mat-datepicker>
-                                    <div class="input-group-append">
-                                        <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--input 1-->
-                        <!--input 2-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
-                            <label class="col-form-label pr-0  font-weight-bold">:</label>
-                            <div class="col-3"><input type="text" class="form-control"></div>
-                            <span class="col-6"></span>
-                        </div>
-                        <!--input 2-->
-                        <!--input 3-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">No Rekening Debit</label>
-                            <label class="col-form-label pr-0  font-weight-bold">:</label>
-                            <div class="col-3"><input type="text" class="form-control"></div>
-                            <span class="col-6"></span>
-                        </div>
-                        <!--input 3-->
-                        <!--input 4-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">No Rekening Kredit</label>
-                            <label class="col-form-label pr-0  font-weight-bold">:</label>
-                            <div class="col-3"><input type="text" class="form-control"></div>
-                            <span class="col-6"></span>
-                        </div>
-                        <!--input 4-->
-                        <!--input 5-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
-                            <label class="col-form-label pr-0  font-weight-bold">:</label>
-                            <div class="col-3"><input type="text" class="form-control"></div>
-                            <span class="col-6"></span>
-                        </div>
-                        <!--input 5-->
-                        <!--input 6-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
-                            <label class="col-form-label pr-0  font-weight-bold">:</label>
-                            <label class="col-2 col-form-label  font-weight-bold">DC</label>
-                            <span class="col-6"></span>
-                        </div>
-                        <!--input 6-->
-                        <!--input 7-->
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
-                            <label class="col-form-label pr-0  font-weight-bold">:</label>
-                            <span></span>
-                            <div class="col-4"><textarea rows="4" cols="50" class="form-control"></textarea></div>
-                            <span class="col-6"></span>
-                        </div>
-                        <!--input 7-->
-                        <div class="d-flex justify-content-center">
-                            <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
-                            <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
-                        </div>
-                    </mdb-card-body>
-                </mdb-card>
-
-                <span style="height: 10vh;"></span>
-            </div>
-        </div>
+          </mdb-card-body>
+        </mdb-card>
+        <span style="height: 10vh;"></span>
+      </div>
     </div>
-
+  </div>
 </div>
+
+
+
+<div mdbModal #modalSwipe="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true" [config]="{ignoreBackdropClick: true}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Transaksi Setoran Tunai</h4>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          Swipe Kartu Debit Customer :
+          <img src="./../../../assets/image/swipe.png" class="rounded mx-auto d-block" alt="..." style="height: 100px;">
+          <!-- <form (submit)="validasiFoto()"> -->
+          <div class="md-form">
+            <form>
+              <div class="md-form">
+                <input mdbInput mdbValidate name="input" type="text" id="inputPin" class="form-control" [(ngModel)]="minLength"
+                  #input="ngModel" required minlength="6">
+                <mdb-error *ngIf="input.invalid && (input.dirty || input.touched)">Input invalid</mdb-error>
+                <p *ngIf="input.valid && (input.dirty || input.touched)">{{validasiFoto()}}</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div mdbModal #modalFoto="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true" [config]="{ignoreBackdropClick: true}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">Validasi Foto Dan Tanda Tangan</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-8 col-sm-6 text-center">
+                Foto Customer :
+                <img src="{{pasFoto}}" class="rounded mx-auto d-block" alt="..." style="height: 200px;">
+              </div>
+              <div class="col-4 col-sm-6 text-center">
+                Tanda Tangan Customer :
+                <br><br><br>
+                <img src="{{tandaTangan}}" class="rounded mx-auto d-block" alt="..." style="height: 120px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="validasiSucces()"
+          mdbWavesEffect><i class="fa fa-refresh"></i> Proses</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bagian modal untuk validasi transaksi-->
+<div mdbModal #modalSucces="mdbModal" class="modal fade modal-notify modal-success" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Transaksi Sukses</p>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fa fa-check fa-4x animated rotateIn"></i>
+        <!-- <h5>{{pesanLogin}}</h5> -->
+      </div>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="success" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="basicModal.hide()">OK</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Bagian modal untuk validasi transaksi-->
+
+<!--Bagian modal untuk validasi transaksi-->

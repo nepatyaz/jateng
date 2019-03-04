@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { AppComponent } from './app.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
-import { HttpClientModule } from '@angular/common/http';
 import { HeaderHomeComponent } from './header/header-home/header-home.component';
 import { NavigationComponent } from './button/navigation/navigation.component';
 import { HomeNavComponent } from './navigation/home-nav/home-nav.component';
@@ -22,14 +23,11 @@ import { TellerInSelisihKasComponent } from './teller-in/teller-in-selisih-kas/t
 import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/teller-in-sinkron-fin.component';
 import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
 import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
-import { AuthService } from './auth.service';
 import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
 import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
 import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
 import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
-import { KtrluserService } from './ktrluser.service';
-import { ViewuserService } from './viewuser.service';
 import { LoginGuard } from './guard/login.guard';
 import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
 import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
@@ -45,7 +43,6 @@ import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.componen
 import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
 import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 import { CetakrekeningComponent } from './rekening-koran/cetakrekening/cetakrekening.component';
-import { MaterialModule } from './material';
 import { DaftarrekeningComponent } from './rekening-koran/daftarrekening/daftarrekening.component';
 import { UploadTransaksiComponent } from './administrative/upload-transaksi/upload-transaksi.component';
 import { ChangeOfflineLimitComponent } from './administrative/change-offline-limit/change-offline-limit.component';
@@ -87,7 +84,29 @@ import { BlokirComponent } from './kartu/tabskartu/komponen/blokir/blokir.compon
 import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka-blokir.component';
 import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
 import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
+import { WebcamComponent } from './test/webcam/webcam.component';
+import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
+import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
+import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
+import { PencarianDaftarRekeningComponent } from './rekening/pencarian-daftar-rekening/pencarian-daftar-rekening.component';
+import { BarsheetRekeningComponent } from './rekening/barsheet-rekening/barsheet-rekening.component';
 
+
+//3rd party library module
+import { WebcamModule } from 'ngx-webcam';
+import { NgxCurrencyModule } from "ngx-currency";
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MaterialModule } from './material';
+import { CurrencyFormatDirective } from 'ng-currency-format';
+import { PaginationComponent } from './test/pagination/pagination.component';
+import { Pagination2Component } from './test/pagination2/pagination2.component';
+
+//service 
+import { KtrluserService } from './ktrluser.service';
+import { ViewuserService } from './viewuser.service';
+import { AuthService } from './auth.service';
+import { TableService } from './service/table.service';
+import { ButtonComponent } from './test/button/button.component';
 
 
 
@@ -172,16 +191,32 @@ import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/re
     BlokirComponent,
     BukaBlokirComponent,
     TutupKartuComponent,
-    RelasiKartuComponent
+    RelasiKartuComponent,
+    WebcamComponent,
+    CurrencyFormatDirective,
+    OtorisasiRekeningKonfidensialComponent,
+    OtorisasiCifComponent,
+    OtorisasiRekeningComponent,
+    PencarianDaftarRekeningComponent,
+    BarsheetRekeningComponent,
+    PaginationComponent,
+    Pagination2Component,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
-    MaterialModule
+    MaterialModule,
+    WebcamModule,
+    NgxCurrencyModule,
+
+
   ],
-  providers: [AuthService, KtrluserService, ViewuserService, LoginGuard],
+  providers: [AuthService, KtrluserService, ViewuserService, TableService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

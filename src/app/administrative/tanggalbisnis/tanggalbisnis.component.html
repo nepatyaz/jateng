@@ -1,50 +1,60 @@
 <!--Main layout-->
-<div class="m-3 h-100">
-    <!-- Start your project here-->
-    <div id="outer" class="d-flex flex-column">
+<div class="bodyContent">
+  <!-- Start your project here-->
+  <div class="d-flex flex-column h-100">
+    <div id="outer" class="d-flex flex-column flex-grow">
       <div class="card konten">
         <div class="card-body">
-          <h5 class="text-primary font-weight-bold">Pengaturan Tanggal Bisnis</h5>
-  
-          <mdb-card>
-            <mdb-card-body>
-  
-              <!--input 1-->
-              <div class="form-group row">
-                <label class="col-2 col-form-label  font-weight-bold" style="width: 500px;">Tanggal Bisnis Sekarang</label>
-                <label class="col-form-label pr-0 font-weight-bold" >:</label>
-                <div class="col-3 form-inline" >
-                  <div class="input-group">
-                    <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Valuta">
-                    <mat-datepicker #picker></mat-datepicker>
-                    <div class="input-group-append">
-                      <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+          <h5 class="card-title">Pengaturan Tanggal Bisnis</h5>
+
+          <!--panel 1-->
+          <div class="card">
+            <div class="card-body">
+
+              <form [formGroup]="validatingForm">
+
+                <div class="form-group row">
+                  <label class="col-2 col-form-label font-weight-bold">Tanggal Bisnis Sekarang</label>
+                  <label class="col-form-label pr-0  font-weight-bold">:</label>
+                  <div class="col-3">
+                    <div class="input-group">
+                      <input class="form-control" mdbValidate formControlName="inputTanggal" [matDatepicker]="picker" id="inputTanggal"
+                        placeholder="Tanggal Valuta">
+                      <mat-datepicker #picker></mat-datepicker>
+                      <div class="input-group-append">
+                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2" mdbWavesEffect (click)="picker.open()"><i class="fa fa-calendar"></i></button>
+                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2" mdbWavesEffect >Ubah</button>
+                      </div>
                     </div>
-                    &nbsp;&nbsp;
-                    <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button"
-                      mdbWavesEffect>Cari</button>
-                      <span class="col-6"></span>
+                  </div>
+                  <p class="col-6 text-danger" *ngIf="inputTanggal.invalid && (inputTanggal.dirty || inputTanggal.touched)">Mohon
+                    Mohon Inputkan Tanggal
+                  </p>
+                </div>
+
+
+                <div class="form-group row">
+                  <label class="col-2 col-form-label font-weight-bold">Tanggal Bisnis Sekarang</label>
+                  <label class="col-form-label pr-0  font-weight-bold">:</label>
+                  <div class="col-3">
+                    <div class="input-group mb-3">
+                        <input class="form-control" value="{{tanggal | date:'dd/MM/yyyy'}}" id="inputTanggalManual" disabled>
+                      <div class="input-group-append">
+                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2" mdbWavesEffect>Buka</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!--input1-->
-              <!--input 2-->
-              <div class="form-group row">
-                <label class="col-2 col-form-label  font-weight-bold">Buka Cabang Manual </label>
-                <label class="col-form-label pr-0  font-weight-bold">:</label> &nbsp;&nbsp;&nbsp;
-                <div class="3"><input type="text" class="form-control"></div> &nbsp; &nbsp;
-                <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button"
-                  mdbWavesEffect>Buka</button>
-                <span class="col-6"></span>
-              </div>
-              <!--input 2-->
 
-            </mdb-card-body>
-          </mdb-card>
-  
-          <span style="height: 10vh;"></span>
+              </form>
+            </div>
+          </div>
+          <!--panel 1  -->
+          <br>
         </div>
       </div>
     </div>
-  
   </div>
+  <!-- /Start your project here-->
+</div>
+<!--Main layout-->

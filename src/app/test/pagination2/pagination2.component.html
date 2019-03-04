@@ -1,0 +1,47 @@
+<!--Main layout-->
+<div class="bodyContent">
+  <!-- Start your project here-->
+  <div id="outer" class="d-flex flex-column">
+    <div class="card konten">
+      <div class="card-body">
+        <h5 class="text-primary font-weight-bold">Test Pagination</h5>
+        <mdb-card>
+          <mdb-card-body>
+
+            <!-- Tabel dan pagination dimulai dari sini -->
+
+            <!-- <mat-form-field>
+              List length:
+              <input matInput [(ngModel)]="length">
+            </mat-form-field>
+
+            <mat-form-field>
+              Page size:
+              <input matInput [(ngModel)]="pageSize">
+            </mat-form-field>
+            <mat-form-field>
+              Page size options:
+              <input matInput [ngModel]="pageSizeOptions" (ngModelChange)="setPageSizeOptions($event)">
+            </mat-form-field> -->
+
+            <mat-paginator [length]="length" 
+                            [pageSize]="pageSize" 
+                            [pageSizeOptions]="pageSizeOptions" 
+                            (page)="paginationEvent($event)">
+            </mat-paginator>
+
+            <div *ngIf="pageEvent">
+              <h5>Page Change Event Properties</h5>
+              <div>Size Record : {{pageEvent.length}}</div>
+              <div>Page size: {{pageEvent.pageSize}}</div>
+              <div>Page index: {{pageEvent.pageIndex}}</div>
+            </div>
+
+            <!-- tabel dan pagination -->
+          </mdb-card-body>
+        </mdb-card>
+        <span style="height: 10vh;"></span>
+      </div>
+    </div>
+  </div>
+</div>

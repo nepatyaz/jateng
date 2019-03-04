@@ -1,5 +1,5 @@
 <!--Main layout-->
-<div class="m-3 h-100">
+<div class="bodyContent">
   <!-- Start your project here-->
   <div id="outer" class="d-flex flex-column">
     <div class="card konten">
@@ -8,18 +8,14 @@
 
         <mdb-card>
           <mdb-card-body>
-
+            <form [formGroup]="validatingForm">
             <!--input 1-->
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
               <label class="col-form-label pr-0 font-weight-bold">:</label>
               <div class="col-3 form-inline">
                 <div class="input-group">
-                  <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Valuta">
-                  <mat-datepicker #picker></mat-datepicker>
-                  <div class="input-group-append">
-                    <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
-                  </div>
+                  <input class="form-control" value="{{tanggal | date:'dd/MM/yyyy'}}" id="TglValuta" disabled>
                 </div>
               </div>
             </div>
@@ -28,7 +24,7 @@
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
+              <div class="col-3"><input type="number" class="form-control" id="NoReferensi"></div>
               <span class="col-6"></span>
             </div>
             <!--input 2-->
@@ -37,21 +33,24 @@
               <label class="col-2 col-form-label  font-weight-bold">Mata Uang</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
               <div class="col-3">
-                <select class="custom-select" name="optkodempn" id="optkodempn" style="width: 250px;">
-                  <option selected>Pilih Salah Satu</option>
-                  <option value="1">IDR</option>
-                  <option value="2">USD</option>
-                  <option value="3">YEN</option>
+                <select class="custom-select" mdbValidate class="form-control" formControlName="mataUang" name="optkodempn" id="MataUang" style="width: 250px;">
+                  <option selected disabled>Pilih Salah Satu</option>
+                  <option value="idr">IDR</option>
+                  <option value="usd">USD</option>
+                  <option value="yen">YEN</option>
                 </select>
               </div>
+              <p class="col-6 text-danger" *ngIf="inputMataUang.invalid && (inputMataUang.dirty || inputMataUang.touched)">Mohon Pilih Salah Satu Mata Uang</p>
             </div>
             <!--input 3-->
             <!--input 4-->
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input type="text" class="form-control"></div>
-              <span class="col-6"></span>
+              <div class="col-3"> <input mdbInput mdbValidate currencyFormat data-symbol="Rp." type="text" min="10000" class="form-control" id="nilaiTransaksi"
+                minlength="10" formControlName="nilaiTransaksi"></div>
+                <p class="col-6 text-danger" *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
+                    Masukan Nilai Transaksi(*minimum Rp.10Rb)</p>
             </div>
             <!--input 4-->
             <!--input 5-->
@@ -66,15 +65,18 @@
             <div class="form-group row">
               <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
               <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <span ></span>
-              <div class="col-4"><textarea rows="4" cols ="50" class="form-control"></textarea></div>
+              <span></span>
+              <div class="col-4"><textarea rows="4" cols="50" class="form-control" id="Keterangan"></textarea></div>
               <span class="col-6"></span>
             </div>
             <!--input 6-->
             <div class="d-flex justify-content-center">
-                <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Proses</button>
-                <button type="button btn-md" mdbBtn color="primary" mdbWavesEffect>Kembali</button>
+                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputNilai.invalid || inputMataUang.invalid" disabled><i class="fa fa-refresh"></i> Proses</button>
+                <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputNilai.valid || inputMataUang.valid" (click)="proses()"><i class="fa fa-refresh"></i> Proses</button>
+              <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active" mdbWavesEffect>
+                Kembali</button>
             </div>
+            </form>
           </mdb-card-body>
         </mdb-card>
 

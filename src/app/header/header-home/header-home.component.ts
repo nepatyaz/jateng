@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class HeaderHomeComponent implements OnInit {
   tanggal = Date.now();
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  fungsi(){
+  fungsi() {
     sessionStorage.setItem('isLoggedIn', "false");
     this.router.navigate(['/login'])
   }
