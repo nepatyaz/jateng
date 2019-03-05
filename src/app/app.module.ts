@@ -70,6 +70,9 @@ import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/de
 import { DataDepositoBerjangkaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/data-deposito-berjangka/data-deposito-berjangka.component';
 import { DetailMutasiDepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/detail-mutasi-deposito/detail-mutasi-deposito.component';
 import { PinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/pinjaman.component';
+import { DataUmumPinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/data-umum-pinjaman/data-umum-pinjaman.component';
+import { AktifitasPinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/aktifitas-pinjaman/aktifitas-pinjaman.component';
+import { PastDueComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/past-due/past-due.component';
 
 @NgModule({
   declarations: [
@@ -126,7 +129,10 @@ import { PinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pi
     DepositoComponent,
     DataDepositoBerjangkaComponent,
     DetailMutasiDepositoComponent,
-    PinjamanComponent
+    PinjamanComponent,
+    DataUmumPinjamanComponent,
+    AktifitasPinjamanComponent,
+    PastDueComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,110 @@
-<p>
-  pinjaman works!
-</p>
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!-- Account Column -->
+          <ng-container matColumnDef="Account">
+            <th mat-header-cell *matHeaderCellDef> Account </th>
+            <td mat-cell *matCellDef="let element"> {{element.account}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Nama">
+            <th mat-header-cell *matHeaderCellDef> Nama </th>
+            <td mat-cell *matCellDef="let element"> {{element.nama}} </td>
+          </ng-container>
+
+          <!-- Cabang Column -->
+          <ng-container matColumnDef="Cabang">
+            <th mat-header-cell *matHeaderCellDef> Cabang </th>
+            <td mat-cell *matCellDef="let element"> {{element.cabang}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="CCY">
+            <th mat-header-cell *matHeaderCellDef> CCY </th>
+            <td mat-cell *matCellDef="let element"> {{element.ccy}} </td>
+          </ng-container>
+
+          <!-- Type Column -->
+          <ng-container matColumnDef="Type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- prev / next -->
+        <div class="d-flex flex-row-reverse mt-2">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">&laquo; Sebelumnya</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">1</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">2</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">3</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">Selanjutnya &raquo;
+            </button>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+          <button type="button" class="btn btn-primary" style="width: 170px"> Mutasi</button><br>
+        </div>
+
+
+        <!--Panel -->
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Nama pada Rekening</label>
+              <label>:</label>
+              <label class="col-2">Ali Sodi1</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">jenis Rekening</label>
+              <label>:</label>
+              <label class="col-3">KR036</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">No Rekening</label>
+              <label>:</label>
+              <label class="col-2">41200000</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Mata Uang</label>
+              <label>:</label>
+              <label class="col-3">IDR</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Cabang</label>
+              <label>:</label>
+              <label class="col-2">Utama</label>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!--Panel-->
+
+        <!-- Menu Tabs -->
+        <mat-tab-group>
+          <mat-tab label="Pinjaman">
+            <app-data-umum-pinjaman></app-data-umum-pinjaman>
+          </mat-tab>
+          <mat-tab label="Aktifitas">
+            <app-aktifitas-pinjaman></app-aktifitas-pinjaman>
+          </mat-tab>
+          <mat-tab label="Past Due">
+            <app-past-due></app-past-due>
+          </mat-tab>
+        </mat-tab-group>
+
+      </div>
+    </div>
+  </div>
+</div>
