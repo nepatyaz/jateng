@@ -1,7 +1,5 @@
 import { Component, OnInit , ElementRef} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ModalDirective } from 'angular-bootstrap-md';
-import { TargetLocator } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-teller-in',
@@ -19,12 +17,9 @@ export class TellerInComponent implements OnInit {
   ngOnInit() {
     this.validatingForm = new FormGroup(
       {
-        // tanggal: new FormControl(null, Validators.required),
-        // rekeningDebit: new FormControl(null,  [Validators.required, Validators.min(1000000), Validators.max(999999999999)]),
-        // rekeningKredit: new FormControl(null, [Validators.required, Validators.min(1000000), Validators.max(999999999999)]),
-        nilaiTransaksi: new FormControl(null, Validators.required),
-        mataUang: new FormControl(null, Validators.required),
-
+      nilaiTransaksi: new FormControl(null, [Validators.required, Validators.min(10000), Validators.max(999999999999)]),
+      mataUang: new FormControl(null, Validators.required),
+    
       }
     );
   }
@@ -41,6 +36,12 @@ export class TellerInComponent implements OnInit {
     let NoReferensi = this._elementRef.nativeElement.querySelector('#NoReferensi').value; 
     let Keterangan = this._elementRef.nativeElement.querySelector('#Keterangan').value; 
     console.log(NilaiTransaksi, MataUang, TglValuta, NoReferensi, Keterangan);
+  }
+
+  ChangingValue(value : string){
+  
+    console.log(value)
+
   }
 
 

@@ -1,37 +1,92 @@
 <div class="card">
   <div class="card-body">
-    <form>
-      <h6 style="color: #2bbbad; font-weight: bold;">KONFIRMASI TUTUP KARTU</h6>
-      <div class="form-group row">
-        <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
-        <label class="col-form-label pr-0  font-weight-bold">:</label>
-        <div class="col-3"><label class="col-form-label">1234567890</label></div>
-        <span class="col-6"></span>
+      <h6 style="color: #2bbbad; font-weight: bold;" *ngIf="isTutupProses  && !isNotifikasi">KONFIRMASI TUTUP KARTU</h6>
+      <h6 style="color: #2bbbad; font-weight: bold;" *ngIf="isNotifikasi">NOTIFIKASI TUTUP KARTU</h6>
+      <h6 style="color: #2bbbad; font-weight: bold;" *ngIf="!isTutupProses  && !isNotifikasi">TUTUP KARTU</h6>
+      <hr>
+      <form>
+        <ng-container *ngIf="!isTutupProses && !isNotifikasi">
+        <div class="form-group row">
+          <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">1234567890</label></div>
+          <span class="col-6"></span>
 
-        <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
-        <label class="col-form-label pr-0  font-weight-bold">:</label>
-        <div class="col-3"><label class="col-form-label">Dian </label></div>
-        <span class="col-6"></span>
+          <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">Dian </label></div>
+          <span class="col-6"></span>
 
-        <label class="col-2 col-form-label  font-weight-bold">Jenis Kelamin</label>
-        <label class="col-form-label pr-0  font-weight-bold">:</label>
-        <div class="col-3"><label class="col-form-label">Perempuan </label></div>
-        <span class="col-6"></span>
+          <label class="col-2 col-form-label  font-weight-bold">Jenis Kelamin</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">Perempuan </label></div>
+          <span class="col-6"></span>
 
-        <label class="col-2 col-form-label  font-weight-bold">Status</label>
-        <label class="col-form-label pr-0  font-weight-bold">:</label>
-        <div class="col-3"><label class="col-form-label">Lajang </label></div>
-        <span class="col-6"></span>
+          <label class="col-2 col-form-label  font-weight-bold">Status</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">Lajang </label></div>
+          <span class="col-6"></span>
 
-        <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
-        <label class="col-form-label pr-0  font-weight-bold">:</label>
-        <div class="col-3"><label class="col-form-label">081222333444</label></div>
-        <span class="col-6"></span>
-      </div>
-    </form>
-    <div class="d-flex justify-content-center">
-      <button type="button" class="btn btn-primary btn-rounded"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
-      <button type="button" class="btn btn-primary btn-rounded"><i class="fa fa-reply" aria-hidden="true"></i> Kembali</button>
+          <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">081222333444</label></div>
+          <span class="col-6"></span>
+        </div>
+        </ng-container>
+
+        <ng-container *ngIf="isTutupProses  && !isNotifikasi">
+        <div class="form-group row">
+          <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">1234567890</label></div>
+          <span class="col-6"></span>
+
+          <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">Dian </label></div>
+          <span class="col-6"></span>
+
+          <label class="col-2 col-form-label  font-weight-bold">Jenis Kelamin</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">Perempuan </label></div>
+          <span class="col-6"></span>
+
+          <label class="col-2 col-form-label  font-weight-bold">Status</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">Lajang </label></div>
+          <span class="col-6"></span>
+
+          <label class="col-2 col-form-label  font-weight-bold">Nomor Telepon</label>
+          <label class="col-form-label pr-0  font-weight-bold">:</label>
+          <div class="col-3"><label class="col-form-label">081222333444</label></div>
+          <span class="col-6"></span>
+        </div>
+        </ng-container>
+
+        <ng-container *ngIf="isNotifikasi && !isTutupProses">
+        <div class="form-group row">
+            <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">1234567890</label></div>
+            <span class="col-6"></span>
+    
+            <label class="col-2 col-form-label  font-weight-bold">Nama pada Kartu</label>
+            <label class="col-form-label pr-0  font-weight-bold">:</label>
+            <div class="col-3"><label class="col-form-label">Dian </label></div>
+            <span class="col-6"></span>
+
+            <span class="col-4">
+                <h6 style="color: #2bbbad; font-weight: bold;">Transaksi Berhasil Di Proses</h6>
+            </span>
+          </div>
+        </ng-container>
+      </form>
+      <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary btn-rounded" (click)="prosesTutup()" *ngIf="!isTutup && !isNotifikasi"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
+          <button type="button" class="btn btn-primary btn-rounded" (click)="konfirmasiProsesTutup()" *ngIf="isTutupProses  && !isNotifikasi"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
+          <button type="button" class="btn btn-primary btn-rounded" [routerLink]="['./']" routerLinkActive="router-link-active"  *ngIf="isTutup || isNotifikasi"><i class="fa fa-reply" aria-hidden="true"></i> Kembali</button>
+       </div>
     </div>
   </div>
-</div>
+
+ 
