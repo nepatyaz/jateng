@@ -1,0 +1,60 @@
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!-- Account Column -->
+          <ng-container matColumnDef="Account">
+            <th mat-header-cell *matHeaderCellDef> Account </th>
+            <td mat-cell *matCellDef="let element"> {{element.account}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Nama">
+            <th mat-header-cell *matHeaderCellDef> Nama </th>
+            <td mat-cell *matCellDef="let element"> {{element.nama}} </td>
+          </ng-container>
+
+          <!-- Cabang Column -->
+          <ng-container matColumnDef="Cabang">
+            <th mat-header-cell *matHeaderCellDef> Cabang </th>
+            <td mat-cell *matCellDef="let element"> {{element.cabang}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="CCY">
+            <th mat-header-cell *matHeaderCellDef> CCY </th>
+            <td mat-cell *matCellDef="let element"> {{element.ccy}} </td>
+          </ng-container>
+
+          <!-- Type Column -->
+          <ng-container matColumnDef="Type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- prev / next -->
+        <div class="d-flex flex-row-reverse mt-2">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">&laquo; Sebelumnya</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">1</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">2</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">3</button>
+            <button mdbBtn type="button" color="link" size="sm" class="waves-light">Selanjutnya &raquo;
+            </button>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

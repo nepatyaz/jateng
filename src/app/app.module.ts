@@ -64,6 +64,9 @@ import { KtrluserService } from './ktrluser.service';
 import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
+import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
+import { RiwayatSaldoGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/riwayat-saldo-giro/riwayat-saldo-giro.component';
+import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/deposito.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +118,9 @@ import { TableService } from './service/table.service';
     BungaJasaGiroGiroComponent,
     BungaPrkGiroComponent,
     BungaCerukanGiroComponent,
+    InformasiCifComponent,
+    RiwayatSaldoGiroComponent,
+    DepositoComponent
   ],
   imports: [
     BrowserModule,
