@@ -67,6 +67,9 @@ import { TableService } from './service/table.service';
 import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
 import { RiwayatSaldoGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/riwayat-saldo-giro/riwayat-saldo-giro.component';
 import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/deposito.component';
+import { DataDepositoBerjangkaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/data-deposito-berjangka/data-deposito-berjangka.component';
+import { DetailMutasiDepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/detail-mutasi-deposito/detail-mutasi-deposito.component';
+import { PinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/pinjaman.component';
 
 @NgModule({
   declarations: [
@@ -120,7 +123,10 @@ import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/de
     BungaCerukanGiroComponent,
     InformasiCifComponent,
     RiwayatSaldoGiroComponent,
-    DepositoComponent
+    DepositoComponent,
+    DataDepositoBerjangkaComponent,
+    DetailMutasiDepositoComponent,
+    PinjamanComponent
   ],
   imports: [
     BrowserModule,
