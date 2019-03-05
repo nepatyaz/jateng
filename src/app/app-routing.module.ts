@@ -4,41 +4,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginGuard } from './guard/login.guard';
-//tellerin
-import { TellerInSetoranTunaiComponent } from './teller-in/teller-in-setoran-tunai/teller-in-setoran-tunai.component';
-import { TellerInPenarikanTunaiComponent } from './teller-in/teller-in-penarikan-tunai/teller-in-penarikan-tunai.component';
-import { TellerInSelisihKasComponent } from './teller-in/teller-in-selisih-kas/teller-in-selisih-kas.component';
-import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/teller-in-sinkron-fin.component';
-import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
-import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
-import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
-//user maintenance
-// import { RoleComponent } from './usermaintenance/role/role.component';
-// import { CariBaruUserComponent } from './usermaintenance/cari-baru-user/cari-baru-user.component';
-// import { GantiPasswordComponent } from './usermaintenance/ganti-password/ganti-password.component';
-// import { KontrolUserComponent } from './usermaintenance/kontrol-user/kontrol-user.component';
-// import { TutupUserComponent } from './usermaintenance/tutup-user/tutup-user.component';
-// import { RefreshUserComponent } from './usermaintenance/refresh-user/refresh-user.component';
-// import { GantiPasswordOverrideComponent } from './usermaintenance/ganti-password-override/ganti-password-override.component';
-
-//passbook
-import { CetakPassbookComponent } from './passbook/cetak-passbook/cetak-passbook.component';
-import { HeaderPassbookComponent } from './passbook/header-passbook/header-passbook.component';
-import { UlangPassbookComponent } from './passbook/ulang-passbook/ulang-passbook.component';
-import { CheckTaspenComponent } from './passbook/check-taspen/check-taspen.component';
-//kartu
-import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
-import { AktivasiAtmComponent } from './kartu/aktivasi-atm/aktivasi-atm.component';
-import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
-//pembayaran
-import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
-import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
-import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
-
-// //cashdrawer
-// import { DenominasiComponent } from './cashdrawer/denominasi/denominasi.component';
-// import { BalancingComponent } from './cashdrawer/balancing/balancing.component';
-// import { SinkronisasiComponent } from './cashdrawer/sinkronisasi/sinkronisasi.component';
 //layout
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
@@ -52,15 +17,6 @@ import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembu
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
-//otorisasi head
-import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
-import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
-import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
-//test komponen
-import { PaginationComponent } from './test/pagination/pagination.component';
-import { Pagination2Component } from './test/pagination2/pagination2.component';
-import { WebcamComponent } from './test/webcam/webcam.component';
-
 
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
@@ -70,26 +26,6 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent, },
       { path: 'dashboard', component: DashboardComponent, },
-      //tellerin
-      { path: 'tellerin/setorantunai', component: TellerInSetoranTunaiComponent },
-      { path: 'tellerin/tellerin', component: TellerInComponent },
-      { path: 'tellerin/penarikantunai', component: TellerInPenarikanTunaiComponent },
-      { path: 'tellerin/selisihkas', component: TellerInSelisihKasComponent },
-      { path: 'tellerin/sinkronfin', component: TellerInSinkronFinComponent },
-      { path: 'tellerin/pinbukbedauang', component: TellerInPindahBukuBedaUangComponent },
-      { path: 'tellerin/pindahbuku', component: TellerInTranPindahBukuComponent },
-      //kartu
-      { path: 'kartu/carikartuatm', component: CariKartuatmComponent },
-      { path: 'kartu/aktivasi', component: AktivasiAtmComponent },
-      { path: 'kartu/tabskartu', component: TabskartuComponent },
-      //pembayaran
-      { path: 'pembayaran/bayarpkb', component: BayarPKBComponent },
-      { path: 'pembayaran/bayarmpn', component: BayarMPNComponent },
-      { path: 'pembayaran/billpayment', component: BillpaymentComponent },
-      //cashdrawer
-      // { path: 'cashdrawer/denominasi', component: DenominasiComponent },
-      // { path: 'cashdrawer/balancing', component: BalancingComponent },
-      // { path: 'cashdrawer/sinkronisasi', component: SinkronisasiComponent },
       //nasabah
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
@@ -100,14 +36,6 @@ const routes: Routes = [
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
       { path: 'nasabah/pencariannasabah/portofoliocif', component: PortofolioCifComponent },
       { path: 'nasabah/pencariandaftarhitam', component: PencarianDaftarHitamComponent },
-      //otorisasi head
-      { path: 'otorisasihead/otorisasicif', component: OtorisasiCifComponent },
-      { path: 'otorisasihead/otorisasirekening', component: OtorisasiRekeningComponent },
-      { path: 'otorisasihead/otorisasirekeningkonfidensial', component: OtorisasiRekeningKonfidensialComponent },
-      //testing
-      { path: 'test/camera', component: WebcamComponent },
-      { path: 'test/pagination', component: PaginationComponent },
-      { path: 'test/pagination2', component: Pagination2Component },
     ]
   },
   {
@@ -126,6 +54,11 @@ const routes: Routes = [
     loadChildren: './administrative/administrative.module#AdministrativeModule',
   },
   {
+    path: 'kartu',
+    component: HomeLayoutComponent,
+    loadChildren: './kartu/kartu.module#KartuModule',
+  },
+  {
     path: 'rekeningkoran',
     component: HomeLayoutComponent,
     loadChildren: './rekening-koran/rekening-koran.module#RekeningKoranModule',
@@ -142,15 +75,39 @@ const routes: Routes = [
     canActivate: [LoginGuard]
   },
   {
+    path: 'otorisasihead',
+    component: HomeLayoutComponent,
+    loadChildren: './otorisasihead/otorisasihead.module#OtorisasiheadModule',
+    canActivate: [LoginGuard]
+  },
+  {
+    path: 'pembayaran',
+    component: HomeLayoutComponent,
+    loadChildren: './pembayaran/pembayaran.module#PembayaranModule',
+    canActivate: [LoginGuard]
+  },
+  {
     path: 'passbook',
     component: HomeLayoutComponent,
     loadChildren: './passbook/passbook.module#PassbookModule',
     canActivate: [LoginGuard]
   },
   {
+    path: 'tellerin',
+    component: HomeLayoutComponent,
+    loadChildren: './teller-in/teller-in.module#TellerInModule',
+    canActivate: [LoginGuard]
+  },
+  {
     path: 'usermaintenance',
     component: HomeLayoutComponent,
     loadChildren: './usermaintenance/usermaintenance.module#UsermaintenanceModule',
+    canActivate: [LoginGuard]
+  },
+  {
+    path: 'test',
+    component: HomeLayoutComponent,
+    loadChildren: './test/test.module#TestModule',
     canActivate: [LoginGuard]
   },
   {
@@ -170,11 +127,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  TellerInComponent, TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent, TellerInSelisihKasComponent,
-  TellerInSinkronFinComponent, TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,
-  DaftarKodeNasabahComponent, PencarianNasabahComponent,AktivasiAtmComponent,
-  DaftarKodeNasabahComponent, PencarianNasabahComponent, PembuatanNasabahBaruComponent,
+  DaftarKodeNasabahComponent, PencarianNasabahComponent,DaftarKodeNasabahComponent, PencarianNasabahComponent, PembuatanNasabahBaruComponent,
   DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, BuatNasabahIndividualComponent,
-  TabskartuComponent, WebcamComponent, OtorisasiCifComponent, OtorisasiRekeningComponent,
-  OtorisasiRekeningKonfidensialComponent,PaginationComponent, Pagination2Component, PortofolioCifComponent, PencarianDaftarHitamComponent
+  PortofolioCifComponent, PencarianDaftarHitamComponent
 ]
