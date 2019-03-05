@@ -9,14 +9,15 @@ import { AktivasiComponent } from './tabskartu/komponen/aktivasi/aktivasi.compon
 import { BlokirComponent } from './tabskartu/komponen/blokir/blokir.component';
 import { RelasiKartuComponent } from './tabskartu/komponen/relasi-kartu/relasi-kartu.component';
 import { BukaBlokirComponent } from './tabskartu/komponen/buka-blokir/buka-blokir.component';
-
-
+import { TutupKartuComponent } from './tabskartu/komponen/tutup-kartu/tutup-kartu.component';
+import { MatTabsModule } from '@angular/material';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    KartuRoutingModule
+    KartuRoutingModule,
+    MatTabsModule
   ],
   declarations: [
     AktivasiComponent,
@@ -26,7 +27,8 @@ import { BukaBlokirComponent } from './tabskartu/komponen/buka-blokir/buka-bloki
     BlokirComponent,
     RelasiKartuComponent,
     BukaBlokirComponent,
-    TabskartuComponent
+    TabskartuComponent,
+    TutupKartuComponent
   ]
 })
 export class KartuModule { }

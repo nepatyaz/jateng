@@ -5,8 +5,7 @@ import { CariKartuatmComponent } from './cari-kartuatm/cari-kartuatm.component';
 
 const routes: Routes = [
   {
-    // path: '',
-    // component: CariKartuatmComponent
+     path: '', component: CariKartuatmComponent
   }
 ];
 

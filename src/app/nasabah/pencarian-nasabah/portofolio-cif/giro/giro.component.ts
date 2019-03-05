@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-giro',
   templateUrl: './giro.component.html',
-  styles: ['table {min-width: 1170px; margin-bottom: 20px;}']
+  styles: ['table {min-width: 1170px; margin-bottom: 20px; width: 100%;}']
 })
 
 export class GiroComponent implements OnInit {
