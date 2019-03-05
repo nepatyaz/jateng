@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
 export class LoginGuard implements CanActivate {
   status: string
 
-  constructor(private Otentifikasi: AuthService, private _router: Router) { }
+  constructor(private _router: Router) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,

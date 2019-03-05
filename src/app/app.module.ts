@@ -18,31 +18,6 @@ import { HomeNavComponent } from './navigation/home-nav/home-nav.component';
 import { FooterHomeComponent } from './footer/footer-home/footer-home.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
-//teller in
-import { TellerInSetoranTunaiComponent } from './teller-in/teller-in-setoran-tunai/teller-in-setoran-tunai.component';
-import { TellerInPenarikanTunaiComponent } from './teller-in/teller-in-penarikan-tunai/teller-in-penarikan-tunai.component';
-import { TellerInSelisihKasComponent } from './teller-in/teller-in-selisih-kas/teller-in-selisih-kas.component';
-import { TellerInSinkronFinComponent } from './teller-in/teller-in-sinkron-fin/teller-in-sinkron-fin.component';
-import { TellerInPindahBukuBedaUangComponent } from './teller-in/teller-in-pindah-buku-beda-uang/teller-in-pindah-buku-beda-uang.component';
-import { TellerInTranPindahBukuComponent } from './teller-in/teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
-import { TellerInComponent } from './teller-in/teller-in/teller-in.component';
-//kartu
-import { CariKartuatmComponent } from './kartu/cari-kartuatm/cari-kartuatm.component';
-import { AktivasiAtmComponent } from './kartu/aktivasi-atm/aktivasi-atm.component';
-import { TabskartuComponent } from './kartu/tabskartu/tabskartu.component';
-import { AktivasiComponent } from './kartu/tabskartu/komponen/aktivasi/aktivasi.component';
-import { BlokirComponent } from './kartu/tabskartu/komponen/blokir/blokir.component';
-import { BukaBlokirComponent } from './kartu/tabskartu/komponen/buka-blokir/buka-blokir.component';
-import { TutupKartuComponent } from './kartu/tabskartu/komponen/tutup-kartu/tutup-kartu.component';
-import { RelasiKartuComponent } from './kartu/tabskartu/komponen/relasi-kartu/relasi-kartu.component';
-//otorisasi head
-import { OtorisasiRekeningKonfidensialComponent } from './otorisasihead/otorisasi-rekening-konfidensial/otorisasi-rekening-konfidensial.component';
-import { OtorisasiCifComponent } from './otorisasihead/otorisasi-cif/otorisasi-cif.component';
-import { OtorisasiRekeningComponent } from './otorisasihead/otorisasi-rekening/otorisasi-rekening.component';
-//pembayaran
-import { BayarPKBComponent } from './pembayaran/bayar-pkb/bayar-pkb.component';
-import { BayarMPNComponent } from './pembayaran/bayar-mpn/bayar-mpn.component';
-import { BillpaymentComponent } from './pembayaran/billpayment/billpayment.component';
 //nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
@@ -70,25 +45,6 @@ import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-ci
 import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
-
-//testing component
-import { WebcamComponent } from './test/webcam/webcam.component';
-import { PaginationComponent } from './test/pagination/pagination.component';
-import { Pagination2Component } from './test/pagination2/pagination2.component';
-
-//3rd party library module
-import { WebcamModule } from 'ngx-webcam';
-import { NgxCurrencyModule } from "ngx-currency";
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { MaterialModule } from './material';
-import { CurrencyFormatDirective } from 'ng-currency-format';
-
-//service 
-import { KtrluserService } from './ktrluser.service';
-import { ViewuserService } from './viewuser.service';
-import { AuthService } from './auth.service';
-import { TableService } from './service/table.service';
-import { ButtonComponent } from './test/button/button.component';
 import { TabunganComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/tabungan.component';
 import { DataAdministrasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/data-administrasi-giro/data-administrasi-giro.component';
 import { DataSukuBungaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/data-suku-bunga-giro/data-suku-bunga-giro.component';
@@ -97,8 +53,18 @@ import { MutasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/
 import { BungaJasaGiroGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-jasa-giro-giro/bunga-jasa-giro-giro.component';
 import { BungaPrkGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-prk-giro/bunga-prk-giro.component';
 import { BungaCerukanGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-cerukan-giro/bunga-cerukan-giro.component';
-import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
 
+//3rd party library module
+import { WebcamModule } from 'ngx-webcam';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MaterialModule } from './material';
+import { CurrencyFormatDirective } from 'ng-currency-format';
+//service 
+import { KtrluserService } from './ktrluser.service';
+import { ViewuserService } from './viewuser.service';
+import { AuthService } from './auth.service';
+import { TableService } from './service/table.service';
+import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
 
 @NgModule({
   declarations: [
@@ -111,17 +77,9 @@ import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif
     HeaderHomeComponent,
     NavigationComponent,
     HomeNavComponent,
-    TellerInSetoranTunaiComponent, TellerInPenarikanTunaiComponent,
-    TellerInSelisihKasComponent, TellerInSinkronFinComponent,
-    TellerInPindahBukuBedaUangComponent, TellerInTranPindahBukuComponent,
     FooterHomeComponent,
     HomeLayoutComponent,
     LoginLayoutComponent,
-    CariKartuatmComponent,
-    BayarPKBComponent,
-    BayarMPNComponent,
-    BillpaymentComponent,
-    TellerInComponent,
     DaftarKodeNasabahComponent,
     PencarianNasabahComponent,
     DataUmumNasabahComponent,
@@ -134,7 +92,6 @@ import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif
     UbahSandiBiComponent,
     DataTambahanComponent,
     UbahDataTambahanComponent,
-    AktivasiAtmComponent,
     PortofolioCifComponent,
     DataAdministrasiComponent,
     DataSukuBungaComponent,
@@ -149,20 +106,7 @@ import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif
     BuatNasabahIndividualComponent,
     GiroComponent,
     BuatNasabahIndividualComponent,
-    TabskartuComponent,
-    AktivasiComponent,
-    BlokirComponent,
-    BukaBlokirComponent,
-    TutupKartuComponent,
-    RelasiKartuComponent,
-    WebcamComponent,
     CurrencyFormatDirective,
-    OtorisasiRekeningKonfidensialComponent,
-    OtorisasiCifComponent,
-    OtorisasiRekeningComponent,
-    PaginationComponent,
-    Pagination2Component,
-    ButtonComponent,
     PencarianDaftarHitamComponent,
     TabunganComponent,
     DataAdministrasiGiroComponent,
@@ -172,7 +116,7 @@ import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif
     BungaJasaGiroGiroComponent,
     BungaPrkGiroComponent,
     BungaCerukanGiroComponent,
-    InformasiCifComponent,
+    InformasiCifComponent
   ],
   imports: [
     BrowserModule,
@@ -183,8 +127,6 @@ import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif
     MDBBootstrapModule.forRoot(),
     MaterialModule,
     WebcamModule,
-    NgxCurrencyModule,
-
   ],
   providers: [AuthService, KtrluserService, ViewuserService, TableService, LoginGuard],
   bootstrap: [AppComponent]
