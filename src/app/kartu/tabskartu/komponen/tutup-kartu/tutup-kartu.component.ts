@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tutup-kartu.component.css']
 })
 export class TutupKartuComponent implements OnInit {
+  isTutup = false;
+  isTutupProses = false;
+  isNotifikasi = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  prosesTutup(){
+    console.log();
+    this.isTutup = true;
+    this.isTutupProses = true;
+    this.isNotifikasi = false;
+  }
+
+  konfirmasiProsesTutup(){
+    this.isTutupProses = false;
+    this.isTutup = false;
+    this.isNotifikasi = true;
+  }
 }
+
