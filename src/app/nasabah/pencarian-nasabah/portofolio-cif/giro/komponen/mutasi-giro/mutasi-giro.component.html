@@ -1,3 +1,29 @@
-<p>
-  mutasi-giro works!
-</p>
+<mdb-card class="mb-3">
+  <mdb-card-body>
+
+    <mat-tab-group>
+      <mat-tab label="Riwayat Saldo">
+
+        <h5 class="text-primary font-weight-bold">Aktifitas Rekening</h5>
+        <br>
+        <div class="row">
+          <label class="col-3 font-weight-bold">Tanggal Awal</label>
+          <label>:</label>
+          <div class="col-3 form-inline">
+            <div class="input-group">
+              <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+              <mat-datepicker #picker></mat-datepicker>
+              <div class="input-group-append">
+                <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br><br><br>
+
+      </mat-tab>
+    </mat-tab-group>
+
+  </mdb-card-body>
+</mdb-card>

@@ -1,3 +1,149 @@
-<p>
-  bunga-jasa-giro-giro works!
-</p>
+<mdb-card class="mb-3">
+  <mdb-card-body>
+
+    <mat-tab-group>
+      <mat-tab label="Riwayat Saldo">
+
+        <h5 class="text-primary font-weight-bold">Rincian Perhitungan Bunga Jasa Giro</h5>
+
+        <!--panel atas-->
+        <div class="row mt-3">
+          <label class="col-3 font-weight-bold">Tanggal Awal</label>
+          <label>:</label>
+          <div class="col-3 form-inline">
+            <div class="input-group">
+              <input class="form-control" [matDatepicker]="picker" placeholder="Tanggal Mulai">
+              <mat-datepicker #picker></mat-datepicker>
+              <div class="input-group-append">
+                <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <!--Panel Atas-->
+
+        <!--Table-->
+        <div class="card shadow-sm">
+          <div class="card-body ">
+            <table class="table table-hover table-bordered">
+              <thead class="grey lighten-2">
+                <tr class="font-weight-bold">
+                  <th scope="col">Tanggal</th>
+                  <th scope="col">Saldo Rekening</th>
+                  <th scope="col">Rate(%) Jasa Giro</th>
+                  <th scope="col">Saldo Jasa Giro</th>
+                  <th scope="col">Bunga Jasa Giro</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">4.25</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">175</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">4.25</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">175</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">4.25</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">175</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-normal">{{tanggal | date:'short'}}</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">4.25</td>
+                  <td class="font-weight-normal">1.500.000</td>
+                  <td class="font-weight-normal">175</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex flex-row-reverse mt-2">
+              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">&laquo; Sebelumnya</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">1</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">2</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">3</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">Selanjutnya &raquo;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- table  -->
+
+
+
+        <!-- panel bawah -->
+        <div class="mt-3">
+          <div class="row">
+            <label class="col-3 font-weight-bold">Perioda Bunga s/d Tanggal</label>
+            <label class="col-2"></label>
+            <span class="col-2"></span>
+            <label class="col-2 font-weight-bold">12/11/2012</label>
+            <label class="col-3">12/12/2018</label>
+          </div>
+
+          <div class="row">
+            <label class="col-3 ">Yang Di Hitung</label>
+            <label class="col-2"></label>
+            <span class="col-2"></span>
+            <label class="col-2 ">12/11/2012</label>
+            <label class="col-3">2.132</label>
+          </div>
+
+          <div class="row">
+            <label class="col-3 ">Yang Di Di Bebankan</label>
+            <label class="col-2"></label>
+            <span class="col-2"></span>
+            <label class="col-2 ">5.248</label>
+            <label class="col-3">5.293</label>
+          </div>
+
+          <div class="row">
+            <label class="col-3 ">Yang Di Cadangkan</label>
+            <label class="col-2"></label>
+            <span class="col-2"></span>
+            <label class="col-2 "></label>
+            <label class="col-3">1.968</label>
+          </div>
+
+          <div class="row">
+            <label class="col-3">Adjustment Cadangan Bunga </label>
+            <label class="col-2"></label>
+            <span class="col-2"></span>
+            <label class="col-2"></label>
+            <label class="col-3">0.0</label>
+          </div>
+
+          <div class="row">
+            <label class="col-3 ">Bunga Bersih</label>
+            <label class="col-2"></label>
+            <span class="col-2"></span>
+            <label class="col-2 "></label>
+            <label class="col-3">0.0</label>
+          </div>
+          <div class="row">
+            <label class="col-3">Metode Perhitungan Bunga</label>
+            <label class="col-2"></label>
+            <span class="col-2">11</span>
+            <label class="col-2"></label>
+            <label class="col-3"></label>
+          </div>
+        </div>
+        <!-- panel bawah -->
+
+      </mat-tab>
+    </mat-tab-group>
+
+  </mdb-card-body>
+</mdb-card>
