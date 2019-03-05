@@ -97,6 +97,7 @@ import { MutasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/
 import { BungaJasaGiroGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-jasa-giro-giro/bunga-jasa-giro-giro.component';
 import { BungaPrkGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-prk-giro/bunga-prk-giro.component';
 import { BungaCerukanGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-cerukan-giro/bunga-cerukan-giro.component';
+import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
 
 
 @NgModule({
@@ -171,6 +172,7 @@ import { BungaCerukanGiroComponent } from './nasabah/pencarian-nasabah/portofoli
     BungaJasaGiroGiroComponent,
     BungaPrkGiroComponent,
     BungaCerukanGiroComponent,
+    InformasiCifComponent,
   ],
   imports: [
     BrowserModule,
