@@ -1,0 +1,19 @@
+table {
+  min-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+
+th.mat-column-position,
+td.mat-column-position {
+  text-align: center;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  text-align: center;
+}

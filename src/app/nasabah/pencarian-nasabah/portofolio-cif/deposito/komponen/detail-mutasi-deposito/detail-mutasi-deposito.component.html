@@ -1,0 +1,94 @@
+<mdb-card class="mb-3">
+  <mdb-card-body>
+
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+      <ng-container matColumnDef="Tanggal Buku">
+        <th mat-header-cell *matHeaderCellDef> Tanggal Buku </th>
+        <td mat-cell *matCellDef="let element"> {{element.tanggalBuku}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Tanggal Berlalu">
+        <th mat-header-cell *matHeaderCellDef> Tanggal Berlalu </th>
+        <td mat-cell *matCellDef="let element"> {{element.tanggalBerlalu}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Even">
+        <th mat-header-cell *matHeaderCellDef> Even </th>
+        <td mat-cell *matCellDef="let element"> {{element.even}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Refrensi">
+        <th mat-header-cell *matHeaderCellDef> No. Refrensi </th>
+        <td mat-cell *matCellDef="let element"> {{element.noRefrensi}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Keterangan">
+        <th mat-header-cell *matHeaderCellDef> Keterangan </th>
+        <td mat-cell *matCellDef="let element"> {{element.keterangan}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Rekening">
+        <th mat-header-cell *matHeaderCellDef> No. Rekening </th>
+        <td mat-cell *matCellDef="let element"> {{element.noRekening}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Bunga">
+        <th mat-header-cell *matHeaderCellDef> Rate Bunga </th>
+        <td mat-cell *matCellDef="let element"> {{element.rateBunga}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Pajak">
+        <th mat-header-cell *matHeaderCellDef> Kode Pajak </th>
+        <td mat-cell *matCellDef="let element"> {{element.kodePajak}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Rate Pajak">
+        <th mat-header-cell *matHeaderCellDef> Base Rate Pajak </th>
+        <td mat-cell *matCellDef="let element"> {{element.baseRate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Mutasi">
+        <th mat-header-cell *matHeaderCellDef> Mutasi </th>
+        <td mat-cell *matCellDef="let element"> {{element.mutasi}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="User">
+        <th mat-header-cell *matHeaderCellDef> User </th>
+        <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Otorisator">
+        <th mat-header-cell *matHeaderCellDef> Otorisator </th>
+        <td mat-cell *matCellDef="let element"> {{element.otorisator}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <!-- prev / next -->
+    <div class="d-flex flex-row-reverse mt-2">
+      <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+        <button mdbBtn type="button" color="link" size="sm" class="waves-light">&laquo; Sebelumnya</button>
+        <button mdbBtn type="button" color="link" size="sm" class="waves-light">1</button>
+        <button mdbBtn type="button" color="link" size="sm" class="waves-light">2</button>
+        <button mdbBtn type="button" color="link" size="sm" class="waves-light">3</button>
+        <button mdbBtn type="button" color="link" size="sm" class="waves-light">Selanjutnya &raquo;
+        </button>
+      </div>
+    </div>
+
+    <!-- button kembali -->
+    <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+      <button type="button" class="btn btn-primary" style="width: 170px"> Kembali</button><br>
+    </div>
+
+
+
+  </mdb-card-body>
+</mdb-card>
