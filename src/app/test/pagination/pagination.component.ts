@@ -79,6 +79,7 @@ export class PaginationComponent implements OnInit {
         );
 
     } else {
+      this.getTotalData();
       this.getFirstData();
     }
 

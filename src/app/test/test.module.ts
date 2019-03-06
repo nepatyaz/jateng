@@ -7,8 +7,10 @@ import { Pagination2Component } from './pagination2/pagination2.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { WebcamComponent } from './webcam/webcam.component';
 import { ButtonComponent } from './button/button.component';
-import { MatPaginatorModule, MatFormFieldModule, MatTableModule, MatMenuModule } from '@angular/material';
+// import { MatPaginatorModule, MatFormFieldModule, MatTableModule, MatMenuModule } from '@angular/material';
+
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MaterialModule } from '../material';
 
 
 
@@ -17,11 +19,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     CommonModule,
     WebcamModule,
     MDBBootstrapModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatMenuModule,
+    // MatFormFieldModule,
+    // MatTableModule,
+    // MatMenuModule,
+    MaterialModule,
     TestRoutingModule,
-    MatPaginatorModule
+    // MatPaginatorModule
   ],
   declarations: [
     Pagination2Component,
