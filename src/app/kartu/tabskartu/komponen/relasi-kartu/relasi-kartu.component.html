@@ -1,22 +1,225 @@
-<h5 class="text-primary font-weight-bold">RELASI KARTU</h5>
-                      <div class="card">
-                        <div class="card-body">
-                          <form>
-                            <div class="form-group row">
-                              <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
-                              <label class="col-form-label pr-0  font-weight-bold">:</label>
-                              <div class="col-3"><label class="col-form-label">1234567890</label></div>
-                              <span class="col-6"></span>
-                              </div>
-                              <div class="form-group row">
-                                <label class="col-2 col-form-label  font-weight-bold">Nomor ICF</label>
-                                <label class="col-form-label pr-0  font-weight-bold">:</label>
-                                <div class="col-3"><input type="text" class="form-control"></div>
-                                <span class="col-6"></span>
-                              </div>
-                              <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary btn-rounded">Proses</button>
-                              </div>
-                              </form>
-                            </div>
-                            </div>
+<div class="card">
+  <div class="card-body">
+    <h6 style="color: #536DFE; font-weight: bold;" *ngIf="isRelasiProses  && !isNotifikasi">KONFIRMASI RELASI KARTU</h6>
+    <h6 style="color: #536DFE; font-weight: bold;" *ngIf="isNotifikasi">NOTIFIKASI RELASI KARTU</h6>
+    <h6 style="color: #536DFE; font-weight: bold;" *ngIf="!isRelasiProses  && !isNotifikasi">RELASI KARTU</h6>                       
+    <hr>
+    <form>
+    <ng-container *ngIf="!isRelasiProses && !isNotifikasi">
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">1234567890</label></div>
+        <span class="col-6"></span>                            
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor ICF</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><input type="text" class="form-control"></div>
+        <span class="col-6"></span>                            
+      </div>
+      <br>
+        <table class="table table-bordered" height="100px">
+          <thead class="indigo lighten-4" style="text-align:center;">
+            <tr class="col-2 col-form-label" style="color: #304FFE ; font-weight: bold;">
+              <th scope="col"><b>RELASI</b></th>
+              <th scope="col"><b>PRIMARY</b></th>
+              <th scope="col"><b>NOMOR REKENING</b></th>
+              <th scope="col"><b>NAMA PEMEGANG</b></th>
+              <th scope="col"><b>MATA UANG</b></th>
+              <th scope="col"><b>TYPE</b></th>
+            </tr>
+          </thead>
+                  <tr>
+                    <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                      <div class="checkbox" style="text-align:center;">
+                          <label><input type="checkbox" value=""></label>
+                        </div>
+                    </td>
+                    <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                      <div class="radio" style="text-align:center;">
+                          <label><input type="radio" name="optradio"></label>
+                        </div>                        
+                      </td>
+                    <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">123456789</a></td>
+                    <td class="font-weight-normal"><a (click)="aktivasiMenu()">AAAA</a></td>
+                    <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">IDR</a></td>
+                    <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">Deposito</a></td>
+                  </tr>
+                  <tr>
+                     <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                      <div class="checkbox" style="text-align:center;">
+                          <label><input type="checkbox" value=""></label>
+                        </div>
+                     </td>
+                     <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                        <div class="radio" style="text-align:center;">
+                          <label><input type="radio" name="optradio"></label>
+                        </div>                        
+                      </td>
+                      <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">987654321</a></td>
+                      <td class="font-weight-normal" ><a (click)="aktivasiMenu()">BBBBBB</a></td>
+                      <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">IDR</a></td>
+                      <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">Tabungan</a></td>
+                    </tr>
+                    <tr>
+                      <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                       <div class="checkbox" style="text-align:center;">
+                           <label><input type="checkbox" value=""></label>
+                         </div>
+                      </td>
+                      <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                         <div class="radio" style="text-align:center;">
+                           <label><input type="radio" name="optradio"></label>
+                         </div>                        
+                       </td>
+                       <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">918273645</a></td>
+                       <td class="font-weight-normal"><a (click)="aktivasiMenu()">CCCCC</a></td>
+                       <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">IDR</a></td>
+                       <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">Giro</a></td>
+                     </tr>
+                </table>
+                <!--Pagination-->
+                <div class="d-flex flex-row-reverse" style="margin-top: 15px;">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination pg-blue">
+                      <li class="page-item">
+                        <a class="page-link">
+                          <span>&laquo;&laquo; Sebelumnya</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link">
+                          <span>Selanjutnya &raquo;&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!--Pagination-->
+    </ng-container>
+
+    <ng-container *ngIf="isRelasiProses  && !isNotifikasi">
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">1234567890</label></div>
+        <span class="col-6"></span>                            
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor ICF</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">34567891011</label></div>
+        <span class="col-6"></span>                          
+      </div>
+      <br>
+        <table class="table table-bordered" height="100px">
+          <thead class="indigo lighten-4" style="text-align:center;">
+            <tr class="col-2 col-form-label" style="color: #304FFE ; font-weight: bold;">
+              <th scope="col"><b>RELASI</b></th>
+              <th scope="col"><b>PRIMARY</b></th>
+              <th scope="col"><b>NOMOR REKENING</b></th>
+              <th scope="col"><b>NAMA PEMEGANG</b></th>
+              <th scope="col"><b>MATA UANG</b></th>
+              <th scope="col"><b>TYPE</b></th>
+            </tr>
+          </thead>
+                  <tr>
+                    <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                      <div class="checkbox" style="text-align:center;">
+                          <label><input type="checkbox" value=""></label>
+                        </div>
+                    </td>
+                    <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                      <div class="radio" style="text-align:center;">
+                          <label><input type="radio" name="optradio"></label>
+                        </div>                        
+                      </td>
+                    <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">123456789</a></td>
+                    <td class="font-weight-normal"><a (click)="aktivasiMenu()">AAAA</a></td>
+                    <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">IDR</a></td>
+                    <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">Deposito</a></td>
+                  </tr>
+                  <tr>
+                     <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                      <div class="checkbox" style="text-align:center;">
+                          <label><input type="checkbox" value=""></label>
+                        </div>
+                     </td>
+                     <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                        <div class="radio" style="text-align:center;">
+                          <label><input type="radio" name="optradio"></label>
+                        </div>                        
+                      </td>
+                      <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">987654321</a></td>
+                      <td class="font-weight-normal" ><a (click)="aktivasiMenu()">BBBBBB</a></td>
+                      <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">IDR</a></td>
+                      <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">Tabungan</a></td>
+                    </tr>
+                    <tr>
+                      <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                       <div class="checkbox" style="text-align:center;">
+                           <label><input type="checkbox" value=""></label>
+                         </div>
+                      </td>
+                      <td class="font-weight-normal"><a (click)="aktivasiMenu()"></a>
+                         <div class="radio" style="text-align:center;">
+                           <label><input type="radio" name="optradio"></label>
+                         </div>                        
+                       </td>
+                       <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">918273645</a></td>
+                       <td class="font-weight-normal"><a (click)="aktivasiMenu()">CCCCC</a></td>
+                       <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">IDR</a></td>
+                       <td class="font-weight-normal" style="text-align:center;"><a (click)="aktivasiMenu()">Giro</a></td>
+                     </tr>
+                </table>
+                <!--Pagination-->
+                <div class="d-flex flex-row-reverse" style="margin-top: 15px;">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination pg-blue">
+                      <li class="page-item">
+                        <a class="page-link">
+                          <span>&laquo;&laquo; Sebelumnya</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link">
+                          <span>Selanjutnya &raquo;&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!--Pagination-->
+    </ng-container>
+
+    <ng-container *ngIf="isNotifikasi && !isRelasiProses">
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor Kartu</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">1234567890</label></div>
+        <span class="col-6"></span>                            
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label  font-weight-bold">Nomor ICF</label>
+        <label class="col-form-label pr-0  font-weight-bold">:</label>
+        <div class="col-3"><label class="col-form-label">34567891011</label></div>
+        <span class="col-6"></span>
+        <span class="col-4">
+            <h6 style="color: #536DFE; font-weight: bold;">Transaksi Berhasil Di Proses</h6>
+        </span>                          
+      </div>
+    </ng-container>
+    </form>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-rounded" (click)="prosesRelasi()" *ngIf="!isRelasi && !isNotifikasi"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
+        <button type="button" class="btn btn-primary btn-rounded"><i class="fa fa-reply" aria-hidden="true"></i> Batal</button>
+        <button type="button" class="btn btn-primary btn-rounded" (click)="konfirmasiProsesRelasi()" *ngIf="isRelasiProses  && !isNotifikasi"><i class="fa fa-refresh" aria-hidden="true"></i> Proses</button>
+        <br>
+        <button type="button" class="btn btn-primary btn-rounded" [routerLink]="['./']" routerLinkActive="router-link-active"  *ngIf="isRelasi || isNotifikasi"><i class="fa fa-reply" aria-hidden="true"></i> Kembali</button>
+     </div>
+  </div>
+</div>
+
+
+                              
