@@ -53,6 +53,15 @@ import { MutasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/
 import { BungaJasaGiroGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-jasa-giro-giro/bunga-jasa-giro-giro.component';
 import { BungaPrkGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-prk-giro/bunga-prk-giro.component';
 import { BungaCerukanGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/bunga-cerukan-giro/bunga-cerukan-giro.component';
+import { DataDepositoBerjangkaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/data-deposito-berjangka/data-deposito-berjangka.component';
+import { DetailMutasiDepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/detail-mutasi-deposito/detail-mutasi-deposito.component';
+import { PinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/pinjaman.component';
+import { DataUmumPinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/data-umum-pinjaman/data-umum-pinjaman.component';
+import { AktifitasPinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/aktifitas-pinjaman/aktifitas-pinjaman.component';
+import { PastDueComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/past-due/past-due.component';
+import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
+import { RiwayatSaldoGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/riwayat-saldo-giro/riwayat-saldo-giro.component';
+import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/deposito.component';
 
 //3rd party library module
 import { WebcamModule } from 'ngx-webcam';
@@ -64,15 +73,8 @@ import { KtrluserService } from './ktrluser.service';
 import { ViewuserService } from './viewuser.service';
 import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
-import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
-import { RiwayatSaldoGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/riwayat-saldo-giro/riwayat-saldo-giro.component';
-import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/deposito.component';
-import { DataDepositoBerjangkaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/data-deposito-berjangka/data-deposito-berjangka.component';
-import { DetailMutasiDepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/komponen/detail-mutasi-deposito/detail-mutasi-deposito.component';
-import { PinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/pinjaman.component';
-import { DataUmumPinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/data-umum-pinjaman/data-umum-pinjaman.component';
-import { AktifitasPinjamanComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/aktifitas-pinjaman/aktifitas-pinjaman.component';
-import { PastDueComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pinjaman/komponen/past-due/past-due.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -136,6 +138,7 @@ import { PastDueComponent } from './nasabah/pencarian-nasabah/portofolio-cif/pin
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

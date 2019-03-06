@@ -9,10 +9,10 @@ import { TellerInSelisihKasComponent } from './teller-in-selisih-kas/teller-in-s
 import { TellerInSetoranTunaiComponent } from './teller-in-setoran-tunai/teller-in-setoran-tunai.component';
 import { TellerInSinkronFinComponent } from './teller-in-sinkron-fin/teller-in-sinkron-fin.component';
 import { TellerInTranPindahBukuComponent } from './teller-in-tran-pindah-buku/teller-in-tran-pindah-buku.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MDBBootstrapModule,  ModalModule, WavesModule, InputsModule, ButtonsModule } from 'angular-bootstrap-md';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCurrencyModule } from 'ngx-currency';
-import { MatDatepickerModule } from '@angular/material';
+import { MatDatepickerModule, MatRadioModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -21,7 +21,9 @@ import { MatDatepickerModule } from '@angular/material';
     MDBBootstrapModule,
     FormsModule, ReactiveFormsModule,
     NgxCurrencyModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    ModalModule, WavesModule, InputsModule, ButtonsModule,
+    MatRadioModule
   ],
   declarations: [
     TellerInComponent,
