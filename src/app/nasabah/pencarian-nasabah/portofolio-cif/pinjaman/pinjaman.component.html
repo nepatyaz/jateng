@@ -56,16 +56,53 @@
           <button type="button" class="btn btn-primary" style="width: 170px"> Mutasi</button><br>
         </div>
 
+
+        <!--Panel -->
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Nama pada Rekening</label>
+              <label>:</label>
+              <label class="col-2">Ali Sodi1</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">jenis Rekening</label>
+              <label>:</label>
+              <label class="col-3">KR036</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">No Rekening</label>
+              <label>:</label>
+              <label class="col-2">41200000</label>
+              <span class="col-2"></span>
+              <label class="col-2 font-weight-bold">Mata Uang</label>
+              <label>:</label>
+              <label class="col-3">IDR</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Cabang</label>
+              <label>:</label>
+              <label class="col-2">Utama</label>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!--Panel-->
+
+        <!-- Menu Tabs -->
         <mat-tab-group>
-          <mat-tab label="Data Berjangka">
-            <app-data-deposito-berjangka></app-data-deposito-berjangka>
+          <mat-tab label="Pinjaman">
+            <app-data-umum-pinjaman></app-data-umum-pinjaman>
           </mat-tab>
-          <mat-tab label="Detail Mutasi">
-            <app-detail-mutasi-deposito></app-detail-mutasi-deposito>
+          <mat-tab label="Aktifitas">
+            <app-aktifitas-pinjaman></app-aktifitas-pinjaman>
+          </mat-tab>
+          <mat-tab label="Past Due">
+            <app-past-due></app-past-due>
           </mat-tab>
         </mat-tab-group>
-
-
 
       </div>
     </div>

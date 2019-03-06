@@ -17,15 +17,14 @@
                   <label class="col-2 col-form-label font-weight-bold">Tanggal Bisnis Sekarang</label>
                   <label class="col-form-label pr-0  font-weight-bold">:</label>
                   <div class="col-3">
-                    <div class="input-group">
+                    <div class="input-group">                   
                       <input class="form-control" mdbValidate formControlName="inputTanggal" [matDatepicker]="picker"
                         id="inputTanggal" placeholder="Tanggal Valuta">
                       <mat-datepicker #picker></mat-datepicker>
                       <div class="input-group-append">
-                        <!-- <button mdbBtn color="default" size="md" class="m-0 px-3 py-2" type="button" (click)="picker.open()"><i class="fa fa-calendar"></i></button> -->
-                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2" mdbWavesEffect (click)="picker.open()"><i class="fa fa-calendar"></i></button>
-                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2" mdbWavesEffect >Ubah</button>
-                      </div>
+                       <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="btnCalendar" mdbWavesEffect (click)="picker.open()"><i class="fa fa-calendar"></i></button>
+                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="btnUbah" mdbWavesEffect >Ubah</button>
+                      </div> 
                     </div>
                   </div>
                   <p class="col-6 text-danger" *ngIf="inputTanggal.invalid && (inputTanggal.dirty || inputTanggal.touched)">Mohon
@@ -39,9 +38,11 @@
                   <label class="col-form-label pr-0  font-weight-bold">:</label>
                   <div class="col-3">
                     <div class="input-group mb-3">
-                        <input class="form-control" value="{{tanggal | date:'dd/MM/yyyy'}}" id="inputTanggalManual" disabled>
+                      <input class="form-control" value="{{tanggal | date:'dd/MM/yyyy'}}" id="inputTanggalManual"
+                        disabled>
                       <div class="input-group-append">
-                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2" mdbWavesEffect>Buka</button>
+                        <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2"
+                          mdbWavesEffect>Buka</button>
                       </div>
                     </div>
                   </div>

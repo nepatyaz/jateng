@@ -1,0 +1,257 @@
+<mdb-card class="mb-3">
+  <mdb-card-body>
+
+    <!--Panel -->
+    <mdb-card class="mb-3">
+      <mdb-card-body>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">No Pinjaman</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+          <span class="col-1"></span>
+          <label class="col-3 font-weight-bold">Cust. Fac. No.</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Pemilik Pinjaman</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+          <span class="col-1"></span>
+          <label class="col-3 font-weight-bold">Cabang</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Tipe Pinjaman</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+          <span class="col-1"></span>
+          <label class="col-3 font-weight-bold">Currency</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Outstanding</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+          <span class="col-1"></span>
+          <label class="col-3 font-weight-bold">Processing Type</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Kalkulasi</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+          <span class="col-1"></span>
+          <label class="col-3 font-weight-bold">Interest Rate</label>
+          <label>:</label>
+          <label class="col-2">-</label>
+        </div>
+
+      </mdb-card-body>
+    </mdb-card>
+    <!--Panel-->
+
+    <!-- Rincian Perhitungan Bunga Jasa Giro -->
+    <mdb-card class="mb-3">
+      <mdb-card-body>
+
+        <h5 class="text-primary font-weight-bold">Aktifitas Pinjaman</h5>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <ng-container matColumnDef="Value Date">
+            <th mat-header-cell *matHeaderCellDef> Value Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.valueDate}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Trans Description">
+            <th mat-header-cell *matHeaderCellDef> Trans Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.transDescription}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Amount">
+            <th mat-header-cell *matHeaderCellDef> Amount </th>
+            <td mat-cell *matCellDef="let element"> {{element.ammount}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Settle Acc">
+            <th mat-header-cell *matHeaderCellDef> Settle Acc </th>
+            <td mat-cell *matCellDef="let element"> {{element.sttleAcc}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Acc Key">
+            <th mat-header-cell *matHeaderCellDef> Acc Key </th>
+            <td mat-cell *matCellDef="let element"> {{element.accKey}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+
+
+      </mdb-card-body>
+    </mdb-card>
+
+    <!-- Aktifitas Pinjaman Detail -->
+    <mdb-card class="mb-3">
+      <mdb-card-body>
+
+        <h5 class="text-primary font-weight-bold">Aktifitas Pinjaman Detail</h5>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Loan No.</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Cust. Fac. No.</label>
+          <label>:</label>
+          <label class="col-1">-</label>
+          <span></span>
+          <label class="col-1 font-weight-bold">KMG</label>
+          <label>:</label>
+          <label class="col-1">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Loan Holder</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Branch</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Loan Type</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Ccy.</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Interest Rate</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Cacl.</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Value Date</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Base</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Transaction Amt.</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Princ Penalty Rate</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Free Code</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Intr Penalty Rate</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Settl. Acc.</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Entry Date</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Description</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Reference</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Transaction Code</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Acc. Key</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Department Code</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Src. Trans</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Operator</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Date</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Authorized By</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+          <span></span>
+          <label class="col-2 font-weight-bold">Time</label>
+          <label>:</label>
+          <label class="col-3">-</label>
+        </div>
+
+        <div class="row">
+          <label class="col-3 font-weight-bold">Override By</label>
+          <label>:</label>
+          <label class="col-3">Tidak</label>
+        </div>
+
+      </mdb-card-body>
+    </mdb-card>
+
+  </mdb-card-body>
+</mdb-card>

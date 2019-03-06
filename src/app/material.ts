@@ -37,13 +37,12 @@ import {
     MatTreeModule,
 } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
     imports: [
         MatDatepickerModule,
-        BrowserAnimationsModule,
         MatRadioModule,
         MatNativeDateModule,
         MatFormFieldModule,
@@ -82,7 +81,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ],
     exports: [
         MatDatepickerModule,
-        BrowserAnimationsModule,
         MatRadioModule,
         MatNativeDateModule,
         MatFormFieldModule,

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TellerInComponent } from './teller-in.component';
+import { DataUmumPinjamanComponent } from './data-umum-pinjaman.component';
 
-describe('TellerInComponent', () => {
-  let component: TellerInComponent;
-  let fixture: ComponentFixture<TellerInComponent>;
+describe('DataUmumPinjamanComponent', () => {
+  let component: DataUmumPinjamanComponent;
+  let fixture: ComponentFixture<DataUmumPinjamanComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TellerInComponent ]
+      declarations: [ DataUmumPinjamanComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TellerInComponent);
+    fixture = TestBed.createComponent(DataUmumPinjamanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,92 +8,96 @@
 
         <mdb-card>
           <mdb-card-body>
-            <!--input 1-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <label class="col-2 col-form-label  font-weight-bold">28/01/2013</label>
-              <span class="col-6"></span>
-            </div>
-            <!--input 1-->
-            <!--input 2-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3">
-                <input mdbInput mdbValidate type="text" name="inputReferensi" id="referensi" class="form-control"
-                  [(ngModel)]="referensi" #inputReferensi="ngModel" required>
+            <form [formGroup]="validatingForm">
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Tanggal Valuta</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label class="col-2 col-form-label  font-weight-bold">
+                  <input type="text" class="form-control" id="tanggalValuta" value="{{tanggal | date:'dd/MM/yyyy'}}" readonly> 
+                </label>
+                <span class="col-6"></span>
               </div>
-              <span class="col-6 mt-2">
-                <p class="text-danger" *ngIf="inputReferensi.invalid && (inputReferensi.dirty || inputReferensi.touched)">Mohon
-                  Inputkan No Referensi</p>
-              </span>
-            </div>
-            <!--input 2-->
-            <!--input 3-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Nomor Rekening</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3"><input mdbInput mdbValidate type="text" name="inputRekening" id="rekening" class="form-control"
-                  [(ngModel)]="rekening" #inputRekening="ngModel" required></div>
-              <span class="col-6 mt-2">
-                <p class="text-danger" *ngIf="inputRekening.invalid && (inputRekening.dirty || inputRekening.touched)">Mohon
-                  Inputkan No Rekening</p>
-              </span>
-            </div>
-            <!--input 3-->
-            <!--input 4-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <div class="col-3 ">
-                <input mdbInput mdbValidate currencyMask name="input" type="text" class="form-control" [(ngModel)]="required"
-                  #inputNilai="ngModel" [options]="{ prefix: 'Rp ', thousands: '.', precision: 0}" required>
+              <!--input 1-->
+              <!--input 2-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Nomor Referensi</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3">
+                  <input mdbValidate type="number" class="form-control" id="NoReferensi" formControlName="noReferensi">
+                </div>
+                <span class="col-6 mt-2">
+                  <p class="text-danger" *ngIf="inputReferensi.invalid && (inputReferensi.dirty || inputReferensi.touched)">Mohon
+                          Inputkan No Referensi</p>
+                </span>
               </div>
-              <span class="col-6 mt-2">
-                <p class="text-danger" *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
-                  Inputkan Jumlah Transaksi</p>
-              </span>
-            </div>
-            <!--input 4-->
-            <!--input 5-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <label class="col-2 col-form-label  font-weight-bold">DC</label>
-              <span class="col-6"></span>
-            </div>
-            <!--input 5-->
-            <!--input 6-->
-            <div class="form-group row">
-              <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
-              <label class="col-form-label pr-0  font-weight-bold">:</label>
-              <span></span>
-              <div class="col-4"><textarea rows="4" cols="50" class="form-control"></textarea></div>
-              <span class="col-6"></span>
-            </div>
-            <!--input 6-->
-            <div class="d-flex justify-content-center">
-              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.invalid || inputReferensi.invalid || inputReferensi.invalid"
-                disabled><i class="fa fa-refresh"></i> Proses</button>
-              <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.valid && inputReferensi.valid && inputReferensi.valid"
-                (click)="frame.show()"><i class="fa fa-refresh"></i> Proses</button>
-              <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active"
-                mdbWavesEffect>
-                <i class="fa fa-angle-left"></i> Kembali
-              </button>
-            </div>
+              <!--input 2-->
+              <!--input 3-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Nomor Rekening</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3">
+                  <input mdbValidate type="number" class="form-control" id="noRekening" formControlName="noRekening">
+                </div>
+                <span class="col-6 mt-2">
+                  <p class="text-danger" *ngIf="inputRekening.invalid && (inputRekening.dirty || inputRekening.touched)">Mohon
+                          Inputkan No Rekening</p>
+                </span>
+              </div>
+              <!--input 3-->
+              <!--input 4-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Nilai Transaksi</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <div class="col-3 ">
+                  <input mdbValidate id="inputNilaiTrans" currencyMask class="form-control" formControlName="nilaiTransaksi"
+                    [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',precision : '0' }">
+                </div>
+                <span class="col-6 mt-2">
+                  <p class="text-danger" *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">Mohon
+                    Inputkan Jumlah Transaksi</p>
+                </span>
+              </div>
+              <!--input 4-->
+              <!--input 5-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Kode Departemen</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <label class="col-2 col-form-label  font-weight-bold">DC</label>
+                <span class="col-6"></span>
+              </div>
+              <!--input 5-->
+              <!--input 6-->
+              <div class="form-group row">
+                <label class="col-2 col-form-label  font-weight-bold">Keterangan</label>
+                <label class="col-form-label pr-0  font-weight-bold">:</label>
+                <span></span>
+                <div class="col-4"><textarea rows="4" cols="50" class="form-control" id="inputKeterangan"></textarea></div>
+                <span class="col-6"></span>
+              </div>
+              <!--input 6-->
+              <div class="d-flex justify-content-center">
+                <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.invalid || inputReferensi.invalid || inputNilai.invalid"
+                  disabled><i class="fa fa-refresh"></i> Proses</button>
+                <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf=" inputRekening.valid && inputReferensi.valid && inputNilai.valid"
+                  (click)="frame.show()"><i class="fa fa-refresh"></i> Proses</button>
+                <button type="button btn-md" mdbBtn color="primary" [routerLink]="['/']" routerLinkActive="router-link-active"
+                  mdbWavesEffect>
+                  <i class="fa fa-reply"></i> Kembali
+                </button>
+              </div>
+            </form>
           </mdb-card-body>
         </mdb-card>
+
         <span style="height: 10vh;"></span>
       </div>
     </div>
   </div>
 </div>
 
-<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+ <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Transaksi Setoran Tunai</h4>
@@ -101,8 +105,8 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           Swipe Kartu Debit Customer :
-          <img src="./../../../assets/image/swipe.png" class="rounded mx-auto d-block" alt="..." style="height: 100px;">
-          <form (submit)="validasiFoto()">
+          <img src="./../../../assets/image/swipe.png" class="rounded mx-auto d-block" alt="..." style="height: 100px;"> 
+           <form (submit)="validasiFoto()"> 
             <div class="md-form">
               <input mdbInput mdbValidate name="pinInput" type="text" class="form-control" [(ngModel)]="minLength"
                 #pinInput="ngModel" required minlength="6">
@@ -115,19 +119,19 @@
                   class="fa fa-refresh"></i> Proses</button>
               <button mdbBtn color="default" class="waves-light" mdbWavesEffect *ngIf="pinInput.valid"><i class="fa fa-refresh"></i>
                 Proses</button>
-            </div>
-          </form>
-        </div>
+            </div> 
+           </form> 
+         </div>
       </div>
     </div>
   </div>
-</div>
+</div> 
 
 
 
 <div mdbModal #modalFoto="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title w-100" id="myModalLabel">Validasi Foto Dan Tanda Tangan</h4>
@@ -160,7 +164,7 @@
 
 <!--bagian modal untuk validasi transaksi-->
 <div mdbModal #modalSucces="mdbModal" class="modal fade modal-notify modal-success" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-sm modal-notify modal-success" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-success" role="document">
     <!--Content-->
     <div class="modal-content text-center">
       <!--Header-->
