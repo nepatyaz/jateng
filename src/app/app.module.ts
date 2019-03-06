@@ -75,6 +75,11 @@ import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FasilitasComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/fasilitas.component';
+import { FasilitasNasabahComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/fasilitas-nasabah/fasilitas-nasabah.component';
+import { AsuransiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/asuransi/asuransi.component';
+import { DaftarBiayaCoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/daftar-biaya-co/daftar-biaya-co.component';
+import { DaftarDetailCollateralComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/daftar-detail-collateral/daftar-detail-collateral.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +139,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PinjamanComponent,
     DataUmumPinjamanComponent,
     AktifitasPinjamanComponent,
-    PastDueComponent
+    PastDueComponent,
+    FasilitasComponent,
+    FasilitasNasabahComponent,
+    AsuransiComponent,
+    DaftarBiayaCoComponent,
+    DaftarDetailCollateralComponent
   ],
   imports: [
     BrowserModule,

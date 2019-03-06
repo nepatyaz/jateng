@@ -1,0 +1,135 @@
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
+
+        <!-- Main Card -->
+        <mdb-card class="mb-3" *ngIf="!isEdit">
+          <mdb-card-body>
+
+            <div class="mat-elevation-z8">
+              <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Account">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.account}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Nama">
+                  <th mat-header-cell *matHeaderCellDef> Nama </th>
+                  <td mat-cell *matCellDef="let element"> {{element.nama}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Cabang">
+                  <th mat-header-cell *matHeaderCellDef> Cabang </th>
+                  <td mat-cell *matCellDef="let element"> {{element.cabang}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="CCY">
+                  <th mat-header-cell *matHeaderCellDef> CCY </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ccy}} </td>
+                </ng-container>
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="Type">
+                  <th mat-header-cell *matHeaderCellDef> Type </th>
+                  <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+
+
+            <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+              <button (click)="ChangeOn()" type="button" class="btn btn-primary" style="width: 170px"> Mutasi</button><br>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!-- Main Card -->
+
+
+
+        <!-- Card Fasilitas -->
+        <mdb-card class="mb-3" *ngIf="isEdit">
+          <mdb-card-body>
+
+            <!-- panel -->
+            <mdb-card class="mb-3">
+              <mdb-card-body>
+
+                <div class="row">
+                  <label class="col-3 font-weight-bold">Nomor Pada Rekening</label>
+                  <label>:</label>
+                  <label class="col-3">Tidak</label>
+                  <span></span>
+                  <label class="col-2 font-weight-bold">Jenis Rekening</label>
+                  <label>:</label>
+                  <label class="col-3">-</label>
+                </div>
+
+
+                <div class="row">
+                  <label class="col-3 font-weight-bold">Nomor Rekening</label>
+                  <label>:</label>
+                  <label class="col-3">Tidak</label>
+                  <span></span>
+                  <label class="col-2 font-weight-bold">Mata Uang</label>
+                  <label>:</label>
+                  <label class="col-3">-</label>
+                </div>
+
+
+
+                <div class="row">
+                  <label class="col-3 font-weight-bold">Cabang</label>
+                  <label>:</label>
+                  <label class="col-3">Tidak</label>
+                  <span></span>
+                </div>
+
+
+              </mdb-card-body>
+            </mdb-card>
+            <!-- panel -->
+
+            <!-- Tab Fasilitas -->
+            <mat-tab-group>
+              <mat-tab label="Fasilitas">
+                <app-fasilitas-nasabah></app-fasilitas-nasabah>
+              </mat-tab>
+              <mat-tab label="Asuransi">
+                <app-asuransi></app-asuransi>
+              </mat-tab>
+              <mat-tab label="Daftar Biaya C/O">
+                <app-daftar-biaya-co></app-daftar-biaya-co>
+              </mat-tab>
+              <mat-tab label="Daftar/Detail Collateral">
+                <app-daftar-detail-collateral></app-daftar-detail-collateral>
+              </mat-tab>
+            </mat-tab-group>
+            <!-- Tab Fasilitas -->
+
+            <!-- Change Button / Back -->
+            <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+              <button (click)="ChangeOn()" type="button" class="btn btn-primary" style="width: 170px"> Kembali</button><br>
+            </div>
+            <!-- Change Button / Back -->
+
+          </mdb-card-body>
+        </mdb-card>
+        <!-- Card Fasilitas -->
+
+
+      </div>
+    </div>
+  </div>
+</div>
