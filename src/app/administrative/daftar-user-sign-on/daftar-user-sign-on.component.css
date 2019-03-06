@@ -1,0 +1,10 @@
+table {
+  width: 100%;
+}
+
+/* .mat-row:hover {
+  background-color:darkgrey;
+} */
+.mat-header-row{
+  background-color: lightgrey;
+}
