@@ -67,6 +67,7 @@ import { TableService } from './service/table.service';
 import { InformasiCifComponent } from './nasabah/pencarian-nasabah/informasi-cif/informasi-cif.component';
 import { RiwayatSaldoGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/riwayat-saldo-giro/riwayat-saldo-giro.component';
 import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/deposito/deposito.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -124,6 +125,7 @@ import { DepositoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/de
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

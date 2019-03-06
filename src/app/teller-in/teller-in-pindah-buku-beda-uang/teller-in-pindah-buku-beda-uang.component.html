@@ -15,8 +15,8 @@
                 <label class="col-form-label pr-0 font-weight-bold">:</label>
                 <div class="col-3 form-inline">
                   <div class="input-group">
-                    <input class="form-control" mdbValidate formControlName="inputTanggal" [matDatepicker]="picker" id="inputTanggal"
-                      placeholder="Tanggal Valuta">
+                      <input mdbValidate id="inputTanggal" matInput [min]="minDate" [max]="maxDate"  class="form-control" [matDatepicker]="picker" placeholder="Tanggal Valuta"
+                      formControlName="inputTanggal">
                     <mat-datepicker #picker></mat-datepicker>
                     <div class="input-group-append">
                       <button mat-raised-button (click)="picker.open()" class="form-control"><i class="fa fa-calendar"></i></button>
@@ -31,7 +31,7 @@
               <div class="form-group row">
                 <label class="col-2 col-form-label font-weight-bold">Nomor Referensi</label>
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
-                <div class="col-3"><input type="text" class="form-control" id="inputNoReferensi"></div>
+                <div class="col-3"><input type="number" class="form-control" id="inputNoReferensi"></div>
                 <span class="col-6"></span>
               </div>
               <!--input 2-->
@@ -160,8 +160,6 @@
                   </tr>
                 </tbody>
               </table>
-
-
               <div class="d-flex justify-content-center mt-5">
                 <button mdbBtn type="button" color="primary" mdbWavesEffect *ngIf="inputTanggal.invalid || inputNoRekeningDebit.invalid || inputNilaiDebit.invalid || inputNoRekKredit.invalid || inputNilaiKredit.invalid "
                   disabled><i class="fa fa-refresh"></i> Proses</button>
@@ -171,13 +169,57 @@
                     class="fa fa-reply "></i> Kembali</a>
               </div>
             </form>
-
           </mdb-card-body>
         </mdb-card>
-
         <span style="height: 10vh;"></span>
       </div>
     </div>
   </div>
+</div>
 
+
+
+
+<!-- modal template -->
+<div mdbModal #modalKonfirmasi="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Notifikasi Transaksi</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modalKonfirmasi.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="mb-2">
+          <p>Tanggal Transaksi : {{Tanggal}} </p>
+        </div>
+        <div class="mb-2">
+          <p>No Referensi : {{NoReferensi}} </p>
+        </div>
+        <div class="mb-2">
+          <p>Nomor Rekening Debit : {{NoRekeningDebit}}</p>
+        </div>
+        <div class="mb-2">
+          <p>Nilai Transaksi Debit : {{NilaiDebit}}</p>
+        </div>
+        <div class="mb-2">
+          <p>No Rekening Kredit :{{NoRekKredit}} </p>
+        </div>
+        <div class="mb-2">
+          <p>Nilai Transaksi Kredit :{{NilaiKredit}} </p>
+        </div>
+        <div class="mb-2">
+          <p>Nilai Ekuivalen :{{NilaiEkuivalen}} </p>
+        </div>
+        <div class="mb-2">
+          <p>Keterangan : {{Keterangan}}</p>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="modalKonfirmasi.hide()">OK</button>
+      </div>
+    </div>
+  </div>
 </div>
