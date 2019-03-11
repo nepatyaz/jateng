@@ -41,13 +41,13 @@ export class PesanComponent implements OnInit {
 export interface SubElement {
   judul: string;
   dibuatOleh: string;
-  tanggalDiBuat: string;
+  tanggalDiBuat: number;
   cbg: string;
-  tgljthtempo: string;
+  tgljthtempo: number;
 }
 
 const ISI_DATA: SubElement[] = [
-  { judul: 'Tabungan', dibuatOleh: 'Herza', tanggalDiBuat: '01/02/2019', cbg: 'Semarang', tgljthtempo: '01/03/2019' }
+  { judul: 'Tabungan', dibuatOleh: 'Herza', tanggalDiBuat: Date.now(), cbg: 'Semarang', tgljthtempo: Date.now() }
 ];
 
 

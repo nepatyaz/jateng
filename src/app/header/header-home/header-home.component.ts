@@ -10,7 +10,8 @@ import { interval } from 'rxjs';
   styleUrls: ['./header-home.component.css']
 })
 export class HeaderHomeComponent implements OnInit {
-  counter
+
+  offline: boolean;
   myIp: string;
   tanggal = Date.now();
   constructor(private router: Router, private ipservice: IpserviceService) { }
@@ -21,11 +22,13 @@ export class HeaderHomeComponent implements OnInit {
       this.ipservice.getIpAddress()
         .subscribe(data => {
           this.myIp = data['ip'];
-          console.log("minta data ");
+          this.offline = true;
+          // console.log("minta data ");
         },
           err => {
-            console.log("data error , set ke : 127")
+            // console.log("data error , set ke : 127")
             this.myIp = "127.0.0.1";
+            this.offline = false;
           }
         )
     })

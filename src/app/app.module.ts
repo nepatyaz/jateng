@@ -21,16 +21,16 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 //nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
-import { DataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/data-umum-nasabah/data-umum-nasabah.component';
-import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/komponen/edit-data-umum-nasabah/edit-data-umum-nasabah.component';
-import { DataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/data-personal/data-personal.component';
-import { UbahDataPersonalComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-personal/ubah-data-personal.component';
-import { TransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/transaksi-limit/transaksi-limit.component';
-import { UbahTransaksiLimitComponent } from './nasabah/pencarian-nasabah/komponen/ubah-transaksi-limit/ubah-transaksi-limit.component';
-import { SandiBiComponent } from './nasabah/pencarian-nasabah/komponen/sandi-bi/sandi-bi.component';
-import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
-import { DataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/data-tambahan/data-tambahan.component';
-import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
+import { DataUmumNasabahComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/data-umum-nasabah/data-umum-nasabah.component';
+import { EditDataUmumNasabahComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/edit-data-umum-nasabah/edit-data-umum-nasabah.component';
+import { DataPersonalComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/data-personal/data-personal.component';
+import { UbahDataPersonalComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/ubah-data-personal/ubah-data-personal.component';
+import { TransaksiLimitComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/transaksi-limit/transaksi-limit.component';
+import { UbahTransaksiLimitComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/ubah-transaksi-limit/ubah-transaksi-limit.component';
+import { SandiBiComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/sandi-bi/sandi-bi.component';
+import { UbahSandiBiComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/ubah-sandi-bi/ubah-sandi-bi.component';
+import { DataTambahanComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/data-tambahan/data-tambahan.component';
+import { UbahDataTambahanComponent } from './nasabah/pencarian-nasabah/informasi-cif/komponen/ubah-data-tambahan/ubah-data-tambahan.component';
 import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
 import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-administrasi/data-administrasi.component';
 import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-suku-bunga/data-suku-bunga.component';
