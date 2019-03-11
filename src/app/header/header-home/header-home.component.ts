@@ -10,22 +10,23 @@ import { interval } from 'rxjs';
   styleUrls: ['./header-home.component.css']
 })
 export class HeaderHomeComponent implements OnInit {
+  counter
   myIp: string;
-  offline: boolean;
   tanggal = Date.now();
   constructor(private router: Router, private ipservice: IpserviceService) { }
 
   ngOnInit() {
 
-
-    interval(4000).subscribe(() => {
+    interval(5000).subscribe(() => {
       this.ipservice.getIpAddress()
         .subscribe(data => {
           this.myIp = data['ip'];
-          this.offline = true;
-          console.log(data);
+          console.log("minta data ");
         },
-          () => { this.myIp = '127.0.0.1'; this.offline = false; }
+          err => {
+            console.log("data error , set ke : 127")
+            this.myIp = "127.0.0.1";
+          }
         )
     })
 
