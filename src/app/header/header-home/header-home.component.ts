@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { IpserviceService } from 'src/app/service/ipservice.service';
 import { interval } from 'rxjs';
 
-
 @Component({
   selector: 'app-header-home',
   templateUrl: './header-home.component.html',
@@ -18,7 +17,7 @@ export class HeaderHomeComponent implements OnInit {
 
   ngOnInit() {
 
-    interval(5000).subscribe(() => {
+    interval(10000).subscribe(() => {
       this.ipservice.getIpAddress()
         .subscribe(data => {
           this.myIp = data['ip'];
