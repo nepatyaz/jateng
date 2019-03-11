@@ -81,6 +81,9 @@ import { AsuransiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fa
 import { DaftarBiayaCoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/daftar-biaya-co/daftar-biaya-co.component';
 import { DaftarDetailCollateralComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/daftar-detail-collateral/daftar-detail-collateral.component';
 import { RelasiCifComponent } from './nasabah/pencarian-nasabah/relasi-cif/relasi-cif.component';
+import { AlamatTambahanComponent } from './nasabah/pencarian-nasabah/alamat-tambahan/alamat-tambahan.component';
+import { PesanComponent } from './nasabah/pencarian-nasabah/pesan/pesan.component';
+import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.component';
 
 @NgModule({
   declarations: [
@@ -146,7 +149,10 @@ import { RelasiCifComponent } from './nasabah/pencarian-nasabah/relasi-cif/relas
     AsuransiComponent,
     DaftarBiayaCoComponent,
     DaftarDetailCollateralComponent,
-    RelasiCifComponent
+    RelasiCifComponent,
+    AlamatTambahanComponent,
+    PesanComponent,
+    ProdukComponent
   ],
   imports: [
     BrowserModule,
