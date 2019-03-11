@@ -31,7 +31,7 @@
 
                     <ng-container matColumnDef="TanggalDibuat">
                       <th mat-header-cell *matHeaderCellDef> Tanggal Dibuat </th>
-                      <td mat-cell *matCellDef="let element"> {{element.tanggalDiBuat}} </td>
+                      <td mat-cell *matCellDef="let element"> {{element.tanggalDiBuat | date:'dd/MM/yyyy'}} </td>
                     </ng-container>
 
                     <ng-container matColumnDef="Cabang">
@@ -41,7 +41,7 @@
 
                     <ng-container matColumnDef="TanggalJatuhTempo">
                       <th mat-header-cell *matHeaderCellDef> Tanggal Jatuh Tempo </th>
-                      <td mat-cell *matCellDef="let element"> {{element.tgljthtempo}} </td>
+                      <td mat-cell *matCellDef="let element"> {{element.tgljthtempo | date:'dd/MM/yyyy'}} </td>
                     </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
