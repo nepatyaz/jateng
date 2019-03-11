@@ -1,0 +1,177 @@
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
+
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+
+
+            <mdb-card class="mb-3">
+              <mdb-card-body>
+
+
+                <h5 class="text-primary font-weight-bold">Daftar Pesan</h5>
+
+                <!-- Tabel -->
+                <div class="mat-elevation-z8">
+                  <table mat-table [dataSource]="dataSource">
+
+                    <ng-container matColumnDef="Judul">
+                      <th mat-header-cell *matHeaderCellDef> Judul </th>
+                      <td mat-cell *matCellDef="let element"> {{element.judul}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="DibuatOleh">
+                      <th mat-header-cell *matHeaderCellDef> Dibuat Oleh </th>
+                      <td mat-cell *matCellDef="let element"> {{element.dibuatOleh}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="TanggalDibuat">
+                      <th mat-header-cell *matHeaderCellDef> Tanggal Dibuat </th>
+                      <td mat-cell *matCellDef="let element"> {{element.tanggalDiBuat}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Cabang">
+                      <th mat-header-cell *matHeaderCellDef> Cabang </th>
+                      <td mat-cell *matCellDef="let element"> {{element.cbg}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="TanggalJatuhTempo">
+                      <th mat-header-cell *matHeaderCellDef> Tanggal Jatuh Tempo </th>
+                      <td mat-cell *matCellDef="let element"> {{element.tgljthtempo}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+
+                  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                </div>
+
+              </mdb-card-body>
+            </mdb-card>
+
+            <mdb-card class="mb-3" *ngIf="!isTambah">
+              <mdb-card-body>
+
+                <!-- Detail Pesan -->
+                <div *ngIf="isUbah" class="container detail-pesan">
+
+                  <h5 class="text-primary font-weight-bold">Detail Pesan</h5>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Judul</label>
+                    <label>:</label>
+                    <label class="col-3">-</label>
+                    <label class="col-2 font-weight-bold">Cabang</label>
+                    <label>:</label>
+                    <label class="col-3">-</label>
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Keterangan</label>
+                    <label>:</label>
+                    <label class="col-9">-</label>
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Tanggal Jatuh Tempo</label>
+                    <label>:</label>
+                    <label class="col-9">-</label>
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Dibuat Oleh</label>
+                    <label>:</label>
+                    <label class="col-3">-</label>
+                    <label class="col-2 font-weight-bold">Tanggal Dibuat</label>
+                    <label>:</label>
+                    <label class="col-3">-</label>
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Update Terakhir Oleh</label>
+                    <label>:</label>
+                    <label class="col-3">-</label>
+                    <label class="col-2 font-weight-bold">Tanggal Terakhir Diubah</label>
+                    <label>:</label>
+                    <label class="col-3">-</label>
+                  </div>
+
+                  <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+                    <button type="button" (click)="editDetail()" class="btn btn-primary" style="width: 170px"> Ubah</button>
+                    <button type="button" class="btn btn-primary" style="width: 170px"> Hapus</button>
+                    <button type="button" (click)="editDetail()" class="btn btn-primary" style="width: 170px"> Batal</button>
+                  </div>
+
+                </div>
+
+                <!-- Ubah Pesan -->
+                <div *ngIf="!isUbah" class="container ubah-pesan">
+                  <h5 class="text-primary font-weight-bold">Ubah Pesan</h5>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Judul</label>
+                    <label>:</label>
+                    <input type="text" class="form-control col-3">
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Cabang</label>
+                    <label>:</label>
+                    <mat-select placeholder="Select an option" class="col-6">
+                      <mat-option value="1">Option1</mat-option>
+                      <mat-option value="2">Option2</mat-option>
+                    </mat-select>
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Keterangan</label>
+                    <label>:</label>
+                    <input type="textarea" class="form-control col-9">
+                  </div>
+
+                  <div class="row">
+                    <label class="col-2 font-weight-bold">Pilih Kriteria</label>
+                    <label>:</label>
+                    <mat-radio-group class="example-radio-group col-2" [(ngModel)]="favoriteSeason">
+                      <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                        {{season}}
+                      </mat-radio-button>
+                    </mat-radio-group>
+                    <mat-form-field class="col-4">
+                      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <!-- <div class="example-selected-value">Your favorite season is: {{favoriteSeason}}</div> -->
+                  </div>
+
+                  <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+                    <button type="button" class="btn btn-primary" style="width: 170px"> Proses</button>
+                    <button type="button" (click)="editDetail()" class="btn btn-primary" style="width: 170px"> Kembali</button>
+                  </div>
+
+                </div>
+
+              </mdb-card-body>
+            </mdb-card>
+
+
+            <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+              <button type="button" *ngIf="isTambah" (click)="openForm()" class="btn btn-primary" style="width: 170px">
+                Tambah</button>
+              <button type="button" *ngIf="!isTambah" (click)="openForm()" class="btn btn-primary" style="width: 170px">
+                Tutup</button>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+
+input.form-control {
+  margin-left: 5px;
+  height: 25px;
+}
+
+input {
+  width: 25px;
+}

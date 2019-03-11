@@ -19,8 +19,11 @@
       </div>
       <div class="row panel-style">
         <ul class="border border-light ul-style bg-opacity">
-          <li class="font-weight-bold text-white">Status: Online</li>
-          <li class="font-weight-bold text-white">IP Anda: {{myIp}}</li>
+          <li *ngIf="offline" class="font-weight-bold text-white">Status : <span class="text-success">Online</span>
+          </li>
+          <li *ngIf="!offline" class="font-weight-bold text-white">Status : <span class="text-danger">Offline</span>
+          </li>
+          <li class="font-weight-bold text-white">IP Anda : {{myIp}}</li>
         </ul>
       </div>
       <div class="row panel-style">

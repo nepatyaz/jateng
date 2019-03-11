@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IpserviceService } from 'src/app/service/ipservice.service';  
+import { IpserviceService } from 'src/app/service/ipservice.service';
 import { interval } from 'rxjs';
-
 
 @Component({
   selector: 'app-header-home',
@@ -16,7 +15,7 @@ export class HeaderHomeComponent implements OnInit {
   constructor(private router: Router, private ipservice: IpserviceService) { }
 
   ngOnInit() {
-    
+
     interval(5000).subscribe(() => {
       this.ipservice.getIpAddress()
         .subscribe(data => {
@@ -26,9 +25,12 @@ export class HeaderHomeComponent implements OnInit {
           err => {
             console.log("data error , set ke : 127")
             this.myIp = "127.0.0.1";
-        }
+          }
         )
     })
+
+
+
   }
 
   fungsi() {

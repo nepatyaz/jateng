@@ -1,0 +1,313 @@
+<!-- Start your project here-->
+<div class="d-flex flex-column h-100">
+  <div id="outer" class="d-flex flex-column flex-grow">
+    <div class="card konten">
+      <div class="card-body">
+
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+            <h5 class="text-primary font-weight-bold">Hubungan Dengan Nasabah Personal Lain</h5>
+
+            <div class="mat-elevation-z8">
+              <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="No">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+                </ng-container>
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Kode Nasabah">
+                  <th mat-header-cell *matHeaderCellDef> Kode Nasabah </th>
+                  <td mat-cell *matCellDef="let element"> {{element.kodeNasabah}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Name">
+                  <th mat-header-cell *matHeaderCellDef> Nama </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="No Kartu Id">
+                  <th mat-header-cell *matHeaderCellDef> No. Kartu Id </th>
+                  <td mat-cell *matCellDef="let element"> {{element.idCard}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="Hubungan">
+                  <th mat-header-cell *matHeaderCellDef> Hubungan </th>
+                  <td mat-cell *matCellDef="let element"> {{element.hub}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+              <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+                <button type="button" class="btn btn-primary" style="width: 170px"> Tambah</button><br>
+              </div>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+
+
+        <!-- Pencarian Hubungan Nasabah -->
+        <mdb-card class="mb-3" *ngIf="!isEdit">
+          <mdb-card-body>
+
+            <h5 class="text-primary font-weight-bold">Pencarian Hubungan Nasabah</h5>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Nama Nasabah</label>
+              <label>:</label>
+              <label class="col-8">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Kode Nasabah</label>
+              <label>:</label>
+              <label class="col-8">-</label>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Hubungan Nasabah</label>
+              <label>:</label>
+              <label class="col-8">-</label>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Kewarganegaraan</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">Negara Asal</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Email</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+              <span class="col-sm-1"></span>
+              <label class="col-2 font-weight-bold">Nomor ID</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Jenis Identitas</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">NPWP</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Jenis Pekerjaan</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">Jabatan Pangkat</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+            </div>
+
+            <h6 class="text-primary font-weight-bold">Alamat</h6>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Alamat</label>
+              <label>:</label>
+              <label class="col-8">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Kota</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">Kode Pos</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Telp</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">No. Fax</label>
+              <label>:</label>
+              <label class="col-3">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">No. Hp</label>
+              <label>:</label>
+              <label class="col-8">-</label>
+            </div>
+
+            <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+              <button type="button" (click)="ubahData()" class="btn btn-primary" style="width: 170px"> Ubah</button>
+              <button type="button" class="btn btn-primary" style="width: 170px"> Hapus</button>
+              <button type="button" class="btn btn-primary" style="width: 170px"> Kembali</button>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!-- Pencarian Hubungan Nasabah -->
+
+        <!-- Perubahan Hubungan Nasabah -->
+        <mdb-card class="mb-3" *ngIf=isEdit>
+          <mdb-card-body>
+
+            <h5 class="text-primary font-weight-bold">Perubahan Hubungan Nasabah</h5>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Nama Nasabah</label>
+              <label>:</label>
+              <input type="text" class="form-control col-9">
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Kode Nasabah</label>
+              <label>:</label>
+              <label class="col-8">-</label>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Hubungan Nasabah</label>
+              <label>:</label>
+              <mat-select placeholder="Select an option" class="col-5">
+                <mat-option value="1">Option1</mat-option>
+                <mat-option value="2">Option2</mat-option>
+              </mat-select>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Kewarganegaraan</label>
+              <label>:</label>
+              <mat-select placeholder="Select an option" class="col-3">
+                <mat-option value="1">Option1</mat-option>
+                <mat-option value="2">Option2</mat-option>
+              </mat-select>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold" style="margin-left: 5px;">Negara Asal</label>
+              <label>:</label>
+              <mat-select placeholder="Select an option" class="col-3">
+                <mat-option value="1">Option1</mat-option>
+                <mat-option value="2">Option2</mat-option>
+              </mat-select>
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Email</label>
+              <label>:</label>
+              <input type="email" class="form-control col-3" style="width: 250px;">
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">Nomor ID</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Jenis Identitas</label>
+              <label>:</label>
+              <mat-select placeholder="Select an option" class="col-3">
+                <mat-option value="1">Option1</mat-option>
+                <mat-option value="2">Option2</mat-option>
+              </mat-select>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold" style="margin-left: 5px;">NPWP</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+            </div>
+
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Jenis Pekerjaan</label>
+              <label>:</label>
+              <mat-select placeholder="Select an option" class="col-3">
+                <mat-option value="1">Option1</mat-option>
+                <mat-option value="2">Option2</mat-option>
+              </mat-select>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold" style="margin-left: 5px;">Jabatan Pangkat</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+            </div>
+
+            <h6 class="text-primary font-weight-bold">Alamat</h6>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Alamat</label>
+              <label>:</label>
+              <input type="text" class="form-control col-9">
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Kota</label>
+              <label>:</label>
+              <mat-select placeholder="Select an option" class="col-3">
+                <mat-option value="1">Option1</mat-option>
+                <mat-option value="2">Option2</mat-option>
+              </mat-select>
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold" style="margin-left: 5px;">Kode Pos</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">Telp</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+              <span class="col-1"></span>
+              <label class="col-2 font-weight-bold">No. Fax</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+            </div>
+
+            <div class="row">
+              <label class="col-2 font-weight-bold">No. Hp</label>
+              <label>:</label>
+              <input type="text" class="form-control col-3">
+            </div>
+
+            <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+              <button type="button" (click)="prosesData()" class="btn btn-primary" style="width: 170px"> Proses</button>
+              <button type="button" (click)="ubahData()" class="btn btn-primary" style="width: 170px"> Kembali</button>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!-- Perubahan Hubungan Nasabah -->
+
+
+        <!-- Button Kembali -->
+        <div class="row d-flex justify-content-center" aria-label="Basic example mb-0">
+          <button type="button" class="btn btn-primary" style="width: 170px"> Kembali</button><br>
+        </div>
+        <!-- Button Kembali -->
+
+      </div>
+    </div>
+  </div>
+</div>
