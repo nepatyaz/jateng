@@ -29,7 +29,7 @@ export class LoginGuard implements CanActivate {
 
   public isLoggedIn(): boolean {
     let status = false;
-    if (sessionStorage.getItem('isLoggedIn') == "true") {
+    if (localStorage.getItem('isLoggedIn') == 'true') {
       status = true;
     }
     else {

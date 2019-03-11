@@ -71,6 +71,7 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
 //service 
 import { KtrluserService } from './ktrluser.service';
 import { ViewuserService } from './viewuser.service';
+import { UserService } from './service/user.service';
 // import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -84,6 +85,7 @@ import { RelasiCifComponent } from './nasabah/pencarian-nasabah/relasi-cif/relas
 import { AlamatTambahanComponent } from './nasabah/pencarian-nasabah/alamat-tambahan/alamat-tambahan.component';
 import { PesanComponent } from './nasabah/pencarian-nasabah/pesan/pesan.component';
 import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.component';
+
 
 @NgModule({
   declarations: [
@@ -165,7 +167,7 @@ import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.compo
     MaterialModule,
     WebcamModule,
   ],
-  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService],
+  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

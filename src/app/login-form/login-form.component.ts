@@ -15,7 +15,9 @@ export class LoginFormComponent implements OnInit {
 
   constructor(private router: Router, private userData: AuthentificationService) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    console.log(JSON.parse(localStorage.getItem('user')))
+  }
 
   loginUser(event) {
     event.preventDefault();
@@ -39,9 +41,9 @@ export class LoginFormComponent implements OnInit {
           console.log(data)
           if (data['status'] === 'ok') {
 
-            // console.log(data['status']);
-            localStorage.setItem("userinfo", JSON.stringify(data));
-            sessionStorage.setItem('isLoggedIn', "true");
+            // console.log(data['ilo']);
+            localStorage.setItem("user", JSON.stringify(data));
+            localStorage.setItem("isLoggedIn", "true" );
             this.router.navigate(['/dashboard']);
 
           } else {
