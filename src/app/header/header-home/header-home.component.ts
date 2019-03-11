@@ -16,14 +16,12 @@ export class HeaderHomeComponent implements OnInit {
 
   ngOnInit() {
 
-    interval(5000).subscribe(() => {
+    interval(10000).subscribe(() => {
       this.ipservice.getIpAddress()
         .subscribe(data => {
           this.myIp = data['ip'];
-          console.log("minta data ");
         },
           err => {
-            console.log("data error , set ke : 127")
             this.myIp = "127.0.0.1";
           }
         )
