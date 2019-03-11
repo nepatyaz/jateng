@@ -12,7 +12,7 @@ import { UploadTransaksiComponent } from './upload-transaksi/upload-transaksi.co
 import { WebBranchStatusComponent } from './web-branch-status/web-branch-status.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material';
-
+import { NgxCurrencyModule } from 'ngx-currency';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { MaterialModule } from '../material';
     // MatDatepickerModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NgxCurrencyModule
   ],
   declarations: [
     AktifitasuserComponent,

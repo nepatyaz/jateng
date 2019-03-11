@@ -71,10 +71,10 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
 //service 
 import { KtrluserService } from './ktrluser.service';
 import { ViewuserService } from './viewuser.service';
-import { AuthService } from './auth.service';
+// import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthentificationService } from './service/authentification.service';
 
 @NgModule({
   declarations: [
@@ -147,7 +147,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialModule,
     WebcamModule,
   ],
-  providers: [AuthService, KtrluserService, ViewuserService, TableService, LoginGuard],
+  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

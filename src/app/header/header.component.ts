@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit {
   }
 
   fungsi() {
-    window.alert('Logout')
-    sessionStorage.setItem('isLoggedIn', "false");
+    sessionStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userinfo');
     this.router.navigate(['/'])
   }
 

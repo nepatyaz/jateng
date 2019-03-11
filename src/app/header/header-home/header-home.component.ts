@@ -14,7 +14,8 @@ export class HeaderHomeComponent implements OnInit {
   }
 
   fungsi() {
-    sessionStorage.setItem('isLoggedIn', "false");
+    sessionStorage.clear();
+    localStorage.clear();
     this.router.navigate(['/login'])
   }
 

@@ -9,19 +9,29 @@
         <mdb-card>
           <mdb-card-body>
             <!--input 1-->
-            <div class="form-group row">
-              <label class="col-3 col-form-label  font-weight-bold">Current Offline Limit</label>
-              <label class="col-form-label pr-0 font-weight-bold">:</label>
-              <div class="col-3 input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
+            <form [formGroup]="formValidation">
+              <div class="form-group row">
+                <label class="col-3 col-form-label  font-weight-bold">Current Offline Limit</label>
+                <label class="col-form-label pr-0 font-weight-bold">:</label>
+                <div class="col-3 input-group mb-3">
+                  <!-- <input mdbValidate currencyMask type="number" class="form-control" placeholder="Enter Limit" id="inputLimit" formControlName="inputLimit" [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',precision : '0' }"> -->
+                  <input id="inputLimit"  currencyMask class="form-control" formControlName="inputLimit"
+                  [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',precision : '0' }">
                   <div class="input-group-append">
-                    <button mdbBtn color="default" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2"
-                      mdbWavesEffect>Button</button>
+                    <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="btnUbah"
+                      mdbWavesEffect disabled *ngIf="inputNilai.invalid">Ubah</button>
+                    <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="btnUbah"
+                      mdbWavesEffect (click)="proses()" *ngIf="inputNilai.valid">Ubah</button>
                   </div>
                 </div>
-              <span class="col-6"></span>
-            </div>
+                <div class="col-5 mt-2">
+                  <p class="text-danger" *ngIf="inputNilai.invalid && (inputNilai.dirty || inputNilai.touched)">
+                    Input Limit Tidak Valid atau Kurang Dari Nilai Minimal
+                  </p>
+                </div>
+              </div>
+              
+            </form>
             <!--input1-->
           </mdb-card-body>
         </mdb-card>
@@ -31,3 +41,56 @@
     </div>
   </div>
 </div>
+
+
+
+
+<!-- modal template -->
+<div mdbModal #modalKonfirmasi="mdbModal" class="modal fade" tabindex="-1" role="dialog" [config]="{ignoreBackdropClick: true}"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Notifikasi Perubahan Limit</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modalKonfirmasi.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="mb-2">
+          <p class="font-weight-bold">Oflline Limit Akan Di Ubah Ke: {{offlineValue}} </p>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="primary" class="waves-light" mdbWavesEffect (click)="prosesKonfirmasi()">
+            <i class="fa fa-refresh" aria-hidden="true"></i> Proses
+        </button>
+        <button mdbBtn color="primary" class="waves-light" mdbWavesEffect (click)="modalKonfirmasi.hide()"> 
+            <i class="fa fa-times" aria-hidden="true"></i>  Batal
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--bagian modal untuk validasi transaksi-->
+<div mdbModal #modalSucces="mdbModal" class="modal fade modal-notify modal-success" tabindex="-1" role="dialog" [config]="{ignoreBackdropClick: true}">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-success" role="document">
+      <!--Content-->
+  
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">Ubah Limit Sukses</p>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <i class="fa fa-check fa-4x animated rotateIn"></i>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Bagian modal untuk validasi transaksi-->
+  
