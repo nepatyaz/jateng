@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'angular-bootstrap-md';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthentificationService } from '../service/authentification.service';
 
 @Component({
   selector: 'app-login-form',
@@ -10,12 +10,12 @@ import { AuthService } from '../auth.service';
 })
 export class LoginFormComponent implements OnInit {
   pesanLogin
-  
+
   @ViewChild('basicModal') basicModal: ModalDirective;
 
-  constructor(private router: Router, private userData: AuthService) { }
+  constructor(private router: Router, private userData: AuthentificationService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   loginUser(event) {
     event.preventDefault();
@@ -27,45 +27,42 @@ export class LoginFormComponent implements OnInit {
     //console.log(username + " - " + password)
     //jalankan fungsi dari servis auth yang bernama getuserdetail
     //kirim juga nilai dari form yang sudah disimpan oleh ke variabel ke dalam parameter fungsi
-    this.userData.getUserDetail(username, password)
+    if(username !== "" && password !== ""){
+      this.userData.Login(username, password)
       //subscribe hasil fungsi ke dalam data
       .subscribe(data => {
         //cek hasil proses fungsi , apakah telah mendapatkan nilai
         //jika bernilai true jalankan kode
-        if (data.status) {
+        console.log(data['status']);
+        if (data['status']) {
           //redirect
-          //console.log(data.status)
-          //jika hasil rest dari proses bernilai 'OK' jalankan fungsi router
-          //dan arahkan ke halaman dashboard
-          if (data.status === 'OK') {
-            //redirect ke halaman redirect
-            console.log(data.status);
-            console.log(data.message)
-            //set session storage untuk menyimpan data session
-            var status: string = String(data.status)
-            var role: string = String(data.role)
-            sessionStorage.setItem('status', status)
-            sessionStorage.setItem('role', role)
-            sessionStorage.setItem('isLoggedIn', "true");
+          console.log(data)
+          if (data['status'] === 'ok') {
 
+            // console.log(data['status']);
+            localStorage.setItem("userinfo", JSON.stringify(data));
+            sessionStorage.setItem('isLoggedIn', "true");
             this.router.navigate(['/dashboard']);
-            //this.otentifikasi.setLoggedIn(true)
+
           } else {
             //jika hasil pengembalian dari nilai bukan 'ok'
             //tampilkan komponen modal
             this.basicModal.show()
             // simpan hasil value dari pengembalian nilai dari data kedalam variabel
-            this.pesanLogin = data.message
-            //window.alert(data.message)
+            this.pesanLogin = data['message']
           }
         } else {
           //jika nilai pengembalian dari fungsi tidak ada atau false
           //tampilkan komponen modal
           this.basicModal.show()
-          //window.alert(data.message)
           // simpan hasil value dari pengembalian nilai dari data kedalam variabel
-          this.pesanLogin = data.message
+          this.pesanLogin = data['message']
         }
       })
+    }else{
+      this.basicModal.show();
+      this.pesanLogin = "Mohon Inputkan Username & Password";
+    }
+    
   }
 }

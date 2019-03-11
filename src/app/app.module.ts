@@ -71,10 +71,10 @@ import { CurrencyFormatDirective } from 'ng-currency-format';
 //service 
 import { KtrluserService } from './ktrluser.service';
 import { ViewuserService } from './viewuser.service';
-import { AuthService } from './auth.service';
+// import { AuthService } from './auth.service';
 import { TableService } from './service/table.service';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthentificationService } from './service/authentification.service';
 import { FasilitasComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/fasilitas.component';
 import { FasilitasNasabahComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/fasilitas-nasabah/fasilitas-nasabah.component';
 import { AsuransiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/fasilitas/komponen/asuransi/asuransi.component';
@@ -159,7 +159,7 @@ import { RelasiCifComponent } from './nasabah/pencarian-nasabah/relasi-cif/relas
     MaterialModule,
     WebcamModule,
   ],
-  providers: [AuthService, KtrluserService, ViewuserService, TableService, LoginGuard],
+  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

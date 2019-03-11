@@ -41,31 +41,32 @@ const routes: Routes = [
   {
     path: 'cashdrawerhead',
     component: HomeLayoutComponent,
+    canActivate: [LoginGuard],
     loadChildren: './cashdrawer-head/cashdrawer-head.module#CashdrawerHeadModule',
   },
   {
     path: 'cashdrawer',
-    component: HomeLayoutComponent,
+    component: HomeLayoutComponent, canActivate: [LoginGuard],
     loadChildren: './cashdrawer/cashdrawer.module#CashdrawerModule',
   },
   {
     path: 'administrative',
-    component: HomeLayoutComponent,
+    component: HomeLayoutComponent, canActivate: [LoginGuard],
     loadChildren: './administrative/administrative.module#AdministrativeModule',
   },
   {
     path: 'kartu',
-    component: HomeLayoutComponent,
+    component: HomeLayoutComponent, canActivate: [LoginGuard],
     loadChildren: './kartu/kartu.module#KartuModule',
   },
   {
     path: 'rekeningkoran',
-    component: HomeLayoutComponent,
+    component: HomeLayoutComponent, canActivate: [LoginGuard],
     loadChildren: './rekening-koran/rekening-koran.module#RekeningKoranModule',
   },
   {
     path: 'rekening',
-    component: HomeLayoutComponent,
+    component: HomeLayoutComponent, canActivate: [LoginGuard],
     loadChildren: './rekening/rekening.module#RekeningModule',
   },
   {

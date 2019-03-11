@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ChangeDetectorRef , ViewChild} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ModalDirective } from 'angular-bootstrap-md';
-
+ 
 
 @Component({
   selector: 'app-teller-in',
