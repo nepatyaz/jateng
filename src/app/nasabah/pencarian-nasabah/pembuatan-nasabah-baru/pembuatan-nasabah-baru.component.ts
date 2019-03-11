@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class PembuatanNasabahBaruComponent implements OnInit {
 
+  validatingForm: FormGroup;
+
   selected = '';
   favoriteOption: string;
   options: string[] = ['Kode Nasabah', 'Kode Cabang', 'No Kartu', 'No Identitas', 'Alamat', 'Nasabah'];
@@ -16,7 +19,17 @@ export class PembuatanNasabahBaruComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.validatingForm = new FormGroup(
+      {
+        inputTanggal: new FormControl(null, Validators.required),
+        inputCari: new FormControl(null, Validators.required),
+      }
+    );
   }
+
+  get inputCari() { return this.validatingForm.get('inputCari'); }
+  get inputTanggal() { return this.validatingForm.get('inputTanggal'); }
+
 
   onClick() {
     // console.log('asdasd');

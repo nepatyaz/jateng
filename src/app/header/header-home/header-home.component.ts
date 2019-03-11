@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IpserviceService } from 'src/app/service/ipservice.service';
-import { setInterval } from 'timers';
+import { IpserviceService } from 'src/app/service/ipservice.service';  
 import { interval } from 'rxjs';
 
 
