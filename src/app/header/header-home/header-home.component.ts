@@ -21,7 +21,7 @@ export class HeaderHomeComponent implements OnInit {
         .subscribe(data => {
           this.myIp = data['ip'];
         },
-          err => {
+          () => {
             this.myIp = "127.0.0.1";
           }
         )
