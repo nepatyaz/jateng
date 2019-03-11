@@ -6,6 +6,176 @@
 
         <h5 class="text-primary font-weight-bold">Rincian Perhitungan Bunga Jasa Giro</h5>
 
+        <!--Panel -->
+        <mdb-card class="mb-3">
+          <mdb-card-body>
+
+            <div class="row">
+              <label class="col-3 font-weight-bold">Branch Area</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+              <span class="col-1"></span>
+              <label class="col-3 font-weight-bold">Currency Code</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-3 font-weight-bold">Branch Code</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+              <span class="col-1"></span>
+              <label class="col-3 font-weight-bold">Loan Processing</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-3 font-weight-bold">Past Due Principle</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+              <span class="col-1"></span>
+              <label class="col-3 font-weight-bold">Late Charge Principle</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+            </div>
+
+            <div class="row">
+              <label class="col-3 font-weight-bold">Past Due Interest</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+              <span class="col-1"></span>
+              <label class="col-3 font-weight-bold">Late Charge Principle</label>
+              <label>:</label>
+              <label class="col-2">-</label>
+            </div>
+
+          </mdb-card-body>
+        </mdb-card>
+        <!--Panel-->
+
+
+        <!--Table-->
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="Value Date">
+              <th mat-header-cell *matHeaderCellDef> Value Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.valueDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Start Date">
+              <th mat-header-cell *matHeaderCellDef> Start Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="End Date">
+              <th mat-header-cell *matHeaderCellDef> End Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.endDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="CLS Code">
+              <th mat-header-cell *matHeaderCellDef> CLS Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.clsCode}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="CLS Desc">
+              <th mat-header-cell *matHeaderCellDef> CLS Desc </th>
+              <td mat-cell *matCellDef="let element"> {{element.clsDesc}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Amount Due">
+              <th mat-header-cell *matHeaderCellDef> Amount Due </th>
+              <td mat-cell *matCellDef="let element"> {{element.amountDue}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Paid Amount">
+              <th mat-header-cell *matHeaderCellDef> Paid Amount </th>
+              <td mat-cell *matCellDef="let element"> {{element.paidAmount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Late Charge Amount">
+              <th mat-header-cell *matHeaderCellDef> Late Charge Amount </th>
+              <td mat-cell *matCellDef="let element"> {{element.lateChargeAmount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Paid Late Charge">
+              <th mat-header-cell *matHeaderCellDef> Paid Late Charge </th>
+              <td mat-cell *matCellDef="let element"> {{element.paidLateCharge}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="No.Reff">
+              <th mat-header-cell *matHeaderCellDef> NO. REFF </th>
+              <td mat-cell *matCellDef="let element"> {{element.noReff}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Rssque">
+              <th mat-header-cell *matHeaderCellDef> RSSQUE </th>
+              <td mat-cell *matCellDef="let element">{{element.rssque}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Source Flag">
+              <th mat-header-cell *matHeaderCellDef> Source Flag </th>
+              <td mat-cell *matCellDef="let element"> {{element.srcFlag}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+
+        <!-- <div class="card shadow-sm">
+          <div class="card-body ">
+            <table class="table table-hover table-bordered">
+              <thead class="grey lighten-2">
+                <tr class="font-weight-bold">
+                  <th scope="col">Value Date</th>
+                  <th scope="col">Start Date</th>
+                  <th scope="col">End Date</th>
+                  <th scope="col">Cls Code</th>
+                  <th scope="col">Cls Desc</th>
+                  <th scope="col">Amount Due</th>
+                  <th scope="col">Paid Amount</th>
+                  <th scope="col">Late Charge Amount</th>
+                  <th scope="col">Paid Late Charge</th>
+                  <th scope="col">No. Reff</th>
+                  <th scope="col">Resque</th>
+                  <th scope="col">Source Flag</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let element of dataSource">
+                  <td class="font-weight-normal">{{element.valueDate}}</td>
+                  <td class="font-weight-normal">{{element.startDate}}</td>
+                  <td class="font-weight-normal">{{element.endDate}}</td>
+                  <td class="font-weight-normal">{{element.clsCode}}</td>
+                  <td class="font-weight-normal">{{element.clsDesc}}</td>
+                  <td class="font-weight-normal">{{element.amountDue}}</td>
+                  <td class="font-weight-normal">{{element.paidAmount}}</td>
+                  <td class="font-weight-normal">{{element.lateChargeAmount}}</td>
+                  <td class="font-weight-normal">{{element.paidLateCharge}}</td>
+                  <td class="font-weight-normal">{{element.noReff}}</td>
+                  <td class="font-weight-normal">{{element.rssque}}</td>
+                  <td class="font-weight-normal">{{element.srcFlag}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex flex-row-reverse mt-2">
+              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">&laquo; Sebelumnya</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">1</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">2</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">3</button>
+                <button mdbBtn type="button" color="link" size="sm" class="waves-light">Selanjutnya &raquo;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- table  -->
+
       </mdb-card-body>
     </mdb-card>
 

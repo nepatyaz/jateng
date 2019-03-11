@@ -134,7 +134,12 @@ import { AuthentificationService } from './service/authentification.service';
     PinjamanComponent,
     DataUmumPinjamanComponent,
     AktifitasPinjamanComponent,
-    PastDueComponent
+    PastDueComponent,
+    FasilitasComponent,
+    FasilitasNasabahComponent,
+    AsuransiComponent,
+    DaftarBiayaCoComponent,
+    DaftarDetailCollateralComponent
   ],
   imports: [
     BrowserModule,
