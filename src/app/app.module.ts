@@ -85,6 +85,11 @@ import { RelasiCifComponent } from './nasabah/pencarian-nasabah/relasi-cif/relas
 import { AlamatTambahanComponent } from './nasabah/pencarian-nasabah/alamat-tambahan/alamat-tambahan.component';
 import { PesanComponent } from './nasabah/pencarian-nasabah/pesan/pesan.component';
 import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.component';
+import { DuplikatCekNasabahBaruComponent } from './nasabah/pencarian-nasabah/duplikat-cek-nasabah-baru/duplikat-cek-nasabah-baru.component';
+import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component';
+import { PencarianNasabahPerusahaanComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah-perusahaan/pencarian-nasabah-perusahaan.component';
+import { PembuatanNasabahPeroranganBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-perorangan-baru/pembuatan-nasabah-perorangan-baru.component';
+import { PembuatanNasabahPerusahaanBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-perusahaan-baru/pembuatan-nasabah-perusahaan-baru.component';
 
 
 @NgModule({
@@ -154,7 +159,12 @@ import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.compo
     RelasiCifComponent,
     AlamatTambahanComponent,
     PesanComponent,
-    ProdukComponent
+    ProdukComponent,
+    DuplikatCekNasabahBaruComponent,
+    PencarianNasabahIndividuComponent,
+    PencarianNasabahPerusahaanComponent,
+    PembuatanNasabahPeroranganBaruComponent,
+    PembuatanNasabahPerusahaanBaruComponent
   ],
   imports: [
     BrowserModule,
