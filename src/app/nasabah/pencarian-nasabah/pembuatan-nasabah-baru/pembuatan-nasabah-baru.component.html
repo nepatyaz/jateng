@@ -15,11 +15,11 @@
                 <label class="col-form-label pr-0  font-weight-bold">:</label>
                 <!-- <div class="col-3 pt-2"> -->
                 <div class="col-8 radio ml-3 mt-2">
-                  <label><input type="radio" name="optradio" checked> Kode Nasabah</label><br>
-                  <label><input type="radio" name="optradio"> Kode Cabang</label><br>
-                  <label><input type="radio" name="optradio"> No Kartu Identitas</label><br>
-                  <label><input type="radio" name="optradio"> Alamat</label><br>
-                  <label><input type="radio" name="optradio"> Nama Nasabah + </label><br>
+                  <label><input type="radio" name="optradio" checked (change)="RadioFunction()"> Kode Nasabah</label><br>
+                  <label><input type="radio" name="optradio" (change)="RadioFunction('kode')"> Kode Cabang</label><br>
+                  <label><input type="radio" name="optradio" (change)="RadioFunction('no')"> No Kartu Identitas</label><br>
+                  <label><input type="radio" name="optradio" (change)="RadioFunction('alamat')"> Alamat</label><br>
+                  <label><input type="radio" name="optradio" (change)="RadioFunction('nama')"> Nama Nasabah + </label><br>
                   <label>Tanggal Lahir</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">

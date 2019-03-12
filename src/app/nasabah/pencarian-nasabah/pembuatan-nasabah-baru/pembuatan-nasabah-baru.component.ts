@@ -56,4 +56,8 @@ export class PembuatanNasabahBaruComponent implements OnInit {
     console.log(this._elementRef.nativeElement.querySelector('#choosenValue').value);
   }
 
+  RadioFunction(value) {
+    console.log(value);
+  }
+
 }
