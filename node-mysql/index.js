@@ -22,10 +22,12 @@ app.use(bodyparser.urlencoded({ extended: true })); // support encoded bodies
 //konfigurasi module sesuai route 
 const tesRoutes = require('./api/test');
 const userRoutes = require('./api/user');
+const branchRoutes = require('./api/branch');
 
 // Rute yang harus menangani permintaan
 app.use('/test', tesRoutes);
 app.use('/user', userRoutes);
+app.use('/branch', branchRoutes);
 
 
 app.use((req, res, next) => {
