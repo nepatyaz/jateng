@@ -7,10 +7,11 @@ import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-barsheet-rekening',
   templateUrl: './barsheet-rekening.component.html',
-  styleUrls: ['./barsheet-rekening.component.css']
+  styleUrls: ['./barsheet-rekening.component.css'] 
 })
 export class BarsheetRekeningComponent implements AfterViewInit {
-  displayedColumns: string[] = ['created', 'state', 'number', 'title'];
+  // displayedColumns: string[] = ['created', 'state', 'number', 'title'];
+  displayedColumns: string[] = ['number'];
   exampleDatabase: ExampleHttpDatabase | null;
   data: GithubIssue[] = [];
 
@@ -18,12 +19,17 @@ export class BarsheetRekeningComponent implements AfterViewInit {
   isLoadingResults = true;
   isRateLimitReached = false;
 
+  RandomNo : number;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+    this.RandomNo = Math.floor((Math.random() * 10000000) + 1);
+   }
 
   ngAfterViewInit() {
     this.exampleDatabase = new ExampleHttpDatabase(this.http);
