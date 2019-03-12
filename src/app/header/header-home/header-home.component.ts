@@ -65,7 +65,8 @@ export class HeaderHomeComponent implements OnInit {
   getUserLog() {
     // console.log("user lgo run", this.userid);
     this.userService.getUserLog(this.userid).subscribe(resp => {
-      this.lastlogin = resp[0].lastlogin;
+      // this.lastlogin = resp[0].lastlogin;
+      console.log(resp);
       // var lastlogout = resp[0].lastlogout;
       // console.log("last login : ", this.lastlogin);
     });
