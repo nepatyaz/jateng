@@ -1,7 +1,7 @@
-import { Component, OnInit, ElementRef, ChangeDetectorRef , ViewChild} from '@angular/core';
+import { Component, OnInit, ElementRef, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ModalDirective } from 'angular-bootstrap-md';
- 
+
 
 @Component({
   selector: 'app-teller-in',
@@ -25,7 +25,7 @@ export class TellerInComponent implements OnInit {
   constructor(private _elementRef: ElementRef, private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.validatingForm = new FormGroup( 
+    this.validatingForm = new FormGroup(
       {
         nilaiTransaksi: new FormControl(),
         mataUang: new FormControl(null, Validators.required),
@@ -82,6 +82,17 @@ export class TellerInComponent implements OnInit {
     this.keterangan = Keterangan;
 
     this.modalKonfirmasi.show();
+  }
+
+  Cetak(){
+    
+    const printContent = document.getElementById("cetak");
+    const WindowPrt = window.open('', '', 'left=0,top=0,width=900,height=900,toolbar=0,scrollbars=0,status=0');
+    WindowPrt.document.write(printContent.innerHTML);
+    WindowPrt.document.close();
+    WindowPrt.focus();
+    WindowPrt.print();
+    WindowPrt.close();
   }
 
 

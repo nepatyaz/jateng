@@ -117,7 +117,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body mx-3">
+      <div class="modal-body mx-3" id="cetak">
         <div class="mb-2">
           <p>Tanggal Transaksi : {{tanggal}} </p>
         </div>
@@ -128,7 +128,7 @@
           <p>Mata Uang : {{kurs}}</p>
         </div>
         <div class="mb-2">
-          <p>Nilai Transaksi Transaksi :{{jumlah}} </p>
+          <p>Nilai Transaksi :{{jumlah}} </p>
         </div>
         <div class="mb-2">
           <p>Keterangan : {{keterangan}}</p>
@@ -139,6 +139,7 @@
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="modalKonfirmasi.hide()">OK</button>
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="Cetak()">Cetak</button>
       </div>
     </div>
   </div>

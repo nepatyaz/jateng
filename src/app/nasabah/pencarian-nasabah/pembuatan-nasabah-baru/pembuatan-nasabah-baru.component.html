@@ -61,19 +61,12 @@
               <div class="form-group row">
 
                 <div class="col-3">
-                  <!-- <select [(value)]="selected" class="form-control" id="selectOption">
-                    <option>None</option>
-                    <option value="individual">Individual</option>
-                    <option value="corporate">Corporate</option>
-                  </select> -->
-                  <mat-select [(value)]="selected" class="form-control" formControlName="control">
-                    <mat-option>None</mat-option>
-                    <mat-option value="option1">Corporate</mat-option>
-                    <mat-option value="option2">Individual</mat-option>
-                  </mat-select>
+                    <select class="form-control" id="selectOption">
+                        <option value="individual">Individual</option>
+                        <option value="corporate">Corporate</option>
+                      </select>
                 </div>
-                <button mdbBtn color="primary" [attr.disabled]="selected ? null : ''" (click)="onClick()" size="sm"
-                  class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
+                <button mdbBtn color="primary" size="sm" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Tambah</button>
                 <span class="col-6"></span>
               </div>
               <!-- <div class="form-group row">
