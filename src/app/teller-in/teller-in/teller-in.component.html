@@ -118,6 +118,13 @@
         </button>
       </div>
       <div class="modal-body mx-3" id="cetak">
+      
+       <div class="mb-2">
+          <img src="/assets/image/LOGO.png" style="width: 80px;" class="float-left" >
+          <p>Penerimaan Teller Lain : </p>
+          <br>
+          <hr>
+        </div>
         <div class="mb-2">
           <p>Tanggal Transaksi : {{tanggal}} </p>
         </div>
@@ -138,8 +145,8 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="modalKonfirmasi.hide()">OK</button>
-        <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="Cetak()">Cetak</button>
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="modalKonfirmasi.hide()"><i class="fa fa-check" aria-hidden="true"></i> OK</button>
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect (click)="Cetak()"><i class="fa fa-print" aria-hidden="true"></i> Cetak</button>
       </div>
     </div>
   </div>

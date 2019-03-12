@@ -87,12 +87,20 @@ export class TellerInComponent implements OnInit {
   Cetak(){
     
     const printContent = document.getElementById("cetak");
-    const WindowPrt = window.open('', '', 'left=0,top=0,width=900,height=900,toolbar=0,scrollbars=0,status=0');
-    WindowPrt.document.write(printContent.innerHTML);
-    WindowPrt.document.close();
-    WindowPrt.focus();
-    WindowPrt.print();
-    WindowPrt.close();
+    const WindowPrt = window.open('', '', 'left=0,top=0,width=700,height=700,toolbar=0,scrollbars=0,status=0');
+   
+    setTimeout(function() {
+      
+      WindowPrt.document.write(printContent.innerHTML);
+      WindowPrt.document.close();
+
+      setTimeout(function() {
+        WindowPrt.focus();
+        WindowPrt.print();
+        WindowPrt.close();
+      },500);
+
+  }, 500);
   }
 
 
