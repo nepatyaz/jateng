@@ -85,6 +85,7 @@ import { RelasiCifComponent } from './nasabah/pencarian-nasabah/relasi-cif/relas
 import { AlamatTambahanComponent } from './nasabah/pencarian-nasabah/alamat-tambahan/alamat-tambahan.component';
 import { PesanComponent } from './nasabah/pencarian-nasabah/pesan/pesan.component';
 import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.component';
+import { MasterBranchService } from './service/masterbranch.service';
 
 
 @NgModule({
@@ -167,7 +168,7 @@ import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.compo
     MaterialModule,
     WebcamModule,
   ],
-  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService],
+  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService,MasterBranchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

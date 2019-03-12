@@ -16,7 +16,7 @@ export class LoginFormComponent implements OnInit {
   constructor(private router: Router, private userData: AuthentificationService) { }
 
   ngOnInit() { 
-    console.log(JSON.parse(localStorage.getItem('user')))
+
   }
 
   loginUser(event) {

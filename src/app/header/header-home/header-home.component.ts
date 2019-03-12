@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { IpserviceService } from 'src/app/service/ipservice.service';
 import { interval } from 'rxjs';
 import { UserService } from 'src/app/service/user.service';
+import { MasterBranchService } from 'src/app/service/masterbranch.service';
 
 @Component({
   selector: 'app-header-home',
@@ -10,49 +11,71 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./header-home.component.css']
 })
 export class HeaderHomeComponent implements OnInit {
-  offline:boolean;
+
+  offline: boolean;
+  userid: string;
+  branchName : string;
+  branchCode : number;
   myIp: string;
   tanggal = Date.now();
-  lastlogin : string;
-  constructor(private router: Router, private ipservice: IpserviceService, private userService : UserService) { 
-    // console.log(JSON.parse(localStorage.getItem('user')));
-    this.lastlogin = JSON.parse(localStorage.getItem('user')).lastlogin;
-    console.log(this.lastlogin);
+  lastlogin: string;
+
+  constructor(
+    private router: Router,
+    private ipservice: IpserviceService,
+    private userService: UserService,
+    private branchService: MasterBranchService) {
+    this.userid = JSON.parse(localStorage.getItem('user')).userid;
+    this.branchCode = JSON.parse(localStorage.getItem('user')).branchcode;
   }
 
   ngOnInit() {
     this.getIp();
     this.getUserLog();
+    this.getBranchById();
     interval(10000).subscribe(() => {
       this.getIp();
     })
   }
 
-  fungsi() {
-    sessionStorage.clear();
-    localStorage.clear();
-    this.router.navigate(['/login'])
+  logout() {
+
+    this.userService.logout(this.userid)
+      .subscribe(() => {
+        sessionStorage.clear();
+        localStorage.clear();
+        this.router.navigate(['/login'])
+      });
+
   }
 
-  getIp(){
+  getIp() {
     this.ipservice.getIpAddress()
-    .subscribe(data => {
-      this.myIp = data['ip'];
-      this.offline = true;
-    },
-      () => {
-        this.offline = false;
-        this.myIp = "127.0.0.1";
-      }
-    )
+      .subscribe(data => {
+        this.myIp = data['ip'];
+        this.offline = true;
+      },
+        () => {
+          this.offline = false;
+          this.myIp = "127.0.0.1";
+        }
+      )
   }
 
-  getUserLog(){
-    // console.log(JSON.parse(localStorage.getItem('user')).userid)
-    var userid = JSON.parse(localStorage.getItem('user')).userid;
-    console.log("user lgo run", userid);
-    this.userService.getUserLog(userid).subscribe(resp=>{
+  getUserLog() {
+    // console.log("user lgo run", this.userid);
+    this.userService.getUserLog(this.userid).subscribe(resp => {
+      this.lastlogin = resp[0].lastlogin;
+      // var lastlogout = resp[0].lastlogout;
+      // console.log("last login : ", this.lastlogin);
+    });
+  }
+
+  getBranchById() {
+    console.log("branch run", this.branchCode);
+    this.branchService.getBranchById(this.branchCode).subscribe(resp => {
       console.log(resp);
+      this.branchName = resp[0].name;
     });
   }
 

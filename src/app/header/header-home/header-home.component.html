@@ -26,16 +26,16 @@
           <li class="font-weight-bold text-white">IP Anda : {{myIp}}</li>
         </ul>
       </div>
-      <div class="row panel-style"> 
+      <div class="row panel-style">
         <ul class="border border-light ul-style">
           <li class="font-weight-bold text-white">Cabang </li>
-          <li class="font-weight-bold text-white">034 | Cabang Utama</li>
+          <li class="font-weight-bold text-white">{{branchCode}} | {{branchName}}</li>
         </ul>
       </div>
       <!-- Logout -->
       <ul class="btn-linear">
         <button class="btn btn-linear text-white">
-          <a class="text-light" (click)="fungsi()">Sign Out</a>
+          <a class="text-light" (click)="logout()">Sign Out</a>
         </button>
       </ul>
 
