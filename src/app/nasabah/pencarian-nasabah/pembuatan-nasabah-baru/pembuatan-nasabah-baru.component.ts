@@ -51,4 +51,9 @@ export class PembuatanNasabahBaruComponent implements OnInit {
     console.log(value);
     console.log(this.favoriteOption);
   }
+
+  evenEmit() {
+    console.log(this._elementRef.nativeElement.querySelector('#choosenValue').value);
+  }
+
 }
