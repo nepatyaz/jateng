@@ -29,4 +29,14 @@ export class UserService {
         );
     }
 
+    logout(userid){
+      let url = this.apiUrl + "user/logout/"+userid;
+      console.log(url);
+      return this.http.get(url, this.options)
+      .pipe(
+        tap(_ => console.log('userservice -> fetched data ')),
+        // catchError(this.handleError('getData', []))
+      );
+    }
+
 }

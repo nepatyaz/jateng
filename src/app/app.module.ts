@@ -90,6 +90,7 @@ import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/p
 import { PencarianNasabahPerusahaanComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah-perusahaan/pencarian-nasabah-perusahaan.component';
 import { PembuatanNasabahPeroranganBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-perorangan-baru/pembuatan-nasabah-perorangan-baru.component';
 import { PembuatanNasabahPerusahaanBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-perusahaan-baru/pembuatan-nasabah-perusahaan-baru.component';
+import { MasterBranchService } from './service/masterbranch.service';
 
 
 @NgModule({
@@ -177,7 +178,7 @@ import { PembuatanNasabahPerusahaanBaruComponent } from './nasabah/pencarian-nas
     MaterialModule,
     WebcamModule,
   ],
-  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService],
+  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService, MasterBranchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
