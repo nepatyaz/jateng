@@ -18,7 +18,8 @@ import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/sub-p
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component';
-import { SubPencarianNasabahComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/sub-pencarian-nasabah.component';
+import { DuplikatCekNasabahBaruComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/duplikat-cek-nasabah-baru/duplikat-cek-nasabah-baru.component';
+
 
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
@@ -38,8 +39,9 @@ const routes: Routes = [
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
       // { path: 'nasabah/pencariannasabah/portofoliocif', component: PortofolioCifComponent },
       { path: 'nasabah/pencariandaftarhitam', component: PencarianDaftarHitamComponent },
+      { path: 'nasabah/cekduplikatnasabahbaru', component: DuplikatCekNasabahBaruComponent },
 
-      { path: 'nasabah/pencarian-nasabah/SubPencarianNasabah', component: SubPencarianNasabahComponent },
+
       { path: 'nasabah/pencarian-nasabah/PencarianNasabahIndividu', component: PencarianNasabahIndividuComponent },
     ]
   },
@@ -135,5 +137,5 @@ export const routingComponents = [
   DashboardComponent, PageNotFoundComponent, LoginFormComponent,
   DaftarKodeNasabahComponent, PencarianNasabahComponent, DaftarKodeNasabahComponent, PembuatanNasabahBaruComponent,
   DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, BuatNasabahIndividualComponent,
-  PencarianDaftarHitamComponent, PencarianNasabahIndividuComponent, SubPencarianNasabahComponent
+  PencarianDaftarHitamComponent, PencarianNasabahIndividuComponent, DuplikatCekNasabahBaruComponent
 ]
