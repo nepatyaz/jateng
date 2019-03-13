@@ -14,8 +14,8 @@ export class HeaderHomeComponent implements OnInit {
 
   offline: boolean;
   userid: string;
-  branchName : string;
-  branchCode : number;
+  branchName: string;
+  branchCode: number;
   myIp: string;
   tanggal = Date.now();
   lastlogin: string;
@@ -65,9 +65,9 @@ export class HeaderHomeComponent implements OnInit {
   getUserLog() {
     // console.log("user lgo run", this.userid);
     this.userService.getUserLog(this.userid).subscribe(resp => {
-      // this.lastlogin = resp[0].lastlogin;
-      console.log(resp);
-      // var lastlogout = resp[0].lastlogout;
+      this.lastlogin = resp[0].lastlogin;
+      // console.log(resp);
+      var lastlogout = resp[0].lastlogout;
       // console.log("last login : ", this.lastlogin);
     });
   }

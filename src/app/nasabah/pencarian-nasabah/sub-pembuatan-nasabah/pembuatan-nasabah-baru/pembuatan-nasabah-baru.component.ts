@@ -15,11 +15,9 @@ export class PembuatanNasabahBaruComponent implements OnInit {
   selected: string;
   favoriteOption: string;
   options: string[] = ['Kode Nasabah', 'Kode Cabang', 'No Kartu', 'No Identitas', 'Alamat', 'Nasabah'];
-
-  selectedOption: string;
-  printedOption: string;
-
   opsi: string;
+
+
 
   constructor(private router: Router, private _elementRef: ElementRef) { }
 
@@ -40,15 +38,23 @@ export class PembuatanNasabahBaruComponent implements OnInit {
 
     this.selected = this._elementRef.nativeElement.querySelector('#choosenValue').value;
     console.log(this.selected);
-    // if (this.selected === 'coorporate') {
-    //   this.router.navigate(['/nasabah/buatnasabahcorporate']);
-    // } else {
-    //   this.router.navigate(['/nasabah/buatnasabahindividual']);
-    // }
+    if (this.selected === 'coorporate') {
+      this.router.navigate(['/nasabah/buatnasabahcorporate']);
+    } else {
+      this.router.navigate(['/nasabah/buatnasabahindividual']);
+    }
   }
 
   cariFunction(value) {
     console.log(value);
     console.log(this.favoriteOption);
+  }
+
+  chooseValue() {
+    console.log(this.selected = this._elementRef.nativeElement.querySelector('#choosenValue').value);
+  }
+
+  radioChoosen(value) {
+    console.log(value);
   }
 }

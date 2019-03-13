@@ -9,14 +9,16 @@ import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 //nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
-import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
-import { PortofolioCifComponent } from './nasabah/pencarian-nasabah/portofolio-cif/portofolio-cif.component';
-import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
-import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
-import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
-import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
-import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
+import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
+// nasabah // pencarian nasabah
+import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
+import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
+import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
+import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
+import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
+import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component';
+import { SubPencarianNasabahComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/sub-pencarian-nasabah.component';
 
 //routing alamat setiap komponen di aplikasi 
 const routes: Routes = [
@@ -34,8 +36,11 @@ const routes: Routes = [
       { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
       { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
       { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
-      { path: 'nasabah/pencariannasabah/portofoliocif', component: PortofolioCifComponent },
+      // { path: 'nasabah/pencariannasabah/portofoliocif', component: PortofolioCifComponent },
       { path: 'nasabah/pencariandaftarhitam', component: PencarianDaftarHitamComponent },
+
+      { path: 'nasabah/pencarian-nasabah/SubPencarianNasabah', component: SubPencarianNasabahComponent },
+      { path: 'nasabah/pencarian-nasabah/PencarianNasabahIndividu', component: PencarianNasabahIndividuComponent },
     ]
   },
   {
@@ -128,7 +133,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  DaftarKodeNasabahComponent, PencarianNasabahComponent,DaftarKodeNasabahComponent, PencarianNasabahComponent, PembuatanNasabahBaruComponent,
+  DaftarKodeNasabahComponent, PencarianNasabahComponent, DaftarKodeNasabahComponent, PembuatanNasabahBaruComponent,
   DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, BuatNasabahIndividualComponent,
-  PortofolioCifComponent, PencarianDaftarHitamComponent
+  PencarianDaftarHitamComponent, PencarianNasabahIndividuComponent, SubPencarianNasabahComponent
 ]

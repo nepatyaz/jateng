@@ -36,14 +36,14 @@ import { DataAdministrasiComponent } from './nasabah/pencarian-nasabah/portofoli
 import { DataSukuBungaComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/data-suku-bunga/data-suku-bunga.component';
 import { SaldoRekeningComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/saldo-rekening/saldo-rekening.component';
 import { MutasiComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/mutasi/mutasi.component';
-import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
-import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
+import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
+import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
 import { BungaJasaGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/bunga-jasa-giro/bunga-jasa-giro.component';
-import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
-import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
+import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
+import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
 import { RiwayatSaldoComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/komponen/riwayat-saldo/riwayat-saldo.component';
 import { GiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/giro.component';
-import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
+import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
 import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
 import { TabunganComponent } from './nasabah/pencarian-nasabah/portofolio-cif/tabungan/tabungan.component';
 import { DataAdministrasiGiroComponent } from './nasabah/pencarian-nasabah/portofolio-cif/giro/komponen/data-administrasi-giro/data-administrasi-giro.component';
@@ -86,6 +86,9 @@ import { AlamatTambahanComponent } from './nasabah/pencarian-nasabah/alamat-tamb
 import { PesanComponent } from './nasabah/pencarian-nasabah/pesan/pesan.component';
 import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.component';
 import { MasterBranchService } from './service/masterbranch.service';
+import { SubPencarianNasabahComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/sub-pencarian-nasabah.component';
+import { SubPembuatanNasabahComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/sub-pembuatan-nasabah.component';
+import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component'
 
 
 @NgModule({
@@ -155,7 +158,10 @@ import { MasterBranchService } from './service/masterbranch.service';
     RelasiCifComponent,
     AlamatTambahanComponent,
     PesanComponent,
-    ProdukComponent
+    ProdukComponent,
+    SubPencarianNasabahComponent,
+    SubPembuatanNasabahComponent,
+    PencarianNasabahIndividuComponent
   ],
   imports: [
     BrowserModule,
@@ -168,7 +174,7 @@ import { MasterBranchService } from './service/masterbranch.service';
     MaterialModule,
     WebcamModule,
   ],
-  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService,MasterBranchService],
+  providers: [KtrluserService, ViewuserService, TableService, LoginGuard, AuthentificationService, UserService, MasterBranchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
