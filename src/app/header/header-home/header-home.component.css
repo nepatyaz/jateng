@@ -11,40 +11,12 @@ header {
 } */
 
 
-.navbar3 {
-  margin-top: 100px;
-  z-index: 1038;
-}
-
-header.navbar3 a.nav-link.active {
-  background-color: #234a7b;
-  margin: 1px;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
-  box-shadow: #000000;
-}
-
-header.navbar3 a.nav-link:hover {
-  border-radius: 0;
-}
-
-header.navbar3 nav.d-flex.justify-content-center.fixed-top {
-  margin-top: 120px;
-}
-
-header.navbar3 div.jumbotron {
-  width: 100%;
-  padding-right: 30px;
-  margin-top: 100px;
-  padding: 50px;
-}
 
 /* ========================================================= */
 /*                           NAVBAR STYLE                    */
 /* ========================================================= */
 
-.ul-style {
+/* .ul-style {
   list-style-type: none;
   font-size: 12px;
   text-align: left;
@@ -79,96 +51,46 @@ button {
 
 ul.bg-opacity {
   background: rgba(225, 225, 225, 50%);
-}
+} */
 
-/* ========================================================= */
-/*                       NAVBAR DROPDOWN                     */
-/* ========================================================= */
+/* ========================================= */
 
+/* .card {
+  width: 300px;
+  height: 60px;
+} */
 
-.bg-styleNav3 {
-  background-image: url(/src/assets/image/material-img/header.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1034;
-}
-
-button.dropdown-toggle.waves-light {
-  background: none;
-  border: 2px solid #234a7b;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-transform: uppercase;
-  padding: 10px 10px;
-  max-width: 100px;
-  cursor: pointer;
-  transition: 0.4s linear;
-  position: relative;
-  border-radius: 5px;
-  margin: 5px;
-  color: #223344;
-  box-shadow: 0 2px rgb(122, 122, 122);
-  top: 2px;
-  font-size: 10px;
-  min-height: 60px;
-}
-
-button.dropdown-toggle.waves-light:hover {
-  color: #fff;
-  box-shadow: 0 0px rgb(122, 122, 122);
-  top: 2px;
-}
-
-button.dropdown-toggle.waves-light:active {
-  color: #fff;
-  box-shadow: 0 0px rgb(122, 122, 122);
-  top: 2px;
-  background-color: #234a7b;
-}
-
-button.dropdown-toggle.waves-light::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: linear-gradient(to right top, #234a7b, #00597d, #006573, #176e63, #487455); */
-  background-image: linear-gradient(to right top, #17375e, #193a63, #1b3e69, #1e416e, #204574, #224d7f, #245589, #255d94, #246ca7, #217cb9, #198ccc, #059cde);
-  z-index: -1;
-  transition: transform 0.5s;
-  transform-origin: 0 0;
-  transition-timing-function: cubic-bezier(0.02, 1.16, 0.58, 1);
-  border-radius: 5px;
-}
-
-button.dropdown-toggle.waves-light[_ngcontent-c1]:active {
-  color: #fff;
-  box-shadow: 0 0px rgb(122, 122, 122);
-  top: 2px;
-  background-color: #234a7b;
-}
-
-button.dropdown-toggle.waves-light.btn-shift::before {
-  transform: scaleX(0);
-  border-radius: 2px;
-}
-
-button.dropdown-toggle.waves-light.btn-shift:hover::before {
-  transform: scaleX(1);
-  border-radius: 2px;
+.panel-style {
+  padding: 10px;
+  max-width: 18rem;
+  /* margin-top: 25px; */
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
 }
 
 
-button.btn-linear:hover {
+header div.row.pr-3.justify-content-end div.card.border-success.panel-style {
+  background: rgba(225, 225, 225, 20%);
+}
+
+header div.row.pr-3.justify-content-end div.card.border-danger.panel-style {
+  background: rgba(225, 225, 225, 20%);
+}
+
+.card-text:last-child {
+  margin-bottom: 0 !important;
+}
+
+button.btn-linear {
+  height: 50px;
+}
+
+button {
+  border-radius: 30px;
+  color: white;
+}
+
+button:hover {
   background: linear-gradient(to top right, #234a7b -15%, #ff0000 102%);
-
-}
-
-.dropdown-item {
-  transition: 0.3s;
-}
-
-.dropdown-item:hover {
-  background-color: #a3c8ec;
-  color: rgb(175, 175, 175);
 }

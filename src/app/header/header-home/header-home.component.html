@@ -1,263 +1,71 @@
 <!-- Header 1 / Logo / Panel / Logout -->
-<header class="navbar fixed-top justify-content-center align-items-center" style="z-index: 9999;">
-  <!-- style="z-index: 1039;" -->
-  <!-- Logo -->
-  <div class="container-fluid">
+<header class="navbar fixed-top align-items-center" style="z-index: 9999;">
+
+  <div class="row-padding justify-content-start">
+
     <div class="row">
       <a [routerLink]="['/dashboard']">
         <img src="/src/assets/image/LOGO.png" alt="LOGO">
       </a>
     </div>
 
-    <!-- Panel -->
-    <div class="col d-flex align-items-center justify-content-end">
-      <div class="row panel-style">
-        <ul class="col border border-light ul-style">
-          <li class="font-weight-bold text-white">Tanggal Bisnis: {{tanggal | date:'dd/MM/yyyy'}}</li>
-          <li class="font-weight-bold text-white">Last Login : {{lastlogin | date:'dd/MM/yyyy hh:mm'}}</li>
-        </ul>
-      </div>
-      <div class="row panel-style">
-        <ul class="border border-light ul-style bg-opacity">
-          <li *ngIf="offline" class="font-weight-bold text-white">Status : <span class="text-success">Online</span>
-          </li>
-          <li *ngIf="!offline" class="font-weight-bold text-white">Status : <span class="text-danger">Offline</span>
-          </li>
-          <li class="font-weight-bold text-white">IP Anda : {{myIp}}</li>
-        </ul>
-      </div>
-      <div class="row panel-style">
-        <ul class="border border-light ul-style">
-          <li class="font-weight-bold text-white">Cabang </li>
-          <li class="font-weight-bold text-white">{{branchCode}} | {{branchName}}</li>
-        </ul>
-      </div>
-      <!-- Logout -->
-      <ul class="btn-linear">
-        <button class="btn btn-linear text-white">
-          <a class="text-light" (click)="logout()">Sign Out</a>
-        </button>
-      </ul>
-
-    </div>
   </div>
+
+
+  <div class="row pr-3 justify-content-end">
+
+    <div class="card bg-transparent border-light panel-style" style="max-width: 18rem;">
+      <div class="card-text bg-transparent text-white small">Tanggal Bisnis: {{tanggal | date:'dd/MM/yyyy'}}</div>
+      <div class="card-text bg-transparent text-white small">Last Login : {{lastlogin | date:'dd/MM/yyyy
+        hh:mm'}}</div>
+    </div>
+
+    <div *ngIf="offline" class="card border-success panel-style" style="max-width: 18rem;">
+      <div *ngIf="offline" class="card-text text-white small">Status : <span class="text-success">Online</span></div>
+      <div class="card-text text-white small">IP Anda : {{myIp}}</div>
+    </div>
+
+    <div *ngIf="!offline" class="card border-danger panel-style" style="max-width: 18rem;">
+      <div *ngIf="!offline" class="card-text text-white small">Status : <span class="text-danger">Offline</span></div>
+      <div class="card-text text-white small">IP Anda : {{myIp}}</div>
+    </div>
+
+    <div class="card bg-transparent border-light panel-style" style="max-width: 18rem;">
+      <div class="card-text bg-transparent text-white small">Cabang</div>
+      <div class="card-text bg-transparent text-white small">{{branchCode}} | {{branchName}}</div>
+    </div>
+
+    <!-- Logout -->
+    <button class="btn btn-linear text-white">
+      <a class="text-light" (click)="logout()">Sign Out</a>
+    </button>
+
+  </div>
+
 </header>
-<!-- Header 2 / Background Header 3 -->
-<!-- <header class="navbar navbar2 fixed-top" style="margin-top: 100px; height: 120px;">
-</header> -->
 
-<!-- Header 3 / Menu Dropdown -->
-<header class="navbar navbar3 fixed-top d-flex align-items-center bg-styleNav3" style="margin-top: 100px; height: 100px;">
-  <nav class="nav d-flex justify-content-center fixed-top" style="margin-top: 110px;">
 
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Financial Retail
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/']">Teller In</button>
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/setorantunai']">Setoran Tunai</button>
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/penarikantunai']">Penarikan Tunai</button>
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/pindahbuku']">Pemindahbukuan Tanpa Cek</button>
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/pinbukbedauang']">Pemindahbukuan Beda
-          Mata
-          Uang</button>
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/selisihkas']">Selisih Kas Lebih</button>
-        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/sinkronfin']">Sinkronisasi Fin Retail</button>
-      </div>
+<!-- <div class="row panel-style">
+      <ul class="col border border-light ul-style">
+        <li class="font-weight-bold text-white">Tanggal Bisnis: {{tanggal | date:'dd/MM/yyyy'}}</li>
+        <li class="font-weight-bold text-white">Last Login : {{lastlogin | date:'dd/MM/yyyy hh:mm'}}</li>
+      </ul>
     </div>
 
-    <div class="dropdown" mdbDropdown>
 
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Administrative
-      </button>
+  <div class="row panel-style">
+    <ul class="border border-light ul-style bg-opacity">
+      <li *ngIf="offline" class="font-weight-bold text-white">Status : <span class="text-success">Online</span>
+      </li>
+      <li *ngIf="!offline" class="font-weight-bold text-white">Status : <span class="text-danger">Offline</span>
+      </li>
+      <li class="font-weight-bold text-white">IP Anda : {{myIp}}</li>
+    </ul>
+  </div>
 
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/administrative/daftaruser']">Daftar User Sign On</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/administrative/webbranchstatus']">Webbranch Status</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/administrative/tanggalbisnis']">Pengaturan Tanggal
-          Bisnis</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/administrative/aktifitasuser']">Daftar Aktifitas User</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/administrative/uploadtransaksi']">Upload Transaksi</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/administrative/changeoffline']">Ubah Offline Limit</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Cash Drawer Head Teller
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawerhead/']">Saldo Semua Teller</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Report
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/report/']">Report Customer Service</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        User Maintenance
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/']">Cari / Baru</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/gantisandi']">Ganti Password</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/tutupuser']">Tutup User</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/kontroluser']">Kontrol User</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/gantisandioveride']">Ganti Password
-          Override</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/role']">Pencarian Role</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/refresh']">Refresh User</button>
-      </div>
-    </div>
-    <!-- </div> -->
-
-    <!-- Try Multi Dropdown -->
-    <!-- <div class="dropdown" mdbDropdown>
-      <button mdbDropdownToggle mat-button [matMenuTriggerFor]="menuNasabah" class="dropdown-toggle waves-light btn-shift">Nasabah</button>
-      <mat-menu #menuNasabah="matMenu">
-        <button mat-menu-item class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet
-          Nasabah</button>
-        <button mat-menu-item [matMenuTriggerFor]="pencarianNasabah" class="dropdown-item text-dark">Pencarian Nasabah</button>
-        <button mat-menu-item class="dropdown-item text-dark">Pencarian Daftar Hitam</button>
-      </mat-menu>
-      <mat-menu #pencarianNasabah="matMenu">
-        <button mat-menu-item class="dropdown-item text-dark" [routerLink]="['/nasabah/carinasabah']">Pencarian Nasabah</button>
-        <button mat-menu-item class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pembuatan
-          Nasabah Baru</button>
-      </mat-menu>
-    </div> -->
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Nasabah
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet Nasabah</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pencarian Nasabah</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/pencariandaftarhitam']">Pencarian Daftar Hitam</button>
-
-        <!-- <button class="dropdown-item text-dark" [routerLink]="['/nasabah/duplikatnasabah']">Duplikat Cek Nasabah Baru -
-          Corporate</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/duplikatnasabahindvl']">Duplikat Cek Nasabah
-          Baru -
-          Individual</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahcorporate']">Buat Nasaba Baru -
-          Corporate</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahindividual']">Buat Nasaba Baru -
-          Individual</button> -->
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Rekening
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/rekening/']">Pencarian Daftar
-          Rekening</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/rekening/pencarianbarsheetrekening']">Bar Sheet
-          Rekening</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        PassBook
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/passbook/']">Cetak Passbook</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/passbook/headerpassbook']">Cetak Header Passbook</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/passbook/ulangpassbook']">Cetak Ulang Passbook</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/passbook/checktaspen']">Check Taspen</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Otorisasi Head CS
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/otorisasihead/otorisasirekeningkonfidensial']">Otorisasi
-          Rekening Konfidensial</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/otorisasihead/otorisasicif']">Otorisasi CIF</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/otorisasihead/otorisasirekening']">Otorisasi Rekening</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Kartu
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/kartu']">Pencarian Kartu ATM</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Pembayaran
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/pembayaran/bayarpkb']">Pembayaran PKB</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/pembayaran/bayarmpn']">MPN (Modul Penerimaan Negara)</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/pembayaran/billpayment']">Billing Payment</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
-        Cash Drawer
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" href="#">Teller Cash Drawer</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawer/denominasi']">Denominasi</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawer/balancing']">Balancing</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawer/sinkronisasi']">Sinkronisasi Cash Drawer</button>
-      </div>
-    </div>
-
-    <div class="dropdown" mdbDropdown>
-
-      <button mdbDropdownToggle class="dropdown-toggle dropdown-toggle-split px-3 waves-light btn-shift" type="button"
-        mdbWavesEffect>
-        Rekening Koran
-      </button>
-
-      <div class="dropdown-menu dropdown-primary">
-        <button class="dropdown-item text-dark" [routerLink]="['/rekeningkoran/']">Daftar Rekening Koran</button>
-        <button class="dropdown-item text-dark" [routerLink]="['/rekeningkoran/cetak']">Cetak Rekening Koran</button>
-      </div>
-    </div>
-
-  </nav>
-</header>
+  <div class="row panel-style">
+    <ul class="border border-light ul-style">
+      <li class="font-weight-bold text-white">Cabang </li>
+      <li class="font-weight-bold text-white">{{branchCode}} | {{branchName}}</li>
+    </ul>
+  </div> -->

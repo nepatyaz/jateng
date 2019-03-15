@@ -4,24 +4,26 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginGuard } from './guard/login.guard';
-//layout
+// layout
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
-//nasabah
+// nasabah
 import { DaftarKodeNasabahComponent } from './nasabah/daftar-kode-nasabah/daftar-kode-nasabah.component';
-import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
 import { PencarianNasabahComponent } from './nasabah/pencarian-nasabah/pencarian-nasabah.component';
-// nasabah // pencarian nasabah
+import { PencarianDaftarHitamComponent } from './nasabah/pencarian-daftar-hitam/pencarian-daftar-hitam.component';
 import { PembuatanNasabahBaruComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/pembuatan-nasabah-baru.component';
 import { DuplikatNasabahComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah/duplikat-nasabah.component';
 import { DuplikatNasabahIndvlComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/duplikat-nasabah-indvl/duplikat-nasabah-indvl.component';
+
+
+// pembuatan nasabah
 import { BuatNasabahCorporateComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-corporate/buat-nasabah-corporate.component';
-import { BuatNasabahIndividualComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/pembuatan-nasabah-baru/komponen/buat-nasabah-individual/buat-nasabah-individual.component';
+
+// Pencarian nasabah
 import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component';
+import { PencarianNasabahPerusahaanComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-perusahaan/pencarian-nasabah-perusahaan.component';
 
-
-import { SubPencarianNasabahComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/sub-pencarian-nasabah.component';
-//routing alamat setiap komponen di aplikasi 
+// routing alamat setiap komponen di aplikasi
 const routes: Routes = [
   {
     path: '', component: HomeLayoutComponent,
@@ -29,19 +31,16 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent, },
       { path: 'dashboard', component: DashboardComponent, },
-      //nasabah
+      // nasabah
       { path: 'nasabah/daftarnasabah', component: DaftarKodeNasabahComponent },
       { path: 'nasabah/carinasabah', component: PencarianNasabahComponent },
-      { path: 'nasabah/buatnasabahbaru', component: PembuatanNasabahBaruComponent },
-      { path: 'nasabah/duplikatnasabah', component: DuplikatNasabahComponent },
-      { path: 'nasabah/duplikatnasabahindvl', component: DuplikatNasabahIndvlComponent },
-      { path: 'nasabah/buatnasabahcorporate', component: BuatNasabahCorporateComponent },
-      { path: 'nasabah/buatnasabahindividual', component: BuatNasabahIndividualComponent },
-      // { path: 'nasabah/pencariannasabah/portofoliocif', component: PortofolioCifComponent },
       { path: 'nasabah/pencariandaftarhitam', component: PencarianDaftarHitamComponent },
-
-      { path: 'nasabah/pencarian-nasabah/SubPencarianNasabah', component: SubPencarianNasabahComponent },
-      { path: 'nasabah/pencarian-nasabah/PencarianNasabahIndividu', component: PencarianNasabahIndividuComponent },
+      { path: 'nasabah/pembuatan-nasabah-baru', component: PembuatanNasabahBaruComponent },
+      { path: 'nasabah/pembuatan-nasabah-baru/corp', component: BuatNasabahCorporateComponent },
+      { path: 'nasabah/pembuatan-nasabah-baru/duplikat-nasabah', component: DuplikatNasabahComponent },
+      { path: 'nasabah/pembuatan-nasabah-baru/duplikat-individu', component: DuplikatNasabahIndvlComponent },
+      { path: 'nasabah/pencarian-nasabah-individu', component: PencarianNasabahIndividuComponent },
+      { path: 'nasabah/pencarian-nasabah-perusahaan', component: PencarianNasabahPerusahaanComponent }
     ]
   },
   {
@@ -81,7 +80,7 @@ const routes: Routes = [
     loadChildren: './report/report.module#ReportModule',
     canActivate: [LoginGuard]
   },
-  {   //changes
+  {
     path: 'otorisasihead',
     component: HomeLayoutComponent,
     loadChildren: './otorisasihead/otorisasihead.module#OtorisasiheadModule',
@@ -134,7 +133,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   DashboardComponent, PageNotFoundComponent, LoginFormComponent,
-  DaftarKodeNasabahComponent, PencarianNasabahComponent, DaftarKodeNasabahComponent, PembuatanNasabahBaruComponent,
-  DuplikatNasabahComponent, DuplikatNasabahIndvlComponent, BuatNasabahCorporateComponent, BuatNasabahIndividualComponent,
-  PencarianDaftarHitamComponent, PencarianNasabahIndividuComponent, DuplikatCekNasabahBaruComponent
-]
+  DaftarKodeNasabahComponent, PencarianNasabahComponent, DaftarKodeNasabahComponent, PencarianDaftarHitamComponent,
+  PembuatanNasabahBaruComponent, BuatNasabahCorporateComponent, DuplikatNasabahComponent, DuplikatNasabahIndvlComponent,
+  PencarianNasabahIndividuComponent, PencarianNasabahPerusahaanComponent];

@@ -1,35 +1,217 @@
-<!--Main Navigation-->
-<!-- <div class="fixed-top" style="z-index: 1031;">
-  <nav class="nav d-flex justify-content-center fixed-top" style="margin-top: 15vh;">
-    <nav class="col d-flex justify-content-center" style="margin-top: 20px;"> -->
-<!-- <button class="btn btn-default btn-press" type="submit" style="color: #ffff00;">Financial Retail</button>
-    <button class="btn btn-default btn-press" type="submit">Administrative</button>
-    <button class="btn btn-default btn-press" type="submit">Report</button>
-    <button class="btn btn-default btn-press" type="submit">User Maintenance</button>
-    <button class="btn btn-default btn-press" type="submit">Pembayaran</button>
-    <button class="btn btn-default btn-press" type="submit">Rekening</button>
-    <button class="btn btn-default btn-press" type="submit">Kartu</button>
-    <button class="btn btn-default btn-press" type="submit">Rekening Koran</button>
-    <button class="btn btn-default btn-press" type="submit">Cash Drawer Teller</button>
-    <button class="btn btn-default btn-press" type="submit">PassBook</button>
-    <button class="btn btn-default btn-press" type="submit">Otorisasi Head CS</button>
-    <button class="btn btn-default btn-press" type="submit">Cash Drawer</button>
-    <button class="btn btn-default btn-press" type="submit">Nasabah</button> -->
-<!-- <a class="nav-link active" [routerLink]="['/user/bob']">Administrative</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Report</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">User Maintenance</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Pembayaran</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Rekening</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Kartu</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Rekening Koran</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Cash Drawer Teller</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">PassBook</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Otorisasi Head CS</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Cash Drawer</a>
-      <a class="nav-link active" [routerLink]="['/user/bob']">Nasabah</a>
-    </nav>
-  </nav>
-</div> -->
+<!-- Header 3 / Menu Dropdown -->
+<header class="navbar navbar3 fixed-top d-flex align-items-center bg-styleNav3" style="margin-top: 100px; height: 100px;">
+  <nav class="nav d-flex justify-content-center fixed-top" style="margin-top: 110px;">
 
-<!-- Main Navigation-->
-<!-- style="margin-top: 20vh;margin-left: 20px; -->
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Financial Retail
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/']">Teller In</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/setorantunai']">Setoran Tunai</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/penarikantunai']">Penarikan Tunai</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/pindahbuku']">Pemindahbukuan Tanpa Cek</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/pinbukbedauang']">Pemindahbukuan Beda
+          Mata
+          Uang</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/selisihkas']">Selisih Kas Lebih</button>
+        <button class="dropdown-item text-dark btn-5" [routerLink]="['/tellerin/sinkronfin']">Sinkronisasi Fin Retail</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Administrative
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/administrative/daftaruser']">Daftar User Sign On</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/administrative/webbranchstatus']">Webbranch Status</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/administrative/tanggalbisnis']">Pengaturan Tanggal
+          Bisnis</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/administrative/aktifitasuser']">Daftar Aktifitas User</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/administrative/uploadtransaksi']">Upload Transaksi</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/administrative/changeoffline']">Ubah Offline Limit</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Cash Drawer Head Teller
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawerhead/']">Saldo Semua Teller</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Report
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/report/']">Report Customer Service</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        User Maintenance
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/']">Cari / Baru</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/gantisandi']">Ganti Password</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/tutupuser']">Tutup User</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/kontroluser']">Kontrol User</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/gantisandioveride']">Ganti Password
+          Override</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/role']">Pencarian Role</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/usermaintenance/refresh']">Refresh User</button>
+      </div>
+    </div>
+
+    <!-- <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Nasabah
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet Nasabah</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/nasabah/buatnasabahbaru']">Pencarian Nasabah</button>
+        <button mat-menu-item [matMenuTriggerFor]="pencarian" class="dropdown-item text-dark">Pencarian
+          Daftar Hitam</button>
+        <mat-menu #pencarian="matMenu">
+          <button mat-menu-item>Pencarian Nasabah</button>
+          <button mat-menu-item>Pencarian Nasabah Baru</button>
+        </mat-menu>
+      </div>
+    </div> -->
+
+    <div class="dropdown" mdbDropdown>
+      <button mat-button [matMenuTriggerFor]="nasabah" class="dropdown-toggle waves-light btn-shift">Nasabah</button>
+
+      <mat-menu #nasabah="matMenu">
+        <button class="dropdown-item text-dark large" mat-menu-item [routerLink]="['/nasabah/daftarnasabah']">Bar Sheet
+          Nasabah</button>
+        <button class="dropdown-item text-dark large" mat-menu-item [routerLink]="['/nasabah/buatnasabahbaru']">Pencarian
+          Daftar Hitam</button>
+        <button class="dropdown-item text-dark large" mat-menu-item [matMenuTriggerFor]="pencarian">Pencarian/Pembuatan</button>
+      </mat-menu>
+
+      <mat-menu #pencarian="matMenu">
+        <button class="dropdown-item text-dark" mat-menu-item [routerLink]="['/nasabah/pembuatan-nasabah-baru']">Pencarian
+          Nasabah</button>
+        <button class="dropdown-item text-dark" mat-menu-item>Pencarian Nasabah Baru</button>
+      </mat-menu>
+
+    </div>
+
+
+
+
+
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Rekening
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/rekening/']">Pencarian Daftar
+          Rekening</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/rekening/pencarianbarsheetrekening']">Bar Sheet
+          Rekening</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        PassBook
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/passbook/']">Cetak Passbook</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/passbook/headerpassbook']">Cetak Header Passbook</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/passbook/ulangpassbook']">Cetak Ulang Passbook</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/passbook/checktaspen']">Check Taspen</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Otorisasi Head CS
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/otorisasihead/otorisasirekeningkonfidensial']">Otorisasi
+          Rekening Konfidensial</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/otorisasihead/otorisasicif']">Otorisasi CIF</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/otorisasihead/otorisasirekening']">Otorisasi Rekening</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Kartu
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/kartu']">Pencarian Kartu ATM</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Pembayaran
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/pembayaran/bayarpkb']">Pembayaran PKB</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/pembayaran/bayarmpn']">MPN (Modul Penerimaan Negara)</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/pembayaran/billpayment']">Billing Payment</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle waves-light btn-shift" type="button" mdbWavesEffect>
+        Cash Drawer
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" href="#">Teller Cash Drawer</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawer/denominasi']">Denominasi</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawer/balancing']">Balancing</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/cashdrawer/sinkronisasi']">Sinkronisasi Cash Drawer</button>
+      </div>
+    </div>
+
+    <div class="dropdown" mdbDropdown>
+
+      <button mdbDropdownToggle class="dropdown-toggle dropdown-toggle-split px-3 waves-light btn-shift" type="button"
+        mdbWavesEffect>
+        Rekening Koran
+      </button>
+
+      <div class="dropdown-menu dropdown-primary">
+        <button class="dropdown-item text-dark" [routerLink]="['/rekeningkoran/']">Daftar Rekening Koran</button>
+        <button class="dropdown-item text-dark" [routerLink]="['/rekeningkoran/cetak']">Cetak Rekening Koran</button>
+      </div>
+    </div>
+
+  </nav>
+</header>

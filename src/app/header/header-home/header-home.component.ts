@@ -28,14 +28,14 @@ export class HeaderHomeComponent implements OnInit {
     this.userid = JSON.parse(localStorage.getItem('user')).userid;
     this.branchCode = JSON.parse(localStorage.getItem('user')).branchcode;
   }
-
+  //  asdasd
   ngOnInit() {
     this.getIp();
     this.getUserLog();
     this.getBranchById();
     interval(10000).subscribe(() => {
       this.getIp();
-    })
+    });
   }
 
   logout() {
@@ -44,7 +44,7 @@ export class HeaderHomeComponent implements OnInit {
       .subscribe(() => {
         sessionStorage.clear();
         localStorage.clear();
-        this.router.navigate(['/login'])
+        this.router.navigate(['/login']);
       });
 
   }
@@ -57,9 +57,9 @@ export class HeaderHomeComponent implements OnInit {
       },
         () => {
           this.offline = false;
-          this.myIp = "127.0.0.1";
+          this.myIp = '127.0.0.1';
         }
-      )
+      );
   }
 
   getUserLog() {
@@ -73,7 +73,7 @@ export class HeaderHomeComponent implements OnInit {
   }
 
   getBranchById() {
-    console.log("branch run", this.branchCode);
+    console.log('branch run', this.branchCode);
     this.branchService.getBranchById(this.branchCode).subscribe(resp => {
       console.log(resp);
       this.branchName = resp[0].name;

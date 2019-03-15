@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-duplikat-nasabah-indvl',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DuplikatNasabahIndvlComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  prosesHalaman() {
+    console.log('test');
+    this.router.navigate(['/nasabah/pencarian-nasabah-individu']);
   }
 
 }

@@ -88,7 +88,8 @@ import { ProdukComponent } from './nasabah/pencarian-nasabah/produk/produk.compo
 import { MasterBranchService } from './service/masterbranch.service';
 import { SubPencarianNasabahComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/sub-pencarian-nasabah.component';
 import { SubPembuatanNasabahComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/sub-pembuatan-nasabah.component';
-import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component'
+import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component';
+import { PencarianNasabahPerusahaanComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-perusahaan/pencarian-nasabah-perusahaan.component';
 
 
 @NgModule({
@@ -161,7 +162,8 @@ import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/s
     ProdukComponent,
     SubPencarianNasabahComponent,
     SubPembuatanNasabahComponent,
-    PencarianNasabahIndividuComponent
+    PencarianNasabahIndividuComponent,
+    PencarianNasabahPerusahaanComponent
   ],
   imports: [
     BrowserModule,

@@ -39,10 +39,14 @@ export class PembuatanNasabahBaruComponent implements OnInit {
     this.selected = this._elementRef.nativeElement.querySelector('#choosenValue').value;
     console.log(this.selected);
     if (this.selected === 'coorporate') {
-      this.router.navigate(['/nasabah/buatnasabahcorporate']);
+      this.router.navigate(['/nasabah/pembuatan-nasabah-baru/duplikat-nasabah']);
     } else {
-      this.router.navigate(['/nasabah/buatnasabahindividual']);
+      this.router.navigate(['/nasabah/pembuatan-nasabah-baru/duplikat-individu']);
     }
+  }
+
+  chooseValue() {
+    console.log(this.selected = this._elementRef.nativeElement.querySelector('#choosenValue').value);
   }
 
   cariFunction(value) {
@@ -50,11 +54,10 @@ export class PembuatanNasabahBaruComponent implements OnInit {
     console.log(this.favoriteOption);
   }
 
-  chooseValue() {
-    console.log(this.selected = this._elementRef.nativeElement.querySelector('#choosenValue').value);
-  }
+
 
   radioChoosen(value) {
     console.log(value);
   }
+
 }
