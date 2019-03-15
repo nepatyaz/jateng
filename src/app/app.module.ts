@@ -89,7 +89,6 @@ import { MasterBranchService } from './service/masterbranch.service';
 import { SubPencarianNasabahComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/sub-pencarian-nasabah.component';
 import { SubPembuatanNasabahComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/sub-pembuatan-nasabah.component';
 import { PencarianNasabahIndividuComponent } from './nasabah/pencarian-nasabah/sub-pencarian-nasabah/pencarian-nasabah-individu/pencarian-nasabah-individu.component'
-import { DuplikatCekNasabahBaruComponent } from './nasabah/pencarian-nasabah/sub-pembuatan-nasabah/duplikat-cek-nasabah-baru/duplikat-cek-nasabah-baru.component';
 
 
 @NgModule({
@@ -162,8 +161,7 @@ import { DuplikatCekNasabahBaruComponent } from './nasabah/pencarian-nasabah/sub
     ProdukComponent,
     SubPencarianNasabahComponent,
     SubPembuatanNasabahComponent,
-    PencarianNasabahIndividuComponent,
-    DuplikatCekNasabahBaruComponent
+    PencarianNasabahIndividuComponent
   ],
   imports: [
     BrowserModule,
